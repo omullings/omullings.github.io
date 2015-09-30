@@ -1,0 +1,158 @@
+markers = [
+   {
+     "name": "Riyadh",
+     "url": "https://en.wikipedia.org/wiki/Canada",
+     "lat": 24.7251918,
+     "lng": 46.8225288,
+     "application_status": 1 ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Mecca",
+     "url": "https://en.wikipedia.org/wiki/Anguilla",
+     "lat": 21.4360154,
+     "lng": 39.8465466,
+     "application_status": 1 ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+
+   },
+   {
+     "name": "Jeddah",
+     "url": "https://en.wikipedia.org/wiki/Barbados",
+     "lat": 21.4547728,
+     "lng": 39.2112822,
+     "application_status": 1 ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Medina",
+     "url": "https://en.wikipedia.org/wiki/United_States",
+     "lat": 24.4710724,
+     "lng": 39.6175575,
+     "application_status": 1 ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+
+   },
+   {
+     "name": "Sulţānah",
+     "url": "https://en.wikipedia.org/wiki/Ireland",
+     "lat": 24.4999996,
+     "lng": 39.58,
+     "application_status": 1 ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Dammam",
+     "url": "https://en.wikipedia.org/wiki/Scotland",
+     "lat": 26.3547207,
+     "lng": 49.9924822,
+     "application_status": 1 ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Ta’if",
+     "url": "https://en.wikipedia.org/wiki/England",
+     "lat": 21.4034757,
+     "lng": 40.5209256,
+     "application_status": 1 ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Tabūk",
+     "url": "https://en.wikipedia.org/wiki/France",
+     "lat": 26.7743993,
+     "lng": 37.3344941,
+     "application_status": 1 ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Buraydah",
+     "url": "https://en.wikipedia.org/wiki/The_Netherlands",
+     "lat": 26.347681,
+     "lng": 43.9234256,
+     "application_status": 1 ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Khamis Mushait",
+     "url": "https://en.wikipedia.org/wiki/Switzerland",
+     "lat": 18.2869674,
+     "lng": 42.7443022,
+     "application_status": 1 ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Al Hufūf",
+     "url": "https://en.wikipedia.org/wiki/South_Africa",
+     "lat": 25.3057257,
+     "lng": 49.6133137,
+     "application_status": 1 ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Al Mubarraz",
+     "url": "https://en.wikipedia.org/wiki/Madagascar",
+     "lat": 21.4304133,
+     "lng": 51.5409851,
+     "application_status": 1 ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Hayil",
+     "url": "https://en.wikipedia.org/wiki/Taiwan",
+     "lat": 27.091878,
+     "lng": 41.895261,
+     "application_status": 1 ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Najrān",
+     "url": "https://en.wikipedia.org/wiki/Japan",
+     "lat": 17.5375359,
+     "lng": 44.193205,
+     "application_status": 1 ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   }
+];

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Globus VPN</title>
+		<meta name="description" content="Inspiration for drag and drop interactions for the modern UI" />
+		<meta name="keywords" content="drag and drop, interaction, inspiration, web design, ui" />
+		<meta name="author" content="Codrops" />
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Montserrat:700' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+		<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/dropit.css"> <!-- Resource style -->
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body class="skin-5">
+		<div class="container">
+			<div id="content" class="content" style="position: relative; overflow-y: hidden; ">
+				<nav class="navigation" >
+					<a href="#cd-nav" class="cd-nav-trigger">Menu
+						<span class="cd-nav-icon"></span>
+
+						<svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+							<circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+						</svg>
+					</a>
+				</nav>
+				<section id="mapPanel" >
+					.
+				</section>
+				<section id="listPanel" >
+						<header id="appliance_header" >
+							<span id="list_header" style="">Appliances</span>
+							<ul class="menu">
+						    <li>
+						        <a href="#"><i class="fa fa-ellipsis-v" style="display: inline-block; position: absolute; right: 0px; "></i></a>
+						        <ul>
+						            <li><a href="#">Create appliances</a></li>
+						            <li><a href="#">Some Action 2</a></li>
+						            <li><a href="#">Some Action 3</a></li>
+						            <li><a href="#">Some Action 4</a></li>
+						        </ul>
+						    </li>
+						</ul>
+						<input id="filter_appliances" type="search" placeholder="Filter applianaces">
+					</header>
+					<header id="selection_header" style="display: none; ">
+						<div id="list_header" class="selection_count" style=""></div>
+						<ul class="menu actions">
+							<li>
+									<a href="#"><i class="fa fa-ellipsis-v" style="display: inline-block; position: absolute; right: 0px; "></i></a>
+									<ul>
+											<li><a href="#">Some Action 1</a></li>
+											<li><a href="#">Some Action 2</a></li>
+											<li><a href="#">Some Action 3</a></li>
+											<li><a href="#">Some Action 4</a></li>
+									</ul>
+							</li>
+						</ul>
+					</header>
+					<section id="actions-list" class="actions-list">
+						<div id="grid" class="grid actions-list__group j-selectable clearfix" >
+						</div>
+					</section>
+				</section>
+				<section id="applicationMap" style="  z-index: 0; position: absolute; top: 0; bottom: 0; left: 72px; right: 300px; "></section>
+
+			</div><!-- /content -->
+		</div><!-- /container -->
+		<div id="drop-area" class="drop-area">
+
+			<div>
+				<h1 style=" font-weight: 200; ">Add appliance to a virtual private network</h1>
+				<br><br>
+				<div class="drop-area__item"> <i class="fa fa-plus"></i> <span style="margin-left: 50px; font-size: 0.7em; text-transform: uppercase; font-family: 'Montserrat'; ">Create vpn</span></div>
+				<div style="border-bottom: 1px solid #f1f1f1; margin: 15px; "></div>
+				<div class="drop-area__item"><i class="fa fa-empire"></i></div>
+				<div class="drop-area__item"><i class="fa fa-empire"></i></div>
+				<div class="drop-area__item"><i class="fa fa-connectdevelop"></i></div>
+				<div class="drop-area__item"><i class="fa fa-connectdevelop"></i></div>
+				<div class="drop-area__item"><i class="fa fa-empire"></i></div>
+				<div class="drop-area__item"><i class="fa fa-connectdevelop"></i></div>
+				<div class="drop-area__item"><i class="fa fa-connectdevelop"></i></div>
+				<div class="drop-area__item"><i class="fa fa-connectdevelop"></i></div>
+				<div class="drop-area__item"><i class="fa fa-connectdevelop"></i></div>
+				<div class="drop-area__item"><i class="fa fa-empire"></i></div>
+				<div class="drop-area__item"><i class="fa fa-empire"></i></div>
+				<div class="drop-area__item"><i class="fa fa-empire"></i></div>
+				<div class="drop-area__item"><i class="fa fa-empire"></i></div>
+				<div class="drop-area__item"><i class="fa fa-connectdevelop"></i></div>
+				<div class="drop-area__item"><i class="fa fa-connectdevelop"></i></div>
+				<div class="drop-area__item"><i class="fa fa-empire"></i></div>
+				<div class="drop-area__item"><i class="fa fa-connectdevelop"></i></div>
+				<div class="drop-area__item"><i class="fa fa-connectdevelop"></i></div>
+				<div class="drop-area__item"><i class="fa fa-connectdevelop"></i></div>
+				<div class="drop-area__item"><i class="fa fa-connectdevelop"></i></div>
+				<div class="drop-area__item"><i class="fa fa-empire"></i></div>
+				<div class="drop-area__item"><i class="fa fa-empire"></i></div>
+			</div>
+		</div>
+		<div class="drop-overlay"></div>
+		<div id="cd-nav" class="cd-nav">
+          <div class="cd-navigation-wrapper">
+            <div class="cd-primary-nav cd-half-block ">
+              <nav>
+              <!--  <h3>Dashboard</h3>
+                <ul class="">
+                  <li><a href="#/overview" class="">Overview</a></li>
+                </ul> -->
+                <h3>Appliance Management</h3>
+                <ul>
+                  <li><a href="appliances.html" class="">Manage Appliances</a></li>
+                  <li><a href="vpns.html" class="">Manage VPNs</a></li>
+                  <!-- <li><a href="#/vpntemplate" class="">Manage VPN Templates</a></li> -->
+                  <!-- <li><a href="#/alerts" class="">Manage Alerts</a></li> -->
+                  <!-- <li><a href="#/sites" class="">Manage Sites</a></li> -->
+                </ul>
+                <h3>Administration</h3>
+                <ul>
+                  <li><a href="" class="">Manage Administrators</a></li>
+                  <li><a href="" class="">Manage Roles and Permissions</a></li>
+                </ul>
+                <h3>System Configuration</h3>
+                <ul>
+                  <li><a href="" class="">Manage Settings</a></li>
+                </ul>
+                <h3>Account</h3>
+                <ul>
+                  <li><a href="" class="">Mohammed Askari</a></li>
+                  <li><a href="" class="">Logout</a></li>
+                </ul>
+              </nav>
+            </div><!-- .cd-half-block -->
+
+            <div class="cd-half-block cd-contact-info companyPanel" >
+              <img src="img/logo.svg" class="rngle-logo">
+              <div >
+              <p>GLOBUS VPN</p>
+              <a href="mailto:info@infosecglobal.com">info@infosecglobal.com</a>
+              <address>
+                <ul >
+                  <li>
+                    <span>Hardturmstrasse 103</span>
+                    <span>8005, Zürich</span>
+                    <span>Switzerland</span>
+                  </li>
+                </ul>
+              </address>
+            </div>
+            </div> <!-- .cd-half-block -->
+          </div> <!-- .cd-navigation-wrapper -->
+        </div> <!-- .cd-nav -->
+
+		<script src="js/main.js"></script> <!-- Resource jQuery -->
+		<script src="js/draggabilly.pkgd.min.js"></script>
+		<script src="js/dragdrop.js"></script>
+
+		<script src="js/dropit.js"></script>
+		<script>
+		$(document).ready(function() {
+				var bodyheight = $(window).height();
+				var gridheader = $("#listPanel header").height() + 10;
+				//$("#grid").css("padding-top", gridheader );
+				$("#content").height(bodyheight);
+		});
+
+		$(window).resize(function() {
+		    var bodyheight = $(window).height();
+				var gridheader = $("#listPanel header").height();
+		    //$("#actions-list").height(bodyheight - gridheader);
+				$("#content").height(bodyheight);
+		});
+
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2'></script>
+		<script type='text/javascript' src='js/maps/markers.json'></script>
+		<script type='text/javascript' src='js/maps/leaf-demo.js'></script>
+
+		<script>
+		$(document).ready(function() {
+				var body = document.body,
+					dropArea = document.getElementById( 'drop-area' ),
+					droppableArr = [], dropAreaTimeout;
+
+				// initialize droppables
+				[].slice.call( document.querySelectorAll( '#drop-area .drop-area__item' )).forEach( function( el ) {
+					droppableArr.push( new Droppable( el, {
+						onDrop : function( instance, draggableEl ) {
+							// show checkmark inside the droppabe element
+							classie.add( instance.el, 'drop-feedback' );
+							clearTimeout( instance.checkmarkTimeout );
+							instance.checkmarkTimeout = setTimeout( function() {
+								classie.remove( instance.el, 'drop-feedback' );
+							}, 800 );
+							// ...
+						}
+					} ) );
+				} );
+
+				// initialize draggable(s)
+				[].slice.call(document.querySelectorAll( '#grid .grid__item' )).forEach( function( el ) {
+					new Draggable( el, droppableArr, {
+						draggabilly : { containment: document.body },
+						scroll : true,
+						scrollable : '#drop-area',
+						scrollSpeed : 20,
+						scrollSensitivity : 10,
+						onStart : function() {
+
+							// clear timeout: dropAreaTimeout (toggle drop area)
+							clearTimeout( dropAreaTimeout );
+
+						},
+						onDrag : function() {
+							// add class 'drag-active' to body
+							classie.add( body, 'drag-active' );
+							// show dropArea
+							classie.add( dropArea, 'show' );
+						},
+						onEnd : function( wasDropped ) {
+							var afterDropFn = function() {
+								// hide dropArea
+								classie.remove( dropArea, 'show' );
+								// remove class 'drag-active' from body
+								classie.remove( body, 'drag-active' );
+							};
+
+							if( !wasDropped ) {
+								afterDropFn();
+							}
+							else {
+								// after some time hide drop area and remove class 'drag-active' from body
+								clearTimeout( dropAreaTimeout );
+								dropAreaTimeout = setTimeout( afterDropFn, 400 );
+							}
+						}
+					} );
+				} );
+		});
+		</script>
+		<script type="text/javascript" src="js/maps/markers.json" ></script>
+		<script type="text/javascript">
+		(function(markers) {
+			var appliancesCount = markers.length;
+
+			for (var i = 0; i < appliancesCount; i++) {
+				$('#grid').prepend(
+					'<div class="grid__item appliance actions-list__option"><h3 class="app_name">'+markers[i]['name']+'</h3><span class="status_'+markers[i]['application_status']+'"></span></div>'
+				);
+			}
+
+		})(markers);
+		</script>
+
+		<script>
+		$(function() {
+			function doSetSelectedCount() {
+				var n = $( "#grid .j-selected" ).length;
+				$("header .selection_count").text( n + ' appliances selected.');
+				return n;
+			}
+
+		  $(window).click(function () {
+				if( doSetSelectedCount()== 0 ) {
+						$(" #listPanel").removeClass("selectionState");
+						$("#appliance_header").show();
+						$("#selection_header").hide();
+
+				} else {
+			  	setTimeout(function() {
+						doSetSelectedCount();
+						$(" #listPanel").addClass("selectionState");
+	          $("#appliance_header").hide();
+						$("#selection_header").show();
+						//getListPaddingHeight();
+					}, 0);
+				}
+
+		  });
+
+			$(window).on('keyup keydown', function() {
+				if( doSetSelectedCount()== 0 ) {
+					$("#appliance_header").show();
+					$("#selection_header").hide();
+				} else {
+					setTimeout(function(){
+						doSetSelectedCount();
+						$(" #listPanel").addClass("selectionState");
+					}, 0);
+				}
+			});
+
+			// define a handler
+			function doc_keyUp(e) {
+
+					// this would test for whichever key is 40 and the ctrl key at the same time
+					if ( e.ctrlKey && e.keyCode == 70 || e.keyCode == 91 && e.keyCode == 70) {
+							console.log( e.keyCode );
+							// call your function to do the thing
+							document.getElementById("filter_appliances").focus();
+							e.preventDefault();
+
+							return false;
+					}
+					console.log( e.keyCode );
+			}
+			// register the handler
+			document.addEventListener('keyup', doc_keyUp, false);
+
+		});
+
+		</script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('.menu').dropit();
+		});
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+			});
+		</script>
+		
+		<script src="js/selectronic.js"></script>
+		<script>
+		(function( $ ) {
+				'use strict';
+
+				var $el = $('#listPanel'),
+				actions = $el.find('header .menu'),
+				list    = $el.find('.actions-list__group');
+
+				// Attach selectonic plugin
+				list.selectonic({
+					multi: true,
+					keyboard: true,
+					focusBlur: true,
+					selectionBlur: true,
+
+					// Before any changes
+					before: function(e) {
+						if (e.target === actions[0] || $(e.target).is('header .menu li a, header .menu i')) {
+							this.selectonic('cancel');
+						}
+					},
+
+					// When one or more items selectes
+					select: function() {
+						toggleActions(false);
+					},
+
+					// When all items clears selection
+					unselectAll: function() {
+						toggleActions(true);
+					}
+				});
+
+				actions.on('click', 'header .menu li a', function(event) {
+					event.preventDefault();
+					// Get selected items from the list
+					// and pass them to a method
+					doAction( list.selectonic('getSelected') );
+					this.blur();
+				});
+
+				function toggleActions (state) {
+					if (state === void 0) {
+						actions.toggleClass('disabled');
+					} else {
+						actions.toggleClass( 'disabled', state );
+					}
+				}
+
+				function doAction (items) {
+					items.each(function(index, el) {
+						var $el = $(el);
+						$el.addClass('animate');
+						setTimeout(function() {
+							$el.removeClass('animate');
+						}, 300);
+					});
+				}
+
+				toggleActions(true);
+
+				})( jQuery );
+		</script>
+	</body>
+</html>
