@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" ng-app>
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,9 +29,6 @@
 						</svg>
 					</a>
 				</nav>
-				<section id="mapPanel" >
-					.
-				</section>
 				<section id="listPanel" >
 						<header id="appliance_header" >
 							<span id="list_header" style="">Appliances</span>
@@ -39,14 +36,26 @@
 						    <li>
 						        <a href="#"><i class="fa fa-ellipsis-v" style="display: inline-block; position: absolute; right: 0px; "></i></a>
 						        <ul>
-						            <li><a href="#">Create appliances</a></li>
-						            <li><a href="#">Some Action 2</a></li>
-						            <li><a href="#">Some Action 3</a></li>
-						            <li><a href="#">Some Action 4</a></li>
+						            <li><a href="#">Add appliances</a></li>
+						            <li><a href="#">View VPNs</a></li>
 						        </ul>
 						    </li>
 						</ul>
-						<input id="filter_appliances" type="search" placeholder="Filter applianaces">
+						<div id="filter-container">
+							<input id="filter_appliances" type="search" placeholder="Filter applianaces">
+							<div class="field_help">
+								<i class="fa fa-question-circle" >
+								<span class="help_text">
+									<strong>Filter by the following: </strong></br>
+									Name , </br> VPNs, </br>location, </br>status (online or offline) or </br>groups. </br></br>
+									<strong>Tip:</strong></br>
+									Hit <i class="fa fa-arrow-down"></i> to select first item </br>
+									Hit Control/Ctrl + A  to select all items</br>
+								</span>
+								</i>
+							</div>
+
+						</div>
 					</header>
 					<header id="selection_header" style="display: none; ">
 						<div id="list_header" class="selection_count" style=""></div>
@@ -54,20 +63,21 @@
 							<li>
 									<a href="#"><i class="fa fa-ellipsis-v" style="display: inline-block; position: absolute; right: 0px; "></i></a>
 									<ul>
-											<li><a href="#">Some Action 1</a></li>
-											<li><a href="#">Some Action 2</a></li>
-											<li><a href="#">Some Action 3</a></li>
-											<li><a href="#">Some Action 4</a></li>
+											<li><a href="#">Assign to VPN</a></li>
+											<li><a href="#">Assign to new VPN</a></li>
+											<li><a href="#">Update software</a></li>
+											<li><a href="#">Apply firewall rules</a></li>
 									</ul>
 							</li>
 						</ul>
 					</header>
 					<section id="actions-list" class="actions-list">
-						<div id="grid" class="grid actions-list__group j-selectable clearfix" >
-						</div>
+						<ul id="grid" class="grid actions-list__group j-selectable clearfix" >
+						</ul>
+
 					</section>
 				</section>
-				<section id="applicationMap" style="  z-index: 0; position: absolute; top: 0; bottom: 0; left: 72px; right: 300px; "></section>
+				<section id="applicationMap"></section>
 
 			</div><!-- /content -->
 		</div><!-- /container -->
@@ -160,26 +170,6 @@
 		<script src="js/dragdrop.js"></script>
 
 		<script src="js/dropit.js"></script>
-		<script>
-		$(document).ready(function() {
-				var bodyheight = $(window).height();
-				var gridheader = $("#listPanel header").height() + 10;
-				//$("#grid").css("padding-top", gridheader );
-				$("#content").height(bodyheight);
-		});
-
-		$(window).resize(function() {
-		    var bodyheight = $(window).height();
-				var gridheader = $("#listPanel header").height();
-		    //$("#actions-list").height(bodyheight - gridheader);
-				$("#content").height(bodyheight);
-		});
-
-		</script>
-		<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
-    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2'></script>
-		<script type='text/javascript' src='js/maps/markers.json'></script>
-		<script type='text/javascript' src='js/maps/leaf-demo.js'></script>
 
 		<script>
 		$(document).ready(function() {
@@ -221,6 +211,8 @@
 							classie.add( body, 'drag-active' );
 							// show dropArea
 							classie.add( dropArea, 'show' );
+
+
 						},
 						onEnd : function( wasDropped ) {
 							var afterDropFn = function() {
@@ -238,25 +230,12 @@
 								clearTimeout( dropAreaTimeout );
 								dropAreaTimeout = setTimeout( afterDropFn, 400 );
 							}
+
 						}
 					} );
 				} );
 		});
 		</script>
-		<script type="text/javascript" src="js/maps/markers.json" ></script>
-		<script type="text/javascript">
-		(function(markers) {
-			var appliancesCount = markers.length;
-
-			for (var i = 0; i < appliancesCount; i++) {
-				$('#grid').prepend(
-					'<div class="grid__item appliance actions-list__option"><h3 class="app_name">'+markers[i]['name']+'</h3><span class="status_'+markers[i]['application_status']+'"></span></div>'
-				);
-			}
-
-		})(markers);
-		</script>
-
 		<script>
 		$(function() {
 			function doSetSelectedCount() {
@@ -277,7 +256,7 @@
 						$(" #listPanel").addClass("selectionState");
 	          $("#appliance_header").hide();
 						$("#selection_header").show();
-						//getListPaddingHeight();
+
 					}, 0);
 				}
 
@@ -300,14 +279,21 @@
 
 					// this would test for whichever key is 40 and the ctrl key at the same time
 					if ( e.ctrlKey && e.keyCode == 70 || e.keyCode == 91 && e.keyCode == 70) {
-							console.log( e.keyCode );
+							//console.log( e.keyCode );
 							// call your function to do the thing
 							document.getElementById("filter_appliances").focus();
 							e.preventDefault();
 
 							return false;
 					}
-					console.log( e.keyCode );
+					//console.log( e.keyCode );
+					if( $(".appliance").hasClass(".j-selected")){
+						doSetSelectedCount();
+						$(" #listPanel").addClass("selectionState");
+						$("#appliance_header").hide();
+						$("#selection_header").show();
+					};
+
 			}
 			// register the handler
 			document.addEventListener('keyup', doc_keyUp, false);
@@ -320,13 +306,21 @@
 			$('.menu').dropit();
 		});
 		</script>
+
+		<script src="js/selectronic.js"></script>
 		<script type="text/javascript">
-			$(document).ready(function(){
+			$('#filter_appliances').keyup(function (e){
+			  console.log(e.keyCode);
+
+			  if (e.keyCode == 40) {
+						$('#filter_appliances').blur();
+						//$(".appliance:first-child").selectonic("select", 0);
+						$("#grid").selectonic("focus", 0 );
+
+			   }
 
 			});
 		</script>
-		
-		<script src="js/selectronic.js"></script>
 		<script>
 		(function( $ ) {
 				'use strict';
@@ -390,5 +384,67 @@
 
 				})( jQuery );
 		</script>
+		<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2'></script>
+		<script type='text/javascript' src='js/maps/markers.json'></script>
+		<script type='text/javascript' src='js/maps/leaf-demo.js'></script>
+		<script type="text/javascript">
+		(function(markers) {
+			var appliancesCount = markers.length;
+
+			for (var i = 0; i < appliancesCount; i++) {
+				$('#grid').prepend(
+					'<li class="grid__item appliance actions-list__option"><h3 class="app_name">'+markers[i]['name']+'</h3><span class="status_'+markers[i]['application_status']+'"></span></li>'
+				);
+			}
+
+		})(markers);
+		</script>
+		<script>
+		$(document).ready(function() {
+				var bodyheight = $(window).height();
+				$("#content").height(bodyheight);
+				$("#applicationMap").height(bodyheight);
+				$("#actions-list").css("overflow-y", "scroll");
+		});
+
+		$(window).resize(function() {
+				var bodyheight = $(window).height();
+				$("#content").height(bodyheight);
+				$("#applicationMap").height(bodyheight);
+		});
+
+		$( ".appliance" ).mousedown(function() {
+		  $("#actions-list").css("overflow-y", "visible");
+		});
+
+		$( ".appliance" ).mouseup(function() {
+			$("#actions-list").css("overflow-y", "scroll");
+		});
+		</script>
+		<script type="text/javascript">
+		$('#filter_appliances').keyup(function (e){
+			var searchValue = this.value.toLowerCase();
+
+			// error checking - if they've cleared the field
+			// show everything
+			if (searchValue === '') {
+				$("#grid").children().each(function (idx, ele) {
+					$(ele).show();
+				});
+			}
+
+			// Map thru all of the options...
+			$("#grid").children().each(function (idx, ele) {
+					var thisOption = $(ele).find('.app_name').text().toLowerCase();
+
+					// If we can't match the search term..
+					if (thisOption.indexOf(searchValue) === -1) {
+						$(ele).hide();
+					}
+			});
+		});
+		</script>
+
 	</body>
 </html>
