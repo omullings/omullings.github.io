@@ -1,5 +1,12 @@
 /* required styles */
-
+.leaflet-map-pane,
+.leaflet-tile-pane,
+.leaflet-tile-container,
+.leaflet-image-layer,
+.leaflet-layer {
+height: 100%;
+width: 100%;
+}
 .leaflet-map-pane,
 .leaflet-tile,
 .leaflet-marker-icon,

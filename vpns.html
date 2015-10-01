@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" ng-app>
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,12 +13,14 @@
 		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 		<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/dropit.css"> <!-- Resource style -->
+		<script src="js/jquery-2.1.1.js"></script>
 		<script src="js/modernizr.custom.js"></script>
 	</head>
 	<body class="skin-5">
 		<div class="container">
 			<div id="content" class="content" style="position: relative; overflow-y: hidden; ">
-				<nav >
+				<nav class="navigation" >
 					<a href="#cd-nav" class="cd-nav-trigger">Menu
 						<span class="cd-nav-icon"></span>
 
@@ -27,49 +29,64 @@
 						</svg>
 					</a>
 				</nav>
+				<section id="listPanel" >
+						<header id="appliance_header" >
+							<span id="list_header" style="">Virtual Private Networks</span>
+							<ul class="menu">
+						    <li>
+						        <a href="#"><i class="fa fa-ellipsis-v" style="display: inline-block; position: absolute; right: 0px; "></i></a>
+						        <ul>
+						            <li><a href="#">Add VPNs</a></li>
+						            <li><a href="#">View appliances</a></li>
+						        </ul>
+						    </li>
+						</ul>
+						<div id="filter-container">
+							<input id="filter_appliances" type="search" placeholder="Filter networks">
+							<div class="field_help">
+								<i class="fa fa-question-circle" >
+								<span class="help_text">
+									<strong>Filter by the following: </strong></br>
+									Name, </br>Topology or </br> appliance</br></br>
+									<strong>Tip:</strong></br>
+									Hit <i class="fa fa-arrow-down"></i> to select first item </br>
+								</span>
+								</i>
+							</div>
 
-				<section style=" width: calc(100% - 300px); display: inline-block; float: left; position: relative;">
-					.
-				</section>
-				<section style="width: 300px;  height: 100%; display: inline-block;  position: relative; ">
-
-		<header style="position: relative; display: block; padding: 15px 20px 5px 20px ;">
-			<span style=" text-transform: uppercase;
-font-size: 0.7em;
-font-family: 'Montserrat', sans-serif;
-color: #91A6B7;  ">Virtual Private Networks</span>
-			<i class="fa fa-ellipsis-v" style="display: inline-block; position: absolute; right: 20px; "></i>
-	</header>
-					<input type="search" placeholder="Filter VPNs" style=" margin: 0; background: rgba(0, 0, 0, 0.1); border-radius: 2px; border: none; width: 240px; padding: 10px; font-size: 12px; font-weight: 200; display: block;  margin: 5px 20px 10px 20px; ">
-					<div id="grid" class="grid clearfix" >
-						<div class="grid__item">
-							<i class="fa fa-empire"></i>
-							<span class="vpn__info"></span>
 						</div>
-						<div class="grid__item"><i class="fa fa-empire"></i></div>
-						<div class="grid__item"><i class="fa fa-connectdevelop"></i></div>
-						<div class="grid__item"><i class="fa fa-connectdevelop"></i></div>
-						<div class="grid__item"><i class="fa fa-connectdevelop"></i></div>
-						<div class="grid__item"><i class="fa fa-empire"></i></div>
-						<div class="grid__item"><i class="fa fa-empire"></i></div>
-						<div class="grid__item"><i class="fa fa-connectdevelop"></i></div>
-						<div class="grid__item"><i class="fa fa-empire"></i></div>
-						<div class="grid__item"><i class="fa fa-empire"></i></div>
-						<div class="grid__item"><i class="fa fa-connectdevelop"></i></div>
-						<div class="grid__item"><i class="fa fa-connectdevelop"></i></div>
-						<div class="grid__item"><i class="fa fa-connectdevelop"></i></div>
-						<div class="grid__item"><i class="fa fa-empire"></i></div>
-						<div class="grid__item"><i class="fa fa-empire"></i></div>
-						<div class="grid__item"><i class="fa fa-connectdevelop"></i></div>
-					</div>
+					</header>
+
+					<section id="actions-list" class="actions-list">
+						<ul id="grid" class="grid actions-list__group clearfix" >
+							<li class="grid__item"><i class="fa fa-empire"></i></li>
+							<li class="grid__item"><i class="fa fa-connectdevelop"></i></li>
+							<li class="grid__item"><i class="fa fa-connectdevelop"></i></li>
+							<li class="grid__item"><i class="fa fa-connectdevelop"></i></li>
+							<li class="grid__item"><i class="fa fa-empire"></i></li>
+							<li class="grid__item"><i class="fa fa-empire"></i></li>
+							<li class="grid__item"><i class="fa fa-connectdevelop"></i></li>
+							<li class="grid__item"><i class="fa fa-empire"></i></li>
+							<li class="grid__item"><i class="fa fa-empire"></i></li>
+							<li class="grid__item"><i class="fa fa-connectdevelop"></i></li>
+							<li class="grid__item"><i class="fa fa-connectdevelop"></i></li>
+							<li class="grid__item"><i class="fa fa-connectdevelop"></i></li>
+							<li class="grid__item"><i class="fa fa-empire"></i></li>
+							<li class="grid__item"><i class="fa fa-empire"></i></li>
+							<li class="grid__item"><i class="fa fa-connectdevelop"></i></li>
+						</ul>
+
+					</section>
 				</section>
-				<div id="applicationMap" style="  z-index: 0; position: absolute; top: 0; bottom: 0; left: 0; right: 300px; "></div>
+				<section id="applicationMap"></section>
+
 			</div><!-- /content -->
 		</div><!-- /container -->
+
 		<div id="cd-nav" class="cd-nav">
           <div class="cd-navigation-wrapper">
             <div class="cd-primary-nav cd-half-block ">
-							<nav>
+              <nav>
               <!--  <h3>Dashboard</h3>
                 <ul class="">
                   <li><a href="#/overview" class="">Overview</a></li>
@@ -118,64 +135,33 @@ color: #91A6B7;  ">Virtual Private Networks</span>
           </div> <!-- .cd-navigation-wrapper -->
         </div> <!-- .cd-nav -->
 
-		<script src="js/jquery-2.1.1.js"></script>
 		<script src="js/main.js"></script> <!-- Resource jQuery -->
-		<script>
+		<script src="js/dropit.js"></script>
+		<script type="text/javascript">
 		$(document).ready(function() {
-		    var bodyheight = $(document).height();
-		    $("#grid").height(bodyheight);
-				$("#applicationMap").height(bodyheight);
-				$("#content").height(bodyheight);
-		});
-		$(window).resize(function() {
-		    var bodyheight = $(document).height();
-		    $("#grid").height(bodyheight);
-				$("#applicationMap").height(bodyheight);
-				$("#content").height(bodyheight);
-
+			$('.menu').dropit();
 		});
 		</script>
-
+		<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2'></script>
+		<script type='text/javascript' src='js/maps/markers.json'></script>
+		<script type='text/javascript' src='js/maps/leaf-demo.js'></script>
 		<script>
+		$(document).ready(function() {
+				var bodyheight = $(window).height();
+				$("#content").height(bodyheight);
+				$("#applicationMap").height(bodyheight);
+				$("#actions-list").css("overflow-y", "scroll");
+		});
 
-			var map;
-			function initMap() {
+		$(window).resize(function() {
+				var bodyheight = $(window).height();
+				$("#content").height(bodyheight);
+				$("#applicationMap").height(bodyheight);
+		});
 
-				// Basic options for a simple Google Map
-				// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-				var mapOptions = {
-						// How zoomed in you want the map to start at (always required)
-						zoom: 6,
-						disableDefaultUI: true,
-
-						// The latitude and longitude to center the map (always required)
-						center: new google.maps.LatLng(24.7251918, 46.8225288), // New York
-
-						// How you would like to style the map.
-						// This is where you would paste any style found on Snazzy Maps.
-						styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#3e606f"},{"weight":2},{"gamma":0.84}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#1a3541"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#2c5a71"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#2c5a71"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#29768a"},{"lightness":-37}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#193341"}]}]
-
-				};
-
-				// Get the HTML DOM element that will contain your map
-				// We are using a div with id="map" seen below in the <body>
-				var mapElement = document.getElementById('applicationMap');
-
-				// Create the Google Map using our element and options defined above
-				var map = new google.maps.Map(mapElement, mapOptions);
-
-				// Let's also add a marker while we're at it
-				var marker = new google.maps.Marker({
-						position: new google.maps.LatLng(40.6700, -73.9400),
-						map: map,
-						title: 'Snazzy!'
-				});
-
-			}
-
-			</script>
-			<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
-		async defer></script>
+		</script>
+		<script async src="//d1ks1friyst4m3.cloudfront.net/toolbar/prod/td.js" data-trackduck-id="560d8ba74660d9d2753f20b5"></script>
 
 	</body>
 </html>

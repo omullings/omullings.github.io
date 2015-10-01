@@ -168,7 +168,7 @@ a:hover, a:focus {
 
 .grid {
   margin: 0;
-  padding: 0px 1em; }
+  padding: 0px; }
 
 .grid__item {
   margin: 0.5%;
@@ -418,6 +418,15 @@ html .navigation-is-open .bar {
   display: inline-block;
   max-width: 50%; }
 
+.navigation {
+  position: relative;
+  width: 72px;
+  height: 100%;
+  background-color: #fff;
+  display: inline-block;
+  border-right: 1px solid #f1f1f1;
+  float: left; }
+
 /* --------------------------------
 
 Main Components
@@ -666,13 +675,6 @@ main {
     -o-transform: translateX(0);
     transform: translateX(0); }
 
-.navigation {
-  position: relative;
-  width: 72px;
-  height: 100%;
-  background-color: white;
-  display: inline-block; }
-
 .app_name {
   font-size: 12px;
   font-weight: bold;
@@ -715,23 +717,18 @@ main {
   position: relative; }
 
 #applicationMap {
-  height: 100%;
-  min-height: 100%; }
-
-#mapPanel, #listPanel {
+  min-height: 100%;
+  width: calc( 100% - 372px);
   display: inline-block;
-  position: relative;
-  height: 100%; }
-
-#mapPanel {
-  width: calc(100% - 380px);
-  display: none; }
+  z-index: 0;
+  position: relative; }
 
 #listPanel {
-  width: 300px;
+  display: inline-block;
+  float: left;
+  position: relative;
   height: 100%;
-  float: right;
-  position: relative; }
+  width: 300px; }
   #listPanel header {
     position: absolute;
     top: 0;
@@ -745,17 +742,46 @@ main {
     #listPanel header .selection_count {
       position: relative;
       padding: 0px 0px 15px 0px; }
-    #listPanel header #filter_appliances {
-      margin: 0;
-      background: rgba(0, 0, 0, 0.1);
-      border-radius: 2px;
-      border: 1px solid #ccc;
-      width: 240px;
-      padding: 10px;
-      font-size: 12px;
-      font-weight: 200;
-      display: block;
-      margin: 15px 20px 10px 0px; }
+    #listPanel header #filter-container {
+      position: relative; }
+      #listPanel header #filter-container #filter_appliances {
+        margin: 0;
+        background: #fafafa;
+        border-radius: 2px;
+        border: 1px solid #ddd;
+        width: 240px;
+        padding: 10px;
+        font-size: 12px;
+        font-weight: 200;
+        display: block;
+        margin: 15px 20px 10px 0px; }
+      #listPanel header #filter-container .field_help {
+        position: absolute;
+        right: 8px;
+        top: 10px; }
+        #listPanel header #filter-container .field_help i.fa-question-circle {
+          font-size: 16px;
+          color: #ccc;
+          position: relative; }
+          #listPanel header #filter-container .field_help i.fa-question-circle span {
+            display: none;
+            background-color: #fff;
+            border-radius: 3px;
+            left: 18px;
+            top: -22px;
+            padding: 15px;
+            position: absolute;
+            font-family: "Source Sans Pro", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+            font-size: 14px;
+            color: #333;
+            text-shadow: 0 1px 0 #fff;
+            width: 220px;
+            line-height: 1.5em;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+        #listPanel header #filter-container .field_help i:hover {
+          color: #666; }
+          #listPanel header #filter-container .field_help i:hover span {
+            display: inline-block; }
   #listPanel #list_header {
     text-transform: uppercase;
     font-size: 0.7em;
@@ -764,13 +790,12 @@ main {
     display: inline-block; }
   #listPanel #actions-list {
     height: 100%;
-    position: relative; }
-  #listPanel #grid {
+    position: relative;
     padding: 112px 10px 40px 10px; }
 
 .selectionState #appliance_header {
   display: none; }
-.selectionState #grid {
+.selectionState #actions-list {
   padding-top: 64px !important; }
 .selectionState #selection_header {
   display: block; }
