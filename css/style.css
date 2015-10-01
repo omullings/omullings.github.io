@@ -720,8 +720,8 @@ main {
   min-height: 100%;
   width: calc( 100% - 372px);
   display: inline-block;
-  float: left;
-  z-index: 0; }
+  z-index: 0;
+  position: relative; }
 
 #listPanel {
   display: inline-block;
