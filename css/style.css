@@ -791,11 +791,12 @@ main {
   #listPanel #actions-list {
     height: 100%;
     position: relative;
-    padding: 112px 10px 40px 10px; }
+    padding: 10px 10px 40px 10px;
+    margin-top: 102px; }
 
 .selectionState #appliance_header {
   display: none; }
 .selectionState #actions-list {
-  padding-top: 64px !important; }
+  margin-top: 54px !important; }
 .selectionState #selection_header {
   display: block; }
