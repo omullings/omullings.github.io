@@ -153,19 +153,6 @@ table {
 .clearfix:after {
   clear: both; }
 
-a:hover, a:focus {
-  color: #fff; }
-
-.skin-5 {
-  background: #fff;
-  color: #666; }
-
-.skin-5 a {
-  color: #333; }
-
-.skin-5 a:hover, .skin-4 a:focus {
-  color: #737369; }
-
 .grid {
   margin: 0;
   padding: 0px; }
@@ -427,6 +414,259 @@ html .navigation-is-open .bar {
   border-right: 1px solid #f1f1f1;
   float: left; }
 
+.cd-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  -webkit-transition: visibility 0s 0.3s;
+  -moz-transition: visibility 0s 0.3s;
+  transition: visibility 0s 0.3s;
+  z-index: 1;
+  border-right: 1px solid #f1f1f1; }
+  .cd-panel::after {
+    /* overlay layer */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    -webkit-transition: background 0.3s 0.3s;
+    -moz-transition: background 0.3s 0.3s;
+    transition: background 0.3s 0.3s; }
+  .cd-panel::after, .cd-panel::before {
+    content: ''; }
+  .cd-panel.is-visible {
+    visibility: visible;
+    -webkit-transition: visibility 0s 0s;
+    -moz-transition: visibility 0s 0s;
+    transition: visibility 0s 0s; }
+    .cd-panel.is-visible::after {
+      background: rgba(0, 0, 0, 0.6);
+      -webkit-transition: background 0.3s 0s;
+      -moz-transition: background 0.3s 0s;
+      transition: background 0.3s 0s; }
+    .cd-panel.is-visible .cd-panel-close::before {
+      -webkit-animation: cd-close-1 0.6s 0.3s;
+      -moz-animation: cd-close-1 0.6s 0.3s;
+      animation: cd-close-1 0.6s 0.3s; }
+    .cd-panel.is-visible .cd-panel-close::after {
+      -webkit-animation: cd-close-2 0.6s 0.3s;
+      -moz-animation: cd-close-2 0.6s 0.3s;
+      animation: cd-close-2 0.6s 0.3s; }
+
+@-webkit-keyframes cd-close-1 {
+  0%, 50% {
+    -webkit-transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(45deg); } }
+@-moz-keyframes cd-close-1 {
+  0%, 50% {
+    -moz-transform: rotate(0); }
+  100% {
+    -moz-transform: rotate(45deg); } }
+@keyframes cd-close-1 {
+  0%, 50% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); } }
+@-webkit-keyframes cd-close-2 {
+  0%, 50% {
+    -webkit-transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(-45deg); } }
+@-moz-keyframes cd-close-2 {
+  0%, 50% {
+    -moz-transform: rotate(0); }
+  100% {
+    -moz-transform: rotate(-45deg); } }
+@keyframes cd-close-2 {
+  0%, 50% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); } }
+.cd-panel-header {
+  position: absolute;
+  width: 90%;
+  height: 50px;
+  line-height: 50px;
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  -webkit-transition: top 0.3s 0s;
+  -moz-transition: top 0.3s 0s;
+  transition: top 0.3s 0s; }
+  .cd-panel-header h2 {
+    font-weight: bold;
+    padding-left: 5%; }
+  .from-right .cd-panel-header, .from-left .cd-panel-header {
+    top: -50px; }
+  .from-right .cd-panel-header {
+    right: 0; }
+  .from-left .cd-panel-header {
+    left: 0; }
+  .is-visible .cd-panel-header {
+    top: 0;
+    -webkit-transition: top 0.3s 0.3s;
+    -moz-transition: top 0.3s 0.3s;
+    transition: top 0.3s 0.3s; }
+  @media only screen and (min-width: 768px) {
+    .cd-panel-header {
+      width: 70%; } }
+  @media only screen and (min-width: 1170px) {
+    .cd-panel-header {
+      width: 50%; } }
+
+.cd-panel-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 60px;
+  color: #333;
+  /* image replacement */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap; }
+  .cd-panel-close::after, .cd-panel-close::before {
+    content: ''; }
+  .cd-panel-close::before, .cd-panel-close::after {
+    /* close icon created in CSS */
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    height: 3px;
+    width: 20px;
+    background-color: #333;
+    /* this fixes a bug where pseudo elements are slighty off position */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .cd-panel-close::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .cd-panel-close::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .no-touch .cd-panel-close:hover {
+    background-color: #333; }
+    .no-touch .cd-panel-close:hover::before, .no-touch .cd-panel-close:hover::after {
+      background-color: #ffffff;
+      -webkit-transition-property: -webkit-transform;
+      -moz-transition-property: -moz-transform;
+      transition-property: transform;
+      -webkit-transition-duration: 0.3s;
+      -moz-transition-duration: 0.3s;
+      transition-duration: 0.3s; }
+    .no-touch .cd-panel-close:hover::before {
+      -webkit-transform: rotate(220deg);
+      -moz-transform: rotate(220deg);
+      -ms-transform: rotate(220deg);
+      -o-transform: rotate(220deg);
+      transform: rotate(220deg); }
+    .no-touch .cd-panel-close:hover::after {
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+      transform: rotate(135deg); }
+
+.cd-panel-container {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  top: 0;
+  background: #FFF;
+  z-index: 1;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  transition-delay: 0.3s; }
+  .from-right .cd-panel-container {
+    right: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -o-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); }
+  .from-left .cd-panel-container {
+    left: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); }
+  .is-visible .cd-panel-container {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    transition-delay: 0s; }
+  @media only screen and (min-width: 768px) {
+    .cd-panel-container {
+      width: 70%; } }
+  @media only screen and (min-width: 1170px) {
+    .cd-panel-container {
+      width: 50%; } }
+
+.cd-panel-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 70px 5%;
+  overflow: auto;
+  /* smooth scrolling on touch devices */
+  -webkit-overflow-scrolling: touch; }
+  .cd-panel-content p {
+    font-size: 14px;
+    font-size: 0.875rem;
+    color: #333;
+    line-height: 1.4;
+    margin: 2em 0; }
+    .cd-panel-content p:first-of-type {
+      margin-top: 0; }
+  @media only screen and (min-width: 768px) {
+    .cd-panel-content p {
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.6; } }
+
 /* --------------------------------
 
 Main Components
@@ -459,11 +699,6 @@ main {
   -webkit-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
   -moz-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
   transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99); }
-  main h1, main p {
-    text-align: center; }
-  main h1 {
-    font-size: 2.6rem;
-    margin-bottom: 1em; }
   main p {
     font-family: "Montserrat", sans-serif;
     color: #d6dfdb;
@@ -716,19 +951,25 @@ main {
 #content {
   position: relative; }
 
-#applicationMap {
-  min-height: 100%;
+#mapContainer {
+  height: 100%;
   width: calc( 100% - 372px);
   display: inline-block;
-  z-index: 0;
-  position: relative; }
+  position: relative;
+  z-index: 0; }
+
+#applicationMap {
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
 
 #listPanel {
   display: inline-block;
   float: left;
   position: relative;
   height: 100%;
-  width: 300px; }
+  width: 300px;
+  border-right: 1px solid #f1f1f1; }
   #listPanel header {
     position: absolute;
     top: 0;
