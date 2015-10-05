@@ -918,12 +918,13 @@ main {
   vertical-align: top; }
 
 .status_1 {
-  background-color: #1D9D1D;
-  border: 1px solid #417505;
-  border-radius: 50px;
-  width: 8px;
-  height: 8px;
-  float: right; }
+  postion: relative;
+  float: right;
+  margin-top: -10px; }
+  .status_1 i {
+    color: #1D9D1D;
+    width: 16px;
+    height: 16px; }
 
 .actions-list__option.j-selected {
   background-color: #E5F7E5;
