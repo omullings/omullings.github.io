@@ -605,8 +605,21 @@
 			var appliancesCount = markers.length;
 
 			for (var i = 0; i < appliancesCount; i++) {
+				var application_status = markers[i]['application_status'];
+console.log( application_status );
+
+				var online_status = 1 ;
+				var down_status = 2 ;
+				var offline_status = 3 ;
+
 				$('#grid').prepend(
-					'<li class="grid__item appliance actions-list__option cd-btn"><h3 class="app_name">'+markers[i]['name']+'</h3><span class="status_'+markers[i]['application_status']+'"><i class="fa fa-caret-up"></i></span></li>'
+					( application_status === online_status )?
+						'<li class="grid__item appliance actions-list__option cd-btn"><h3 class="app_name">' + markers[i]['name'] + '</h3><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-caret-up"></i></span></li>'
+					: ( application_status ===  down_status )?
+						'<li class="grid__item appliance actions-list__option cd-btn"><h3 class="app_name">' + markers[i]['name'] + '</h3><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-caret-down"></span></li>'
+					: ( application_status ===  offline_status )?
+						'<li class="grid__item appliance actions-list__option cd-btn"><h3 class="app_name">' + markers[i]['name'] + '</h3><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-minus"></i></span></li>'
+          : ''
 				);
 			}
 

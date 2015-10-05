@@ -170,7 +170,7 @@ table {
   position: relative; }
 
 .grid__item:hover {
-  background: #ccc; }
+  background: #fafafa; }
 
 .appliance:hover {
   cursor: move;
@@ -923,6 +923,24 @@ main {
   margin-top: -10px; }
   .status_1 i {
     color: #1D9D1D;
+    width: 16px;
+    height: 16px; }
+
+.status_2 {
+  postion: relative;
+  float: right;
+  margin-top: -8px; }
+  .status_2 i {
+    color: red;
+    width: 16px;
+    height: 16px; }
+
+.status_3 {
+  postion: relative;
+  float: right;
+  margin-top: -8px; }
+  .status_3 i {
+    color: #ccc;
     width: 16px;
     height: 16px; }
 
