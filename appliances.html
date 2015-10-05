@@ -18,6 +18,79 @@
 		<script src="js/modernizr.custom.js"></script>
 	</head>
 	<body >
+		<div id="preloader" >
+			<style>
+				#preloader .companyPanel{
+
+				}
+				#preloader {
+				    display: table;
+				    position: absolute;
+				    height: 100%;
+				    width: 100%;
+				}
+
+				.companyPanel {
+				    display: table-cell;
+				    vertical-align: middle;
+				}
+
+				.cd-contact-info {
+				    margin-left: auto;
+				    margin-right: auto;
+				    width: auto;
+				}
+
+				.cd-contact-info {
+					margin-top: 30px;
+					text-align: center;
+					padding: 25px 0;
+					background: white;
+					border-radius: 3px;
+					width: 360px;
+					min-height: 500px;}
+
+					.cd-contact-info p{
+						font-weight: bold;
+						font-family: 'Montserrat', sans-serif;
+					}
+
+					.cd-contact-info a {
+						color: #333;
+						text-decoration: none;
+						padding-bottom: 2px;
+						border-bottom: 1px dotted #333;
+					}
+
+					.cd-contact-info p,.cd-contact-info a,.cd-contact-info address {
+						margin: 20px 40px;
+					}
+
+					.cd-contact-info address span {
+						display: block;
+						color: #666;
+						line-height: 1.5em;
+					}
+
+			</style>
+			<div class="cd-half-block  companyPanel" >
+
+				<div class="cd-contact-info">
+					<img src="img/icon-globus-vpn.svg" class="rngle-logo">
+				<p>GLOBUS VPN</p>
+				<a href="mailto:info@infosecglobal.com">info@infosecglobal.com</a>
+				<address>
+					<ul >
+						<li>
+							<span>Hardturmstrasse 103</span>
+							<span>8005, Zürich</span>
+							<span>Switzerland</span>
+						</li>
+					</ul>
+				</address>
+			</div>
+			</div> <!-- .cd-half-block -->
+		</div>
 		<div class="container">
 			<div id="content" class="content" style="position: relative; overflow-y: hidden; ">
 				<style media="screen">
@@ -65,6 +138,18 @@
 						border-bottom: 1px solid #f1f1f1;
 						border-top: 1px solid #f1f1f1;
 					}
+
+					div#preloader {
+						position: fixed;
+						left: 0;
+						top: 0;
+						z-index: 999;
+						width: 100%;
+						height: 100%;
+						overflow: visible;
+						background: #fff ;
+					}
+
 				</style>
 				<nav class="navigation" ><!---
 					<a href="#cd-nav" class="cd-nav-trigger">Menu
@@ -420,6 +505,17 @@
 		<script type="text/javascript">
 		$(document).ready(function() {
 			$('.menu').dropit();
+
+		jQuery(document).ready(function($) {
+			// site preloader -- also uncomment the div in the header and the css style for #preloader
+			$(window).load(function(){
+				setTimeout(function() {
+					$('#preloader').fadeOut( 2000 ,function(){$(this).remove();});
+				}, 2000);
+
+			});
+
+			});
 		});
 		</script>
 
@@ -528,7 +624,7 @@
 		$(window).resize(function() {
 				var bodyheight = $(window).height();
 				$("#content").height(bodyheight);
-				//$("#applicationMap").height(bodyheight);
+				$("#applicationMap").height(bodyheight);
 		});
 
 		$( ".appliance" ).mousedown(function() {
