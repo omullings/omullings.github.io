@@ -26,7 +26,7 @@ for ( var i=0; i < markers.length; ++i )
     var myIcon = L.icon({
         iconUrl: myURL + 'images/up.svg',
         iconRetinaUrl: myURL + 'images/up.svg',
-        iconSize: [24, 24],
+        iconSize: [36, 36],
         iconAnchor: [9, 21],
         popupAnchor: [0, -14]
     });
@@ -34,7 +34,7 @@ for ( var i=0; i < markers.length; ++i )
     var myIcon = L.icon({
         iconUrl: myURL + 'images/down.svg',
         iconRetinaUrl: myURL + 'images/down.svg',
-        iconSize: [24, 24],
+        iconSize: [36, 36],
         iconAnchor: [9, 21],
         popupAnchor: [0, -14]
     });
@@ -42,7 +42,7 @@ for ( var i=0; i < markers.length; ++i )
     var myIcon = L.icon({
         iconUrl: myURL + 'images/offline.svg',
         iconRetinaUrl: myURL + 'images/offline.svg',
-        iconSize: [24, 24],
+        iconSize: [36, 36],
         iconAnchor: [9, 21],
         popupAnchor: [0, -14]
     });

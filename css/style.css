@@ -924,7 +924,8 @@ main {
   .status_1 i {
     color: #1D9D1D;
     width: 16px;
-    height: 16px; }
+    height: 16px;
+    font-size: 16px; }
 
 .status_2 {
   postion: relative;
@@ -933,16 +934,18 @@ main {
   .status_2 i {
     color: red;
     width: 16px;
-    height: 16px; }
+    height: 16px;
+    font-size: 16px; }
 
 .status_3 {
   postion: relative;
   float: right;
   margin-top: -8px; }
   .status_3 i {
-    color: #ccc;
+    color: #8DA2A8;
     width: 16px;
-    height: 16px; }
+    height: 16px;
+    font-size: 16px; }
 
 .actions-list__option.j-selected {
   background-color: #E5F7E5;
