@@ -17,34 +17,34 @@ for ( var i=0; i < markers.length; ++i )
 {
   var application_status = markers[i]['application_status'];
 
-  var online_status = 1 ;
-  var down_status = 2 ;
-  var offline_status = 3 ;
+  var online_status = "online" ;
+  var down_status = "down" ;
+  var offline_status = "offline" ;
 
 
     if( application_status === online_status ){
     var myIcon = L.icon({
         iconUrl: myURL + 'images/up.svg',
         iconRetinaUrl: myURL + 'images/up.svg',
-        iconSize: [36, 36],
-        iconAnchor: [9, 21],
-        popupAnchor: [9, -12]
+        iconSize: [ 24, 24],
+        iconAnchor: [12, 21],
+        popupAnchor: [ 0 , -14]
     });
   } else if (application_status ===  down_status ) {
     var myIcon = L.icon({
         iconUrl: myURL + 'images/down.svg',
         iconRetinaUrl: myURL + 'images/down.svg',
-        iconSize: [36, 36],
-        iconAnchor: [9, 21],
-        popupAnchor: [9, -12]
+        iconSize: [24, 24],
+        iconAnchor: [12, 21],
+        popupAnchor: [ 0 , -14]
     });
   } else if (application_status ===  offline_status ) {
     var myIcon = L.icon({
         iconUrl: myURL + 'images/offline.svg',
         iconRetinaUrl: myURL + 'images/offline.svg',
-        iconSize: [36, 36],
-        iconAnchor: [9, 21],
-        popupAnchor: [9, -12]
+        iconSize: [24, 24],
+        iconAnchor: [12, 21],
+        popupAnchor: [ 0 , -14]
     });
   } else {
 

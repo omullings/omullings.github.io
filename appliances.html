@@ -215,9 +215,12 @@
 				<section id="mapContainer">
 					<div id="applicationMap" style="height: 800px; "></div>
 					<div class="cd-panel from-left">
-						<header class="cd-panel-header">
-							<h2>Appliance name</h2>
+						<header class="cd-panel-header ">
+							<h2 id="application_name"> </h2>
 							<a href="#0" class="cd-panel-close">Close</a>
+							<div class="detail_summary" style="min-height: 160px; width: 100%; border-bottom: 1px solid #f1f1f1; ">
+								<span id="application_status"></span>
+							</div>
 						</header>
 						<div class="cd-panel-container">
 							<div class="cd-panel-content">
@@ -324,7 +327,6 @@
 		<script src="js/dragdrop.js"></script>
 
 		<script src="js/dropit.js"></script>
-
 		<script>
 		$(document).ready(function() {
 				var body = document.body,
@@ -401,12 +403,17 @@
 
 			//open the lateral panel
 			$('.cd-btn').on('click', function(event){
+
 				event.preventDefault();
+
 				if( doSetSelectedCount() < 2 ) {
+
 					$('.cd-panel').addClass('is-visible');
+
 				} else {
 
 				}
+
 			});
 
 		  $(window).click(function () {
@@ -518,6 +525,24 @@
 			});
 		});
 		</script>
+		<script type="text/javascript">
+		$(function() {
+
+			$('.cd-btn').on('click', function(event){
+
+				event.preventDefault();
+
+				var app_name = $( event.target ).attr('data-name');
+				var app_status = $( event.target ).attr('data-status');
+
+				//console.log( app_name );
+				$('#application_name').html( app_name );
+				$('#application_status').html( app_status );
+
+			});
+
+		});
+		</script>
 
 		<script src="js/selectronic.js"></script>
 		<script type="text/javascript">
@@ -607,17 +632,17 @@
 			for (var i = 0; i < appliancesCount; i++) {
 				var application_status = markers[i]['application_status'];
 
-				var online_status = 1 ;
-				var down_status = 2 ;
-				var offline_status = 3 ;
+				var online_status = "online" ;
+				var down_status = "down" ;
+				var offline_status = "offline" ;
 
 				$('#grid').prepend(
 					( application_status === online_status )?
-						'<li class="grid__item appliance actions-list__option cd-btn"><h3 class="app_name">' + markers[i]['name'] + '</h3><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-circle"></i></span></li>'
+						'<li data-name="'+ markers[i]['name'] +'" data-status="'+ markers[i]['application_status'] +'" class="grid__item appliance actions-list__option cd-btn"><h3 class="app_name">' + markers[i]['name'] + '</h3><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-circle"></i></span></li>'
 					: ( application_status ===  down_status )?
-						'<li class="grid__item appliance actions-list__option cd-btn"><h3 class="app_name">' + markers[i]['name'] + '</h3><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-exclamation-triangle"></i></span></li>'
+						'<li data-name="'+ markers[i]['name'] +'" data-status="'+ markers[i]['application_status'] +'" class="grid__item appliance actions-list__option cd-btn"><h3 class="app_name">' + markers[i]['name'] + '</h3><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-exclamation-triangle"></i></span></li>'
 					: ( application_status ===  offline_status )?
-						'<li class="grid__item appliance actions-list__option cd-btn"><h3 class="app_name">' + markers[i]['name'] + '</h3><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-minus"></i></span></li>'
+						'<li data-name="'+ markers[i]['name'] +'" data-status="'+ markers[i]['application_status'] +'" class="grid__item appliance actions-list__option cd-btn"><h3 class="app_name">' + markers[i]['name'] + '</h3><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-minus"></i></span></li>'
           : ''
 				);
 			}
