@@ -5,12 +5,10 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="offline" sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)" stroke="#3E5154">
-            <path d="M102.5,205 C131.588912,205 157.84767,192.882672 176.504013,173.420277 C194.154303,155.007402 205,130.020275 205,102.5 C205,45.8908131 159.109187,0 102.5,0 C45.8908131,0 0,45.8908131 0,102.5 C0,159.109187 45.8908131,205 102.5,205 Z" id="glow" stroke-opacity="0.3" stroke-width="2.178" fill-opacity="0.3" fill="#8DA2A8" sketch:type="MSShapeGroup"></path>
-            <circle id="core" stroke-width="4" fill="#8DA2A8" sketch:type="MSShapeGroup" cx="102.5" cy="102.5" r="47.5"></circle>
-            <g id="x-copy" transform="translate(77.000000, 77.000000)" fill="#3E5154" sketch:type="MSShapeGroup">
-                <path d="M16.8076118,25.5 L2.6718121,39.6357997 C0.127239313,42.1803725 0.127068325,46.2961159 2.66547622,48.8345238 C5.19871897,51.3677665 9.32229315,51.370095 11.8642003,48.8281879 L26,34.6923882 L40.1357997,48.8281879 C42.6777069,51.370095 46.801281,51.3677665 49.3345238,48.8345238 C51.8729317,46.2961159 51.8727607,42.1803725 49.3281879,39.6357997 L35.1923882,25.5 L49.3281879,11.3642003 C51.8727607,8.81962747 51.8729317,4.70388412 49.3345238,2.16547622 C46.801281,-0.367766526 42.6777069,-0.370095007 40.1357997,2.1718121 L26,16.3076118 L11.8642003,2.1718121 C9.32229315,-0.370095007 5.19871897,-0.367766526 2.66547622,2.16547622 C0.127068325,4.70388412 0.127239313,8.81962747 2.6718121,11.3642003 L16.8076118,25.5 Z" id="Rectangle-14"></path>
-            </g>
+        <g id="offline" sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)">
+            <path d="M102.5,205 C131.588912,205 157.84767,192.882672 176.504013,173.420277 C194.154303,155.007402 205,130.020275 205,102.5 C205,45.8908131 159.109187,0 102.5,0 C45.8908131,0 0,45.8908131 0,102.5 C0,159.109187 45.8908131,205 102.5,205 Z" id="glow" stroke-opacity="0.3" stroke="#3E5154" stroke-width="2.178" fill-opacity="0.3" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <circle id="core" stroke="#3E5154" stroke-width="4" fill="#FFFFFF" sketch:type="MSShapeGroup" cx="102.5" cy="102.5" r="47.5"></circle>
+            <rect id="-" fill="#3E5154" sketch:type="MSShapeGroup" x="77" y="97" width="51" height="11" rx="8"></rect>
         </g>
     </g>
 </svg>
