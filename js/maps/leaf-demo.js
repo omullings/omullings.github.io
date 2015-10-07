@@ -28,7 +28,7 @@ for ( var i=0; i < markers.length; ++i )
         iconRetinaUrl: myURL + 'images/up.svg',
         iconSize: [36, 36],
         iconAnchor: [9, 21],
-        popupAnchor: [0, -14]
+        popupAnchor: [9, -12]
     });
   } else if (application_status ===  down_status ) {
     var myIcon = L.icon({
@@ -36,7 +36,7 @@ for ( var i=0; i < markers.length; ++i )
         iconRetinaUrl: myURL + 'images/down.svg',
         iconSize: [36, 36],
         iconAnchor: [9, 21],
-        popupAnchor: [0, -14]
+        popupAnchor: [9, -12]
     });
   } else if (application_status ===  offline_status ) {
     var myIcon = L.icon({
@@ -44,7 +44,7 @@ for ( var i=0; i < markers.length; ++i )
         iconRetinaUrl: myURL + 'images/offline.svg',
         iconSize: [36, 36],
         iconAnchor: [9, 21],
-        popupAnchor: [0, -14]
+        popupAnchor: [9, -12]
     });
   } else {
 
