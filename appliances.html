@@ -220,6 +220,7 @@
 							<a href="#0" class="cd-panel-close">Close</a>
 							<div class="detail_summary" style="min-height: 160px; width: 100%; border-bottom: 1px solid #f1f1f1; background-color: #fff; ">
 								<span id="application_status"></span>
+								<span id="application_location"></span>
 							</div>
 						</header>
 						<div class="cd-panel-container">
@@ -533,10 +534,12 @@
 
 				var app_name = $( event.currentTarget ).attr('data-name');
 				var app_status = $( event.currentTarget ).attr('data-status');
+				var app_location = $( event.currentTarget ).attr('data-location');
 
 				//console.log( app_name );
 				$('#application_name').html( app_name );
 				$('#application_status').html( app_status );
+				$('#application_location').html( app_location );
 			});
 
 		});
@@ -637,11 +640,11 @@
 
 				$('#grid').prepend(
 					( application_status === online_status )?
-						'<li data-name="'+ markers[i]['name'] +'" data-status="'+ markers[i]['application_status'] +'" class="grid__item appliance actions-list__option cd-btn"><h3 class="app_name">' + markers[i]['name'] + '</h3><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-circle"></i></span></li>'
+						'<li data-name="'+ markers[i]['name'] +'" data-status="'+ markers[i]['application_status'] +'" data-location="'+ markers[i]['location'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + markers[i]['name'] + '</h3></div><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-circle"></i></span></li>'
 					: ( application_status ===  down_status )?
-						'<li data-name="'+ markers[i]['name'] +'" data-status="'+ markers[i]['application_status'] +'" class="grid__item appliance actions-list__option cd-btn"><h3 class="app_name">' + markers[i]['name'] + '</h3><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-exclamation-triangle"></i></span></li>'
+						'<li data-name="'+ markers[i]['name'] +'" data-status="'+ markers[i]['application_status'] +'" data-location="'+ markers[i]['location'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + markers[i]['name'] + '</h3></div><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-exclamation-triangle"></i></span></li>'
 					: ( application_status ===  offline_status )?
-						'<li data-name="'+ markers[i]['name'] +'" data-status="'+ markers[i]['application_status'] +'" class="grid__item appliance actions-list__option cd-btn"><h3 class="app_name">' + markers[i]['name'] + '</h3><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-minus"></i></span></li>'
+						'<li data-name="'+ markers[i]['name'] +'" data-status="'+ markers[i]['application_status'] +'" data-location="'+ markers[i]['location'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + markers[i]['name'] + '</h3></div><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-minus"></i></span></li>'
           : ''
 				);
 			}
@@ -664,11 +667,11 @@
 		});
 
 		$( ".appliance" ).mousedown(function() {
-		  $("#actions-list").css("overflow-y", "visible");
+		  //$("#actions-list").css("overflow-y", "visible");
 		});
 
 		$( ".appliance" ).mouseup(function() {
-			$("#actions-list").css("overflow-y", "scroll");
+			//$("#actions-list").css("overflow-y", "scroll");
 		});
 		</script>
 		<script type="text/javascript">
