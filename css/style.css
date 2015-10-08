@@ -159,7 +159,6 @@ table {
 
 .grid__item {
   margin: 0.5%;
-  height: 2.05em;
   padding: 0.8em;
   border-radius: 4px;
   background: color-1;
@@ -911,40 +910,42 @@ main {
     transform: translateX(0); }
 
 .app_name {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
-  display: inline;
+  display: inline-block;
   margin: 0;
-  vertical-align: top; }
+  vertical-align: middle; }
 
-.status_online {
-  postion: relative;
-  float: right;
-  margin-top: -10px; }
-  .status_online i {
+.status_online, .status_active {
+  width: 16px;
+  height: 16px;
+  float: right; }
+  .status_online i, .status_active i {
     color: #1D9D1D;
-    width: 16px;
-    height: 16px;
+    font-size: 16px; }
+
+.status_inactive {
+  width: 16px;
+  height: 16px;
+  float: right; }
+  .status_inactive i {
+    color: #ccc;
     font-size: 16px; }
 
 .status_down {
-  postion: relative;
-  float: right;
-  margin-top: -8px; }
+  width: 16px;
+  height: 16px;
+  float: right; }
   .status_down i {
     color: red;
-    width: 16px;
-    height: 16px;
     font-size: 16px; }
 
 .status_offline {
-  postion: relative;
-  float: right;
-  margin-top: -8px; }
+  width: 16px;
+  height: 16px;
+  float: right; }
   .status_offline i {
     color: #8DA2A8;
-    width: 16px;
-    height: 16px;
     font-size: 16px; }
 
 .actions-list__option.j-selected {
@@ -1080,3 +1081,10 @@ main {
   text-transform: uppercase;
   color: #f4f6f8;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3); }
+
+.vpn_status {
+  text-transform: uppercase;
+  font-size: 9px;
+  font-family: "Montserrat", sans-serif;
+  color: #666;
+  display: block; }

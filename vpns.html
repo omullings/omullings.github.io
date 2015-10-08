@@ -109,33 +109,7 @@
 
 					<section id="actions-list" class="actions-list">
 						<ul id="grid" class="grid actions-list__group clearfix" >
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
-							<li class="grid__item actions-list__option cd-btn"><h3 class="app_name">vpn name</h3></li>
+
 						</ul>
 
 					</section>
@@ -144,8 +118,11 @@
 					<div id="applicationMap" style="height: 800px; "></div>
 					<div class="cd-panel from-left">
 						<header class="cd-panel-header">
-							<h2>Virtual private network name</h2>
+							<h2  id="application_name"> </h2>
 							<a href="#0" class="cd-panel-close">Close</a>
+							<div class="detail_summary" style="min-height: 160px; width: 100%; border-bottom: 1px solid #f1f1f1; background-color: #fff; ">
+								<span id="application_status"></span>
+							</div>
 						</header>
 
 						<div class="cd-panel-container">
@@ -244,6 +221,37 @@
 		});
 
 		</script>
+		<script type='text/javascript' src='js/vpns.json'></script>
+		<script type="text/javascript">
+		(function(vpns) {
+			var appliancesCount = vpns.length;
+
+			for (var i = 0; i < appliancesCount; i++) {
+				$('#grid').prepend(
+						'<li data-name="'+ vpns[i]['name'] +'" data-status="'+ vpns[i]['vpn_status'] +'" data-type="'+ vpns[i]['type'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + vpns[i]['name'] + '</h3><span class="vpn_status">' + vpns[i]['type'] + '</span></div><span class="status_' + vpns[i]['vpn_status'] + '"><i class="fa fa-circle"></i></span></li>'
+				);
+			}
+
+		})(vpns);
+		</script>
+		<script type="text/javascript">
+		$(function() {
+
+			$('.cd-btn').on('click', function(event){
+
+				event.preventDefault();
+
+				var app_name = $( event.target ).attr('data-name');
+				var app_status = $( event.target ).attr('data-status');
+
+				console.log( event.target );
+				$('#application_name').html( app_name );
+				$('#application_status').html( app_status );
+
+			});
+
+		});
+		</script>
 		<script src="js/selectronic.js"></script>
 		<script>
 		(function( $ ) {
@@ -316,7 +324,6 @@
 				$('.cd-btn').on('click', function(event){
 					event.preventDefault();
 					$('.cd-panel').addClass('is-visible');
-
 				});
 
 				//close the lateral panel
