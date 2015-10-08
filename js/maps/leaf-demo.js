@@ -13,9 +13,9 @@ L.tileLayer( 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
 var myURL = jQuery( 'script[src$="leaf-demo.js"]' ).attr( 'src' ).replace( 'leaf-demo.js', '' );
 
 
-for ( var i=0; i < markers.length; ++i )
+for ( var i=0; i < appliances.length; ++i )
 {
-  var application_status = markers[i]['application_status'];
+  var application_status = appliances[i]['application_status'];
 
   var online_status = "online" ;
   var down_status = "down" ;
@@ -50,7 +50,7 @@ for ( var i=0; i < markers.length; ++i )
 
   }
 
-   L.marker( [markers[i].lat, markers[i].lng], {icon: myIcon} )
-      .bindPopup( '<a href="' + markers[i].url + '" target="_blank">' + markers[i].name + '</a>' )
+   L.marker( [appliances[i].lat, appliances[i].lng], {icon: myIcon} )
+      .bindPopup( '<a href="' + appliances[i].url + '" target="_blank">' + appliances[i].name + '</a>' )
       .addTo( map );
 }

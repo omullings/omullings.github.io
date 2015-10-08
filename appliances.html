@@ -402,6 +402,32 @@
 				return n;
 			}
 
+			function setClickedItemDetails() {
+
+					var app_name = $( event.currentTarget ).attr('data-name');
+					var app_status = $( event.currentTarget ).attr('data-status');
+					var app_location = $( event.currentTarget ).attr('data-location');
+
+					//console.log( app_name );
+					$('#application_name').html( app_name );
+					$('#application_status').html( app_status );
+					$('#application_location').html( app_location );
+
+			}
+
+			function setSelectedItemDetails( selectedItem ) {
+
+					var app_name = $( selectedItem ).attr('data-name');
+					var app_status = $( selectedItem ).attr('data-status');
+					var app_location = $( selectedItem ).attr('data-location');
+
+					//console.log( app_name );
+					$('#application_name').html( app_name );
+					$('#application_status').html( app_status );
+					$('#application_location').html( app_location );
+
+			}
+
 			//open the lateral panel
 			$('.cd-btn').on('click', function(event){
 
@@ -410,6 +436,7 @@
 				if( doSetSelectedCount() < 2 ) {
 
 					$('.cd-panel').addClass('is-visible');
+					setClickedItemDetails();
 
 				} else {
 
@@ -453,6 +480,7 @@
 						$("#selection_header").hide();
 						if( doSetSelectedCount() == 1 ) {
 							$('.cd-panel').addClass('is-visible');
+							setSelectedItemDetails( $('.j-selected') );
 						}
 				} else if( doSetSelectedCount() == 2 ) {
 					setTimeout(function() {
@@ -524,24 +552,6 @@
 			});
 
 			});
-		});
-		</script>
-		<script type="text/javascript">
-		$(function() {
-
-			$('.cd-btn').on('click', function(event){
-				event.preventDefault();
-
-				var app_name = $( event.currentTarget ).attr('data-name');
-				var app_status = $( event.currentTarget ).attr('data-status');
-				var app_location = $( event.currentTarget ).attr('data-location');
-
-				//console.log( app_name );
-				$('#application_name').html( app_name );
-				$('#application_status').html( app_status );
-				$('#application_location').html( app_location );
-			});
-
 		});
 		</script>
 
@@ -625,14 +635,14 @@
 		</script>
 		<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
     <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2'></script>
-		<script type='text/javascript' src='js/maps/markers.json'></script>
+		<script type='text/javascript' src='API/appliances.json'></script>
 		<script type='text/javascript' src='js/maps/leaf-demo.js'></script>
 		<script type="text/javascript">
-		(function(markers) {
-			var appliancesCount = markers.length;
+		(function(appliances) {
+			var appliancesCount = appliances.length;
 
 			for (var i = 0; i < appliancesCount; i++) {
-				var application_status = markers[i]['application_status'];
+				var application_status = appliances[i]['application_status'];
 
 				var online_status = "online" ;
 				var down_status = "down" ;
@@ -640,16 +650,16 @@
 
 				$('#grid').prepend(
 					( application_status === online_status )?
-						'<li data-name="'+ markers[i]['name'] +'" data-status="'+ markers[i]['application_status'] +'" data-location="'+ markers[i]['location'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + markers[i]['name'] + '</h3></div><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-circle"></i></span></li>'
+						'<li data-name="'+ appliances[i]['name'] +'" data-status="'+ appliances[i]['application_status'] +'" data-location="'+ appliances[i]['location'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '"><i class="fa fa-circle"></i></span></li>'
 					: ( application_status ===  down_status )?
-						'<li data-name="'+ markers[i]['name'] +'" data-status="'+ markers[i]['application_status'] +'" data-location="'+ markers[i]['location'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + markers[i]['name'] + '</h3></div><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-exclamation-triangle"></i></span></li>'
+						'<li data-name="'+ appliances[i]['name'] +'" data-status="'+ appliances[i]['application_status'] +'" data-location="'+ appliances[i]['location'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '"><i class="fa fa-exclamation-triangle"></i></span></li>'
 					: ( application_status ===  offline_status )?
-						'<li data-name="'+ markers[i]['name'] +'" data-status="'+ markers[i]['application_status'] +'" data-location="'+ markers[i]['location'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + markers[i]['name'] + '</h3></div><span class="status_' + markers[i]['application_status'] + '"><i class="fa fa-minus"></i></span></li>'
+						'<li data-name="'+ appliances[i]['name'] +'" data-status="'+ appliances[i]['application_status'] +'" data-location="'+ appliances[i]['location'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '"><i class="fa fa-minus"></i></span></li>'
           : ''
 				);
 			}
 
-		})(markers);
+		})(appliances);
 		</script>
 		<script>
 		$(document).ready(function() {
