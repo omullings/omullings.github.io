@@ -240,16 +240,19 @@
 			$('.cd-btn').on('click', function(event){
 
 				event.preventDefault();
+				event.stopPropagation();
 
-				var app_name = $( event.target ).attr('data-name');
-				var app_status = $( event.target ).attr('data-status');
+				//console.log( event.currentTarget );
 
-				console.log( event.target );
+				var app_name = $( event.currentTarget ).attr('data-name');
+				var app_status = $( event.currentTarget ).attr('data-status');
+
+
+				//console.log( event.target );
 				$('#application_name').html( app_name );
 				$('#application_status').html( app_status );
 
 			});
-
 		});
 		</script>
 		<script src="js/selectronic.js"></script>

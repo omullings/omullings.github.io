@@ -532,8 +532,8 @@
 
 				event.preventDefault();
 
-				var app_name = $( event.target ).attr('data-name');
-				var app_status = $( event.target ).attr('data-status');
+				var app_name = $( event.currentTarget ).attr('data-name');
+				var app_status = $( event.currentTarget ).attr('data-status');
 
 				//console.log( app_name );
 				$('#application_name').html( app_name );
