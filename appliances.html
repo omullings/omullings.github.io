@@ -517,8 +517,8 @@
 			// site preloader -- also uncomment the div in the header and the css style for #preloader
 			$(window).load(function(){
 				setTimeout(function() {
-					$('#preloader').fadeOut( 2000 ,function(){$(this).remove();});
-				}, 2000);
+					$('#preloader').fadeOut( 100 ,function(){$(this).remove();});
+				}, 100);
 
 			});
 
@@ -529,7 +529,6 @@
 		$(function() {
 
 			$('.cd-btn').on('click', function(event){
-
 				event.preventDefault();
 
 				var app_name = $( event.currentTarget ).attr('data-name');
@@ -538,7 +537,6 @@
 				//console.log( app_name );
 				$('#application_name').html( app_name );
 				$('#application_status').html( app_status );
-
 			});
 
 		});
