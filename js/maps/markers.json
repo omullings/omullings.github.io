@@ -1,5 +1,104 @@
 markers = [
    {
+     "name": "Saudi Standards, Metrology & Quality Org Server 1",
+     "location": "د الفرعي، المحمدية الرياض 12364 Saudi Arabia",
+     "lat": 24.735164,
+     "lng": 46.635238,
+     "application_status": "online" ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Ministry of Interior - Riyadh Server 1",
+     "location": "King Fahd Rd, Al Olaya Riyadh 12611 Saudi Arabia",
+     "lat": 24.677045,
+     "lng": 46.691414,
+     "application_status": "online" ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "General Commission for Survey",
+     "location": "Al Olaya Riyadh 11543 Saudi Arabia",
+     "lat": 24.674359,
+     "lng": 46.694305,
+     "application_status": "online" ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Riyadh Passports",
+     "location": "6971 King Fahad Branch Rd, Al Murabba Riyadh 12613 Saudi Arabia",
+     "lat": 24.659082,
+     "lng": 46.701778,
+     "application_status": "online" ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Ministry of Finance - Riyadh Server 1",
+     "location": "Al Malaz Riyadh 12641 Saudi Arabia",
+     "lat": 24.653192,
+     "lng": 46.718238,
+     "application_status": "online" ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Riyadh",
+     "location": "Riyadh, Riyadh Province, Saudi Arabia",
+     "lat": 24.7251918,
+     "lng": 46.8225288,
+     "application_status": "online" ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Riyadh",
+     "location": "Riyadh, Riyadh Province, Saudi Arabia",
+     "lat": 24.7251918,
+     "lng": 46.8225288,
+     "application_status": "online" ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Riyadh",
+     "location": "Riyadh, Riyadh Province, Saudi Arabia",
+     "lat": 24.7251918,
+     "lng": 46.8225288,
+     "application_status": "online" ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "Riyadh",
+     "location": "Riyadh, Riyadh Province, Saudi Arabia",
+     "lat": 24.7251918,
+     "lng": 46.8225288,
+     "application_status": "online" ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
      "name": "Riyadh",
      "location": "Riyadh, Riyadh Province, Saudi Arabia",
      "lat": 24.7251918,
@@ -100,10 +199,10 @@ markers = [
      },
    },
    {
-     "name": "Dammam",
-     "location": "https://en.wikipedia.org/wiki/Scotland",
-     "lat": 26.3547207,
-     "lng": 49.9924822,
+     "name": "King Faisal Base Airport Server 1",
+     "location": "Dschidda, Provinz Mekka, Saudi-Arabien",
+     "lat": 21.345753,
+     "lng": 39.176474,
      "application_status": "online" ,
      "groups":  {
        "group_id" : 12 ,
@@ -203,6 +302,17 @@ markers = [
      "location": "Ballhmar, Al Balad Jeddah 22233 Saudi Arabia",
      "lat": 21.478004,
      "lng": 39.185493,
+     "application_status": "online" ,
+     "groups":  {
+       "group_id" : 12 ,
+       "group_type" : 1 ,
+     },
+   },
+   {
+     "name": "فرع مصلحة الزكاة والدخل ",
+     "location": "فرع مصلحة الزكاة والدخل, الرياض, منطقة الرياض, الم",
+     "lat": 24.687883,
+     "lng": 46.776763,
      "application_status": "online" ,
      "groups":  {
        "group_id" : 12 ,
