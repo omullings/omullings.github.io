@@ -50,7 +50,7 @@ for ( var i=0; i < appliances.length; ++i )
 
   }
 
-   L.marker( [appliances[i].lat, appliances[i].lng], {icon: myIcon} )
+   L.marker( [appliances[i].latitude, appliances[i].longitude], {icon: myIcon} )
       .bindPopup( '<a href="' + appliances[i].url + '" target="_blank">' + appliances[i].name + '</a>' )
       .addTo( map );
 }

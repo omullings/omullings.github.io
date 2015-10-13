@@ -16,6 +16,8 @@
 		<link rel="stylesheet" href="css/dropit.css"> <!-- Resource style -->
 		<script src="js/jquery-2.1.1.js"></script>
 		<script src="js/modernizr.custom.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2'></script>
 	</head>
 	<body >
 		<div id="preloader" >
@@ -215,23 +217,46 @@
 				<section id="mapContainer">
 					<div id="applicationMap" style="height: 800px; "></div>
 					<div class="cd-panel from-left">
-						<header class="cd-panel-header ">
-							<h2 id="application_name"> </h2>
+						<header class="cd-panel-header clearfix">
+							<span id="application_location_map" style="display: block;  height: 300px; position: relative; "></span>
+
 							<a href="#0" class="cd-panel-close">Close</a>
-							<div class="detail_summary" style="min-height: 160px; width: 100%; border-bottom: 1px solid #f1f1f1; background-color: #fff; padding: 0 5%;  ">
-								<span id="application_status"></span>
-								<span id="application_location"></span>
-							</div>
+
 						</header>
 						<div class="cd-panel-container">
-							<div class="cd-panel-content">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur tempora voluptatem est repudiandae iusto, architecto perferendis sequi, asperiores dolores doloremque odit. Libero, ipsum fuga repellat quae numquam cumque nobis ipsa voluptates pariatur, a rerum aspernatur aliquid maxime magnam vero dolorum omnis neque fugit laboriosam eveniet veniam explicabo, similique reprehenderit at. Iusto totam vitae blanditiis. Culpa, earum modi rerum velit voluptatum voluptatibus debitis, architecto aperiam vero tempora ratione sint ullam voluptas non! Odit sequi ipsa, voluptatem ratione illo ullam quaerat qui, vel dolorum eligendi similique inventore quisquam perferendis reprehenderit quos officia! Maxime aliquam, soluta reiciendis beatae quisquam. Alias porro facilis obcaecati et id, corporis accusamus? Ab porro fuga consequatur quisquam illo quae quas tenetur.</p>
+							<div class="cd-panel-content"  >
+								<div class="detail_summary" style="width: 100%;  width: 60%;  display: inline-block; padding-right: 25px; ">
+									<span id="application_status"></span>
+									<h2 id="application_name"> </h2>
+									<i class="fa fa-ellipsis-v" style="float: right;  "></i>
+									<span id="application_description" style=" display: block; margin: 15px 0; line-height: 1.5em;"></span>
 
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque similique, at excepturi adipisci repellat ut veritatis officia, saepe nemo soluta modi ducimus velit quam minus quis reiciendis culpa ullam quibusdam eveniet. Dolorum alias ducimus, ad, vitae delectus eligendi, possimus magni ipsam repudiandae iusto placeat repellat omnis veritatis adipisci aliquam hic ullam facere voluptatibus ratione laudantium perferendis quos ut. Beatae expedita, itaque assumenda libero voluptatem adipisci maiores voluptas accusantium, blanditiis saepe culpa laborum iusto maxime quae aperiam fugiat odit consequatur soluta hic. Sed quasi beatae quia repellendus, adipisci facilis ipsa vel, aperiam, consequatur eaque mollitia quaerat. Iusto fugit inventore eveniet velit.</p>
-
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque similique, at excepturi adipisci repellat ut veritatis officia, saepe nemo soluta modi ducimus velit quam minus quis reiciendis culpa ullam quibusdam eveniet. Dolorum alias ducimus, ad, vitae delectus eligendi, possimus magni ipsam repudiandae iusto placeat repellat omnis veritatis adipisci aliquam hic ullam facere voluptatibus ratione laudantium perferendis quos ut. Beatae expedita, itaque assumenda libero voluptatem adipisci maiores voluptas accusantium, blanditiis saepe culpa laborum iusto maxime quae aperiam fugiat odit consequatur soluta hic. Sed quasi beatae quia repellendus, adipisci facilis ipsa vel, aperiam, consequatur eaque mollitia quaerat. Iusto fugit inventore eveniet velit.</p>
-
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur tempora voluptatem est repudiandae iusto, architecto perferendis sequi, asperiores dolores doloremque odit. Libero, ipsum fuga repellat quae numquam cumque nobis ipsa voluptates pariatur, a rerum aspernatur aliquid maxime magnam vero dolorum omnis neque fugit laboriosam eveniet veniam explicabo, similique reprehenderit at. Iusto totam vitae blanditiis. Culpa, earum modi rerum velit voluptatum voluptatibus debitis, architecto aperiam vero tempora ratione sint ullam voluptas non! Odit sequi ipsa, voluptatem ratione illo ullam quaerat qui, vel dolorum eligendi similique inventore quisquam perferendis reprehenderit quos officia! Maxime aliquam, soluta reiciendis beatae quisquam. Alias porro facilis obcaecati et id, corporis accusamus? Ab porro fuga consequatur quisquam illo quae quas tenetur.</p>
+									<div class="app_details" style="margin-top: 25px; ">
+										<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px;  ">Appliance Details</h3>
+										<label>Make:</label><span></span></br></br>
+										<label>Model:</label><span></span></br></br>
+										<label>Serial number:</label><span></span></br></br>
+										<label>Software version:</label><span></span></br></br>
+									</div>
+									<div class="app_details" style="margin-top: 25px; ">
+										<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px;  ">Groups</h3>
+										<span class="group_item">Rack Servers</span><span class="group_item">Jeddah</span><span class="group_item">Visa Offices</span>
+									</div>
+								</div>
+								<aside style=" width: 40%; margin: 0; display: inline-block; float: right; padding:  0 0 0 15px;  ">
+									<div class="" style=" margin-top: 0px; ">
+										<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px;  ">Management Port</h3>
+										<span id="application_address" style=" padding: 15px; border: 1px solid #f1f1f1; background: #fafafa; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px;  "></span>
+										<span id="application_port" style=" padding: 15px; border: 1px solid #f1f1f1; background: #fafafa; display: block; margin-top: -1px; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px;  "></span>
+									</div>
+									<div class="" style=" margin-top: 15px; ">
+										<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px;  ">Networks</h3>
+										<span  style=" padding: 15px; border: 1px solid #f1f1f1; background: #fafafa; display: block; text-shadow: 0 1px 0 #fff; border-top-left-radius: 3px;  border-top-right-radius: 3px; ">Intranet <i class="fa fa-chevron-right" style=" float: right; color: #ccc; "></i></span>
+										<span  style=" padding: 15px; border: 1px solid #f1f1f1; background: #fafafa; display: block; text-shadow: 0 1px 0 #fff; margin-top: -1px;  ">Email <i class="fa fa-chevron-right " style=" float: right; color: #ccc; "></i></span>
+										<span  style=" padding: 15px; border: 1px solid #f1f1f1; background: #fafafa; display: block; text-shadow: 0 1px 0 #fff; margin-top: -1px; ">Printing <i class="fa fa-chevron-right" style=" float: right; color: #ccc; "></i></span>
+										<span  style=" padding: 15px; border: 1px solid #f1f1f1; background: #fafafa; display: block; text-shadow: 0 1px 0 #fff; margin-top: -1px; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px;  ">V.O.I.P. <i class="fa fa-chevron-right" style=" float: right; color: #ccc; "></i></span>
+									</div>
+								</aside>
 							</div> <!-- cd-panel-content -->
 						</div> <!-- cd-panel-container -->
 					</div> <!-- cd-panel -->
@@ -393,13 +418,78 @@
 				} );
 		});
 		</script>
-
+		<script type='text/javascript' src='API/appliances.json'></script>
+		<script type='text/javascript' src='js/maps/leaf-demo.js'></script>
 		<script>
 		$(function() {
+
+
 			function doSetSelectedCount() {
 				var n = $( "#grid .j-selected" ).length;
 				$("header .selection_count").text( n + ' appliances selected.');
 				return n;
+			}
+
+			var detail_map = L.map('application_location_map');
+			L.tileLayer( 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+					attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+			}).addTo( detail_map );
+
+			function setItemMap( selectedItem ) {
+				var app_lat = $( selectedItem ).attr('data-lat');
+				var app_lng = $( selectedItem ).attr('data-lng');
+				var app_location = $( selectedItem ).attr('data-location');
+				var app_status = $( selectedItem ).attr('data-status');
+
+				detail_map.setView([ app_lat , app_lng ], 16 );
+
+
+
+				var myIcon = L.icon({
+		        iconUrl: myURL + 'images/up.svg',
+		        iconRetinaUrl: myURL + 'images/up.svg',
+		        iconSize: [ 24, 24],
+		        iconAnchor: [12, 21],
+		        popupAnchor: [ 0 , -14]
+		    });
+
+			  var online_status = "online" ;
+			  var down_status = "down" ;
+			  var offline_status = "offline" ;
+
+			  if( app_status === online_status ){
+			    var myIcon = L.icon({
+			        iconUrl: myURL + 'images/up.svg',
+			        iconRetinaUrl: myURL + 'images/up.svg',
+			        iconSize: [ 24, 24],
+			        iconAnchor: [12, 21],
+			        popupAnchor: [ 0 , -14]
+			    });
+			  } else if (app_status ===  down_status ) {
+			    var myIcon = L.icon({
+			        iconUrl: myURL + 'images/down.svg',
+			        iconRetinaUrl: myURL + 'images/down.svg',
+			        iconSize: [24, 24],
+			        iconAnchor: [12, 21],
+			        popupAnchor: [ 0 , -14]
+			    });
+			  } else if (app_status ===  offline_status ) {
+			    var myIcon = L.icon({
+			        iconUrl: myURL + 'images/offline.svg',
+			        iconRetinaUrl: myURL + 'images/offline.svg',
+			        iconSize: [24, 24],
+			        iconAnchor: [12, 21],
+			        popupAnchor: [ 0 , -14]
+			    });
+			  } else {
+
+			  }
+
+				L.marker( [ app_lat , app_lng ], {icon: myIcon} )
+				.bindPopup( '<span  >' + app_location + '</span>' )
+				.addTo( detail_map )
+				.openPopup();
+
 			}
 
 			function setClickedItemDetails() {
@@ -407,24 +497,66 @@
 					var app_name = $( event.currentTarget ).attr('data-name');
 					var app_status = $( event.currentTarget ).attr('data-status');
 					var app_location = $( event.currentTarget ).attr('data-location');
+					var app_lat = $( event.currentTarget ).attr('data-lat');
+					var app_lng = $( event.currentTarget ).attr('data-lng');
+					var app_description = $( event.currentTarget ).attr('data-description');
+					var app_address = $( event.currentTarget ).attr('data-address');
+					var app_port = $( event.currentTarget ).attr('data-port');
 
-					//console.log( app_name );
 					$('#application_name').html( app_name );
-					$('#application_status').html( app_status );
-					$('#application_location').html( app_location );
+					//$('#application_location').html( app_location );
+					//$('#application_lat').html( app_lat );
+					//$('#application_long').html( app_lng );
+					$('#application_address').html( app_address );
+					$('#application_port').html( app_port );
+					$('#application_description').html( app_description );
+
+					$('#application_status').html(
+						( app_status === "online" )?
+							'<span class="status_' + app_status + '"><i class="fa fa-circle"></i></span>'
+						: ( app_status ===  "down" )?
+							'<span class="status_' + app_status + '"><i class="fa fa-exclamation-triangle"></i></span>'
+						: ( app_status ===  "offline" )?
+							'<span class="status_' + app_status + '"><i class="fa fa-minus"></i></span>'
+	          : ''
+					);
+
+					setItemMap( event.currentTarget );
 
 			}
 
 			function setSelectedItemDetails( selectedItem ) {
 
+					var app_node = $( selectedItem );
 					var app_name = $( selectedItem ).attr('data-name');
 					var app_status = $( selectedItem ).attr('data-status');
 					var app_location = $( selectedItem ).attr('data-location');
+					var app_lat = $( selectedItem ).attr('data-lat');
+					var app_lng = $( selectedItem ).attr('data-lng');
+					var app_description = $( selectedItem ).attr('data-description');
+					var app_address = $( selectedItem ).attr('data-address');
+					var app_port = $( selectedItem ).attr('data-port');
 
-					//console.log( app_name );
+
 					$('#application_name').html( app_name );
-					$('#application_status').html( app_status );
-					$('#application_location').html( app_location );
+					//$('#application_location').html( app_location );
+					//$('#application_lat').html( app_lat );
+					//$('#application_long').html( app_lng );
+					$('#application_address').html( app_address );
+					$('#application_port').html( app_port );
+					$('#application_description').html( app_description );
+
+					$('#application_status').html(
+						( app_status === "online" )?
+							'<span class="status_' + app_status + '"><i class="fa fa-circle"></i></span>'
+						: ( app_status ===  "down" )?
+							'<span class="status_' + app_status + '"><i class="fa fa-exclamation-triangle"></i></span>'
+						: ( app_status ===  "offline" )?
+							'<span class="status_' + app_status + '"><i class="fa fa-minus"></i></span>'
+	          : ''
+					);
+
+					setItemMap( app_node );
 
 			}
 
@@ -555,7 +687,6 @@
 		});
 		</script>
 
-
 		<script src="js/selectronic.js"></script>
 		<script type="text/javascript">
 			$('#filter_appliances').keyup(function (e){
@@ -633,10 +764,6 @@
 
 				})( jQuery );
 		</script>
-		<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
-    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2'></script>
-		<script type='text/javascript' src='API/appliances.json'></script>
-		<script type='text/javascript' src='js/maps/leaf-demo.js'></script>
 		<script type="text/javascript">
 		(function(appliances) {
 			var appliancesCount = appliances.length;
@@ -650,11 +777,11 @@
 
 				$('#grid').prepend(
 					( application_status === online_status )?
-						'<li data-name="'+ appliances[i]['name'] +'" data-status="'+ appliances[i]['application_status'] +'" data-location="'+ appliances[i]['location'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '"><i class="fa fa-circle"></i></span></li>'
+						'<li data-name="'+ appliances[i]['name'] +'" data-status="'+ appliances[i]['application_status'] +'" data-location="'+ appliances[i]['location'] +'" data-lat="'+ appliances[i]['latitude'] +'" data-lng="'+ appliances[i]['longitude'] +'" data-address="'+ appliances[i]['address'] +'" data-port="'+ appliances[i]['port'] +'" data-description="'+ appliances[i]['description'] +'"  class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '"><i class="fa fa-circle"></i></span></li>'
 					: ( application_status ===  down_status )?
-						'<li data-name="'+ appliances[i]['name'] +'" data-status="'+ appliances[i]['application_status'] +'" data-location="'+ appliances[i]['location'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '"><i class="fa fa-exclamation-triangle"></i></span></li>'
+						'<li data-name="'+ appliances[i]['name'] +'" data-status="'+ appliances[i]['application_status'] +'" data-location="'+ appliances[i]['location'] +'" data-lat="'+ appliances[i]['latitude'] +'" data-lng="'+ appliances[i]['longitude'] +'" data-address="'+ appliances[i]['address'] +'" data-port="'+ appliances[i]['port'] +'" data-description="'+ appliances[i]['description'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '"><i class="fa fa-exclamation-triangle"></i></span></li>'
 					: ( application_status ===  offline_status )?
-						'<li data-name="'+ appliances[i]['name'] +'" data-status="'+ appliances[i]['application_status'] +'" data-location="'+ appliances[i]['location'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '"><i class="fa fa-minus"></i></span></li>'
+						'<li data-name="'+ appliances[i]['name'] +'" data-status="'+ appliances[i]['application_status'] +'" data-location="'+ appliances[i]['location'] +'" data-lat="'+ appliances[i]['latitude'] +'" data-lng="'+ appliances[i]['longitude'] +'" data-address="'+ appliances[i]['address'] +'" data-port="'+ appliances[i]['port'] +'" data-description="'+ appliances[i]['description'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '"><i class="fa fa-minus"></i></span></li>'
           : ''
 				);
 			}
@@ -667,7 +794,6 @@
 				$("#content").height(bodyheight);
 				$("#actions-list").css("overflow-y", "scroll");
 				$("#applicationMap").height(bodyheight);
-
 		});
 
 		$(window).resize(function() {

@@ -1,333 +1,993 @@
 appliances = [
    {
+     "id": 234523453245,
      "name": "Saudi Standards, Metrology & Quality Org Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "د الفرعي، المحمدية الرياض 12364 Saudi Arabia",
-     "lat": 24.735164,
-     "lng": 46.635238,
+     "latitude": 24.735164,
+     "longitude": 46.635238,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Ministry of Interior - Riyadh Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "King Fahd Rd, Al Olaya Riyadh 12611 Saudi Arabia",
-     "lat": 24.677045,
-     "lng": 46.691414,
+     "latitude": 24.677045,
+     "longitude": 46.691414,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "General Commission for Survey",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Al Olaya Riyadh 11543 Saudi Arabia",
-     "lat": 24.674359,
-     "lng": 46.694305,
+     "latitude": 24.674359,
+     "longitude": 46.694305,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Riyadh Passports",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "6971 King Fahad Branch Rd, Al Murabba Riyadh 12613 Saudi Arabia",
-     "lat": 24.659082,
-     "lng": 46.701778,
+     "latitude": 24.659082,
+     "longitude": 46.701778,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Ministry of Finance - Riyadh Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Al Malaz Riyadh 12641 Saudi Arabia",
-     "lat": 24.653192,
-     "lng": 46.718238,
+     "latitude": 24.653192,
+     "longitude": 46.718238,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Riyadh",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Riyadh, Riyadh Province, Saudi Arabia",
-     "lat": 24.7251918,
-     "lng": 46.8225288,
+     "latitude": 24.7251918,
+     "longitude": 46.8225288,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Riyadh",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Riyadh, Riyadh Province, Saudi Arabia",
-     "lat": 24.7251918,
-     "lng": 46.8225288,
+     "latitude": 24.7251918,
+     "longitude": 46.8225288,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Riyadh",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Riyadh, Riyadh Province, Saudi Arabia",
-     "lat": 24.7251918,
-     "lng": 46.8225288,
+     "latitude": 24.7251918,
+     "longitude": 46.8225288,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Riyadh",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Riyadh, Riyadh Province, Saudi Arabia",
-     "lat": 24.7251918,
-     "lng": 46.8225288,
+     "latitude": 24.7251918,
+     "longitude": 46.8225288,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Riyadh",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Riyadh, Riyadh Province, Saudi Arabia",
-     "lat": 24.7251918,
-     "lng": 46.8225288,
+     "latitude": 24.7251918,
+     "longitude": 46.8225288,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Mecca",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Mecca, Makkah Province, Saudi Arabia",
-     "lat": 21.4360154,
-     "lng": 39.8465466,
+     "latitude": 21.4360154,
+     "longitude": 39.8465466,
      "application_status": "down" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
 
    },
    {
+     "id": 234523453245,
      "name": "British Consulate-General Server 17",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Jeddah Umm Al Muminin Zaiynab, Ash Shati Jeddah 23514 Saudi Arabia",
-     "lat": 21.5441298,
-     "lng": 39.1499453,
+     "latitude": 21.5441298,
+     "longitude": 39.1499453,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "SAGIA Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "An Naim Jeddah 23621 Saudi Arabia",
-     "lat": 21.633809,
-     "lng": 39.133397,
+     "latitude": 21.633809,
+     "longitude": 39.133397,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Civil Affairs Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Dumar Ibn Thalabah, Al Nuzhah Jeddah 23532 Saudi Arabia",
-     "lat": 21.626968,
-     "lng": 39.161799,
+     "latitude": 21.626968,
+     "longitude": 39.161799,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Servcorp Serviced and Virtual Offices- Al Murjanah Tower Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Level 7, Al Murjanah Tower Corner of Prince Sultan and Alkayyal Streets Jeddah Saudi Arabia",
-     "lat": 21.566813,
-     "lng": 39.143311,
+     "latitude": 21.566813,
+     "longitude": 39.143311,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Consulate General of India Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "As Sindi, Al Andalus Jeddah 23326 Saudi Arabia",
-     "lat": 21.549963,
-     "lng": 39.157486,
+     "latitude": 21.549963,
+     "longitude": 39.157486,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Medina",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "https://en.wikipedia.org/wiki/United_States",
-     "lat": 24.4710724,
-     "lng": 39.6175575,
+     "latitude": 24.4710724,
+     "longitude": 39.6175575,
      "application_status": "offline" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Sulţānah",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "https://en.wikipedia.org/wiki/Ireland",
-     "lat": 24.4999996,
-     "lng": 39.58,
+     "latitude": 24.4999996,
+     "longitude": 39.58,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "King Faisal Base Airport Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Dschidda, Provinz Mekka, Saudi-Arabien",
-     "lat": 21.345753,
-     "lng": 39.176474,
+     "latitude": 21.345753,
+     "longitude": 39.176474,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Ministry of Interior Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Old Makkah Rd, Al Balad Jeddah 22236 Saudi Arabia",
-     "lat": 21.490606,
-     "lng": 39.188499,
+     "latitude": 21.490606,
+     "longitude": 39.188499,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Department of Drug Control Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "As Siha, Mishrifah Jeddah 23341 Saudi Arabia",
-     "lat": 21.537989,
-     "lng": 39.21303,
+     "latitude": 21.537989,
+     "longitude": 39.21303,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "South Jeddah Municipality Office Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Jeddah 22441 Saudi Arabia",
-     "lat": 21.429944,
-     "lng": 43.9234256,
+     "latitude": 21.429944,
+     "longitude": 43.9234256,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Saudi Geological Survey Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur" ,
      "location": "Jeddah 21514 Saudi Arabia",
-     "lat": 21.556309,
-     "lng": 39.241447,
+     "latitude": 21.556309,
+     "longitude": 39.241447,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Bureau of Investigation and Prosecution Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur " ,
      "location": "4636 Al Amir Muhammad Ibn Abdul Aziz, As Safa Jeddah 23453 Saudi Arabia",
-     "lat": 21.567049,
-     "lng": 39.22383,
+     "latitude": 21.567049,
+     "longitude": 39.22383,
      "application_status": "down" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Administration of Security and Safety Server 3",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur " ,
      "location": "King Abdulaziz University Jeddah 22254 Saudi Arabia",
-     "lat": 21.48882,
-     "lng": 39.240361,
+     "latitude": 21.48882,
+     "longitude": 39.240361,
      "application_status": "offline" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Administration of Security and Safety Server 2",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur " ,
      "location": "King Abdulaziz University Jeddah 22254 Saudi Arabia",
-     "lat": 21.48882,
-     "lng": 39.240361,
+     "latitude": 21.48882,
+     "longitude": 39.240361,
      "application_status": "offline" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Administration of Security and Safety Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur " ,
      "location": "King Abdulaziz University Jeddah 22254 Saudi Arabia",
-     "lat": 21.48882,
-     "lng": 39.240361,
+     "latitude": 21.48882,
+     "longitude": 39.240361,
      "application_status": "offline" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Jeddah Municpality Balad Office Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur " ,
      "location": "Ballhmar, Al Balad Jeddah 22233 Saudi Arabia",
-     "lat": 21.478004,
-     "lng": 39.185493,
+     "latitude": 21.478004,
+     "longitude": 39.185493,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "فرع مصلحة الزكاة والدخل ",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur " ,
      "location": "فرع مصلحة الزكاة والدخل, الرياض, منطقة الرياض, الم",
-     "lat": 24.687883,
-     "lng": 46.776763,
+     "latitude": 24.687883,
+     "longitude": 46.776763,
      "application_status": "online" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    },
    {
+     "id": 234523453245,
      "name": "Canadian Visa Application Center Server 1",
+     "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur " ,
      "location": "King Abdullah Branch Rd, Al Sharafiyah Jeddah Saudi Arabia",
-     "lat": 21.511487,
-     "lng": 39.18794,
+     "latitude": 21.511487,
+     "longitude": 39.18794,
      "application_status": "offline" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
+     "address": "000.000.000.000",
+     "port": 49761,
+     "group":  [
+      {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
      },
+     {
+       "id" : "" ,
+       "name" : "" ,
+       "appliances" : "" ,
+       "roles" : {
+         "vpns":  [
+           { "id" : 12 , "name" : "" , "template" : "" , "active" : 0 }
+         ]
+       },
+     }
+   ]
    }
 ];

@@ -402,7 +402,7 @@ html .navigation-is-open .bar {
 
 .cd-half-block {
   display: inline-block;
-  max-width: 50%; }
+  max-width: 100%; }
 
 .navigation {
   position: relative;
@@ -459,17 +459,17 @@ html .navigation-is-open .bar {
       animation: cd-close-2 0.6s 0.3s; }
 
 @-webkit-keyframes cd-close-1 {
-  0%, 50% {
+  0%, 100% {
     -webkit-transform: rotate(0); }
   100% {
     -webkit-transform: rotate(45deg); } }
 @-moz-keyframes cd-close-1 {
-  0%, 50% {
+  0%, 100% {
     -moz-transform: rotate(0); }
   100% {
     -moz-transform: rotate(45deg); } }
 @keyframes cd-close-1 {
-  0%, 50% {
+  0%, 100% {
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
     -ms-transform: rotate(0);
@@ -482,17 +482,17 @@ html .navigation-is-open .bar {
     -o-transform: rotate(45deg);
     transform: rotate(45deg); } }
 @-webkit-keyframes cd-close-2 {
-  0%, 50% {
+  0%, 100% {
     -webkit-transform: rotate(0); }
   100% {
     -webkit-transform: rotate(-45deg); } }
 @-moz-keyframes cd-close-2 {
-  0%, 50% {
+  0%, 100% {
     -moz-transform: rotate(0); }
   100% {
     -moz-transform: rotate(-45deg); } }
 @keyframes cd-close-2 {
-  0%, 50% {
+  0%, 100% {
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
     -ms-transform: rotate(0);
@@ -506,18 +506,12 @@ html .navigation-is-open .bar {
     transform: rotate(-45deg); } }
 .cd-panel-header {
   position: absolute;
-  width: 90%;
-  height: 50px;
-  line-height: 50px;
+  width: 100%;
   z-index: 2;
   background-color: #fff;
   -webkit-transition: top 0.3s 0s;
   -moz-transition: top 0.3s 0s;
   transition: top 0.3s 0s; }
-  .cd-panel-header h2 {
-    padding-left: 5%;
-    font-size: 1.5em;
-    font-weight: 100; }
   .from-right .cd-panel-header, .from-left .cd-panel-header {
     top: -50px; }
   .from-right .cd-panel-header {
@@ -531,10 +525,10 @@ html .navigation-is-open .bar {
     transition: top 0.3s 0.3s; }
   @media only screen and (min-width: 768px) {
     .cd-panel-header {
-      width: 70%; } }
+      width: 100%; } }
   @media only screen and (min-width: 1170px) {
     .cd-panel-header {
-      width: 50%; } }
+      width: 100%; } }
 
 .cd-panel-close {
   position: absolute;
@@ -542,7 +536,7 @@ html .navigation-is-open .bar {
   right: 0;
   height: 100%;
   width: 60px;
-  color: #333;
+  color: #ccc;
   /* image replacement */
   display: inline-block;
   overflow: hidden;
@@ -557,7 +551,7 @@ html .navigation-is-open .bar {
     left: 20px;
     height: 3px;
     width: 20px;
-    background-color: #333;
+    background-color: #ffffff;
     /* this fixes a bug where pseudo elements are slighty off position */
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden; }
@@ -576,7 +570,7 @@ html .navigation-is-open .bar {
   .no-touch .cd-panel-close:hover {
     background-color: #333; }
     .no-touch .cd-panel-close:hover::before, .no-touch .cd-panel-close:hover::after {
-      background-color: #ffffff;
+      background-color: #FFF;
       -webkit-transition-property: -webkit-transform;
       -moz-transition-property: -moz-transform;
       transition-property: transform;
@@ -598,7 +592,7 @@ html .navigation-is-open .bar {
 
 .cd-panel-container {
   position: absolute;
-  width: 90%;
+  width: 100%;
   height: 100%;
   top: 0;
   background: #FFF;
@@ -637,10 +631,10 @@ html .navigation-is-open .bar {
     transition-delay: 0s; }
   @media only screen and (min-width: 768px) {
     .cd-panel-container {
-      width: 70%; } }
+      width: 100%; } }
   @media only screen and (min-width: 1170px) {
     .cd-panel-container {
-      width: 50%; } }
+      width: 100%; } }
 
 .cd-panel-content {
   position: absolute;
@@ -648,10 +642,30 @@ html .navigation-is-open .bar {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 250px 5%;
+  padding-top: calc( 300px + 3% );
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 3%;
   overflow: auto;
   /* smooth scrolling on touch devices */
   -webkit-overflow-scrolling: touch; }
+  .cd-panel-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    display: inline-block;
+    width: calc( 100% - 60px);
+    float: left; }
+  .cd-panel-content #application_status {
+    line-height: 1.5em;
+    display: inline-block;
+    width: 30px;
+    float: left; }
+    .cd-panel-content #application_status .status_offline, .cd-panel-content #application_status .status_down, .cd-panel-content #application_status .status_online {
+      float: none;
+      margin-right: 15px; }
+      .cd-panel-content #application_status .status_offline i, .cd-panel-content #application_status .status_down i, .cd-panel-content #application_status .status_online i {
+        margin-bottom: 15px;
+        display: inline-block; }
   .cd-panel-content p {
     font-size: 14px;
     font-size: 0.875rem;
@@ -922,7 +936,7 @@ main {
   float: right; }
   .status_online i, .status_active i {
     color: #1D9D1D;
-    font-size: 16px; }
+    font-size: 12px; }
 
 .status_inactive {
   width: 16px;
@@ -930,7 +944,7 @@ main {
   float: right; }
   .status_inactive i {
     color: #ccc;
-    font-size: 16px; }
+    font-size: 12px; }
 
 .status_down {
   width: 16px;
@@ -938,7 +952,7 @@ main {
   float: right; }
   .status_down i {
     color: red;
-    font-size: 16px; }
+    font-size: 12px; }
 
 .status_offline {
   width: 16px;
@@ -946,7 +960,7 @@ main {
   float: right; }
   .status_offline i {
     color: #8DA2A8;
-    font-size: 16px; }
+    font-size: 12px; }
 
 .actions-list__option.j-selected {
   background-color: #E5F7E5;
@@ -1068,13 +1082,13 @@ main {
 #preloader {
   position: relative; }
 
-#application_status {
+.group_item {
   font-family: "Montserrat", sans-serif;
   background-color: #e4e7ec;
   border: 1px solid #ccc;
   display: inline-block;
   padding: 4px 8px;
-  margin: 20px 5px 5px 0;
+  margin: 0px 5px 5px 0;
   border-radius: 2px;
   font-size: 9px;
   text-decoration: none;
@@ -1082,10 +1096,9 @@ main {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
   color: #90939a;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5em;
-  float: right; }
+  line-height: 1.5em; }
 
-#application_status:hover {
+.group_item:hover {
   background-color: #90939a;
   color: #f4f6f8;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2); }
