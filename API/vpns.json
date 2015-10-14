@@ -1,7 +1,7 @@
 vpns = [
    {
-     "name": "Globus vpn 014",
-     "type": "Mesh",
+     "name": "Intranet",
+     "type": "Full Mesh",
      "vpn_status": "active" ,
      "groups":  {
        "group_id" : 12 ,
@@ -9,8 +9,8 @@ vpns = [
      },
    },
    {
-     "name": "Globus vpn 013",
-     "type": "Mesh",
+     "name": "Email",
+     "type": "Full Mesh",
      "vpn_status": "active" ,
      "groups":  {
        "group_id" : 12 ,
@@ -19,35 +19,8 @@ vpns = [
 
    },
    {
-     "name": "Globus vpn 012",
-     "type": "Mesh",
-     "vpn_status": "active" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
-     },
-   },
-   {
-     "name": "Globus vpn 011",
-     "type": "Mesh",
-     "vpn_status": "active" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
-     },
-   },
-   {
-     "name": "Globus vpn 010",
-     "type": "Mesh",
-     "vpn_status": "active" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
-     },
-   },
-   {
-     "name": "Globus vpn 009",
-     "type": "Mesh",
+     "name": "Printing",
+     "type": "Full Mesh",
      "vpn_status": "inactive" ,
      "groups":  {
        "group_id" : 12 ,
@@ -55,8 +28,8 @@ vpns = [
      },
    },
    {
-     "name": "Globus vpn 008",
-     "type": "Hub and spoke",
+     "name": "V.O.I.P.",
+     "type": "Full Mesh",
      "vpn_status": "active" ,
      "groups":  {
        "group_id" : 12 ,
@@ -64,66 +37,13 @@ vpns = [
      },
    },
    {
-     "name": "Globus vpn 007",
-     "type": "Mesh",
+     "name": "File Sharing",
+     "type": "Full Mesh",
      "vpn_status": "active" ,
      "groups":  {
        "group_id" : 12 ,
        "group_type" : 1 ,
      },
    },
-   {
-     "name": "Globus vpn 006",
-     "type": "Mesh",
-     "vpn_status": "active" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
-     },
-   },
-   {
-     "name": "Globus vpn 005",
-     "type": "Mesh",
-     "vpn_status": "active" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
-     },
-   },
-   {
-     "name": "Globus vpn 004",
-     "type": "Mesh",
-     "vpn_status": "active" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
-     },
-   },
-   {
-     "name": "Globus vpn 003",
-     "type": "Hub and spoke",
-     "vpn_status": "active" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
-     },
-   },
-   {
-     "name": "Globus vpn 002",
-     "type": "Hub and spoke",
-     "vpn_status": "inactive" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
-     },
-   },
-   {
-     "name": "Globus vpn 001",
-     "type": "Mesh",
-     "vpn_status": "active" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
-     },
-   }
+
 ];

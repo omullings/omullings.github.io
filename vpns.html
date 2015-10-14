@@ -117,25 +117,74 @@
 				<section id="mapContainer">
 					<div id="applicationMap" style="height: 800px; "></div>
 					<div class="cd-panel from-left">
-						<header class="cd-panel-header">
-							<h2  id="application_name"> </h2>
+						<header class="cd-panel-header" style=" min-height: 60px; background: transparent; border: none;  ">
+
 							<a href="#0" class="cd-panel-close">Close</a>
-							<div class="detail_summary" style="min-height: 160px; width: 100%; border-bottom: 1px solid #f1f1f1; background-color: #fff; padding: 0 5%; ">
-								<span id="application_status"></span>
-							</div>
 						</header>
 
-						<div class="cd-panel-container">
-							<div class="cd-panel-content">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur tempora voluptatem est repudiandae iusto, architecto perferendis sequi, asperiores dolores doloremque odit. Libero, ipsum fuga repellat quae numquam cumque nobis ipsa voluptates pariatur, a rerum aspernatur aliquid maxime magnam vero dolorum omnis neque fugit laboriosam eveniet veniam explicabo, similique reprehenderit at. Iusto totam vitae blanditiis. Culpa, earum modi rerum velit voluptatum voluptatibus debitis, architecto aperiam vero tempora ratione sint ullam voluptas non! Odit sequi ipsa, voluptatem ratione illo ullam quaerat qui, vel dolorum eligendi similique inventore quisquam perferendis reprehenderit quos officia! Maxime aliquam, soluta reiciendis beatae quisquam. Alias porro facilis obcaecati et id, corporis accusamus? Ab porro fuga consequatur quisquam illo quae quas tenetur.</p>
+						<style media="screen">
+							.app_details ul li {
+								line-height: 1.5em;
+								padding: 15px;
+								border: 1px solid #f1f1f1;
+								background: #fafafa;
+								display: block;
+								text-shadow: 0 1px 0 #fff;
+								margin-bottom: -1px;
+							}
 
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque similique, at excepturi adipisci repellat ut veritatis officia, saepe nemo soluta modi ducimus velit quam minus quis reiciendis culpa ullam quibusdam eveniet. Dolorum alias ducimus, ad, vitae delectus eligendi, possimus magni ipsam repudiandae iusto placeat repellat omnis veritatis adipisci aliquam hic ullam facere voluptatibus ratione laudantium perferendis quos ut. Beatae expedita, itaque assumenda libero voluptatem adipisci maiores voluptas accusantium, blanditiis saepe culpa laborum iusto maxime quae aperiam fugiat odit consequatur soluta hic. Sed quasi beatae quia repellendus, adipisci facilis ipsa vel, aperiam, consequatur eaque mollitia quaerat. Iusto fugit inventore eveniet velit.</p>
+							.app_details ul li:first-child {
+								border-top-left-radius: 3px;
+								border-top-right-radius: 3px;
+							}
 
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque similique, at excepturi adipisci repellat ut veritatis officia, saepe nemo soluta modi ducimus velit quam minus quis reiciendis culpa ullam quibusdam eveniet. Dolorum alias ducimus, ad, vitae delectus eligendi, possimus magni ipsam repudiandae iusto placeat repellat omnis veritatis adipisci aliquam hic ullam facere voluptatibus ratione laudantium perferendis quos ut. Beatae expedita, itaque assumenda libero voluptatem adipisci maiores voluptas accusantium, blanditiis saepe culpa laborum iusto maxime quae aperiam fugiat odit consequatur soluta hic. Sed quasi beatae quia repellendus, adipisci facilis ipsa vel, aperiam, consequatur eaque mollitia quaerat. Iusto fugit inventore eveniet velit.</p>
+							.app_details ul li:last-child {
+								border-bottom-left-radius: 3px;
+								border-bottom-right-radius: 3px;
+							}
 
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam magnam accusamus obcaecati nisi eveniet quo veniam quibusdam veritatis autem accusantium doloribus nam mollitia maxime explicabo nemo quae aspernatur impedit cupiditate dicta molestias consectetur, sint reprehenderit maiores. Tempora, exercitationem, voluptate. Sapiente modi officiis nulla sed ullam, amet placeat, illum necessitatibus, eveniet dolorum et maiores earum tempora, quas iste perspiciatis quibusdam vero accusamus veritatis. Recusandae sunt, repellat incidunt impedit tempore iusto, nostrum eaque necessitatibus sint eos omnis! Beatae, itaque, in. Vel reiciendis consequatur saepe soluta itaque aliquam praesentium, neque tempora. Voluptatibus sit, totam rerum quo ex nemo pariatur tempora voluptatem est repudiandae iusto, architecto perferendis sequi, asperiores dolores doloremque odit. Libero, ipsum fuga repellat quae numquam cumque nobis ipsa voluptates pariatur, a rerum aspernatur aliquid maxime magnam vero dolorum omnis neque fugit laboriosam eveniet veniam explicabo, similique reprehenderit at. Iusto totam vitae blanditiis. Culpa, earum modi rerum velit voluptatum voluptatibus debitis, architecto aperiam vero tempora ratione sint ullam voluptas non! Odit sequi ipsa, voluptatem ratione illo ullam quaerat qui, vel dolorum eligendi similique inventore quisquam perferendis reprehenderit quos officia! Maxime aliquam, soluta reiciendis beatae quisquam. Alias porro facilis obcaecati et id, corporis accusamus? Ab porro fuga consequatur quisquam illo quae quas tenetur.</p>
+							.vpn_side_component hr {
+								border-bottom: 1px solid #f1f1f1;
+								border-top: none;
+								margin: 15px 0;
+							}
+
+						</style>
+
+						<div class="cd-panel-container" style="width: 100%;  padding: 4%;  background-color: #fff;">
+
+							<div class="cd-panel-content"style=" padding-top: 30px;  width: 60%;  display: inline-block; padding-right: 25px; ">
+								<span  style="width: 64px;  ">
+									<input class="tgl tgl-ios" id="application_status" type="checkbox">
+									<label class="tgl-btn" for="application_status"></label>
+								</span>
+								<h2  id="application_name" style="display: block ; width: calc( 100% - 64px); margin-bottom: 8px; "> </h2>
+
+
+
+								<div class="app_details" style=" margin-top: 20px; " >
+									<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px;  ">TOPOLOGY</h3>
+									<span id="application_type"  style=" padding: 15px; border: 1px solid #f1f1f1; display: block; border-radius: 3px; margin-bottom: 15px;   "></span>
+									<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px;  ">Appliances</h3>
+									<ul id="vpn_list">
+
+									</ul>
+								</div>
 							</div> <!-- cd-panel-content -->
+							<aside style=" width: 40%; margin: 0; display: inline-block; float: right; padding:  0 0 0 15px;  ">
+								<div class="vpn_side_component" style=" margin-top: 0px; ">
+									<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px;  ">Security</h3>
+									<span id="application_address" style=" padding: 15px; border: 1px solid #f1f1f1; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">TEMPLATE:</span> default</span>
+									</br>
+									<span id="application_address" style=" padding: 15px; border: 1px solid #f1f1f1; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">AUTHENTICATION:</span> Public Key Infrastructure</span>
+									<span id="application_port" style=" padding: 15px; border: 1px solid #f1f1f1;  display: block; margin-top: -1px; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666;  ">PROTOCOLS:</span>Public-Key Cryptography Standards (PKCS) #12<hr> cacerts : cacerts.pfx </span>
+									</br>
+									<span id="application_address" style=" padding: 15px; border: 1px solid #f1f1f1; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">TUNNEL ENCRYPTION:</span> Encryption Algorithm</span>
+									<span id="application_port" style=" padding: 15px; border: 1px solid #f1f1f1;  display: block; margin-top: -1px; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666;  ">PROTOCOLS:</span>Internet Key Exchange v2 <hr> Encapsulating Secure Payload </span>
+								</div>
+							</aside>
 						</div> <!-- cd-panel-container -->
+
 					</div> <!-- cd-panel -->
 
 				</section>
@@ -204,6 +253,7 @@
 		</script>
 		<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
     <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2'></script>
+		<script type='text/javascript' src='API/appliances.json'></script>
 		<script type='text/javascript' src='js/maps/leaf-demo.js'></script>
 		<script>
 		$(document).ready(function() {
@@ -241,15 +291,30 @@
 				event.preventDefault();
 				event.stopPropagation();
 
+				$('.cd-btn').removeClass('j-selected', 'j-focused');
+				$( event.currentTarget ).addClass('j-selected', 'j-focused');
+
+
 				//console.log( event.currentTarget );
 
 				var app_name = $( event.currentTarget ).attr('data-name');
 				var app_status = $( event.currentTarget ).attr('data-status');
+				var app_type = $( event.currentTarget ).attr('data-type');
 
 
 				//console.log( event.target );
 				$('#application_name').html( app_name );
-				$('#application_status').html( app_status );
+				$('#application_type').html( app_type );
+
+				if( app_status === "active" ) {
+
+					$('#application_status').prop('checked', true).hide();
+
+				} else {
+
+					$('#application_status').prop('checked', false).hide();
+
+				}
 
 			});
 		});
@@ -337,6 +402,30 @@
 				});
 
 		});
+		</script>
+		<script type="text/javascript">
+		(function(appliances) {
+			var appliancesCount = appliances.length;
+
+			for (var i = 0; i < appliancesCount; i++) {
+				var application_status = appliances[i]['application_status'];
+
+				var online_status = "online" ;
+				var down_status = "down" ;
+				var offline_status = "offline" ;
+
+				$('#vpn_list').prepend(
+					( application_status === online_status )?
+						'<li  ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '"><i class="fa fa-circle"></i></span></li>'
+					: ( application_status ===  down_status )?
+						'<li ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '"><i class="fa fa-exclamation-triangle"></i></span></li>'
+					: ( application_status ===  offline_status )?
+						'<li ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '"><i class="fa fa-minus"></i></span></li>'
+          : ''
+				);
+			}
+
+		})(appliances);
 		</script>
 		<script async src="//d1ks1friyst4m3.cloudfront.net/toolbar/prod/td.js" data-trackduck-id="560d8ba74660d9d2753f20b5"></script>
 
