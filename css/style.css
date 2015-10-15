@@ -410,7 +410,7 @@ html .navigation-is-open .bar {
   height: 100%;
   background-color: #fff;
   display: inline-block;
-  border-right: 1px solid #f1f1f1;
+  border-right: 1px solid #eee;
   float: left; }
 
 .cd-panel {
@@ -424,7 +424,7 @@ html .navigation-is-open .bar {
   -moz-transition: visibility 0s 0.3s;
   transition: visibility 0s 0.3s;
   z-index: 1;
-  border-right: 1px solid #f1f1f1; }
+  border-right: 1px solid #eee; }
   .cd-panel::after {
     /* overlay layer */
     position: absolute;
@@ -509,7 +509,7 @@ html .navigation-is-open .bar {
   width: 100%;
   z-index: 2;
   background-color: #fff;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #eee;
   min-height: 60px;
   pointer-events: none;
   -webkit-transition: top 0.3s 0s;
@@ -1010,7 +1010,7 @@ main {
   position: relative;
   height: 100%;
   width: 300px;
-  border-right: 1px solid #f1f1f1; }
+  border-right: 1px solid #eee; }
   #listPanel header {
     position: absolute;
     top: 0;
@@ -1018,7 +1018,7 @@ main {
     background: #fff;
     display: block;
     z-index: 1;
-    border-bottom: 1px solid #f1f1f1;
+    border-bottom: 1px solid #eee;
     width: 100%;
     padding: 15px 20px 8px 20px; }
     #listPanel header .selection_count {
