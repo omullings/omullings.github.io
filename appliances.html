@@ -217,19 +217,19 @@
 				<section id="mapContainer">
 					<div id="applicationMap" style="height: 800px; "></div>
 					<div class="cd-panel from-left">
-						<header class="cd-panel-header clearfix">
-							<span id="application_location_map" style="display: block;  height: 300px; position: relative; "></span>
-
-							<a href="#0" class="cd-panel-close">Close</a>
+						<header class="cd-panel-header clearfix" style=" min-height: 50px;   ">
+							<div class="title_bar" style="width: calc( 100% - 50px ); height: 50px; position: relative;   padding: 15px 3%; ">
+								<h2 id="application_name" style=" display: block; font-weight: 600; "> </h2>
+								<i class="fa fa-ellipsis-v" style="    position: absolute; right: 3%; top: 18px;  "></i>
+							</div>
+							<a href="#0" class="cd-panel-close" style=" width: 60px; ">Close</a>
 
 						</header>
-						<div class="cd-panel-container">
-							<div class="cd-panel-content"  >
+						<div class="cd-panel-container" >
+							<div class="cd-panel-content" style="padding-top: 70px; "  >
 								<div class="detail_summary" style="width: 100%;  width: 60%;  display: inline-block; padding-right: 25px; ">
-									<h2 id="application_name" style=" display: block; "> </h2>
-									<i class="fa fa-ellipsis-v" style="float: right;  "></i>
-									<br><br>
-									<span id="application_description" style=" display: block; margin: 20px 0; line-height: 1.5em;"></span>
+
+									<span id="application_description" style=" display: block; margin: 20px 0; line-height: 1.5em; font-size: 0.8em; "></span>
 									<div class="" style=" margin-top: 15px; ">
 										<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px;  ">Virtual Private Networks</h3>
 										<span  style=" padding: 15px; border: 1px solid #f1f1f1; background: #fafafa; display: block; text-shadow: 0 1px 0 #fff; border-top-left-radius: 3px;  border-top-right-radius: 3px; ">Intranet <i class="fa fa-chevron-right" style=" float: right; color: #ccc; "></i></span>
@@ -240,9 +240,9 @@
 									</div>
 
 								</div>
-								<aside style=" width: 40%; margin: 0; display: inline-block; float: right; padding:  0 0 0 15px;  ">
-									<div class="" style=" margin-top: 0px; ">
-										<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: inline-block; width: auto;  ">Connection</h3>
+								<aside style=" width: 40%; margin: 0; display: inline-block; float: right; padding:  0px 0 0 15px;  ">
+									<div class="" style=" margin-top: 0px;  ">
+										<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; margin-top: 15px; display: inline-block; width: auto;  ">Connection</h3>
 										<span id="application_status" style=" float: right; display: inline-block; text-align: right; "></span>
 										<span style=" padding: 15px; border: 1px solid #f1f1f1; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Management Address:</span> <span id="application_address" ></span></span>
 										<span  style=" padding: 15px; border: 1px solid #f1f1f1; display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Management port:</span> <span id="application_port" ></span></span>
@@ -251,6 +251,10 @@
 										<br>
 									</div>
 									<br>
+									<div class="app_details" style="margin-top: 25px; position: relative; ">
+										<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px;  ">Location</h3>
+										<span id="application_location_map" style="display: block;  height: 300px; position: relative; border-radius: 3px; border: 1px solid #ccc;  "></span>
+									</div>
 									<div class="app_details" style="margin-top: 25px; ">
 										<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px;  ">Appliance Details</h3>
 										<label>Make:</label><span></span></br></br>
