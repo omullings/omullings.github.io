@@ -191,14 +191,7 @@
 					<div id="applicationMap" style="height: 800px; "></div>
 					<div class="cd-panel from-left">
 
-						<header class="cd-panel-header clearfix" style=" min-height: 50px;   ">
-							<div class="title_bar" style="width: calc( 100% - 50px ); height: 50px; position: relative;   padding: 15px 3%; ">
-								<h2 id="application_name" style=" display: block; font-weight: 900; "> </h2>
-								<span  style=" position: absolute; right: 3%; top: 10px;   ">
-									<input class="tgl tgl-ios" id="application_status" type="checkbox">
-									<label class="tgl-btn" for="application_status"></label>
-								</span>
-							</div>
+						<header class="cd-panel-header clearfix" >
 							<a href="#0" class="cd-panel-close" style=" width: 60px; ">Close</a>
 						</header>
 
@@ -238,33 +231,52 @@
 								background: rgba(255, 255, 255, 0.9);
 							}
 
+							#form_submit_buttons {
+							  -webkit-transition: top 0.5s 0s;
+							  -moz-transition: top 0.5s 0s;
+							  transition: top 0.5s 0s; }
+
 						</style>
 
 						<div class="cd-panel-container" style="width: 100%;  position: relative;  background-color: #fff;">
+							<form class="" action="" method="post">
 
-							<div class="cd-panel-content"style=" padding-top: 80px; ">
+							<div class="cd-panel-content" style="padding-top: 40px; ">
 								<section style=" width: 60%;  display: inline-block; padding-right: 25px; ">
 
 
 
-
 								<div class="app_details" style=" margin-top: 0px; " >
-									<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px;  ">Network</h3>
-									<span  style=" padding: 15px; border: 1px solid #eee; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px; margin-bottom: 15px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">TOPOLOGY:</span><span id="application_type"> default</span>
-									<br><br><br>
-									<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Appliances:</span>
-									<ul id="vpn_list">
 
-									</ul>
+									<div class="title_bar" style="display: block;  position: relative; margin-bottom: 25px; ">
+										<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Network:</span>
+										<h2 id="application_name" style=" display: block; font-weight: 900; font-size: 24px; line-height: 1.5em; " contenteditable="true"> </h2>
+									</div>
+
+									<span  style=" display: block; ">
+										<div style="margin-bottom: 25px; display: block; position: relative; ">
+											<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Activate Network:</span>
+											<span  >
+												<input class="tgl tgl-ios" id="application_status" type="checkbox">
+												<label class="tgl-btn" for="application_status"></label>
+											</span>
+										</div>
+										<div style="margin-bottom: 25px; display: block; position relative; ">
+											<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">TOPOLOGY:</span><span id="application_type"> default</span>
+										</div>
+										<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Appliances:</span>
+										<ul id="vpn_list">
+
+										</ul>
 									</span>
 								</div>
 								</section>
 								<aside style=" width: 40%; margin: 0; display: inline-block; float: right; padding:  0 0 0 15px;  ">
 									<div class="vpn_side_component" style=" margin-top: 0px; ">
-										<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px;  ">Security</h3>
-										<span style=" padding: 15px; border: 1px solid #eee; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Key Agreement Method:</span> Public Key Infrastructure</span>
-										<span style=" padding: 15px; border: 1px solid #eee;  display: block; margin-top: -1px; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666;  ">Key Agreement Algorithm:</span>Rivest-Shamir-Adleman (RSA) public key encryption</span>
-										<span style=" padding: 15px; border: 1px solid #eee;  display: block; margin-top: -1px; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666;  ">Certificate Authority:</span>
+										<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px;  ">Network Security</h3>
+										<span style=" padding: 15px; border: 1px solid #eee; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Authentication Method:</span> Public Key Infrastructure</span>
+										<span style=" padding: 15px; border: 1px solid #eee;  display: block; margin-top: -1px; ;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666;  ">Public Key Algorithm:</span>Rivest-Shamir-Adleman (RSA) public key encryption</span>
+										<span style=" padding: 15px; border: 1px solid #eee;  display: block; margin-top: -1px; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666;  ">Certificate Authority Root Certificate:</span>
 										<span style="font-size: 0.7em; word-wrap: break-word;">
 											-----BEGIN CERTIFICATE REQUEST-----<br>
 											MIIBqDCCARECAQAwajESMBAGA1UEAxMJbG9jYWxob3N0MREwDwYDVQQLEwhHZXJvbmltbzEPMA0GA1UEChMGQXBhY2hlMRAwDgYDVQQHDAdNeV9DaXR5MREwDwYDVQQIDAhNeV9TdGF0ZTELMAkGA1UEBhMCQ0MwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMfqprJ/aMbVzmEjDimnMQuVN/CaO7Yb89KP6ed3VQf+/Ea2i+p0dRskM8oNg+3kZeKuOplwq5KGEUnp+xbfq7M6tLGrWqQ8qL3EZUFE2nizH5VzV093vKu5jgnR2RfbTc2AplcldCPofUVuMUbDLPsmE1YQQr+OcHtcNspZL5tdAgMBAAEwDQYJKoZIhvcNAQEEBQADgYEAZFuPz0gzKqMZNA0bYLm0aPFLbR9a19NA0EbgJL2SYzoKnuKyplG2JzMVQ6myaez0J8t+iWtuthz70kBihRzU2vqOWpB4oqh+zbPwn4f87l4l8PjJh3SkiDIYdMcL5U1rxwFNAaIEpfjft/uJLY/Bv7DZQG7UPsGz+SPdn+DbdBo=
@@ -272,25 +284,27 @@
 											-----END CERTIFICATE REQUEST-----
 										</span>
 									</span>
-									<span style=" padding: 15px; border: 1px solid #eee;  display: block; margin-top: -1px; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666;  ">Key exchange configuration:</span>
-										<span style=" font-size: 0.8em; ">
-											Key retries: enabled <br>
-											Re-keying time period: 1440 sec
-										</span>
-									</span>
+
 										</br>
-										<span  style=" padding: 15px; border: 1px solid #eee; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Secure Association Encryption:</span> Advanced Encryption Standard (AES) 256 bits</span>
-										<span id="application_port" style=" padding: 15px; border: 1px solid #eee;  display: block; margin-top: -1px; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666;  ">Security Association Integrity Algorithm:</span>Secure Hash Algorithm 2 (SHA 2) 256 bits </span>
-											<span style=" padding: 15px; border: 1px solid #eee;  display: block; margin-top: -1px; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666;  ">Security association configuration:</span>
-												<span style=" font-size: 0.8em; ">
-													Re-authorization time: 240 sec <br>
-													IKE Security Association Lifetime: 1440 sec
-												</span>
+										<span  style=" padding: 15px; border: 1px solid #eee; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">IKE Secure association Encryption:</span> Advanced Encryption Standard (AES) 256 bits</span>
+										<span id="application_port" style=" padding: 15px; border: 1px solid #eee;  display: block; margin-top: -1px; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666;  ">IKE Security association Integrity Algorithm:</span>Secure Hash Algorithm 2 (SHA 2) 256 bits </span>
+
+										<span style=" padding: 15px; border: 1px solid #eee;  display: block; margin-top: 15px; border-radius: 3px; "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666;  ">IKE Security association configuration:</span>
+											<span style=" font-size: 0.8em; ">
+												Key retries: enabled <br>
+												Re-keying time period: 1440 sec <br>
+												Re-authorization time interval: 240 sec <br>
+												Lifetime: 1440 sec <br>
 											</span>
+										</span>
 									</div>
 								</aside>
 							</div> <!-- cd-panel-content -->
-
+							<div id="form_submit_buttons" style=" background-color: rgba(0, 0, 0, 0.6); height: 70px; position: absolute; bottom: 0; right: 0; left: 0; display: none; z-index: 99999; ">
+								<input type="submit" name="submit" value="Save Changes" class="submit-button" style=" margin: 15px 5px 10px 25px; border-radius: 3px; height: 40px; padding: 5px 15px; text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600;  background: #1D9D1D;  color: #fff; border: 1px solid #333; ; box-shadow: none; text-shadow: 0 1px 0 green;    ">
+								<button type="button" name="button" style=" background: transparent; color: #fff; border: 2px solid #fff; border-radius: 3px;  box-shadow: none; margin: 15px 5px; height: 40px; padding: 5px 15px; text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600;"> Revert changes </button>
+							</div>
+							</form>
 						</div> <!-- cd-panel-container -->
 
 					</div> <!-- cd-panel -->
@@ -299,58 +313,6 @@
 
 			</div><!-- /content -->
 		</div><!-- /container -->
-
-		<div id="cd-nav" class="cd-nav">
-          <div class="cd-navigation-wrapper">
-            <div class="cd-primary-nav cd-half-block ">
-              <nav>
-              <!--  <h3>Dashboard</h3>
-                <ul class="">
-                  <li><a href="#/overview" class="">Overview</a></li>
-                </ul> -->
-                <h3>Appliance Management</h3>
-                <ul>
-                  <li><a href="appliances.html" class="">Manage Appliances</a></li>
-                  <li><a href="vpns.html" class="">Manage VPNs</a></li>
-                  <!-- <li><a href="#/vpntemplate" class="">Manage VPN Templates</a></li> -->
-                  <!-- <li><a href="#/alerts" class="">Manage Alerts</a></li> -->
-                  <!-- <li><a href="#/sites" class="">Manage Sites</a></li> -->
-                </ul>
-                <h3>Administration</h3>
-                <ul>
-                  <li><a href="" class="">Manage Administrators</a></li>
-                  <li><a href="" class="">Manage Roles and Permissions</a></li>
-                </ul>
-                <h3>System Configuration</h3>
-                <ul>
-                  <li><a href="" class="">Manage Settings</a></li>
-                </ul>
-                <h3>Account</h3>
-                <ul>
-                  <li><a href="" class="">Mohammed Askari</a></li>
-                  <li><a href="" class="">Logout</a></li>
-                </ul>
-              </nav>
-            </div><!-- .cd-half-block -->
-
-            <div class="cd-half-block cd-contact-info companyPanel" >
-              <img src="img/logo.svg" class="rngle-logo">
-              <div >
-              <p>GLOBUS VPN</p>
-              <a href="mailto:info@infosecglobal.com">info@infosecglobal.com</a>
-              <address>
-                <ul >
-                  <li>
-                    <span>Hardturmstrasse 103</span>
-                    <span>8005, Zürich</span>
-                    <span>Switzerland</span>
-                  </li>
-                </ul>
-              </address>
-            </div>
-            </div> <!-- .cd-half-block -->
-          </div> <!-- .cd-navigation-wrapper -->
-        </div> <!-- .cd-nav -->
 
 				<span id="appliance_vpn_details" style=" display: none;  ">
 					 <span style="background-color: #fafafa; text-shadow: 0 1px 0 #fff; padding: 15px; border-top: 1px solid #eee; position: relative; display: block; margin-top: -1px; ">
@@ -443,7 +405,7 @@
 
 			for (var i = 0; i < appliancesCount; i++) {
 				$('#grid').prepend(
-						'<li data-name="'+ vpns[i]['name'] +'" data-status="'+ vpns[i]['vpn_status'] +'" data-type="'+ vpns[i]['type'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + vpns[i]['name'] + '</h3><span class="vpn_status">' + vpns[i]['type'] + '</span></div><span class="status_' + vpns[i]['vpn_status'] + '"><i class="fa fa-circle"></i></span></li>'
+						'<li data-name="'+ vpns[i]['roles']['name'] +'" data-status="'+ vpns[i]['roles']['active'] +'" data-type="'+ vpns[i]['roles']['type'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + vpns[i]['roles']['name'] + '</h3><span class="vpn_status">' + vpns[i]['roles']['type'] + '</span></div><span class="status_' + vpns[i]['roles']['active'] + '"><i class="fa fa-circle"></i></span></li>'
 				);
 			}
 
@@ -472,7 +434,7 @@
 				$('#application_name').html( app_name );
 				$('#application_type').html( app_type );
 
-				if( app_status === "active" ) {
+				if( app_status === "true" ) {
 
 					$('#application_status').prop('checked', true).hide();
 
@@ -569,6 +531,7 @@
 
 		});
 		</script>
+
 		<script type="text/javascript">
 		(function(appliances) {
 			var appliancesCount = appliances.length;
@@ -601,6 +564,39 @@
 				$('#appliance_vpn_details').show();
 
 			});
+		});
+		</script>
+		<script type="text/javascript">
+		$(function(){
+
+			var contents;
+
+			$('#application_name').focus(function() {
+				$('#form_submit_buttons').show();
+			});
+
+			$('.cd-btn').on('click', function(){
+				contents = document.getElementById('application_name').innerHTML;
+			});
+
+
+			$('#application_name').blur(function() {
+
+				//$('#form_submit_buttons').hide();
+
+					if (contents == $(this).text()){
+
+						$('#form_submit_buttons').hide();
+
+					} else {
+						console.log(contents);
+						console.log( $(this).text() );
+							//alert('Handler for .change() called.');
+							//contents = $(this).text();
+
+					}
+			});
+
 		});
 		</script>
 		<script async src="//d1ks1friyst4m3.cloudfront.net/toolbar/prod/td.js" data-trackduck-id="560d8ba74660d9d2753f20b5"></script>

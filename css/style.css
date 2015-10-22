@@ -508,7 +508,6 @@ html .navigation-is-open .bar {
   position: absolute;
   width: 100%;
   z-index: 2;
-  background-color: #fff;
   min-height: 60px;
   pointer-events: none;
   -webkit-transition: top 0.3s 0s;
@@ -655,9 +654,7 @@ html .navigation-is-open .bar {
   .cd-panel-content h2 {
     font-size: 1.5em;
     margin-bottom: 15px;
-    display: inline-block;
-    width: calc( 100% - 60px);
-    float: left; }
+    display: inline-block;}
   .cd-panel-content #application_status {
     line-height: 1.5em;
     display: inline-block;
@@ -933,19 +930,19 @@ main {
   margin: 0;
   vertical-align: middle; }
 
-.status_online, .status_active {
+.status_online, .status_true {
   width: 16px;
   height: 16px;
   float: right; }
-  .status_online i, .status_active i {
+  .status_online i, .status_true i {
     color: #1D9D1D;
     font-size: 12px; }
 
-.status_inactive {
+.status_false {
   width: 16px;
   height: 16px;
   float: right; }
-  .status_inactive i {
+  .status_false i {
     color: #ccc;
     font-size: 12px; }
 

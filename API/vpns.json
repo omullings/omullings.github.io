@@ -1,49 +1,354 @@
 vpns = [
-   {
-     "name": "Intranet",
-     "type": "Full Mesh",
-     "vpn_status": "active" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
-     },
-   },
-   {
-     "name": "Email",
-     "type": "Full Mesh",
-     "vpn_status": "active" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
-     },
 
-   },
-   {
-     "name": "Printing",
-     "type": "Full Mesh",
-     "vpn_status": "inactive" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
-     },
-   },
-   {
-     "name": "V.O.I.P.",
-     "type": "Full Mesh",
-     "vpn_status": "active" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
-     },
-   },
-   {
-     "name": "File Sharing",
-     "type": "Full Mesh",
-     "vpn_status": "active" ,
-     "groups":  {
-       "group_id" : 12 ,
-       "group_type" : 1 ,
-     },
-   },
+{
+   "name":"%vpnname",
+   "roles": {
+         "name":"Intranet",
+         "type": "Full Mesh",
+         "active":true,
+         "template": {
+               "id":"01378bb3-2f4e-4cf4-9bbc-af21bb7a157a",
+               "name":"tmpl0",
+               "profile_info": {
+                  "ike_version":2,
+                  "local_addrs":[
+                     "%local.ike_addrs"
+                  ],
+                  "remote_addrs":[
+                     "%remote.ike_addrs"
+                  ],
+                  "local_port":"%local.ike_port",
+                  "remote_port":"%remote.ike_port",
+                  "proposals":[ {"proposal":"aes256-sha256-modp1024", "encryption_algorithm": "aes256", "integrity_algorithm" : "sha256", "Diffie Hellman Groups" : "modp1024" }
+
+                  ],
+                  "dpd_delay":240,
+                  "rekey_time":14400,
+                  "local_auth":[
+                     {
+                        "auth":"pubkey",
+                        "id":"%local.secrets.#0.id",
+                        "certs":[
+                           "%local.certs"
+                        ]
+                     }
+                  ],
+                  "remote_auth":[
+                     {
+                        "auth":"pubkey",
+                        "id":"%remote.secrets.#0.id",
+                        "certs":[
+                           "%remote.certs"
+                        ],
+                        "cacerts":["Q2VydGlmaWNhdGU6CiAgICBEYXRhOgogICAgICAgIFZlcnNpb246IDMgKDB4MikKICAgICAgICBTZXJpYWwgTnVtYmVyOiAxMzIyMjUgKDB4MjA0ODEpCiAgICBTaWduYXR1cmUgQWxnb3JpdGhtOiBzaGExV2l0aFJTQUVuY3J5cHRpb24KICAgICAgICBJc3N1ZXI6IEM9Q0EsIE89SVNHLCBDTj1JU0dfQ0EKICAgICAgICBWYWxpZGl0eQogICAgICAgICAgICBOb3QgQmVmb3JlOiBTZXAgMTYgMDA6MDA6MDAgMjAxNSBHTVQKICAgICAgICAgICAgTm90IEFmdGVyIDogT2N0IDE0IDE5OjQ3OjU4IDIwMjAgR01UCiAgICAgICAgU3ViamVjdDogQz1DQSwgTz1JU0csIENOPUlTR19DQQogICAgICAgIFN1YmplY3QgUHVibGljIEtleSBJbmZvOgogICAgICAgICAgICBQdWJsaWMgS2V5IEFsZ29yaXRobTogcnNhRW5jcnlwdGlvbgogICAgICAgICAgICAgICAgUHVibGljLUtleTogKDEwMjQgYml0KQogICAgICAgICAgICAgICAgTW9kdWx1czoKICAgICAgICAgICAgICAgICAgICAwMDpiODowYzoxNzo0NjpjODpkMjo4Nzo5MjozNjo2YTo2OTo3OTplYjoyMToKICAgICAgICAgICAgICAgICAgICA3NDo2Zjo1NjpmMToxNDo3ZDpiYjowODplOTplOTo3NDoxZDpkNDphZTo1ZjoKICAgICAgICAgICAgICAgICAgICA2NDpiNzpjODo5YTpjNDo5MjoyNzpiZDphNTphNjphZToyNDo4YTpkNTowMjoKICAgICAgICAgICAgICAgICAgICA4Mjo2MTphYzo4ZDphNzpjMToxZDpiMzozMjo5Njo4NzpjYzpjMzphZToxODoKICAgICAgICAgICAgICAgICAgICAyMDo1MDphNTowYToyNDo4MDpjYzozMDo5OTo4YTo5NDpmNjpkNTo2Njo4OToKICAgICAgICAgICAgICAgICAgICAwYjoxZjpiMTo5NjplYzphMzplNTphMzoxNTo5YTpmMDo1ODo0MTpjNDo3MjoKICAgICAgICAgICAgICAgICAgICBlZjpiZTo0ODo0Mjo4NDo1ZjpmNjoyOTphNjo2MjpiOTpmNDo4Yjo3MDpkYjoKICAgICAgICAgICAgICAgICAgICA4ZjpmNTpjNzo2OTo3YTo0MDpiYzplODpiNTphZTphNzo2ZTozZjpiMToxNzoKICAgICAgICAgICAgICAgICAgICBiZTo4YjozNTpiNDoyMTpkMjo5ODo0ODpkMQogICAgICAgICAgICAgICAgRXhwb25lbnQ6IDY1NTM3ICgweDEwMDAxKQogICAgICAgIFg1MDl2MyBleHRlbnNpb25zOgogICAgICAgICAgICBYNTA5djMgQmFzaWMgQ29uc3RyYWludHM6IAogICAgICAgICAgICAgICAgQ0E6VFJVRQogICAgICAgICAgICBYNTA5djMgU3ViamVjdCBLZXkgSWRlbnRpZmllcjogCiAgICAgICAgICAgICAgICBDNjpFODo0RDpBQToyQzo0OToyODo0MTpFOTpDNjo1OToxNTpFMDo1Qjo0OTo1MTo0RToyRTpEQjo0NQogICAgICAgICAgICBYNTA5djMgQXV0aG9yaXR5IEtleSBJZGVudGlmaWVyOiAKICAgICAgICAgICAgICAgIGtleWlkOkM2OkU4OjREOkFBOjJDOjQ5OjI4OjQxOkU5OkM2OjU5OjE1OkUwOjVCOjQ5OjUxOjRFOjJFOkRCOjQ1CgogICAgU2lnbmF0dXJlIEFsZ29yaXRobTogc2hhMVdpdGhSU0FFbmNyeXB0aW9uCiAgICAgICAgIDNhOjcwOmEzOjEzOjdmOjJkOjU5OjgwOmQ2OmRkOjI4OmE0OjhlOjRlOjRhOjFjOjg1OmFkOgogICAgICAgICA3MTowODplNTo5Zjo3ZjpjOTo4Yjo2MDpmMDphYzphODo4NDpmOTozZjo5MjpjYzphZDpiYjoKICAgICAgICAgYzU6OWU6ZGE6OWM6Mzc6OGU6ZGI6NDQ6MjI6MzU6OGU6MmY6N2Y6MGE6NGY6YTU6MTI6ZTE6CiAgICAgICAgIDhlOjdhOmEzOmEwOjM1OjBiOjVlOjgwOmY0OjM3Ojg2OjFmOjExOjg3OmYxOjhiOjIyOjQzOgogICAgICAgICA4Zjo1OTo5MzpiNjpiMTozMzphYTpiYjpiYzoxZjoyMjo4NTpmODozOToyNTpjMzo2NTo3YjoKICAgICAgICAgMDU6NGM6YWQ6ZGU6NGI6MmU6ZTQ6NGY6OGY6M2E6ZDg6ZmQ6YTk6ZjM6ODI6NjA6ZjY6Mjg6CiAgICAgICAgIGU1OmIwOmI2OjZjOjBmOmViOjlkOmJhOjIyOmI2OmExOjMyOjI5OjJjOjQ4OjY2OjcwOmQ4OgogICAgICAgICAwMDo4ZgotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJQ0lEQ0NBWW1nQXdJQkFnSURBZ1NCTUEwR0NTcUdTSWIzRFFFQkJRVUFNQ3d4Q3pBSkJnTlZCQVlUQWtOQgpNUXd3Q2dZRFZRUUtEQU5KVTBjeER6QU5CZ05WQkFNTUJrbFRSMTlEUVRBZUZ3MHhOVEE1TVRZd01EQXdNREJhCkZ3MHlNREV3TVRReE9UUTNOVGhhTUN3eEN6QUpCZ05WQkFZVEFrTkJNUXd3Q2dZRFZRUUtEQU5KVTBjeER6QU4KQmdOVkJBTU1Ca2xUUjE5RFFUQ0JuekFOQmdrcWhraUc5dzBCQVFFRkFBT0JqUUF3Z1lrQ2dZRUF1QXdYUnNqUwpoNUkyYW1sNTZ5RjBiMWJ4RkgyN0NPbnBkQjNVcmw5a3Q4aWF4SkludmFXbXJpU0sxUUtDWWF5TnA4RWRzektXCmg4ekRyaGdnVUtVS0pJRE1NSm1LbFBiVlpva0xIN0dXN0tQbG94V2E4RmhCeEhMdnZraENoRi8yS2FaaXVmU0wKY051UDljZHBla0M4NkxXdXAyNC9zUmUraXpXMElkS1lTTkVDQXdFQUFhTlFNRTR3REFZRFZSMFRCQVV3QXdFQgovekFkQmdOVkhRNEVGZ1FVeHVoTnFpeEpLRUhweGxrVjRGdEpVVTR1MjBVd0h3WURWUjBqQkJnd0ZvQVV4dWhOCnFpeEpLRUhweGxrVjRGdEpVVTR1MjBVd0RRWUpLb1pJaHZjTkFRRUZCUUFEZ1lFQU9uQ2pFMzh0V1lEVzNTaWsKams1S0hJV3RjUWpsbjMvSmkyRHdyS2lFK1QrU3pLMjd4WjdhbkRlTzIwUWlOWTR2ZndwUHBSTGhqbnFqb0RVTApYb0QwTjRZZkVZZnhpeUpEajFtVHRyRXpxcnU4SHlLRitEa2x3MlY3QlV5dDNrc3U1RStQT3RqOXFmT0NZUFlvCjViQzJiQS9ybmJvaXRxRXlLU3hJWm5EWUFJOD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],
+                        "revocation":"relaxed"
+                     }
+                  ],
+                  "children":[
+                     {
+                        "esp_proposals":[
+                           "default"
+                        ],
+                        "local_ts":[
+                           "%local.selectors"
+                        ],
+                        "remote_ts":[
+                           "%remote.selectors"
+                        ],
+                        "rekey_time":3600,
+                        "life_time":10,
+                        "mode":"tunnel"
+                     }
+                  ]
+               }
+            }
+      },
+      "appliances":[
+        {
+        "id": 234523453245,
+        "id": 234523453245
+       }
+    ],
+},
+{
+   "name":"%vpnname",
+   "roles": {
+         "name":"Email",
+         "type": "Full Mesh",
+         "active":true,
+         "template": {
+               "id":"01378bb3-2f4e-4cf4-9bbc-af21bb7a157a",
+               "name":"tmpl0",
+               "profile_info": {
+                  "ike_version":2,
+                  "local_addrs":[
+                     "%local.ike_addrs"
+                  ],
+                  "remote_addrs":[
+                     "%remote.ike_addrs"
+                  ],
+                  "local_port":"%local.ike_port",
+                  "remote_port":"%remote.ike_port",
+                  "proposals":[ {"proposal":"aes256-sha256-modp1024", "encryption_algorithm": "aes256", "integrity_algorithm" : "sha256", "Diffie Hellman Groups" : "modp1024" }
+
+                  ],
+                  "dpd_delay":240,
+                  "rekey_time":14400,
+                  "local_auth":[
+                     {
+                        "auth":"pubkey",
+                        "id":"%local.secrets.#0.id",
+                        "certs":[
+                           "%local.certs"
+                        ]
+                     }
+                  ],
+                  "remote_auth":[
+                     {
+                        "auth":"pubkey",
+                        "id":"%remote.secrets.#0.id",
+                        "certs":[
+                           "%remote.certs"
+                        ],
+                        "cacerts":["Q2VydGlmaWNhdGU6CiAgICBEYXRhOgogICAgICAgIFZlcnNpb246IDMgKDB4MikKICAgICAgICBTZXJpYWwgTnVtYmVyOiAxMzIyMjUgKDB4MjA0ODEpCiAgICBTaWduYXR1cmUgQWxnb3JpdGhtOiBzaGExV2l0aFJTQUVuY3J5cHRpb24KICAgICAgICBJc3N1ZXI6IEM9Q0EsIE89SVNHLCBDTj1JU0dfQ0EKICAgICAgICBWYWxpZGl0eQogICAgICAgICAgICBOb3QgQmVmb3JlOiBTZXAgMTYgMDA6MDA6MDAgMjAxNSBHTVQKICAgICAgICAgICAgTm90IEFmdGVyIDogT2N0IDE0IDE5OjQ3OjU4IDIwMjAgR01UCiAgICAgICAgU3ViamVjdDogQz1DQSwgTz1JU0csIENOPUlTR19DQQogICAgICAgIFN1YmplY3QgUHVibGljIEtleSBJbmZvOgogICAgICAgICAgICBQdWJsaWMgS2V5IEFsZ29yaXRobTogcnNhRW5jcnlwdGlvbgogICAgICAgICAgICAgICAgUHVibGljLUtleTogKDEwMjQgYml0KQogICAgICAgICAgICAgICAgTW9kdWx1czoKICAgICAgICAgICAgICAgICAgICAwMDpiODowYzoxNzo0NjpjODpkMjo4Nzo5MjozNjo2YTo2OTo3OTplYjoyMToKICAgICAgICAgICAgICAgICAgICA3NDo2Zjo1NjpmMToxNDo3ZDpiYjowODplOTplOTo3NDoxZDpkNDphZTo1ZjoKICAgICAgICAgICAgICAgICAgICA2NDpiNzpjODo5YTpjNDo5MjoyNzpiZDphNTphNjphZToyNDo4YTpkNTowMjoKICAgICAgICAgICAgICAgICAgICA4Mjo2MTphYzo4ZDphNzpjMToxZDpiMzozMjo5Njo4NzpjYzpjMzphZToxODoKICAgICAgICAgICAgICAgICAgICAyMDo1MDphNTowYToyNDo4MDpjYzozMDo5OTo4YTo5NDpmNjpkNTo2Njo4OToKICAgICAgICAgICAgICAgICAgICAwYjoxZjpiMTo5NjplYzphMzplNTphMzoxNTo5YTpmMDo1ODo0MTpjNDo3MjoKICAgICAgICAgICAgICAgICAgICBlZjpiZTo0ODo0Mjo4NDo1ZjpmNjoyOTphNjo2MjpiOTpmNDo4Yjo3MDpkYjoKICAgICAgICAgICAgICAgICAgICA4ZjpmNTpjNzo2OTo3YTo0MDpiYzplODpiNTphZTphNzo2ZTozZjpiMToxNzoKICAgICAgICAgICAgICAgICAgICBiZTo4YjozNTpiNDoyMTpkMjo5ODo0ODpkMQogICAgICAgICAgICAgICAgRXhwb25lbnQ6IDY1NTM3ICgweDEwMDAxKQogICAgICAgIFg1MDl2MyBleHRlbnNpb25zOgogICAgICAgICAgICBYNTA5djMgQmFzaWMgQ29uc3RyYWludHM6IAogICAgICAgICAgICAgICAgQ0E6VFJVRQogICAgICAgICAgICBYNTA5djMgU3ViamVjdCBLZXkgSWRlbnRpZmllcjogCiAgICAgICAgICAgICAgICBDNjpFODo0RDpBQToyQzo0OToyODo0MTpFOTpDNjo1OToxNTpFMDo1Qjo0OTo1MTo0RToyRTpEQjo0NQogICAgICAgICAgICBYNTA5djMgQXV0aG9yaXR5IEtleSBJZGVudGlmaWVyOiAKICAgICAgICAgICAgICAgIGtleWlkOkM2OkU4OjREOkFBOjJDOjQ5OjI4OjQxOkU5OkM2OjU5OjE1OkUwOjVCOjQ5OjUxOjRFOjJFOkRCOjQ1CgogICAgU2lnbmF0dXJlIEFsZ29yaXRobTogc2hhMVdpdGhSU0FFbmNyeXB0aW9uCiAgICAgICAgIDNhOjcwOmEzOjEzOjdmOjJkOjU5OjgwOmQ2OmRkOjI4OmE0OjhlOjRlOjRhOjFjOjg1OmFkOgogICAgICAgICA3MTowODplNTo5Zjo3ZjpjOTo4Yjo2MDpmMDphYzphODo4NDpmOTozZjo5MjpjYzphZDpiYjoKICAgICAgICAgYzU6OWU6ZGE6OWM6Mzc6OGU6ZGI6NDQ6MjI6MzU6OGU6MmY6N2Y6MGE6NGY6YTU6MTI6ZTE6CiAgICAgICAgIDhlOjdhOmEzOmEwOjM1OjBiOjVlOjgwOmY0OjM3Ojg2OjFmOjExOjg3OmYxOjhiOjIyOjQzOgogICAgICAgICA4Zjo1OTo5MzpiNjpiMTozMzphYTpiYjpiYzoxZjoyMjo4NTpmODozOToyNTpjMzo2NTo3YjoKICAgICAgICAgMDU6NGM6YWQ6ZGU6NGI6MmU6ZTQ6NGY6OGY6M2E6ZDg6ZmQ6YTk6ZjM6ODI6NjA6ZjY6Mjg6CiAgICAgICAgIGU1OmIwOmI2OjZjOjBmOmViOjlkOmJhOjIyOmI2OmExOjMyOjI5OjJjOjQ4OjY2OjcwOmQ4OgogICAgICAgICAwMDo4ZgotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJQ0lEQ0NBWW1nQXdJQkFnSURBZ1NCTUEwR0NTcUdTSWIzRFFFQkJRVUFNQ3d4Q3pBSkJnTlZCQVlUQWtOQgpNUXd3Q2dZRFZRUUtEQU5KVTBjeER6QU5CZ05WQkFNTUJrbFRSMTlEUVRBZUZ3MHhOVEE1TVRZd01EQXdNREJhCkZ3MHlNREV3TVRReE9UUTNOVGhhTUN3eEN6QUpCZ05WQkFZVEFrTkJNUXd3Q2dZRFZRUUtEQU5KVTBjeER6QU4KQmdOVkJBTU1Ca2xUUjE5RFFUQ0JuekFOQmdrcWhraUc5dzBCQVFFRkFBT0JqUUF3Z1lrQ2dZRUF1QXdYUnNqUwpoNUkyYW1sNTZ5RjBiMWJ4RkgyN0NPbnBkQjNVcmw5a3Q4aWF4SkludmFXbXJpU0sxUUtDWWF5TnA4RWRzektXCmg4ekRyaGdnVUtVS0pJRE1NSm1LbFBiVlpva0xIN0dXN0tQbG94V2E4RmhCeEhMdnZraENoRi8yS2FaaXVmU0wKY051UDljZHBla0M4NkxXdXAyNC9zUmUraXpXMElkS1lTTkVDQXdFQUFhTlFNRTR3REFZRFZSMFRCQVV3QXdFQgovekFkQmdOVkhRNEVGZ1FVeHVoTnFpeEpLRUhweGxrVjRGdEpVVTR1MjBVd0h3WURWUjBqQkJnd0ZvQVV4dWhOCnFpeEpLRUhweGxrVjRGdEpVVTR1MjBVd0RRWUpLb1pJaHZjTkFRRUZCUUFEZ1lFQU9uQ2pFMzh0V1lEVzNTaWsKams1S0hJV3RjUWpsbjMvSmkyRHdyS2lFK1QrU3pLMjd4WjdhbkRlTzIwUWlOWTR2ZndwUHBSTGhqbnFqb0RVTApYb0QwTjRZZkVZZnhpeUpEajFtVHRyRXpxcnU4SHlLRitEa2x3MlY3QlV5dDNrc3U1RStQT3RqOXFmT0NZUFlvCjViQzJiQS9ybmJvaXRxRXlLU3hJWm5EWUFJOD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],
+                        "revocation":"relaxed"
+                     }
+                  ],
+                  "children":[
+                     {
+                        "esp_proposals":[
+                           "default"
+                        ],
+                        "local_ts":[
+                           "%local.selectors"
+                        ],
+                        "remote_ts":[
+                           "%remote.selectors"
+                        ],
+                        "rekey_time":3600,
+                        "life_time":10,
+                        "mode":"tunnel"
+                     }
+                  ]
+               }
+            }
+      },
+      "appliances":[
+        {
+        "id": 234523453245,
+        "id": 234523453245
+       }
+    ],
+},
+{
+   "name":"%vpnname",
+   "roles": {
+         "name":"Printing",
+         "type": "Full Mesh",
+         "active":false,
+         "template": {
+               "id":"01378bb3-2f4e-4cf4-9bbc-af21bb7a157a",
+               "name":"tmpl0",
+               "profile_info": {
+                  "ike_version":2,
+                  "local_addrs":[
+                     "%local.ike_addrs"
+                  ],
+                  "remote_addrs":[
+                     "%remote.ike_addrs"
+                  ],
+                  "local_port":"%local.ike_port",
+                  "remote_port":"%remote.ike_port",
+                  "proposals":[ {"proposal":"aes256-sha256-modp1024", "encryption_algorithm": "aes256", "integrity_algorithm" : "sha256", "Diffie Hellman Groups" : "modp1024" }
+
+                  ],
+                  "dpd_delay":240,
+                  "rekey_time":14400,
+                  "local_auth":[
+                     {
+                        "auth":"pubkey",
+                        "id":"%local.secrets.#0.id",
+                        "certs":[
+                           "%local.certs"
+                        ]
+                     }
+                  ],
+                  "remote_auth":[
+                     {
+                        "auth":"pubkey",
+                        "id":"%remote.secrets.#0.id",
+                        "certs":[
+                           "%remote.certs"
+                        ],
+                        "cacerts":["Q2VydGlmaWNhdGU6CiAgICBEYXRhOgogICAgICAgIFZlcnNpb246IDMgKDB4MikKICAgICAgICBTZXJpYWwgTnVtYmVyOiAxMzIyMjUgKDB4MjA0ODEpCiAgICBTaWduYXR1cmUgQWxnb3JpdGhtOiBzaGExV2l0aFJTQUVuY3J5cHRpb24KICAgICAgICBJc3N1ZXI6IEM9Q0EsIE89SVNHLCBDTj1JU0dfQ0EKICAgICAgICBWYWxpZGl0eQogICAgICAgICAgICBOb3QgQmVmb3JlOiBTZXAgMTYgMDA6MDA6MDAgMjAxNSBHTVQKICAgICAgICAgICAgTm90IEFmdGVyIDogT2N0IDE0IDE5OjQ3OjU4IDIwMjAgR01UCiAgICAgICAgU3ViamVjdDogQz1DQSwgTz1JU0csIENOPUlTR19DQQogICAgICAgIFN1YmplY3QgUHVibGljIEtleSBJbmZvOgogICAgICAgICAgICBQdWJsaWMgS2V5IEFsZ29yaXRobTogcnNhRW5jcnlwdGlvbgogICAgICAgICAgICAgICAgUHVibGljLUtleTogKDEwMjQgYml0KQogICAgICAgICAgICAgICAgTW9kdWx1czoKICAgICAgICAgICAgICAgICAgICAwMDpiODowYzoxNzo0NjpjODpkMjo4Nzo5MjozNjo2YTo2OTo3OTplYjoyMToKICAgICAgICAgICAgICAgICAgICA3NDo2Zjo1NjpmMToxNDo3ZDpiYjowODplOTplOTo3NDoxZDpkNDphZTo1ZjoKICAgICAgICAgICAgICAgICAgICA2NDpiNzpjODo5YTpjNDo5MjoyNzpiZDphNTphNjphZToyNDo4YTpkNTowMjoKICAgICAgICAgICAgICAgICAgICA4Mjo2MTphYzo4ZDphNzpjMToxZDpiMzozMjo5Njo4NzpjYzpjMzphZToxODoKICAgICAgICAgICAgICAgICAgICAyMDo1MDphNTowYToyNDo4MDpjYzozMDo5OTo4YTo5NDpmNjpkNTo2Njo4OToKICAgICAgICAgICAgICAgICAgICAwYjoxZjpiMTo5NjplYzphMzplNTphMzoxNTo5YTpmMDo1ODo0MTpjNDo3MjoKICAgICAgICAgICAgICAgICAgICBlZjpiZTo0ODo0Mjo4NDo1ZjpmNjoyOTphNjo2MjpiOTpmNDo4Yjo3MDpkYjoKICAgICAgICAgICAgICAgICAgICA4ZjpmNTpjNzo2OTo3YTo0MDpiYzplODpiNTphZTphNzo2ZTozZjpiMToxNzoKICAgICAgICAgICAgICAgICAgICBiZTo4YjozNTpiNDoyMTpkMjo5ODo0ODpkMQogICAgICAgICAgICAgICAgRXhwb25lbnQ6IDY1NTM3ICgweDEwMDAxKQogICAgICAgIFg1MDl2MyBleHRlbnNpb25zOgogICAgICAgICAgICBYNTA5djMgQmFzaWMgQ29uc3RyYWludHM6IAogICAgICAgICAgICAgICAgQ0E6VFJVRQogICAgICAgICAgICBYNTA5djMgU3ViamVjdCBLZXkgSWRlbnRpZmllcjogCiAgICAgICAgICAgICAgICBDNjpFODo0RDpBQToyQzo0OToyODo0MTpFOTpDNjo1OToxNTpFMDo1Qjo0OTo1MTo0RToyRTpEQjo0NQogICAgICAgICAgICBYNTA5djMgQXV0aG9yaXR5IEtleSBJZGVudGlmaWVyOiAKICAgICAgICAgICAgICAgIGtleWlkOkM2OkU4OjREOkFBOjJDOjQ5OjI4OjQxOkU5OkM2OjU5OjE1OkUwOjVCOjQ5OjUxOjRFOjJFOkRCOjQ1CgogICAgU2lnbmF0dXJlIEFsZ29yaXRobTogc2hhMVdpdGhSU0FFbmNyeXB0aW9uCiAgICAgICAgIDNhOjcwOmEzOjEzOjdmOjJkOjU5OjgwOmQ2OmRkOjI4OmE0OjhlOjRlOjRhOjFjOjg1OmFkOgogICAgICAgICA3MTowODplNTo5Zjo3ZjpjOTo4Yjo2MDpmMDphYzphODo4NDpmOTozZjo5MjpjYzphZDpiYjoKICAgICAgICAgYzU6OWU6ZGE6OWM6Mzc6OGU6ZGI6NDQ6MjI6MzU6OGU6MmY6N2Y6MGE6NGY6YTU6MTI6ZTE6CiAgICAgICAgIDhlOjdhOmEzOmEwOjM1OjBiOjVlOjgwOmY0OjM3Ojg2OjFmOjExOjg3OmYxOjhiOjIyOjQzOgogICAgICAgICA4Zjo1OTo5MzpiNjpiMTozMzphYTpiYjpiYzoxZjoyMjo4NTpmODozOToyNTpjMzo2NTo3YjoKICAgICAgICAgMDU6NGM6YWQ6ZGU6NGI6MmU6ZTQ6NGY6OGY6M2E6ZDg6ZmQ6YTk6ZjM6ODI6NjA6ZjY6Mjg6CiAgICAgICAgIGU1OmIwOmI2OjZjOjBmOmViOjlkOmJhOjIyOmI2OmExOjMyOjI5OjJjOjQ4OjY2OjcwOmQ4OgogICAgICAgICAwMDo4ZgotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJQ0lEQ0NBWW1nQXdJQkFnSURBZ1NCTUEwR0NTcUdTSWIzRFFFQkJRVUFNQ3d4Q3pBSkJnTlZCQVlUQWtOQgpNUXd3Q2dZRFZRUUtEQU5KVTBjeER6QU5CZ05WQkFNTUJrbFRSMTlEUVRBZUZ3MHhOVEE1TVRZd01EQXdNREJhCkZ3MHlNREV3TVRReE9UUTNOVGhhTUN3eEN6QUpCZ05WQkFZVEFrTkJNUXd3Q2dZRFZRUUtEQU5KVTBjeER6QU4KQmdOVkJBTU1Ca2xUUjE5RFFUQ0JuekFOQmdrcWhraUc5dzBCQVFFRkFBT0JqUUF3Z1lrQ2dZRUF1QXdYUnNqUwpoNUkyYW1sNTZ5RjBiMWJ4RkgyN0NPbnBkQjNVcmw5a3Q4aWF4SkludmFXbXJpU0sxUUtDWWF5TnA4RWRzektXCmg4ekRyaGdnVUtVS0pJRE1NSm1LbFBiVlpva0xIN0dXN0tQbG94V2E4RmhCeEhMdnZraENoRi8yS2FaaXVmU0wKY051UDljZHBla0M4NkxXdXAyNC9zUmUraXpXMElkS1lTTkVDQXdFQUFhTlFNRTR3REFZRFZSMFRCQVV3QXdFQgovekFkQmdOVkhRNEVGZ1FVeHVoTnFpeEpLRUhweGxrVjRGdEpVVTR1MjBVd0h3WURWUjBqQkJnd0ZvQVV4dWhOCnFpeEpLRUhweGxrVjRGdEpVVTR1MjBVd0RRWUpLb1pJaHZjTkFRRUZCUUFEZ1lFQU9uQ2pFMzh0V1lEVzNTaWsKams1S0hJV3RjUWpsbjMvSmkyRHdyS2lFK1QrU3pLMjd4WjdhbkRlTzIwUWlOWTR2ZndwUHBSTGhqbnFqb0RVTApYb0QwTjRZZkVZZnhpeUpEajFtVHRyRXpxcnU4SHlLRitEa2x3MlY3QlV5dDNrc3U1RStQT3RqOXFmT0NZUFlvCjViQzJiQS9ybmJvaXRxRXlLU3hJWm5EWUFJOD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],
+                        "revocation":"relaxed"
+                     }
+                  ],
+                  "children":[
+                     {
+                        "esp_proposals":[
+                           "default"
+                        ],
+                        "local_ts":[
+                           "%local.selectors"
+                        ],
+                        "remote_ts":[
+                           "%remote.selectors"
+                        ],
+                        "rekey_time":3600,
+                        "life_time":10,
+                        "mode":"tunnel"
+                     }
+                  ]
+               }
+            }
+      },
+      "appliances":[
+        {
+        "id": 234523453245,
+        "id": 234523453245
+       }
+    ],
+},
+{
+   "name":"%vpnname",
+   "roles": {
+         "name":"V.O.I.P.",
+         "type": "Full Mesh",
+         "active":true,
+         "template": {
+               "id":"01378bb3-2f4e-4cf4-9bbc-af21bb7a157a",
+               "name":"tmpl0",
+               "profile_info": {
+                  "ike_version":2,
+                  "local_addrs":[
+                     "%local.ike_addrs"
+                  ],
+                  "remote_addrs":[
+                     "%remote.ike_addrs"
+                  ],
+                  "local_port":"%local.ike_port",
+                  "remote_port":"%remote.ike_port",
+                  "proposals":[ {"proposal":"aes256-sha256-modp1024", "encryption_algorithm": "aes256", "integrity_algorithm" : "sha256", "Diffie Hellman Groups" : "modp1024" }
+
+                  ],
+                  "dpd_delay":240,
+                  "rekey_time":14400,
+                  "local_auth":[
+                     {
+                        "auth":"pubkey",
+                        "id":"%local.secrets.#0.id",
+                        "certs":[
+                           "%local.certs"
+                        ]
+                     }
+                  ],
+                  "remote_auth":[
+                     {
+                        "auth":"pubkey",
+                        "id":"%remote.secrets.#0.id",
+                        "certs":[
+                           "%remote.certs"
+                        ],
+                        "cacerts":["Q2VydGlmaWNhdGU6CiAgICBEYXRhOgogICAgICAgIFZlcnNpb246IDMgKDB4MikKICAgICAgICBTZXJpYWwgTnVtYmVyOiAxMzIyMjUgKDB4MjA0ODEpCiAgICBTaWduYXR1cmUgQWxnb3JpdGhtOiBzaGExV2l0aFJTQUVuY3J5cHRpb24KICAgICAgICBJc3N1ZXI6IEM9Q0EsIE89SVNHLCBDTj1JU0dfQ0EKICAgICAgICBWYWxpZGl0eQogICAgICAgICAgICBOb3QgQmVmb3JlOiBTZXAgMTYgMDA6MDA6MDAgMjAxNSBHTVQKICAgICAgICAgICAgTm90IEFmdGVyIDogT2N0IDE0IDE5OjQ3OjU4IDIwMjAgR01UCiAgICAgICAgU3ViamVjdDogQz1DQSwgTz1JU0csIENOPUlTR19DQQogICAgICAgIFN1YmplY3QgUHVibGljIEtleSBJbmZvOgogICAgICAgICAgICBQdWJsaWMgS2V5IEFsZ29yaXRobTogcnNhRW5jcnlwdGlvbgogICAgICAgICAgICAgICAgUHVibGljLUtleTogKDEwMjQgYml0KQogICAgICAgICAgICAgICAgTW9kdWx1czoKICAgICAgICAgICAgICAgICAgICAwMDpiODowYzoxNzo0NjpjODpkMjo4Nzo5MjozNjo2YTo2OTo3OTplYjoyMToKICAgICAgICAgICAgICAgICAgICA3NDo2Zjo1NjpmMToxNDo3ZDpiYjowODplOTplOTo3NDoxZDpkNDphZTo1ZjoKICAgICAgICAgICAgICAgICAgICA2NDpiNzpjODo5YTpjNDo5MjoyNzpiZDphNTphNjphZToyNDo4YTpkNTowMjoKICAgICAgICAgICAgICAgICAgICA4Mjo2MTphYzo4ZDphNzpjMToxZDpiMzozMjo5Njo4NzpjYzpjMzphZToxODoKICAgICAgICAgICAgICAgICAgICAyMDo1MDphNTowYToyNDo4MDpjYzozMDo5OTo4YTo5NDpmNjpkNTo2Njo4OToKICAgICAgICAgICAgICAgICAgICAwYjoxZjpiMTo5NjplYzphMzplNTphMzoxNTo5YTpmMDo1ODo0MTpjNDo3MjoKICAgICAgICAgICAgICAgICAgICBlZjpiZTo0ODo0Mjo4NDo1ZjpmNjoyOTphNjo2MjpiOTpmNDo4Yjo3MDpkYjoKICAgICAgICAgICAgICAgICAgICA4ZjpmNTpjNzo2OTo3YTo0MDpiYzplODpiNTphZTphNzo2ZTozZjpiMToxNzoKICAgICAgICAgICAgICAgICAgICBiZTo4YjozNTpiNDoyMTpkMjo5ODo0ODpkMQogICAgICAgICAgICAgICAgRXhwb25lbnQ6IDY1NTM3ICgweDEwMDAxKQogICAgICAgIFg1MDl2MyBleHRlbnNpb25zOgogICAgICAgICAgICBYNTA5djMgQmFzaWMgQ29uc3RyYWludHM6IAogICAgICAgICAgICAgICAgQ0E6VFJVRQogICAgICAgICAgICBYNTA5djMgU3ViamVjdCBLZXkgSWRlbnRpZmllcjogCiAgICAgICAgICAgICAgICBDNjpFODo0RDpBQToyQzo0OToyODo0MTpFOTpDNjo1OToxNTpFMDo1Qjo0OTo1MTo0RToyRTpEQjo0NQogICAgICAgICAgICBYNTA5djMgQXV0aG9yaXR5IEtleSBJZGVudGlmaWVyOiAKICAgICAgICAgICAgICAgIGtleWlkOkM2OkU4OjREOkFBOjJDOjQ5OjI4OjQxOkU5OkM2OjU5OjE1OkUwOjVCOjQ5OjUxOjRFOjJFOkRCOjQ1CgogICAgU2lnbmF0dXJlIEFsZ29yaXRobTogc2hhMVdpdGhSU0FFbmNyeXB0aW9uCiAgICAgICAgIDNhOjcwOmEzOjEzOjdmOjJkOjU5OjgwOmQ2OmRkOjI4OmE0OjhlOjRlOjRhOjFjOjg1OmFkOgogICAgICAgICA3MTowODplNTo5Zjo3ZjpjOTo4Yjo2MDpmMDphYzphODo4NDpmOTozZjo5MjpjYzphZDpiYjoKICAgICAgICAgYzU6OWU6ZGE6OWM6Mzc6OGU6ZGI6NDQ6MjI6MzU6OGU6MmY6N2Y6MGE6NGY6YTU6MTI6ZTE6CiAgICAgICAgIDhlOjdhOmEzOmEwOjM1OjBiOjVlOjgwOmY0OjM3Ojg2OjFmOjExOjg3OmYxOjhiOjIyOjQzOgogICAgICAgICA4Zjo1OTo5MzpiNjpiMTozMzphYTpiYjpiYzoxZjoyMjo4NTpmODozOToyNTpjMzo2NTo3YjoKICAgICAgICAgMDU6NGM6YWQ6ZGU6NGI6MmU6ZTQ6NGY6OGY6M2E6ZDg6ZmQ6YTk6ZjM6ODI6NjA6ZjY6Mjg6CiAgICAgICAgIGU1OmIwOmI2OjZjOjBmOmViOjlkOmJhOjIyOmI2OmExOjMyOjI5OjJjOjQ4OjY2OjcwOmQ4OgogICAgICAgICAwMDo4ZgotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJQ0lEQ0NBWW1nQXdJQkFnSURBZ1NCTUEwR0NTcUdTSWIzRFFFQkJRVUFNQ3d4Q3pBSkJnTlZCQVlUQWtOQgpNUXd3Q2dZRFZRUUtEQU5KVTBjeER6QU5CZ05WQkFNTUJrbFRSMTlEUVRBZUZ3MHhOVEE1TVRZd01EQXdNREJhCkZ3MHlNREV3TVRReE9UUTNOVGhhTUN3eEN6QUpCZ05WQkFZVEFrTkJNUXd3Q2dZRFZRUUtEQU5KVTBjeER6QU4KQmdOVkJBTU1Ca2xUUjE5RFFUQ0JuekFOQmdrcWhraUc5dzBCQVFFRkFBT0JqUUF3Z1lrQ2dZRUF1QXdYUnNqUwpoNUkyYW1sNTZ5RjBiMWJ4RkgyN0NPbnBkQjNVcmw5a3Q4aWF4SkludmFXbXJpU0sxUUtDWWF5TnA4RWRzektXCmg4ekRyaGdnVUtVS0pJRE1NSm1LbFBiVlpva0xIN0dXN0tQbG94V2E4RmhCeEhMdnZraENoRi8yS2FaaXVmU0wKY051UDljZHBla0M4NkxXdXAyNC9zUmUraXpXMElkS1lTTkVDQXdFQUFhTlFNRTR3REFZRFZSMFRCQVV3QXdFQgovekFkQmdOVkhRNEVGZ1FVeHVoTnFpeEpLRUhweGxrVjRGdEpVVTR1MjBVd0h3WURWUjBqQkJnd0ZvQVV4dWhOCnFpeEpLRUhweGxrVjRGdEpVVTR1MjBVd0RRWUpLb1pJaHZjTkFRRUZCUUFEZ1lFQU9uQ2pFMzh0V1lEVzNTaWsKams1S0hJV3RjUWpsbjMvSmkyRHdyS2lFK1QrU3pLMjd4WjdhbkRlTzIwUWlOWTR2ZndwUHBSTGhqbnFqb0RVTApYb0QwTjRZZkVZZnhpeUpEajFtVHRyRXpxcnU4SHlLRitEa2x3MlY3QlV5dDNrc3U1RStQT3RqOXFmT0NZUFlvCjViQzJiQS9ybmJvaXRxRXlLU3hJWm5EWUFJOD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],
+                        "revocation":"relaxed"
+                     }
+                  ],
+                  "children":[
+                     {
+                        "esp_proposals":[
+                           "default"
+                        ],
+                        "local_ts":[
+                           "%local.selectors"
+                        ],
+                        "remote_ts":[
+                           "%remote.selectors"
+                        ],
+                        "rekey_time":3600,
+                        "life_time":10,
+                        "mode":"tunnel"
+                     }
+                  ]
+               }
+            }
+      },
+      "appliances":[
+        {
+        "id": 234523453245,
+        "id": 234523453245
+       }
+    ],
+},
+{
+   "name":"%vpnname",
+   "roles": {
+         "name":"File Sharing",
+         "type": "Full Mesh",
+         "active":true,
+         "template": {
+               "id":"01378bb3-2f4e-4cf4-9bbc-af21bb7a157a",
+               "name":"tmpl0",
+               "profile_info": {
+                  "ike_version":2,
+                  "local_addrs":[
+                     "%local.ike_addrs"
+                  ],
+                  "remote_addrs":[
+                     "%remote.ike_addrs"
+                  ],
+                  "local_port":"%local.ike_port",
+                  "remote_port":"%remote.ike_port",
+                  "proposals":[ {"proposal":"aes256-sha256-modp1024", "encryption_algorithm": "aes256", "integrity_algorithm" : "sha256", "Diffie Hellman Groups" : "modp1024" }
+
+                  ],
+                  "dpd_delay":240,
+                  "rekey_time":14400,
+                  "local_auth":[
+                     {
+                        "auth":"pubkey",
+                        "id":"%local.secrets.#0.id",
+                        "certs":[
+                           "%local.certs"
+                        ]
+                     }
+                  ],
+                  "remote_auth":[
+                     {
+                        "auth":"pubkey",
+                        "id":"%remote.secrets.#0.id",
+                        "certs":[
+                           "%remote.certs"
+                        ],
+                        "cacerts":["Q2VydGlmaWNhdGU6CiAgICBEYXRhOgogICAgICAgIFZlcnNpb246IDMgKDB4MikKICAgICAgICBTZXJpYWwgTnVtYmVyOiAxMzIyMjUgKDB4MjA0ODEpCiAgICBTaWduYXR1cmUgQWxnb3JpdGhtOiBzaGExV2l0aFJTQUVuY3J5cHRpb24KICAgICAgICBJc3N1ZXI6IEM9Q0EsIE89SVNHLCBDTj1JU0dfQ0EKICAgICAgICBWYWxpZGl0eQogICAgICAgICAgICBOb3QgQmVmb3JlOiBTZXAgMTYgMDA6MDA6MDAgMjAxNSBHTVQKICAgICAgICAgICAgTm90IEFmdGVyIDogT2N0IDE0IDE5OjQ3OjU4IDIwMjAgR01UCiAgICAgICAgU3ViamVjdDogQz1DQSwgTz1JU0csIENOPUlTR19DQQogICAgICAgIFN1YmplY3QgUHVibGljIEtleSBJbmZvOgogICAgICAgICAgICBQdWJsaWMgS2V5IEFsZ29yaXRobTogcnNhRW5jcnlwdGlvbgogICAgICAgICAgICAgICAgUHVibGljLUtleTogKDEwMjQgYml0KQogICAgICAgICAgICAgICAgTW9kdWx1czoKICAgICAgICAgICAgICAgICAgICAwMDpiODowYzoxNzo0NjpjODpkMjo4Nzo5MjozNjo2YTo2OTo3OTplYjoyMToKICAgICAgICAgICAgICAgICAgICA3NDo2Zjo1NjpmMToxNDo3ZDpiYjowODplOTplOTo3NDoxZDpkNDphZTo1ZjoKICAgICAgICAgICAgICAgICAgICA2NDpiNzpjODo5YTpjNDo5MjoyNzpiZDphNTphNjphZToyNDo4YTpkNTowMjoKICAgICAgICAgICAgICAgICAgICA4Mjo2MTphYzo4ZDphNzpjMToxZDpiMzozMjo5Njo4NzpjYzpjMzphZToxODoKICAgICAgICAgICAgICAgICAgICAyMDo1MDphNTowYToyNDo4MDpjYzozMDo5OTo4YTo5NDpmNjpkNTo2Njo4OToKICAgICAgICAgICAgICAgICAgICAwYjoxZjpiMTo5NjplYzphMzplNTphMzoxNTo5YTpmMDo1ODo0MTpjNDo3MjoKICAgICAgICAgICAgICAgICAgICBlZjpiZTo0ODo0Mjo4NDo1ZjpmNjoyOTphNjo2MjpiOTpmNDo4Yjo3MDpkYjoKICAgICAgICAgICAgICAgICAgICA4ZjpmNTpjNzo2OTo3YTo0MDpiYzplODpiNTphZTphNzo2ZTozZjpiMToxNzoKICAgICAgICAgICAgICAgICAgICBiZTo4YjozNTpiNDoyMTpkMjo5ODo0ODpkMQogICAgICAgICAgICAgICAgRXhwb25lbnQ6IDY1NTM3ICgweDEwMDAxKQogICAgICAgIFg1MDl2MyBleHRlbnNpb25zOgogICAgICAgICAgICBYNTA5djMgQmFzaWMgQ29uc3RyYWludHM6IAogICAgICAgICAgICAgICAgQ0E6VFJVRQogICAgICAgICAgICBYNTA5djMgU3ViamVjdCBLZXkgSWRlbnRpZmllcjogCiAgICAgICAgICAgICAgICBDNjpFODo0RDpBQToyQzo0OToyODo0MTpFOTpDNjo1OToxNTpFMDo1Qjo0OTo1MTo0RToyRTpEQjo0NQogICAgICAgICAgICBYNTA5djMgQXV0aG9yaXR5IEtleSBJZGVudGlmaWVyOiAKICAgICAgICAgICAgICAgIGtleWlkOkM2OkU4OjREOkFBOjJDOjQ5OjI4OjQxOkU5OkM2OjU5OjE1OkUwOjVCOjQ5OjUxOjRFOjJFOkRCOjQ1CgogICAgU2lnbmF0dXJlIEFsZ29yaXRobTogc2hhMVdpdGhSU0FFbmNyeXB0aW9uCiAgICAgICAgIDNhOjcwOmEzOjEzOjdmOjJkOjU5OjgwOmQ2OmRkOjI4OmE0OjhlOjRlOjRhOjFjOjg1OmFkOgogICAgICAgICA3MTowODplNTo5Zjo3ZjpjOTo4Yjo2MDpmMDphYzphODo4NDpmOTozZjo5MjpjYzphZDpiYjoKICAgICAgICAgYzU6OWU6ZGE6OWM6Mzc6OGU6ZGI6NDQ6MjI6MzU6OGU6MmY6N2Y6MGE6NGY6YTU6MTI6ZTE6CiAgICAgICAgIDhlOjdhOmEzOmEwOjM1OjBiOjVlOjgwOmY0OjM3Ojg2OjFmOjExOjg3OmYxOjhiOjIyOjQzOgogICAgICAgICA4Zjo1OTo5MzpiNjpiMTozMzphYTpiYjpiYzoxZjoyMjo4NTpmODozOToyNTpjMzo2NTo3YjoKICAgICAgICAgMDU6NGM6YWQ6ZGU6NGI6MmU6ZTQ6NGY6OGY6M2E6ZDg6ZmQ6YTk6ZjM6ODI6NjA6ZjY6Mjg6CiAgICAgICAgIGU1OmIwOmI2OjZjOjBmOmViOjlkOmJhOjIyOmI2OmExOjMyOjI5OjJjOjQ4OjY2OjcwOmQ4OgogICAgICAgICAwMDo4ZgotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJQ0lEQ0NBWW1nQXdJQkFnSURBZ1NCTUEwR0NTcUdTSWIzRFFFQkJRVUFNQ3d4Q3pBSkJnTlZCQVlUQWtOQgpNUXd3Q2dZRFZRUUtEQU5KVTBjeER6QU5CZ05WQkFNTUJrbFRSMTlEUVRBZUZ3MHhOVEE1TVRZd01EQXdNREJhCkZ3MHlNREV3TVRReE9UUTNOVGhhTUN3eEN6QUpCZ05WQkFZVEFrTkJNUXd3Q2dZRFZRUUtEQU5KVTBjeER6QU4KQmdOVkJBTU1Ca2xUUjE5RFFUQ0JuekFOQmdrcWhraUc5dzBCQVFFRkFBT0JqUUF3Z1lrQ2dZRUF1QXdYUnNqUwpoNUkyYW1sNTZ5RjBiMWJ4RkgyN0NPbnBkQjNVcmw5a3Q4aWF4SkludmFXbXJpU0sxUUtDWWF5TnA4RWRzektXCmg4ekRyaGdnVUtVS0pJRE1NSm1LbFBiVlpva0xIN0dXN0tQbG94V2E4RmhCeEhMdnZraENoRi8yS2FaaXVmU0wKY051UDljZHBla0M4NkxXdXAyNC9zUmUraXpXMElkS1lTTkVDQXdFQUFhTlFNRTR3REFZRFZSMFRCQVV3QXdFQgovekFkQmdOVkhRNEVGZ1FVeHVoTnFpeEpLRUhweGxrVjRGdEpVVTR1MjBVd0h3WURWUjBqQkJnd0ZvQVV4dWhOCnFpeEpLRUhweGxrVjRGdEpVVTR1MjBVd0RRWUpLb1pJaHZjTkFRRUZCUUFEZ1lFQU9uQ2pFMzh0V1lEVzNTaWsKams1S0hJV3RjUWpsbjMvSmkyRHdyS2lFK1QrU3pLMjd4WjdhbkRlTzIwUWlOWTR2ZndwUHBSTGhqbnFqb0RVTApYb0QwTjRZZkVZZnhpeUpEajFtVHRyRXpxcnU4SHlLRitEa2x3MlY3QlV5dDNrc3U1RStQT3RqOXFmT0NZUFlvCjViQzJiQS9ybmJvaXRxRXlLU3hJWm5EWUFJOD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],
+                        "revocation":"relaxed"
+                     }
+                  ],
+                  "children":[
+                     {
+                        "esp_proposals":[
+                           "default"
+                        ],
+                        "local_ts":[
+                           "%local.selectors"
+                        ],
+                        "remote_ts":[
+                           "%remote.selectors"
+                        ],
+                        "rekey_time":3600,
+                        "life_time":10,
+                        "mode":"tunnel"
+                     }
+                  ]
+               }
+            }
+      },
+      "appliances":[
+        {
+        "id": 234523453245,
+        "id": 234523453245
+       }
+    ],
+}
 
 ];
