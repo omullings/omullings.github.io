@@ -198,20 +198,17 @@
 						<style media="screen">
 							.app_details ul li {
 								line-height: 1.5em;
-								border: 1px solid #eee;
+								border-top: 1px solid #eee;
 								display: block;
 								text-shadow: 0 1px 0 #fff;
-								margin-bottom: -1px;
 							}
 
 							.app_details ul li:first-child {
-								border-top-left-radius: 3px;
-								border-top-right-radius: 3px;
+
 							}
 
 							.app_details ul li:last-child {
-								border-bottom-left-radius: 3px;
-								border-bottom-right-radius: 3px;
+
 							}
 
 							.vpn_side_component hr {
@@ -235,6 +232,12 @@
 							  -webkit-transition: top 0.5s 0s;
 							  -moz-transition: top 0.5s 0s;
 							  transition: top 0.5s 0s; }
+
+
+							.cd-panel-content h2:hover {
+								background-color: #fafafa;
+								border-radius: 3px;
+							}
 
 						</style>
 
@@ -264,10 +267,12 @@
 										<div style="margin-bottom: 25px; display: block; position relative; ">
 											<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">TOPOLOGY:</span><span id="application_type"> default</span>
 										</div>
-										<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Appliances:</span>
+										<div style="margin-bottom: 80px; border: 1px solid #eee; border-radius: 3px;">
+										<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 15px; display: block; color: #666; ">Appliances:</span>
 										<ul id="vpn_list">
 
 										</ul>
+									</div>
 									</span>
 								</div>
 								</section>

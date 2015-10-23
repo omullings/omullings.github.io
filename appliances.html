@@ -152,6 +152,10 @@
 						background: rgba(255, 255, 255, 0.9);
 					}
 
+					[ contenteditable="true"]:hover {
+						background-color: #fafafa;
+					}
+
 				</style>
 				<nav class="navigation" ><!---
 					<a href="#cd-nav" class="cd-nav-trigger">Menu
@@ -217,33 +221,41 @@
 				<section id="mapContainer">
 					<div id="applicationMap" style="height: 800px; "></div>
 					<div class="cd-panel from-left">
-						<header class="cd-panel-header clearfix" style=" min-height: 50px;   ">
+						<header class="cd-panel-header clearfix" style=" min-height: 50px;   "> <!--
 							<div class="title_bar" style="width: calc( 100% - 50px ); height: 50px; position: relative;   padding: 15px 3%; ">
 								<h2 id="application_name" style=" display: block; font-weight: 800; "> </h2>
 								<i class="fa fa-ellipsis-v" style="    position: absolute; right: 3%; top: 18px;  "></i>
-							</div>
+							</div>  -->
 							<a href="#0" class="cd-panel-close" style=" width: 60px; ">Close</a>
 
 						</header>
 						<div class="cd-panel-container" >
+							<form class="" action="" method="post">
 							<div class="cd-panel-content" style="padding-top: 70px; "  >
 								<div class="detail_summary" style="width: 100%;  width: 60%;  display: inline-block; padding-right: 25px; ">
 
-									<span id="application_description" style=" display: block; margin: 20px 0; line-height: 1.5em; font-size: 0.8em; "></span>
-									<div class="" style=" margin-top: 25px; ">
-										<h3 style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px;  ">Virtual Private Networks</h3>
-										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: 0 0 5px 0 ; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Intranet</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: 0 0 5px 0 ; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Email</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: 0 0 5px 0 ; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Printing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_false"><i class="fa fa-circle"></i></span></div></span>
-										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: 0 0 5px 0 ; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">V.O.I.P.</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: 0 0 5px 0 ; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">File Sharing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+
+									<div class="title_bar" style="display: block;  position: relative; margin-bottom: 25px; ">
+										<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Appliance:</span>
+										<h2 id="application_name" style=" display: block; font-weight: 900; font-size: 24px; line-height: 1.5em; " contenteditable="true"> </h2>
+									</div>
+
+									<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Description:</span>
+									<span id="application_description" contenteditable="true" style=" display: block; margin: 20px 0; line-height: 1.5em; font-size: 0.8em; "></span>
+									<div class="" style=" margin-top: 25px; margin-bottom: 80px; border: 1px solid #eee; border-radius: 3px; ">
+										<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 15px; display: block; color: #666; ">Virtual Private Networks:</span>
+										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Intranet</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Email</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Printing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_false"><i class="fa fa-circle"></i></span></div></span>
+										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">V.O.I.P.</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">File Sharing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
 									</div>
 
 								</div>
 								<aside style=" width: 40%; margin: 0; display: inline-block; float: right; padding:  0px 0 0 15px;  ">
 									<div class="" style=" margin-top: 0px; ">
-										<span style=" padding: 15px; border: 1px solid #eee; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Management Address:</span> <span id="application_address" ></span></span>
-										<span  style=" padding: 15px; border: 1px solid #eee; display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Management port:</span> <span id="application_port" ></span></span>
+										<span style=" padding: 15px; border: 1px solid #eee; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Management Address:</span> <span id="application_address"contenteditable="true" style=" display: block; line-height: 1.5em; "></span></span>
+										<span  style=" padding: 15px; border: 1px solid #eee; display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Management port:</span> <span id="application_port"  contenteditable="true" style=" display: block; line-height: 1.5em; "></span></span>
 										<span  style=" padding: 15px; border: 1px solid #eee; display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Connection:</span><span id="application_status" style=" display: block; width: 100%; float: none; "></span><span style="font-size: 0.7em; color: #666; margin: 0px 0 10px 0; line-height: 1em; ">Last communication attempt: 2:30 AM - October 30, 2015.</span></span>
 									</div>
 
@@ -268,6 +280,11 @@
 
 								</aside>
 							</div> <!-- cd-panel-content -->
+							<div id="form_submit_buttons" style=" background-color: rgba(0, 0, 0, 0.6); height: 70px; position: absolute; bottom: 0; right: 0; left: 0; display: none; z-index: 99999; ">
+								<input type="submit" name="submit" value="Save Changes" class="submit-button" style=" margin: 15px 5px 10px 25px; border-radius: 3px; height: 40px; padding: 5px 15px; text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600;  background: #1D9D1D;  color: #fff; border: 1px solid #333; ; box-shadow: none; text-shadow: 0 1px 0 green;    ">
+								<button type="button" name="button" style=" background: transparent; color: #fff; border: 2px solid #fff; border-radius: 3px;  box-shadow: none; margin: 15px 5px; height: 40px; padding: 5px 15px; text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600;"> Revert changes </button>
+							</div>
+							</form>
 						</div> <!-- cd-panel-container -->
 					</div> <!-- cd-panel -->
 				</section>
@@ -848,6 +865,39 @@
 			});
 		});
 
+		</script>
+		<script type="text/javascript">
+		$(function(){
+
+			var contents;
+
+			$('#application_name').focus(function() {
+				$('#form_submit_buttons').show();
+			});
+
+			$('.cd-btn').on('click', function(){
+				contents = document.getElementById('application_name').innerHTML;
+			});
+
+
+			$('#application_name').blur(function() {
+
+				//$('#form_submit_buttons').hide();
+
+					if (contents == $(this).text()){
+
+						$('#form_submit_buttons').hide();
+
+					} else {
+						console.log(contents);
+						console.log( $(this).text() );
+							//alert('Handler for .change() called.');
+							//contents = $(this).text();
+
+					}
+			});
+
+		});
 		</script>
 		<script async src="//d1ks1friyst4m3.cloudfront.net/toolbar/prod/td.js" data-trackduck-id="560d8ba74660d9d2753f20b5"></script>
 	</body>
