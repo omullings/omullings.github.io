@@ -867,35 +867,54 @@
 
 		</script>
 		<script type="text/javascript">
-		$(function(){
+		function manageFormSubmitControls(){
+
+			// on the form element
+			// if content on focus != content on blur then changes occurred
+			// if changes occurred, then keep the form elements open
 
 			var contents;
+			var changesExist;
 
-			$('#application_name').focus(function() {
+			$('[contenteditable = "true"]').focus(function() {
+
+				contents = $(this).text() ;
+
 				$('#form_submit_buttons').show();
+
 			});
 
-			$('.cd-btn').on('click', function(){
-				contents = document.getElementById('application_name').innerHTML;
+			$(document).on('blur','[contenteditable = "true"]', function() {
+
+				if( contents == $(this).text()  ) {
+
+					changesExist = "false";
+
+				} else  {
+
+					changesExist = "true";
+
+				}
+
+				if( changesExist == "false" ){
+
+					$('#form_submit_buttons').hide();
+
+				} else  {
+
+					$('#form_submit_buttons').show();
+
+				}
+
 			});
 
 
-			$('#application_name').blur(function() {
 
-				//$('#form_submit_buttons').hide();
+		}
 
-					if (contents == $(this).text()){
+		$('.cd-btn').on('click', function(){
 
-						$('#form_submit_buttons').hide();
-
-					} else {
-						console.log(contents);
-						console.log( $(this).text() );
-							//alert('Handler for .change() called.');
-							//contents = $(this).text();
-
-					}
-			});
+			manageFormSubmitControls();
 
 		});
 		</script>
