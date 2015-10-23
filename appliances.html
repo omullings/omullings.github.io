@@ -22,9 +22,11 @@
 	<body >
 		<div id="preloader" >
 			<style>
+
 				#preloader .companyPanel{
 
 				}
+
 				#preloader {
 				    display: table;
 				    position: absolute;
@@ -177,6 +179,9 @@
 							<span class="nav_text">VPNs</span>
 						</span>
 					</a>
+					<div style="position: absolute; bottom: 5px; padding: 8px; border: 1px solid #eee; border-radius: 3px; display: block;  width: 40px; margin: 15px; ">
+						<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; display: block; color: #666; text-align: center; ">EN</span>
+					</div>
 				</nav>
 				<section id="listPanel" >
 						<header id="appliance_header" >
@@ -195,7 +200,6 @@
 								</span>
 								</i>
 							</div>
-
 						</div>
 					</header>
 					<header id="selection_header" style="display: none; ">
@@ -215,20 +219,15 @@
 					<section id="actions-list" class="actions-list">
 						<ul id="grid" class="grid actions-list__group j-selectable clearfix" >
 						</ul>
-
 					</section>
 				</section>
 				<section id="mapContainer">
 					<div id="applicationMap" style="height: 800px; "></div>
 					<div class="cd-panel from-left">
-						<header class="cd-panel-header clearfix" style=" min-height: 50px;   "> <!--
-							<div class="title_bar" style="width: calc( 100% - 50px ); height: 50px; position: relative;   padding: 15px 3%; ">
-								<h2 id="application_name" style=" display: block; font-weight: 800; "> </h2>
-								<i class="fa fa-ellipsis-v" style="    position: absolute; right: 3%; top: 18px;  "></i>
-							</div>  -->
+						<header class="cd-panel-header clearfix" style=" min-height: 50px;   ">
 							<a href="#0" class="cd-panel-close" style=" width: 60px; ">Close</a>
-
 						</header>
+
 						<div class="cd-panel-container" >
 							<form class="" action="" method="post">
 							<div class="cd-panel-content" style="padding-top: 70px; "  >
@@ -917,6 +916,36 @@
 			manageFormSubmitControls();
 
 		});
+		</script>
+		<script type="text/javascript">
+		$.fn.inlineEdit = function(replaceWith, connectWith) {
+
+			$(this).hover(function() {
+					$(this).addClass('hover');
+			}, function() {
+					$(this).removeClass('hover');
+			});
+
+			$(this).click(function() {
+
+					var elem = $(this);
+
+					elem.hide();
+					elem.after(replaceWith);
+					replaceWith.focus();
+
+					replaceWith.blur(function() {
+
+							if ($(this).val() != "") {
+									connectWith.val($(this).val()).change();
+									elem.text($(this).val());
+							}
+
+							$(this).remove();
+							elem.show();
+					});
+			});
+		};
 		</script>
 		<script async src="//d1ks1friyst4m3.cloudfront.net/toolbar/prod/td.js" data-trackduck-id="560d8ba74660d9d2753f20b5"></script>
 	</body>
