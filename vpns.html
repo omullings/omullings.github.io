@@ -138,6 +138,16 @@
 						border-bottom: 1px solid #eee;
 						border-top: 1px solid #eee;
 					}
+
+					[ contenteditable="true" ] {
+						display: block;
+						line-height: 1.5em;
+					}
+
+					#vpn_list [ contenteditable="true" ] {
+						display: inline-block;
+						line-height: 1.5em;
+					}
 				</style>
 				<nav class="navigation" ><!---
 					<a href="#cd-nav" class="cd-nav-trigger">Menu
@@ -159,7 +169,7 @@
 							<span class="nav_text">VPNs</span>
 						</span>
 					</a>
-					
+
 					<div style="position: absolute; bottom: 5px; padding: 8px; border: 1px solid #eee; border-radius: 3px; display: block;  width: 40px; margin: 15px; ">
 						<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; display: block; color: #666; text-align: center; ">EN</span>
 					</div>
@@ -286,7 +296,7 @@
 										<span style=" padding: 15px; border: 1px solid #eee; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Authentication Method:</span> Public Key Infrastructure</span>
 										<span style=" padding: 15px; border: 1px solid #eee;  display: block; margin-top: -1px; ;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666;  ">Public Key Algorithm:</span>Rivest-Shamir-Adleman (RSA) public key encryption</span>
 										<span style=" padding: 15px; border: 1px solid #eee;  display: block; margin-top: -1px; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666;  ">Certificate Authority Root Certificate:</span>
-										<span style="font-size: 0.7em; word-wrap: break-word;">
+										<span style="font-size: 0.7em; word-wrap: break-word; " contenteditable="true">
 											-----BEGIN CERTIFICATE REQUEST-----<br>
 											MIIBqDCCARECAQAwajESMBAGA1UEAxMJbG9jYWxob3N0MREwDwYDVQQLEwhHZXJvbmltbzEPMA0GA1UEChMGQXBhY2hlMRAwDgYDVQQHDAdNeV9DaXR5MREwDwYDVQQIDAhNeV9TdGF0ZTELMAkGA1UEBhMCQ0MwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMfqprJ/aMbVzmEjDimnMQuVN/CaO7Yb89KP6ed3VQf+/Ea2i+p0dRskM8oNg+3kZeKuOplwq5KGEUnp+xbfq7M6tLGrWqQ8qL3EZUFE2nizH5VzV093vKu5jgnR2RfbTc2AplcldCPofUVuMUbDLPsmE1YQQr+OcHtcNspZL5tdAgMBAAEwDQYJKoZIhvcNAQEEBQADgYEAZFuPz0gzKqMZNA0bYLm0aPFLbR9a19NA0EbgJL2SYzoKnuKyplG2JzMVQ6myaez0J8t+iWtuthz70kBihRzU2vqOWpB4oqh+zbPwn4f87l4l8PjJh3SkiDIYdMcL5U1rxwFNAaIEpfjft/uJLY/Bv7DZQG7UPsGz+SPdn+DbdBo=
 											<br>
@@ -326,7 +336,7 @@
 				<span id="appliance_vpn_details" style=" display: none;  ">
 					 <span style="background-color: #fafafa; text-shadow: 0 1px 0 #fff; padding: 15px; border-top: 1px solid #eee; position: relative; display: block; margin-top: -1px; ">
 						 <span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 0 0 5px 0; display: block; color: #666; ">Subnets</span>
-						 <span style=" font-size: 0.8em; ">
+						 <span style=" font-size: 0.8em; " contenteditable="true">
 							 000.000.000.00\24
 						 </span>
 					 </span>
@@ -334,24 +344,24 @@
 					 <span style="background-color: #fafafa; text-shadow: 0 1px 0 #fff; padding: 15px; border-top: 1px solid #eee; position: relative; display: block; margin-top: -1px; ">
 						 <span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 0 0 5px 0; display: block; color: #666; ">Internet Key Exchange (IKE) Configuration</span>
 						 <span style=" font-size: 0.8em; border-bottom: 1px solid #f1f1f1; margin-bottom: 5px; padding: 15px 0; display: block;  ">
-							 IKE address: 000.000.000.000 <br>
-							 IKE port: 49761 <br>
+							 IKE address: <span contenteditable="true"> 000.000.000.000 </span><br>
+							 IKE port: <span contenteditable="true"> 49761 </span><br>
 						 </span>
 						 <span style=" font-size: 0.8em; ">
-							 id: <br>
-							 secret: ***************** <br>
-							 ref: <br>
+							 id: <span contenteditable="true"> </span><br>
+							 secret: <span contenteditable="true">*****************</span> <br>
+							 ref: <span contenteditable="true"> </span><br>
 						 </span>
 					 </span>
 					 <span style="background-color: #fafafa; text-shadow: 0 1px 0 #fff; padding: 15px; border-top: 1px solid #eee; position: relative; display: block; margin-top: -1px; ">
 						 <span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 0 0 5px 0; display: block; color: #666; ">Rivest-Shamir-Adleman (RSA) public key encryption</span>
 						 <span style=" font-size: 0.8em; ">
-							 RSA Key: ***************** <br>
+							 RSA Key: <span contenteditable="true">*****************</span> <br>
 						 </span>
 					 </span>
 					 <span style="background-color: #fafafa; text-shadow: 0 1px 0 #fff;  padding: 15px; border-top: 1px solid #eee;  position: relative; display: block; margin-top: -1px; ">
 						 <span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 0 0 5px 0; display: block; color: #666; ">Certs</span>
-						 <span style=" font-size: 0.8em; ">
+						 <span style=" font-size: 0.8em; " contenteditable="true">
 						 -----BEGIN CERTIFICATE REQUEST-----<br>
 						 MIIBqDCCARECAQAwajESMBAGA1UEAxMJbG9jYWxob3N0MREwDwYDVQQLEwhHZXJvbmltbz
 						 EPMA0GA1UEChMGQXBhY2hlMRAwDgYDVQQHDAdNeV9DaXR5MREwDwYDVQQIDAhNeV9TdGF0
@@ -576,35 +586,54 @@
 		});
 		</script>
 		<script type="text/javascript">
-		$(function(){
+		function manageFormSubmitControls(){
+
+			// on the form element
+			// if content on focus != content on blur then changes occurred
+			// if changes occurred, then keep the form elements open
 
 			var contents;
+			var changesExist;
 
-			$('#application_name').focus(function() {
+			$('[contenteditable = "true"]').focus(function() {
+
+				contents = $(this).text() ;
+
 				$('#form_submit_buttons').show();
+
 			});
 
-			$('.cd-btn').on('click', function(){
-				contents = document.getElementById('application_name').innerHTML;
+			$(document).on('blur','[contenteditable = "true"]', function() {
+
+				if( contents == $(this).text()  ) {
+
+					changesExist = "false";
+
+				} else  {
+
+					changesExist = "true";
+
+				}
+
+				if( changesExist == "false" ){
+
+					$('#form_submit_buttons').hide();
+
+				} else  {
+
+					$('#form_submit_buttons').show();
+
+				}
+
 			});
 
 
-			$('#application_name').blur(function() {
 
-				//$('#form_submit_buttons').hide();
+		}
 
-					if (contents == $(this).text()){
+		$('.cd-btn').on('click', function(){
 
-						$('#form_submit_buttons').hide();
-
-					} else {
-						console.log(contents);
-						console.log( $(this).text() );
-							//alert('Handler for .change() called.');
-							//contents = $(this).text();
-
-					}
-			});
+			manageFormSubmitControls();
 
 		});
 		</script>
