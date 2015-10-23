@@ -241,13 +241,25 @@
 
 									<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Description:</span>
 									<span id="application_description" contenteditable="true" style=" display: block; margin: 20px 0; line-height: 1.5em; font-size: 0.8em; "></span>
-									<div class="" style=" margin-top: 25px; margin-bottom: 80px; border: 1px solid #eee; border-radius: 3px; ">
+									<div id="appliances_section" style=" margin-top: 25px; margin-bottom: 80px; border: 1px solid #eee; border-radius: 3px; position: relative; ">
+										<style>
+										#appliances_section:hover {
+											background-color: #f1f1f1;
+										}
+
+										#appliances_section:hover i.fa-pencil {
+											color: #333 !important;
+										}
+										</style>
 										<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 15px; display: block; color: #666; ">Virtual Private Networks:</span>
-										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Intranet</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Email</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Printing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_false"><i class="fa fa-circle"></i></span></div></span>
-										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">V.O.I.P.</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-										<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">File Sharing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+											<i class="fa fa-pencil" style="color: #ccc; text-shadow: 0 1px 0 #fff; font-size: 12px; position: absolute; top: 15px; right: 15px;  "></i>
+											<div style="background-color: #fff; ">
+											<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Intranet</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+											<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Email</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+											<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Printing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_false"><i class="fa fa-circle"></i></span></div></span>
+											<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">V.O.I.P.</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+											<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">File Sharing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+										</div>
 									</div>
 
 								</div>
@@ -258,8 +270,21 @@
 										<span  style=" padding: 15px; border: 1px solid #eee; display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Connection:</span><span id="application_status" style=" display: block; width: 100%; float: none; "></span><span style="font-size: 0.7em; color: #666; margin: 0px 0 10px 0; line-height: 1em; ">Last communication attempt: 2:30 AM - October 30, 2015.</span></span>
 									</div>
 
-									<div class="app_details" style="margin-top: 25px; position: relative; ">
-										<span  style=" border: 1px solid #eee; border-radius: 3px;  display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px; overflow: none;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin: 15px; display: block; color: #666; ">Location:</span><span id="application_location_map" style="display: block;  height: 300px; position: relative;  "></span></span>
+									<div id="location_section" class="app_details" style="margin-top: 25px; position: relative; ">
+									<style>
+									#location_section:hover {
+										background-color: #f1f1f1;
+									}
+
+									#location_section:hover i.fa-pencil {
+										color: #333 !important;
+									}
+									</style>
+										<span  style=" border: 1px solid #eee; border-radius: 3px;  display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px; overflow: none;  ">
+											<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin: 15px; display: block; color: #666; ">Location:</span>
+											<i class="fa fa-pencil" style="color: #ccc; text-shadow: 0 1px 0 #fff; font-size: 12px; position: absolute; top: 15px; right: 15px;  "></i>
+											<span id="application_location_map" style="display: block;  height: 300px; position: relative;  "></span>
+										</span>
 									</div>
 
 									<div class="app_details" style="margin-top: 25px; position: relative; ">
@@ -917,36 +942,44 @@
 
 		});
 		</script>
+		<!--
 		<script type="text/javascript">
-		$.fn.inlineEdit = function(replaceWith, connectWith) {
+		(function(){
+			var replaceWith = " ",
+	    connectWith = " ";
 
-			$(this).hover(function() {
-					$(this).addClass('hover');
-			}, function() {
-					$(this).removeClass('hover');
-			});
+			$.fn.inlineEdit = function(replaceWith, connectWith) {
 
-			$(this).click(function() {
+				$(this).hover(function() {
+						$(this).addClass('hover');
+				}, function() {
+						$(this).removeClass('hover');
+				});
 
-					var elem = $(this);
+				$(this).click(function() {
 
-					elem.hide();
-					elem.after(replaceWith);
-					replaceWith.focus();
+						var elem = $(this);
 
-					replaceWith.blur(function() {
+						elem.hide();
+						elem.after(replaceWith);
+						replaceWith.focus();
 
-							if ($(this).val() != "") {
-									connectWith.val($(this).val()).change();
-									elem.text($(this).val());
-							}
+						replaceWith.blur(function() {
 
-							$(this).remove();
-							elem.show();
-					});
-			});
-		};
+								if ($(this).val() != "") {
+										connectWith.val($(this).val()).change();
+										elem.text($(this).val());
+								}
+
+								$(this).remove();
+								elem.show();
+						});
+				});
+			};
+		});
 		</script>
+		-->
+		<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 		<script async src="//d1ks1friyst4m3.cloudfront.net/toolbar/prod/td.js" data-trackduck-id="560d8ba74660d9d2753f20b5"></script>
 	</body>
 </html>
