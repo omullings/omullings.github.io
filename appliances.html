@@ -17,6 +17,7 @@
 		<script src="js/jquery-2.1.1.js"></script>
 		<script src="js/modernizr.custom.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+		<link rel="stylesheet" type="text/css" href="css/chosen.min.css" />
     <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2'></script>
 	</head>
 	<body >
@@ -244,24 +245,49 @@
 
 									<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Description:</span>
 									<span id="application_description" contenteditable="true" style=" display: block; margin: 20px 0; line-height: 1.5em; font-size: 0.8em; "></span>
-									<div id="appliances_section" style=" margin-top: 25px; margin-bottom: 80px; border: 1px solid #eee; border-radius: 3px; position: relative; ">
-										<style>
-										#appliances_section:hover {
-											background-color: #fafafa;
-										}
+									<div id="appliances_section" class="edit_in_place" style=" margin-top: 25px; margin-bottom: 80px; border: 1px solid #eee; border-radius: 3px; position: relative; ">
+										<div class="display_panel">
+											<style>
+											#appliances_section:hover {
+												background-color: #fafafa;
+											}
 
-										#appliances_section:hover i.fa-pencil {
-											color: #333 !important;
-										}
-										</style>
-										<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 15px; display: block; color: #666; ">Virtual Private Networks:</span>
-											<i class="fa fa-pencil" style="color: #ccc; text-shadow: 0 1px 0 #fff; font-size: 12px; position: absolute; top: 15px; right: 15px;  "></i>
+											#appliances_section:hover i.fa-pencil {
+												color: #333 !important;
+											}
+
+											.chosen-container-multi .chosen-choices {
+												border: 1px solid #eee;
+												border-radius: 3px;
+												background-image: none;
+											}
+
+											.edit_panel .chosen-container .chosen-choices .search-field input[ type="text"] {
+												min-width: 147px;
+												display: block;
+											}
+											</style>
+											<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 15px; display: block; color: #666; ">Virtual Private Networks:</span>
+												<i class="fa fa-pencil" style="color: #ccc; text-shadow: 0 1px 0 #fff; font-size: 12px; position: absolute; top: 15px; right: 15px;  "></i>
 											<div style="background-color: #fff; ">
-											<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Intranet</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-											<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Email</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-											<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Printing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_false"><i class="fa fa-circle"></i></span></div></span>
-											<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">V.O.I.P.</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-											<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">File Sharing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+												<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Intranet</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+												<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Email</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+												<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Printing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_false"><i class="fa fa-circle"></i></span></div></span>
+												<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">V.O.I.P.</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+												<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">File Sharing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+											</div>
+										</div>
+										<div class="edit_panel" style="display: none; ">
+											<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 15px; display: block; color: #666; ">Virtual Private Networks:</span>
+											<div style="padding: 0 15px 15px 15px; ">
+												<select id="select_vpn_list" data-placeholder="Choose VPNs..." multiple="multiple" name="vpn_list">
+													<option value="Intranet">Intranet</option>
+													<option value="Email">Email</option>
+													<option value="Printing">Printing</option>
+													<option value="V.O.I.P.">V.O.I.P.</option>
+													<option value="File Sharing">File Sharing</option>
+												</select>
+											</div>
 										</div>
 									</div>
 
@@ -283,10 +309,24 @@
 										color: #333 !important;
 									}
 									</style>
-										<span  style=" border: 1px solid #eee; border-radius: 3px;  display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px; overflow: none;  ">
-											<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin: 15px; display: block; color: #666; ">Location:</span>
-											<i class="fa fa-pencil" style="color: #ccc; text-shadow: 0 1px 0 #fff; font-size: 12px; position: absolute; top: 15px; right: 15px;  "></i>
-											<span id="application_location_map" style="display: block;  height: 300px; position: relative;  "></span>
+										<span class="edit_in_place" style=" border: 1px solid #eee; border-radius: 3px;  display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px; overflow: none;  ">
+											<div class="display_panel" style="display: block; ">
+												<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin: 15px; display: block; color: #666; ">Location:</span>
+												<i class="fa fa-pencil" style="color: #ccc; text-shadow: 0 1px 0 #fff; font-size: 12px; position: absolute; top: 15px; right: 15px;  "></i>
+												<span id="application_location_map" style="display: block;  height: 300px; position: relative;  "></span>
+											</div>
+											<div class="edit_panel" style="display: none; ">
+
+												<div style="padding: 0 15px 15px 15px">
+													<label for="location_field" style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; margin: 20px 0 10px 0; display: block; color: #666; ">Location:</label>
+													<input type="text" id="location_field" placeholder="Enter street address" style="display: block; width: 100%; margin-bottom: 10px; border: 1px solid #eee; border-radius: 3px; padding: 5px; font-size: 0.7em; ">
+													<label for="location_long_field" style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif;  margin: 10px 0; display: block; color: #666; ">Longitude:</label>
+													<input type="number" id="location_long_field" placeholder="24.7251918" style="display: block; width: 100%;margin-bottom: 10px; border: 1px solid #eee; border-radius: 3px; padding: 5px; font-size: 0.7em; ">
+													<label for="location_lat_field" style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif;  margin: 10px 0;  display: block; color: #666; ">Latitude:</label>
+													<input type="number" id="location_lat_field" placeholder="46.8225288" style="display: block; width: 100%; margin-bottom: 10px; border: 1px solid #eee; border-radius: 3px; padding: 5px; font-size: 0.7em; ">
+													<button id="commit_changes" style="text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; display: inline-block; color: #666; border: 1px solid #eee; background: #fff; padding: 8px 15px; margin: 10px 5px 0px 0px; ">OK </button>
+												</div>
+											</div>
 										</span>
 									</div>
 
@@ -307,9 +347,10 @@
 
 								</aside>
 							</div> <!-- cd-panel-content -->
-							<div id="form_submit_buttons" style=" background-color: rgba(0, 0, 0, 0.6); height: 70px; position: absolute; bottom: 0; right: 0; left: 0; display: none; z-index: 99999; ">
-								<input type="submit" name="submit" value="Save Changes" class="submit-button" style=" margin: 15px 5px 10px 25px; border-radius: 3px; height: 40px; padding: 5px 15px; text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600;  background: #1D9D1D;  color: #fff; border: 1px solid #333; ; box-shadow: none; text-shadow: 0 1px 0 green;    ">
-								<button type="button" name="button" style=" background: transparent; color: #fff; border: 2px solid #fff; border-radius: 3px;  box-shadow: none; margin: 15px 5px; height: 40px; padding: 5px 15px; text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600;"> Revert changes </button>
+
+							<div id="form_submit_buttons" style="  border-top: 1px solid #eee; background-color: rgba(255, 255, 255, 0.9); height: 70px; position: absolute; bottom: 0; right: 0; left: 0; display: none; z-index: 99999; -webkit-transition: height 400ms ease-in-out,border 0s linear 0s; transition: height 400ms ease-in-out,border 0s linear 0s;">
+								<input type="submit" name="submit" value="Save Changes" class="submit-button" style=" margin: 15px 5px 10px 25px; border-radius: 3px; height: 40px; padding: 5px 15px; text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600;  background: #1D9D1D;  color: #fff; border: 2px solid #1D9D1D; ; box-shadow: none; text-shadow: 0 1px 0 green;    ">
+								<button type="button" name="button" style=" background: transparent; color: #333; border: 2px solid #333; border-radius: 3px;  box-shadow: none; margin: 15px 5px; height: 40px; padding: 5px 15px; text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600;"> Revert changes </button>
 							</div>
 							</form>
 						</div> <!-- cd-panel-container -->
@@ -483,7 +524,6 @@
 		});
 		$(function() {
 
-
 			function doSetSelectedCount() {
 				var n = $( "#grid .j-selected" ).length;
 				$("header .selection_count").text( n + ' appliances selected.');
@@ -633,8 +673,6 @@
 				}
 
 			});
-
-
 
 		  $(window).click(function () {
 				if( doSetSelectedCount() == 0 ) {
@@ -944,44 +982,61 @@
 			manageFormSubmitControls();
 
 		});
+
 		</script>
 		<!--
 		<script type="text/javascript">
 		(function(){
-			var replaceWith = " ",
-	    connectWith = " ";
-
-			$.fn.inlineEdit = function(replaceWith, connectWith) {
-
-				$(this).hover(function() {
-						$(this).addClass('hover');
-				}, function() {
-						$(this).removeClass('hover');
-				});
-
-				$(this).click(function() {
-
-						var elem = $(this);
-
-						elem.hide();
-						elem.after(replaceWith);
-						replaceWith.focus();
-
-						replaceWith.blur(function() {
-
-								if ($(this).val() != "") {
-										connectWith.val($(this).val()).change();
-										elem.text($(this).val());
-								}
-
-								$(this).remove();
-								elem.show();
-						});
-				});
-			};
+			$('#')
 		});
 		</script>
 		-->
+
+		<script type="text/javascript">
+		$(function(){
+
+				$('.edit_in_place').click(function(){
+					$(this).find( ".edit_panel" ).show();
+					$(this).find( ".display_panel" ).hide();
+				});
+
+				$('#select_vpn_list option').attr('selected', 'selected');
+
+				$('#select_vpn_list').chosen({width: "100%"});
+
+				//Commit chosen select changes
+				$('.search-field input[type="text"]').blur(function(){
+
+					var component = $(this).closest('div.edit_in_place');
+
+					$(component).find( ".edit_panel" ).hide();
+					$(component).find( ".display_panel" ).show();
+				});
+
+				//Commit complex selection changes
+				$('#commit_changes').click(function(){
+					//event.preventDefault;
+
+					var component = $(this).closest('.edit_in_place').get(0);
+
+					$(this).closest('.edit_in_place').find( ".edit_panel" ).hide();
+					$(this).closest('.edit_in_place').find( ".display_panel" ).show();
+
+
+				});
+
+				$(window).click(function(){
+					$('.edit_panel').hide();
+					$('.display_panel').show();
+				});
+
+				$('.edit_in_place').click(function(event){
+		    	event.stopPropagation();
+				});
+
+		});
+		</script>
+
 		<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 		<script async src="//d1ks1friyst4m3.cloudfront.net/toolbar/prod/td.js" data-trackduck-id="560d8ba74660d9d2753f20b5"></script>
 	</body>
