@@ -209,7 +209,7 @@
 							<li>
 									<a href="#"><i class="fa fa-ellipsis-v" style="display: inline-block; position: absolute; right: 0px; "></i></a>
 									<ul>
-											<li><a href="#">Assign to VPN</a></li>
+											<li><a class="assign_to_VPN_link" href="#">Assign to VPN</a></li>
 											<li><a href="#">Assign to new VPN</a></li>
 											<li><a href="#">Update software</a></li>
 											<li><a href="#">Apply firewall rules</a></li>
@@ -232,7 +232,7 @@
 							<a href="#0" class="cd-panel-close" style=" width: 60px; ">Close</a>
 						</header>
 
-						<div class="cd-panel-container" >
+						<div id="view_edit_details" class="cd-panel-container" >
 							<form class="" action="" method="post">
 							<div class="cd-panel-content" style="padding-top: 70px; "  >
 								<div class="detail_summary" style="width: 100%;  width: 60%;  display: inline-block; padding-right: 25px; ">
@@ -354,6 +354,16 @@
 							</div>
 							</form>
 						</div> <!-- cd-panel-container -->
+						<div id="assign_to_vpn_panel" class="cd-panel-container" style="width: 100%;  position: relative;  background-color: #fff; display: none; padding: 25px 5%; ">
+							<h3 style="margin-bottom: 25px; ">Assign select appliances to a VPN</h3>
+							<div style="background-color: #fff; border: 1px solid #eee; ">
+								<span  ><div class="appliance " style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;     padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Intranet</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+								<span  ><div class="appliance " style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;     padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Email</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+								<span  ><div class="appliance " style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;    padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Printing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_false"><i class="fa fa-circle"></i></span></div></span>
+								<span  ><div class="appliance " style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;    padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">V.O.I.P.</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+								<span  ><div class="appliance " style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;    padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">File Sharing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+							</div>
+						</div>
 					</div> <!-- cd-panel -->
 				</section>
 
@@ -520,6 +530,7 @@
 		$(function(){
 			$('.cd-panel-close').click(function(){
 				$('.cd-panel ').removeClass('is-visible');
+				$('#view_edit_details').show();
 			});
 		});
 		$(function() {
@@ -1036,7 +1047,22 @@
 
 		});
 		</script>
+		<script type="text/javascript">
+			$(function(){
+				$(".assign_to_VPN_link").click(function(){
+					$('.cd-panel ').addClass('is-visible');
+					$('#assign_to_vpn_panel').show();
+					$('#view_edit_details').hide();
+				});
 
+				$("#assign_to_vpn_panel .appliance").click(function(){
+					console.log('assigned!!!');
+					$('#assign_to_vpn_panel').hide();
+					$('#view_edit_details').show();
+					$('.cd-panel ').removeClass('is-visible');
+				});
+			});
+		</script>
 		<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 		<script async src="//d1ks1friyst4m3.cloudfront.net/toolbar/prod/td.js" data-trackduck-id="560d8ba74660d9d2753f20b5"></script>
 	</body>
