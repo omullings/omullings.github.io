@@ -268,6 +268,10 @@
 								display: block;
 							}
 
+							.edit_in_place .display_value:hover {
+								background: #fafafa;
+							}
+
 						</style>
 
 						<div class="cd-panel-container" style="width: 100%;  position: relative;  background-color: #fff;">
@@ -293,8 +297,18 @@
 												<label class="tgl-btn" for="application_status"></label>
 											</span>
 										</div>
-										<div style="margin-bottom: 25px; display: block; position relative; ">
-											<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">TOPOLOGY:</span><span id="application_type"> default</span>
+										<div class="edit_in_place" style="margin-bottom: 25px; display: block; position relative; ">
+											<div class=" display_panel" style="display: block; ">
+												<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">TOPOLOGY:</span>
+												<span id="application_type" class="display_value" style="display: block; "> default</span>
+											</div>
+											<div class="edit_panel" style="display: none; ">
+													<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">TOPOLOGY:</span>
+													<select class="topology" name="topology">
+														<option value="fullmesh" > Full Mesh </option>
+														<option value="hubnspoke" > Hub and Spoke </option>
+													</select>
+											</div>
 										</div>
 										<div id="appliances_section" class="edit_in_place" style="margin-bottom: 80px; border: 1px solid #eee; border-radius: 3px; position: relative; ">
 												<style>
@@ -314,7 +328,7 @@
 
 													</ul>
 												</div>
-												<div class="edit_panel">
+												<div class="edit_panel" style="display: none; ">
 													<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 15px; display: block; color: #666; ">Appliances:</span>
 													<div style="padding: 0 15px 15px 15px; ">
 														<select id="select_appliance_list" data-placeholder="Choose appliances..." multiple="multiple" name="appliance_list">
@@ -617,7 +631,7 @@
 				var item_details = $('#appliance_vpn_details')
 				$( event.currentTarget ).append(item_details);
 				$('#appliance_vpn_details').show();
-
+				event.stopPropagation();
 			});
 		});
 		</script>
@@ -685,6 +699,15 @@
 
 				//Commit chosen select changes
 				$('.search-field input[type="text"]').blur(function(){
+
+					var component = $(this).closest('div.edit_in_place');
+
+					$(component).find( ".edit_panel" ).hide();
+					$(component).find( ".display_panel" ).show();
+				});
+
+				//Commit chosen select changes
+				$('.topology').change(function(){
 
 					var component = $(this).closest('div.edit_in_place');
 
