@@ -1,0 +1,712 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Worker Classification | Blue J legal</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300,100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <script src="assets/components/modernizr.js"></script>
+    <style media="screen">
+
+    /*basic reset*/
+    * {margin: 0; padding: 0;}
+
+    /*form styles*/
+    #msform {
+    position: relative;
+    display: block;
+    padding: 0 300px;
+    width: 100%;
+    }
+
+    #questionPages {
+      position: relative;
+      width: 100%;
+    }
+    #msform fieldset {
+      border: 0 none;
+      left: 0;
+      right: 0;
+      top: 0;
+      /*
+    background: white;
+
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);*/
+    padding: 20px 30px;
+    margin: 5px 0 25px 0;
+
+    box-sizing: border-box;
+
+    /*stacking fieldsets above each other*/
+    position: absolute;
+    }
+    /*Hide all except first fieldset*/
+    #msform fieldset:not(:first-of-type) {
+    display: none;
+    }
+    /*inputs*/
+    #msform input, #msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #517fa4;
+    font-size: 13px;
+    }
+    /*buttons*/
+    #msform .action-button {
+    width: 100px;
+    background: #517fa4;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 1px 0 #22252e;
+    border: 0 none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    }
+    #msform .action-button:hover, #msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+    }
+    /*headings*/
+    .fs-title {
+    font-size: 24px;
+    font-weight: normal;
+    color: #fff;
+    margin-bottom: 10px;
+    }
+    .fs-subtitle {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 24px;
+      margin: 35px 0 35px 0;
+    }
+
+    .question {
+      font-weight: normal;
+      font-size: 1.3em;
+      line-height: 1.5em;
+      color: #ccc;
+      margin: 20px 0;
+      padding-top: 20px;
+      border-top: 1px solid #22252e;
+      display: block;
+    }
+
+    .radio_wrap {
+      margin: 15px 0;
+      display: block;
+      padding: 5px 0;
+      position: relative;
+    }
+
+    label.radio {
+      position: relative;
+      cursor: pointer;
+      display: block;
+      padding: 2px 5px 3px 35px  ;
+      position: relative;
+      line-height: 1.5em;
+      font-size: 1.2em;
+    }
+
+    label:before {
+      border-radius: 100%;
+      border: 1px solid white;
+      display: block;
+      height: 15px;
+      width: 15px;
+      position: absolute;
+      top: 5px;
+      left: 0px;
+      content:'';
+    }
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type=radio]:checked + label:before{
+      box-shadow: inset 0 0 0 1px white;
+      transition: transition: all 0.5s ease;
+      background: #fff;
+    }
+
+    .hr {
+      border-top: 1px solid #22252e;
+      margin: 20px 0 10px 0;
+    }
+
+    .skip {
+      display: block;
+      margin: 25px 0;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    /*progressbar*/
+    #progressbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 300px;
+    text-align: left;
+    padding: 20px;
+
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+    }
+    #progressbar li {
+    list-style-type: none;
+    display: block;
+    color: white;
+    font-size: 12px;
+    position: relative;
+    border: 1px solid #22252e;
+    padding: 10px;
+    margin-top: -1px;
+    background: rgba(50, 54, 65, 0.8);
+    }
+    #progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    font-size: 10px;
+    color: #fff;
+    text-shadow: 0 1px 0 #22252e;
+    background: transparent;
+    border: 1px solid #22252e;
+    border-radius: 50px;
+    margin: 0 auto 5px auto;
+    display: inline-block;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: 900;
+    }
+    /*progressbar connectors*/
+    #progressbar li:after {
+    content: '';
+    width: 2px;
+    height: 27px;
+    background: #22252e;
+    position: absolute;
+    left: 20px;
+    bottom: 37px;
+    z-index: -1; /*put it behind the numbers*/
+    }
+    #progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+    }
+    /*marking active/completed steps green*/
+    /*The number of the step and the connector before it = green*/
+    #progressbar li.active:before,  #progressbar li.active:after{
+    background: #517fa4;
+    color: white;
+    font-weight: 900;
+    }
+    </style>
+
+  </head>
+  <body >
+    <main class="main" role="main" >
+
+        <!-- multistep form -->
+        <form id="msform">
+        	<!-- progressbar -->
+        	<ul id="progressbar">
+        		<li class="active">Welcome</li>
+        		<li>Background</li>
+        		<li>Working relationship</li>
+            <li>Control</li>
+            <li>Tools and Equipment</li>
+            <li>Financial Risk</li>
+            <li>Integration</li>
+        	</ul>
+          <section id="questionPages" >
+          	<!-- fieldsets -->
+          	<fieldset>
+          		<h2 class="fs-title">Welcome</h2>
+          		<p class="fs-subtitle">Hello! </p>
+              <p class="fs-subtitle">Today we’re going to determine if your client is an employee or an independent contractor under Canadian tax law. </p>
+              <p class="fs-subtitle">I just have a few questions for you. </p>
+              <p class="fs-subtitle">From now on, I will refer to your client as the “worker”, and the person or company that hired him or her as the “hirer”.</p>
+              <div class="hr" ></div>
+          		<input type="button" name="next" class="next action-button" value="Get Started" />
+          	</fieldset>
+          	<fieldset>
+          		<h2 class="fs-title">Background</h2>
+          		<p class="question" for="occupation">What is the worker's profession or occupation?</p>
+          		<input type="text" name="occupation" placeholder="e.g. I.T. consultant, Transport Driver etc." />
+              <p class="question" for="companyBusiness">How would you describe the hirer’s business?</p>
+          		<input type="text" name="companyBusiness" placeholder="e.g. Bank, Software Consultancy, Insurance etc." />
+              <div class="hr" ></div>
+          		<input type="button" name="previous" class="previous action-button" value="Previous" />
+          		<input type="button" id="stage_1" name="next" class="next action-button" value="Next" />
+          	</fieldset>
+            <fieldset>
+              <h2 class="fs-title">Working Relationship</h2>
+              <p class="question">
+                Does the contract between the worker and the hirer specify whether the worker is an employee or an independent contractor? Or does the contract specify whether the worker is in a contract of service or contract for services?
+              </p>
+
+              <div class="radio_wrap">
+                <input type="radio" name="relationship" id="employee" value="employee">
+                <label class="radio" for="employee"><strong>Employee:  </strong> Contract states that the worker is an employee (or is a contract of service)</label>
+              </div>
+              <div class="radio_wrap">
+                <input type="radio" name="relationship" id="independent_contractor" value="independent_contractor">
+                <label class="radio" for="independent_contractor"><strong>Independent Contractor:  </strong> Contract states that the worker is an independent (or is a contract for services)</label>
+              </div>
+
+              <span class="skip">Skip</span>
+              <div class="hr" ></div>
+              <input type="button" name="previous" class="previous action-button" value="Previous" />
+              <input type="button" id="stage_2" name="next" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset>
+              <h2 class="fs-title">Control</h2>
+              <p class="question">
+              <strong>Schedule: </strong>   Does the worker set his or her own hours and schedule?
+              </p>
+              <div class="radio_wrap">
+                <input type="radio" name="schedule" id="schedule_yes" value="employee">
+                <label class="radio" for="schedule_yes">Yes</label>
+              </div>
+              <div class="radio_wrap">
+                <input type="radio" name="schedule" id="schedule_no" value="independent_contractor">
+                <label class="radio" for="schedule_no">No</label>
+              </div>
+
+              <span class="skip">Skip</span>
+
+              <p class="question">
+              <strong>Supervision: </strong>   Is the worker – or the work done by the worker – monitored or supervised by the hirer?</p>
+              <div class="radio_wrap">
+                <input type="radio" name="supervised" id="supervised_yes" value="employee">
+                <label class="radio" for="supervised_yes">Yes</label>
+              </div>
+              <div class="radio_wrap">
+                <input type="radio" name="supervised" id="supervised_no" value="independent_contractor">
+                <label class="radio" for="supervised_no">No</label>
+              </div>
+
+              <span class="skip">Skip</span>
+
+              <p class="question"><strong>Instructions: </strong>  Does the worker determine what work should be done?</p>
+              <div class="radio_wrap">
+                <input type="radio" name="instructions" id="instructions_yes" value="employee">
+                <label class="radio" for="instructions_yes">Yes</label>
+              </div>
+              <div class="radio_wrap">
+                <input type="radio" name="instructions" id="instructions_no" value="independent_contractor">
+                <label class="radio" for="instructions_no">No</label>
+              </div>
+
+              <span class="skip">Skip</span>
+
+              <p class="question">Is the worker free to work for other people or for other companies while working for this hirer?</p>
+              <div class="radio_wrap">
+                <input type="radio" name="num_jobs" id="num_jobs_yes" value="employee">
+                <label class="radio" for="num_jobs_yes">Yes</label>
+              </div>
+              <div class="radio_wrap">
+                <input type="radio" name="num_jobs" id="num_jobs_no" value="independent_contractor">
+                <label class="radio" for="num_jobs_no">No</label>
+              </div>
+
+              <span class="skip">Skip</span>
+
+              <p class="question"><strong>Sub Contracting: </strong>  Can the worker delegate work or subcontract work without notifying the hirer?</p>
+              <div class="radio_wrap">
+                <input type="radio" name="sub_contracting" id="sub_contracting_yes" value="employee">
+                <label class="radio" for="sub_contracting_yes">Yes</label>
+              </div>
+              <div class="radio_wrap">
+                <input type="radio" name="sub_contracting" id="sub_contracting_no" value="independent_contractor">
+                <label class="radio" for="sub_contracting_no">No</label>
+              </div>
+
+              <span class="skip">Skip</span>
+
+              <div class="hr" ></div>
+              <input type="button" name="previous" class="previous action-button" value="Previous" />
+              <input type="button" id="stage_3" name="next" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset>
+              <h2 class="fs-title">Tools and Equipment</h2>
+              <p class="question">What are the most important tools or equipment for the worker's profession or occupation?</p>
+              <input type="text" name="tools_of_trade" placeholder="e.g. Computer, Equipment, vehicle etc." />
+              <span class="skip">Skip</span>
+
+              <p class="question">Who owns these tools or equipment?</p>
+              <div class="radio_wrap">
+                <input type="radio" name="equipment_ownership" id="equipment_ownership_worker" value="employee">
+                <label class="radio" for="equipment_ownership_worker">Yes</label>
+              </div>
+              <div class="radio_wrap">
+                <input type="radio" name="equipment_ownership" id="equipment_ownership_hirer" value="independent_contractor">
+                <label class="radio" for="equipment_ownership_hirer">No</label>
+              </div>
+
+              <span class="skip">Skip</span>
+
+              <p class="question">What other tools or equipment does the worker use?</p>
+              <input type="text" name="tools_of_trade" placeholder="e.g. Computer, Equipment, vehicle etc." />
+              <span class="skip">Skip</span>
+
+              <p class="question">Who owns these tools or equipment?</p>
+              <div class="radio_wrap">
+                <input type="radio" name="equipment_ownership" id="equipment_ownership_worker" value="employee">
+                <label class="radio" for="equipment_ownership_worker">Yes</label>
+              </div>
+              <div class="radio_wrap">
+                <input type="radio" name="equipment_ownership" id="equipment_ownership_hirer" value="independent_contractor">
+                <label class="radio" for="equipment_ownership_hirer">No</label>
+              </div>
+
+              <span class="skip">Skip</span>
+
+              <div class="hr" ></div>
+              <input type="button" name="previous" class="previous action-button" value="Previous" />
+              <input type="button" id="stage_4" name="next" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset>
+              <h2 class="fs-title">Financial Risk</h2>
+              <p class="question">How is the worker paid?</p>
+              <input type="text" name="way_paid" placeholder="e.g. hourly, weekly, monthly, invoiced, etc..." />
+              <span class="skip">Skip</span>
+
+              <p class="question">Does the worker receive any commission on sales by the hirer?</p>
+              <div class="radio_wrap">
+                <input type="radio" name="commission" id="commission_yes" value="employee">
+                <label class="radio" for="commission_yes">Yes</label>
+              </div>
+              <div class="radio_wrap">
+                <input type="radio" name="commission" id="commission_no" value="independent_contractor">
+                <label class="radio" for="commission_no">No</label>
+              </div>
+
+              <span class="skip">Skip</span>
+
+              <p class="question">Other than the loss of work, is the worker personally at risk of any loss?</p>
+              <div class="radio_wrap">
+                <input type="radio" name="losses" id="losses_yes" value="employee">
+                <label class="radio" for="losses_yes">Yes</label>
+              </div>
+              <div class="radio_wrap">
+                <input type="radio" name="losses" id="losses_no" value="independent_contractor">
+                <label class="radio" for="losses_no">No</label>
+              </div>
+
+              <span class="skip">Skip</span>
+
+              <div class="hr" ></div>
+              <input type="button" name="previous" class="previous action-button" value="Previous" />
+              <input type="button" id="stage_5" name="next" class="next action-button" value="Next" />
+            </fieldset>
+          	<fieldset>
+          		<h2 class="fs-title">Integration</h2>
+              <p class="question">Where does the worker do most of his or her work?</p>
+
+              <div class="radio_wrap">
+                <input type="radio" name="work_location" id="work_location_home" value="employee">
+                <label class="radio" for="work_location_home"> Home / Personal office </label>
+              </div>
+
+              <div class="radio_wrap">
+                <input type="radio" name="work_location" id="work_location_office" value="independent_contractor">
+                <label class="radio" for="work_location_office"> Hirer's workplace </label>
+              </div>
+
+              <div class="radio_wrap">
+                <input type="radio" name="work_location" id="work_location_mobile" value="independent_contractor">
+                <label class="radio" for="work_location_mobile"> Mobile </label>
+              </div>
+
+              <span class="skip">Skip</span>
+
+              <p class="question"> Who pays for the worker's transport?</p>
+
+              <div class="radio_wrap">
+                <input type="radio" name="transport" id="transport_worker" value="independent_contractor">
+                <label class="radio" for="transport_worker"> Worker</label>
+              </div>
+
+              <div class="radio_wrap">
+                <input type="radio" name="transport" id="transport_hirer" value="independent_contractor">
+                <label class="radio" for="transport_hirer"> Hirer </label>
+              </div>
+
+              <span class="skip">Skip</span>
+
+              <p class="question" >To what extent is the worker involved in the hirer’s main business?</p>
+
+              <div class="radio_wrap">
+                <input type="radio" name="involvement" id="involvement_1" value="employee">
+                <label class="radio" for="involvement_1"> Not at all </label>
+              </div>
+
+              <div class="radio_wrap">
+                <input type="radio" name="involvement" id="involvement_2" value="independent_contractor">
+                <label class="radio" for="involvement_2"> Somewhat </label>
+              </div>
+
+              <div class="radio_wrap">
+                <input type="radio" name="involvement" id="involvement_3" value="independent_contractor">
+                <label class="radio" for="involvement_3"> Very much so </label>
+              </div>
+
+              <span class="skip">Skip</span>
+
+              <p class="question"> How long has the worker worked for the hirer? </p>
+
+              <div class="radio_wrap">
+                <input type="radio" name="tenure" id="tenure_1" value="employee">
+                <label class="radio" for="tenure_1"> Less than 3 months </label>
+              </div>
+
+              <div class="radio_wrap">
+                <input type="radio" name="tenure" id="tenure_2" value="independent_contractor">
+                <label class="radio" for="tenure_2"> 3 months - 1 year </label>
+              </div>
+
+              <div class="radio_wrap">
+                <input type="radio" name="tenure" id="tenure_3" value="independent_contractor">
+                <label class="radio" for="tenure_3"> More than 1 year </label>
+              </div>
+
+              <span class="skip">Skip</span>
+
+              <div class="hr" ></div>
+
+          		<input type="button" name="previous" class="previous action-button" value="Previous" />
+          		<input type="submit" id="stage_6" name="submit" class="submit action-button" value="Submit" />
+          	</fieldset>
+
+          </section>
+        </form>
+
+
+    </main>
+
+    <aside class="sidebar" role="complementary" style="background-color: #fff; position: fixed; top: 0; right: 0; bottom: 0; width: 300px; z-index: 1; padding: 20px; color: #333; ">
+      <div id="loading" style="display: none; text-align: center; padding-top: 25%;  background-color: rgba( 255, 255, 255, 0.8); position: fixed; top: 0; right: 0; bottom: 0; width: 300px; z-index: 2; ">
+        <img src="assets/img/watson.gif" >
+      </div>
+      <h2 style="text-transform: uppercase; color: #666; font-size: 0.8em; font-weight: 900; ">Classification Preview</h2>
+      <span id="result" style="font-size: 1.5em; font-weight: 400; padding: 5px 0; margin: 0 0 15px 0; display: block; line-height: 1.6em;  ">Get Started to generate a recommendation</span>
+      <h2 style="text-transform: uppercase; color: #666; font-size: 0.8em; font-weight: 900; ">confidence</h2>
+      <span id="confidence" style="padding: 5px 0; margin: 0 0 15px 0; display: block; ">0%</span>
+      <section id="evidence">
+        <div class="hr" style="margin-bottom: 20px; border-top: 1px solid #ccc; "></div>
+        <h2 style="text-transform: uppercase; color: #666; font-size: 0.8em; font-weight: 900; ">Evidence</h2>
+        <ul  style="list-style: none; margin: 10px 0; line-height: 1.3em; ">
+          <li style="margin-bottom: 20px; ">
+            <p style="margin-bottom: 10px; ">The relationship is one of subordination. The payer will
+  often direct, scrutinize, and effectively control many
+  elements of how and when the work is performed. <span style="font-weight: 600; ">- Source: rc4110-14e CRA</span> </p>
+            <div class="evidence_footer" style="position: relative;"  >
+
+              <span><strong>Confidence:</strong> 20%</span>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px; ">
+            <p style="margin-bottom: 10px; ">The relationship is one of subordination. The payer will
+  often direct, scrutinize, and effectively control many
+  elements of how and when the work is performed. <span style="font-weight: 600; ">- Source: rc4110-14e CRA</span> </p>
+            <div class="evidence_footer" style="position: relative;"  >
+
+              <span><strong>Confidence:</strong> 20%</span>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px; ">
+            <p style="margin-bottom: 10px; ">The relationship is one of subordination. The payer will
+  often direct, scrutinize, and effectively control many
+  elements of how and when the work is performed. <span style="font-weight: 600; ">- Source: rc4110-14e CRA</span> </p>
+            <div class="evidence_footer" style="position: relative;"  >
+
+              <span><strong>Confidence:</strong> 20%</span>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px; ">
+            <p style="margin-bottom: 10px; ">The relationship is one of subordination. The payer will
+  often direct, scrutinize, and effectively control many
+  elements of how and when the work is performed. <span style="font-weight: 600; ">- Source: rc4110-14e CRA</span> </p>
+            <div class="evidence_footer" style="position: relative;"  >
+
+              <span><strong>Confidence:</strong> 20%</span>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px; ">
+            <p style="margin-bottom: 10px; ">The relationship is one of subordination. The payer will
+  often direct, scrutinize, and effectively control many
+  elements of how and when the work is performed. <span style="font-weight: 600; ">- Source: rc4110-14e CRA</span> </p>
+            <div class="evidence_footer" style="position: relative;"  >
+
+              <span><strong>Confidence:</strong> 20%</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+    </aside>
+
+    <footer class="footer" role="contentinfo">
+      <div class="copyright">
+        © 2015 • <a href="/">Blue J legal</a>
+      </div>
+      <nav class="footer_links">
+        <a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/what-is-watson.html">What's Watson?</a>
+      </nav>
+      <ul>
+        <li><a href="https://twitter.com/BlueJLegal"><i class="fa fa-twitter"></i></i></a></li>
+        <li><a href="https://www.facebook.com/bluejlegal"><i class="fa fa-facebook"></i></i></a></li>
+      </ul>
+    </footer>
+
+    <script src="assets/js/jquery-2.1.4.min.js"></script>
+    <script src="assets/js/scripts.min.js"></script>
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+    <script src="assets/js/jquery.easing.compatibility.js"></script>
+    <script type="text/javascript">
+    //jQuery time
+    var current_fs, next_fs, previous_fs; //fieldsets
+    var left, opacity, scale; //fieldset properties which we will animate
+    var animating; //flag to prevent quick multi-click glitches
+
+    jQuery(".next").click(function(){
+    if(animating) return false;
+    animating = true;
+
+    current_fs = jQuery(this).parent();
+    next_fs = jQuery(this).parent().next();
+
+    //activate next step on progressbar using the index of next_fs
+    jQuery("#progressbar li").eq(jQuery("fieldset").index(next_fs)).addClass("active");
+
+    //show the next fieldset
+    next_fs.show();
+    //hide the current fieldset with style
+    current_fs.animate({opacity: 0}, {
+      step: function(now, mx) {
+        //as the opacity of current_fs reduces to 0 - stored in "now"
+        //1. scale current_fs down to 80%
+        scale = 1 - (1 - now) * 0.2;
+        //2. bring next_fs from the right(50%)
+        left = (now * 50)+"%";
+        //3. increase opacity of next_fs to 1 as it moves in
+        opacity = 1 - now;
+        current_fs.css({'transform': 'scale('+scale+')'});
+        next_fs.css({'left': left, 'opacity': opacity});
+      },
+      duration: 800,
+      complete: function(){
+        current_fs.hide();
+        animating = false;
+      },
+      //this comes from the custom easing plugin
+      easing: 'easeInOutBack'
+    });
+    });
+
+    jQuery(".previous").click(function(){
+    if(animating) return false;
+    animating = true;
+
+    current_fs = jQuery(this).parent();
+    previous_fs = jQuery(this).parent().prev();
+
+    //de-activate current step on progressbar
+    jQuery("#progressbar li").eq(jQuery("fieldset").index(current_fs)).removeClass("active");
+
+    //show the previous fieldset
+    previous_fs.show();
+    //hide the current fieldset with style
+    current_fs.animate({opacity: 0}, {
+      step: function(now, mx) {
+        //as the opacity of current_fs reduces to 0 - stored in "now"
+        //1. scale previous_fs from 80% to 100%
+        scale = 0.8 + (1 - now) * 0.2;
+        //2. take current_fs to the right(50%) - from 0%
+        //left = ((1-now) * 50)+"%";
+        //3. increase opacity of previous_fs to 1 as it moves in
+        opacity = 1 - now;
+        current_fs.css({'left': left});
+        previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+      },
+      duration: 800,
+      complete: function(){
+        current_fs.hide();
+        animating = false;
+      },
+      //this comes from the custom easing plugin
+      easing: 'easeInOutBack'
+    });
+    });
+
+    jQuery(".submit").click(function(){
+    return false;
+    })
+
+    jQuery("#stage_1").click(function(){
+      jQuery('#loading').show();
+      jQuery('#result').html('Independent Contractor');
+      jQuery('#confidence').html('10%');
+      jQuery('#evidence').show();
+      jQuery('#loading').fadeOut(2000);
+
+    });
+
+    jQuery("#stage_2").click(function(){
+      jQuery('#loading').show();
+      jQuery('#confidence').html('15%');
+      jQuery('#loading').fadeOut(2000);
+    });
+
+    jQuery("#stage_3").click(function(){
+      jQuery('#loading').show();
+      jQuery('#confidence').html('20%');
+      jQuery('#loading').fadeOut(2000);
+    });
+
+    jQuery("#stage_4").click(function(){
+      jQuery('#loading').show();
+      jQuery('#confidence').html('25%');
+      jQuery('#loading').fadeOut(2000);
+    });
+
+    jQuery("#stage_5").click(function(){
+      jQuery('#loading').show();
+      jQuery('#confidence').html('40%');
+      jQuery('#loading').fadeOut(2000);
+    });
+
+    jQuery("#stage_6").click(function(){
+      jQuery('#loading').show();
+      jQuery('#confidence').html('48%');
+      jQuery('#loading').fadeOut(2000);
+    });
+
+    jQuery(document).ready( function(){
+      jQuery('#evidence').hide();
+    });
+
+
+
+    </script>
+  </body>
+</html>
