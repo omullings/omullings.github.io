@@ -67,7 +67,7 @@
     /*buttons*/
     #msform .action-button {
     width: 100px;
-    background: #517fa4;
+    background: rgba(81, 127, 164, 0.2);
     font-weight: bold;
     color: white;
     text-shadow: 0 1px 0 #22252e;
@@ -76,6 +76,9 @@
     cursor: pointer;
     padding: 10px 5px;
     margin: 10px 5px;
+    }
+    #msform input[type="submit"], #msform .start, #msform .next {
+      background: #517fa4;
     }
     #msform .action-button:hover, #msform .action-button:focus {
     box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
@@ -225,7 +228,7 @@
     <main class="main" role="main" >
 
         <!-- multistep form -->
-        <form id="msform">
+        <form id="msform" action="/classification_result.html">
         	<!-- progressbar -->
         	<ul id="progressbar">
         		<li class="active">Welcome</li>
@@ -243,7 +246,7 @@
           		<p class="fs-subtitle">Hello! </p>
               <p class="fs-subtitle">Today we’re going to determine if your client is an employee or an independent contractor under Canadian tax law. </p>
               <p class="fs-subtitle">I just have a few questions for you. </p>
-              <p class="fs-subtitle">From now on, I will refer to your client as the “worker”, and the person or company that hired him or her as the “hirer”.</p>
+              <p style="color: #ccc; font-size: 1.2em; margin: 100px 0;">From now on, I will refer to your client as the “worker”, and the person or company that hired him or her as the “hirer”.</p>
               <div class="hr" ></div>
           		<input type="button" name="next" class="next action-button" value="Get Started" />
           	</fieldset>
@@ -494,7 +497,7 @@
               <div class="hr" ></div>
 
           		<input type="button" name="previous" class="previous action-button" value="Previous" />
-          		<input type="submit" id="stage_6" name="submit" class="submit action-button" value="Submit" />
+          		<input type="submit" name="submit" class="submit action-button" value="Submit" />
           	</fieldset>
 
           </section>
@@ -509,8 +512,10 @@
       </div>
       <h2 style="text-transform: uppercase; color: #666; font-size: 0.8em; font-weight: 900; ">Classification Preview</h2>
       <span id="result" style="font-size: 1.5em; font-weight: 400; padding: 5px 0; margin: 0 0 15px 0; display: block; line-height: 1.6em;  ">Get Started to generate a recommendation</span>
-      <h2 style="text-transform: uppercase; color: #666; font-size: 0.8em; font-weight: 900; ">confidence</h2>
-      <span id="confidence" style="padding: 5px 0; margin: 0 0 15px 0; display: block; ">0%</span>
+      <section id="confidence_summary">
+        <h2 style="text-transform: uppercase; color: #666; font-size: 0.8em; font-weight: 900; ">confidence</h2>
+        <span id="confidence" style="padding: 5px 0; margin: 0 0 15px 0; display: block; ">0%</span>
+      </section>
       <section id="evidence">
         <div class="hr" style="margin-bottom: 20px; border-top: 1px solid #ccc; "></div>
         <h2 style="text-transform: uppercase; color: #666; font-size: 0.8em; font-weight: 900; ">Evidence</h2>
@@ -567,7 +572,7 @@
 
     <footer class="footer" role="contentinfo">
       <div class="copyright">
-        © 2015 • <a href="/">Blue J legal</a>
+        <a href="/">Blue J legal</a> • 2015 ©
       </div>
       <nav class="footer_links">
         <a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/what-is-watson.html">What's Watson?</a>
@@ -658,51 +663,43 @@
     });
     });
 
-    jQuery(".submit").click(function(){
-    return false;
-    })
-
     jQuery("#stage_1").click(function(){
       jQuery('#loading').show();
+      jQuery('#confidence_summary').show();
       jQuery('#result').html('Independent Contractor');
       jQuery('#confidence').html('10%');
       jQuery('#evidence').show();
-      jQuery('#loading').fadeOut(2000);
+      jQuery('#loading').fadeOut(4000);
 
     });
 
     jQuery("#stage_2").click(function(){
       jQuery('#loading').show();
       jQuery('#confidence').html('15%');
-      jQuery('#loading').fadeOut(2000);
+      jQuery('#loading').fadeOut(4000);
     });
 
     jQuery("#stage_3").click(function(){
       jQuery('#loading').show();
       jQuery('#confidence').html('20%');
-      jQuery('#loading').fadeOut(2000);
+      jQuery('#loading').fadeOut(4000);
     });
 
     jQuery("#stage_4").click(function(){
       jQuery('#loading').show();
       jQuery('#confidence').html('25%');
-      jQuery('#loading').fadeOut(2000);
+      jQuery('#loading').fadeOut(4000);
     });
 
     jQuery("#stage_5").click(function(){
       jQuery('#loading').show();
       jQuery('#confidence').html('40%');
-      jQuery('#loading').fadeOut(2000);
-    });
-
-    jQuery("#stage_6").click(function(){
-      jQuery('#loading').show();
-      jQuery('#confidence').html('48%');
-      jQuery('#loading').fadeOut(2000);
+      jQuery('#loading').fadeOut(4000);
     });
 
     jQuery(document).ready( function(){
       jQuery('#evidence').hide();
+      jQuery('#confidence_summary').hide();
     });
 
 

@@ -1,0 +1,320 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Worker Classification | Blue J legal</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300,100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <script src="assets/components/modernizr.js"></script>
+
+  </head>
+  <body >
+    <main class="main" role="main" >
+      <div id="loading" style="display: none; text-align: center; padding-top: 25%;  background-color: rgba( 255, 255, 255, 0.9); position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100%; z-index: 2; ">
+        <p id="learning" style=" font-size: 24px; color: #333; ">
+          Watson is learning from your suggestion. Thank you!
+        </p>
+        <img src="assets/img/watson.gif" >
+      </div>
+      <div id="feedback" style="display: none;  padding-top: 5%;  background-color: rgba( 255, 255, 255, 0.9); position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100%; z-index: 2; color: #333;   ">
+        <div class="modal_content" style="background-color: #fff; width: 100%; max-width: 600px; border-radius: 3px; padding: 20px 40px 40px 40px; margin: 0 auto; display: block; z-index: 1; position: relative; border: 1px solid #ccc;">
+          <style media="screen">
+            .rating_section {
+              display: inline-block;
+              width: 33%;
+            }
+
+            .br-widget {
+              white-space: nowrap;
+            }
+            .br-widget a {
+              height: 8px;
+              width: 8px;
+              padding: 8px;
+              line-height: 8px;
+              font-size: 4px;
+              content: '';
+              margin:10px 5px 10px 0;
+              background-color: rgba(255, 211, 61, 0.2);
+              color: rgb(255, 211, 61);
+              text-decoration: none;
+              text-align: center;
+              font-weight: 400;
+              border-radius: 500px;
+              display: inline-block;
+            }
+
+            .br-widget a.br-active,
+            .br-widget a.br-selected {
+              background-color: rgb(255, 211, 61);
+              color: white;
+            }
+            .br-readonly a.br-active,
+            .br-readonly a.br-selected {
+              background-color: #7cead1;
+            }
+
+            .rating_section p {
+              text-transform: uppercase;
+              color: #666;
+              font-size: 0.8em;
+              font-weight: 900;
+              margin-bottom: 0;
+            }
+
+            .modal_actions .button {
+              padding: 8px 10px;
+              background: #517fa4;
+              color: #fff;
+              border-radius: 3px;
+            }
+
+            .modal_actions a {
+              text-transform: uppercase;
+            }
+          </style>
+          <h2 style="font-weight: normal; margin-bottom: 15px ;">Feedback</h2>
+          <div class="rating_section">
+            <p>
+              Speed
+            </p>
+            <select class="ratings_control" id="speed_rating" name="speed_rating" style="display: block;">
+							<option value="Bad">Bad</option>
+							<option value="Mediocre">Mediocre</option>
+							<option value="Adequate" selected="selected">Adequate</option>
+							<option value="Good">Good</option>
+              <option value="Awesome">Awesome</option>
+						</select>
+          </div>
+          <div class="rating_section">
+            <p>
+              Accuracy
+            </p>
+            <select class="ratings_control" id="accuracy_rating" name="accuracy_rating" style="display: block;">
+              <option value="Bad">Bad</option>
+              <option value="Mediocre">Mediocre</option>
+              <option value="Adequate" selected="selected">Adequate</option>
+              <option value="Good">Good</option>
+              <option value="Awesome">Awesome</option>
+            </select>
+          </div>
+          <div class="rating_section">
+            <p>
+              Relevance of evidence
+            </p>
+            <select class="ratings_control" id="relevance_rating" name="relevance_rating" style="display: block;">
+              <option value="Bad">Bad</option>
+              <option value="Mediocre">Mediocre</option>
+              <option value="Adequate" selected="selected">Adequate</option>
+              <option value="Good">Good</option>
+              <option value="Awesome">Awesome</option>
+            </select>
+          </div>
+          <div class="feedback_section">
+            <textarea name="name" rows="8" cols="40" style="border: 1px solid #ccc; border-radius: 3px; margin-top: 40px; display: block; width: 100%;"></textarea>
+          </div>
+          <div class="modal_actions" style="margin-top: 40px; ">
+            <a id="submit_feedback" class="button" href="">Submit</a><a id="feedback_nothanks" style="float: right;" href="">No Thanks</a>
+          </div>
+
+        </div>
+      </div>
+
+      <section id="resultsPage" style="background-color: #fff; border: 1px solid #ccc; border-radius: 3px; max-width: 960px; min-height: 1200px; color: #333; margin: 80px auto; padding: 40px;  position: relative; ">
+
+        <section id="results summary" style="width: 70%; display: inline-block; ">
+          <h2 style="text-transform: uppercase; color: #666; font-size: 0.8em; font-weight: 900; margin-bottom: 0; ">Classification Result</h2>
+          <span id="result" style="font-size: 1.5em; font-weight: 400; padding: 5px 0; margin: 0 0 15px 0; display: block; line-height: 1.6em;  ">Independent Contractor</span>
+        </section>
+
+        <section id="confidence_summary" style="width: 30%; display: inline-block; float: right;  padding: 0 20px; ">
+          <h2 style="text-transform: uppercase; color: #666; font-size: 0.8em; font-weight: 900; margin-bottom: 0; ">confidence</h2>
+          <span id="confidence" style="font-size: 1.5em; font-weight: 400; padding: 5px 0; margin: 0 0 15px 0; display: block; line-height: 1.6em; ">48%</span>
+        </section>
+
+        <style media="screen">
+          #evidence .actions a {
+            padding: 5px 8px ; border: 2px solid transparent; border-radius: 3px; margin-left: 5px;
+          }
+          #evidence .actions a:hover {
+            color: #333; border-color: #333;
+          }
+          .review_stage {
+            border: 2px dotted #ccc;
+            border-radius: 3px;
+            padding: 5px 20px;
+          }
+
+          .review_stage .review_stage_title {
+            display: block;
+          }
+
+          .review_stage .loadmore {
+            display: block;
+          }
+
+          .final_stage {
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+          }
+
+          .final_stage .review_stage_title,
+          .final_stage .loadmore,
+          .final_stage .evidence_footer .actions {
+            display: none;
+          }
+
+        </style>
+        <section id="evidence" class="review_stage">
+          <p class="review_stage_title" style=" font-size: 16px; padding-bottom: 20px; border-bottom: 2px dotted #ccc; margin-bottom: 20px; ">
+            Review Evidence
+            <a href="" id="done_reviewing" style=" text-transform: uppercase; float: right; font-size: 12px; padding: 5px 8px; background: #517fa4; border-radius: 3px; margin-top: -8px; color: #fff; ">Done Reviewing</a>
+          </p>
+
+          <h2 style="text-transform: uppercase; color: #666; font-size: 0.8em; font-weight: 900; ">Evidence</h2>
+          <ul  style="list-style: none; margin: 10px 0; line-height: 1.3em; padding: 0; ">
+            <li style="margin-bottom: 30px; ">
+              <span style="font-weight: 900; ">Source: rc4110-14e CRA <span style="color: #666; font-weight: 300; margin: 0 15px; float: right; font-size: 0.8em; text-transform: uppercase;"> 2 years old</span></span>
+              <p style="margin-bottom: 10px; ">The relationship is one of subordination. The payer will
+    often direct, scrutinize, and effectively control many
+    elements of how and when the work is performed. </p>
+              <div class="evidence_footer" style="position: relative;"  >
+
+                <span><strong>Confidence:</strong> 20%</span>
+                <div class="actions" style="float: right; text-transform: uppercase; font-size: 0.8em; font-weight: 600; ">
+                  <a href="" style="margin-right: 10px;" >Keep</a> <a href="" class="irrelevant">Irrelevant</a>
+                </div>
+
+              </div>
+            </li>
+            <li style="margin-bottom: 30px; ">
+              <span style="font-weight: 900; ">Source: rc4110-14e CRA <span style="color: #666; font-weight: 300; margin: 0 15px; float: right; font-size: 0.8em; text-transform: uppercase;"> 2 years old</span></span>
+              <p style="margin-bottom: 10px; ">The relationship is one of subordination. The payer will
+    often direct, scrutinize, and effectively control many
+    elements of how and when the work is performed. </p>
+              <div class="evidence_footer" style="position: relative;"  >
+
+                <span><strong>Confidence:</strong> 20%</span>
+                <div class="actions" style="float: right; text-transform: uppercase; font-size: 0.8em; font-weight: 600; ">
+                  <a href="" style="margin-right: 10px;" >Keep</a> <a href="" class="irrelevant">Irrelevant</a>
+                </div>
+
+              </div>
+            </li>
+            <li style="margin-bottom: 30px; ">
+              <span style="font-weight: 900; ">Source: rc4110-14e CRA <span style="color: #666; font-weight: 300; margin: 0 15px; float: right; font-size: 0.8em; text-transform: uppercase;"> 2 years old</span></span>
+              <p style="margin-bottom: 10px; ">The relationship is one of subordination. The payer will
+    often direct, scrutinize, and effectively control many
+    elements of how and when the work is performed. </p>
+              <div class="evidence_footer" style="position: relative;"  >
+
+                <span><strong>Confidence:</strong> 20%</span>
+                <div class="actions" style="float: right; text-transform: uppercase; font-size: 0.8em; font-weight: 600; ">
+                  <a href="" style="margin-right: 10px;" >Keep</a> <a href="" class="irrelevant">Irrelevant</a>
+                </div>
+
+              </div>
+            </li>
+            <li style="margin-bottom: 30px; ">
+              <span style="font-weight: 900; ">Source: rc4110-14e CRA <span style="color: #666; font-weight: 300; margin: 0 15px; float: right; font-size: 0.8em; text-transform: uppercase;"> 2 years old</span></span>
+              <p style="margin-bottom: 10px; ">The relationship is one of subordination. The payer will
+    often direct, scrutinize, and effectively control many
+    elements of how and when the work is performed. </p>
+              <div class="evidence_footer" style="position: relative;"  >
+
+                <span><strong>Confidence:</strong> 20%</span>
+                <div class="actions" style="float: right; text-transform: uppercase; font-size: 0.8em; font-weight: 600; ">
+                  <a href="" style="margin-right: 10px;" >Keep</a> <a href="" class="irrelevant">Irrelevant</a>
+                </div>
+
+              </div>
+            </li>
+            <li style="margin-bottom: 30px; ">
+              <span style="font-weight: 900; ">Source: rc4110-14e CRA <span style="color: #666; font-weight: 300; margin: 0 15px; float: right; font-size: 0.8em; text-transform: uppercase;"> 2 years old</span></span>
+              <p style="margin-bottom: 10px; ">The relationship is one of subordination. The payer will
+    often direct, scrutinize, and effectively control many
+    elements of how and when the work is performed. </p>
+              <div class="evidence_footer" style="position: relative;"  >
+
+                <span><strong>Confidence:</strong> 20%</span>
+                <div class="actions" style="float: right; text-transform: uppercase; font-size: 0.8em; font-weight: 600; ">
+                  <a href="" style="margin-right: 10px;" >Keep</a> <a href="" class="irrelevant">Irrelevant</a>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+          <a href="" class="loadmore" style="border: 2px dotted #ccc; border-radius: 3px; padding: 10px 15px; margin: 40px 20px 20px 20px; text-align: center; text-transform: uppercase; color: #666;   ">load more</a>
+        </section>
+      </section>
+
+    </main>
+
+    <aside class="sidebar" role="complementary" >
+
+
+    </aside>
+
+    <footer class="footer" role="contentinfo">
+      <div class="copyright">
+        <a href="/">Blue J legal</a> • 2015 ©
+      </div>
+      <nav class="footer_links">
+        <a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/what-is-watson.html">What's Watson?</a>
+      </nav>
+      <ul>
+        <li><a href="https://twitter.com/BlueJLegal"><i class="fa fa-twitter"></i></i></a></li>
+        <li><a href="https://www.facebook.com/bluejlegal"><i class="fa fa-facebook"></i></i></a></li>
+      </ul>
+    </footer>
+
+    <script src="assets/js/jquery-2.1.4.min.js"></script>
+    <script src="assets/js/scripts.min.js"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+      jQuery('#loading').show();
+      jQuery('#loading').fadeOut(4000);
+      jQuery('#learning').hide();
+      jQuery('.ratings_control').barrating();
+    });
+
+    jQuery('.irrelevant').click(function(){
+      jQuery('#learning').show();
+      jQuery('#loading').show();
+      jQuery('#loading').fadeOut(4000);
+      jQuery('#learning').fadeOut(4000);
+      return false;
+    });
+
+    jQuery('#done_reviewing').click(function(){
+      jQuery('#evidence').removeClass('review_stage');
+      jQuery('#evidence').addClass('final_stage');
+      jQuery('#feedback').show();
+      return false;
+    });
+
+    jQuery('#feedback_nothanks').click(function(){
+      jQuery('#feedback').hide();
+      return false;
+    });
+
+    jQuery('#submit_feedback').click(function(){
+      jQuery('#feedback').hide();
+      return false;
+    });
+
+
+    </script>
+    <script src="assets/js/jquery.barrating.js"></script>
+
+  </body>
+</html>
