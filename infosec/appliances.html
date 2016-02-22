@@ -375,11 +375,11 @@
 													<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 15px; display: block; color: #666; ">Virtual Private Networks:</span>
 														<i class="fa fa-pencil" style="color: #ccc; text-shadow: 0 1px 0 #fff; font-size: 12px; position: absolute; top: 15px; right: 15px;  "></i>
 													<div style="background-color: #fff; ">
-														<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Intranet</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><img src="img/active.svg"></span></div></span>
-														<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Email</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><img src="img/active.svg"></span></div></span>
-														<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Printing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_false"><img src="img/inactive.svg"></span></div></span>
-														<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">V.O.I.P.</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><img src="img/active.svg"></span></div></span>
-														<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">File Sharing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><img src="img/active.svg"></span></div></span>
+														<span  ><div class="grid__item appliance  edit_in_place_content" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Intranet</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><img src="img/active.svg"></span></div></span>
+														<span  ><div class="grid__item appliance  edit_in_place_content" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Email</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><img src="img/active.svg"></span></div></span>
+														<span  ><div class="grid__item appliance edit_in_place_content" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Printing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_false"><img src="img/inactive.svg"></span></div></span>
+														<span  ><div class="grid__item appliance edit_in_place_content" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">V.O.I.P.</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><img src="img/active.svg"></span></div></span>
+														<span  ><div class="grid__item appliance edit_in_place_content" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">File Sharing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><img src="img/active.svg"></span></div></span>
 													</div>
 												</div>
 												<div class="edit_panel" style="display: none; ">
@@ -1148,6 +1148,10 @@
 		<script type="text/javascript">
 		$(function(){
 
+				$('.edit_in_place .edit_in_place_content').click(function(event){
+					event.stopPropagation();
+				});
+
 				$('.edit_in_place').click(function(){
 					$(this).find( ".edit_panel" ).show();
 					$(this).find( ".display_panel" ).hide();
@@ -1203,7 +1207,9 @@
 					$('#view_edit_details').show();
 					$('.cd-panel ').removeClass('is-visible');
 				});
+
 			});
+
 		</script>
 		<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 		<script async src="//d1ks1friyst4m3.cloudfront.net/toolbar/prod/td.js" data-trackduck-id="560d8ba74660d9d2753f20b5"></script>
