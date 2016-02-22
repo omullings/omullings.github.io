@@ -1202,6 +1202,7 @@ main {
 
 .shaded_section [contenteditable=true]:hover, .shaded_section .display_value:hover {
   background-color: #E0E0E0;
+  cursor: pointer;
 }
 
 .status_true img, .status_false img  {
