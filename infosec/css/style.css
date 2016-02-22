@@ -931,16 +931,12 @@ main {
   vertical-align: middle; }
 
 .status_online, .status_true {
-  width: 16px;
-  height: 16px;
   float: right; }
   .status_online i, .status_true i, i.status_online  {
     color: #1D9D1D;
     font-size: 12px; }
 
 .status_false {
-  width: 16px;
-  height: 16px;
   float: right; }
   .status_false i {
     color: #ccc;
@@ -1206,4 +1202,9 @@ main {
 
 .shaded_section [contenteditable=true]:hover, .shaded_section .display_value:hover {
   background-color: #E0E0E0;
+}
+
+.status_true img, .status_false img  {
+  width: 30px;
+  height: 15px;
 }

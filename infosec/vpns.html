@@ -681,9 +681,13 @@
 			var appliancesCount = vpns.length;
 
 			for (var i = 0; i < appliancesCount; i++) {
-				$('#grid').prepend(
-						'<li data-name="'+ vpns[i]['roles']['name'] +'" data-status="'+ vpns[i]['roles']['active'] +'" data-type="'+ vpns[i]['roles']['type'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + vpns[i]['roles']['name'] + '</h3><span class="vpn_status">' + vpns[i]['roles']['type'] + '</span></div><span class="status_' + vpns[i]['roles']['active'] + '"><i class="fa fa-circle"></i></span></li>'
-				);
+				var vpn = '';
+				if(vpns[i]['roles']['active']){
+					vpn ='<li data-name="'+ vpns[i]['roles']['name'] +'" data-status="'+ vpns[i]['roles']['active'] +'" data-type="'+ vpns[i]['roles']['type'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + vpns[i]['roles']['name'] + '</h3><span class="vpn_status">' + vpns[i]['roles']['type'] + '</span></div><span class="status_' + vpns[i]['roles']['active'] + '"><img src="img/active.svg"></span></li>';
+				} else {
+					vpn ='<li data-name="'+ vpns[i]['roles']['name'] +'" data-status="'+ vpns[i]['roles']['active'] +'" data-type="'+ vpns[i]['roles']['type'] +'" class="grid__item appliance actions-list__option cd-btn"><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">' + vpns[i]['roles']['name'] + '</h3><span class="vpn_status">' + vpns[i]['roles']['type'] + '</span></div><span class="status_' + vpns[i]['roles']['active'] + '"><img src="img/inactive.svg"></span></li>';
+				}
+				$('#grid').prepend( vpn );
 			}
 
 		})(vpns);
