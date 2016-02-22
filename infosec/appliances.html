@@ -140,8 +140,8 @@
 
 					nav.navigation a.current {
 						background-color: #fafafa;
-						border-bottom: 1px solid #eee;
-						border-top: 1px solid #eee;
+						border-bottom: 1px solid #ddd;
+						border-top: 1px solid #ddd;
 					}
 
 					div#preloader {
@@ -180,7 +180,7 @@
 							<span class="nav_text">VPNs</span>
 						</span>
 					</a>
-					<div style="position: absolute; bottom: 5px; padding: 8px; border: 1px solid #eee; border-radius: 3px; display: block;  width: 50px; margin: 10px; ">
+					<div style="position: absolute; bottom: 5px; padding: 8px; border: 1px solid #ddd; border-radius: 3px; display: block;  width: 50px; margin: 10px; ">
 						<span style=" text-transform: uppercase;  font-size: 0.7em; font-family: 'Montserrat', sans-serif; font-weight: 600; display: block; color: #666; text-align: center; ">العربية</span>
 					</div>
 				</nav>
@@ -237,118 +237,265 @@
 							<div class="cd-panel-content" style="padding-top: 70px; "  >
 								<div class="detail_summary" style="width: 100%;  width: 60%;  display: inline-block; padding-right: 25px; ">
 
-
 									<div class="title_bar" style="display: block;  position: relative; margin-bottom: 25px; ">
-										<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Appliance:</span>
+										<!--<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Appliance:</span> -->
 										<h2 id="application_name" style=" display: block; font-weight: 900; font-size: 24px; line-height: 1.5em; " contenteditable="true"> </h2>
 									</div>
 
-									<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Description:</span>
-									<span id="application_description" contenteditable="true" style=" display: block; margin: 20px 0; line-height: 1.5em; font-size: 0.8em; "></span>
-									<div id="appliances_section" class="edit_in_place" style=" margin-top: 25px; margin-bottom: 80px; border: 1px solid #eee; border-radius: 3px; position: relative; ">
-										<div class="display_panel">
+									<section>
+										<style media="screen">
+										ul.tabs{
+										margin: 0px;
+										padding: 0px;
+										list-style: none;
+										font-family: "Montserrat", sans-serif;
+										border: 1px solid #ccc;
+										display: block;
+										padding: 2px;
+										margin: 0px 5px 5px 0;
+										border-radius: 2px;
+										font-size: 0.7rem;
+										text-decoration: none;
+										text-transform: uppercase;
+										background-color: #e4e7ec;
+										text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+										color: #90939a;
+										-webkit-font-smoothing: antialiased;
+										line-height: 1.5em;
+										}
+										ul.tabs li{
+										background: none;
+										display: inline-block;
+										padding: 5px 15px;
+										cursor: pointer;
+										border-radius: 2px;
+										}
+
+										ul.tabs li.current{
+											background-color: #333;
+									    color: #fff;
+									    text-shadow: 0 1px 0 #333;
+										}
+
+										ul.tabs li:hover {
+											background-color: #90939a;
+											color: #f4f6f8;
+											text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+										}
+
+										.tab-content{
+										display: none;
+										padding: 20px 0;
+										}
+
+										.tab-content.current{
+										display: inherit;
+										}
+										</style>
+										<ul class="tabs">
+											<li class="tab-link current" data-tab="tab-1">Details</li>
+											<li class="tab-link" data-tab="tab-2">VPNS</li>
+											<li class="tab-link" data-tab="tab-3">Firewall rules</li>
+											<li class="tab-link" data-tab="tab-4">Syslog Alerts</li>
+										</ul>
+										<div id="tab-1" class="tab-content current">
+
+											<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Description:</span>
+											<span id="application_description" contenteditable="true" style=" display: block; margin: 20px 0; line-height: 1.5em; font-size: 0.8em; "></span>
+
+											<div id="location_section" class="app_details" style="margin-top: 25px; position: relative; ">
 											<style>
-											#appliances_section:hover {
+											#location_section:hover {
 												background-color: #fafafa;
 											}
 
-											#appliances_section:hover i.fa-pencil {
+											#location_section:hover i.fa-pencil {
 												color: #333 !important;
 											}
-
-											.chosen-container-multi .chosen-choices {
-												border: 1px solid #eee;
-												border-radius: 3px;
-												background-image: none;
-											}
-
-											.edit_panel .chosen-container .chosen-choices .search-field input[ type="text"] {
-												min-width: 147px;
-												display: block;
-											}
 											</style>
-											<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 15px; display: block; color: #666; ">Virtual Private Networks:</span>
-												<i class="fa fa-pencil" style="color: #ccc; text-shadow: 0 1px 0 #fff; font-size: 12px; position: absolute; top: 15px; right: 15px;  "></i>
-											<div style="background-color: #fff; ">
-												<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Intranet</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-												<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Email</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-												<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Printing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_false"><i class="fa fa-circle"></i></span></div></span>
-												<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">V.O.I.P.</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-												<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">File Sharing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-											</div>
-										</div>
-										<div class="edit_panel" style="display: none; ">
-											<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 15px; display: block; color: #666; ">Virtual Private Networks:</span>
-											<div style="padding: 0 15px 15px 15px; ">
-												<select id="select_vpn_list" data-placeholder="Choose VPNs..." multiple="multiple" name="vpn_list">
-													<option value="Intranet">Intranet</option>
-													<option value="Email">Email</option>
-													<option value="Printing">Printing</option>
-													<option value="V.O.I.P.">V.O.I.P.</option>
-													<option value="File Sharing">File Sharing</option>
-												</select>
-											</div>
-										</div>
-									</div>
+												<span class="edit_in_place" style=" border: 1px solid #ddd; border-radius: 3px;  display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px; overflow: none;  ">
+													<div class="display_panel" style="display: block; ">
+														<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin: 15px; display: block; color: #666; ">Location:</span>
+														<i class="fa fa-pencil" style="color: #ccc; text-shadow: 0 1px 0 #fff; font-size: 12px; position: absolute; top: 15px; right: 15px;  "></i>
+														<span id="application_location_map" style="display: block;  height: 300px; position: relative; border-top: 1px solid #ccc; "></span>
+													</div>
+													<div class="edit_panel" style="display: none; ">
 
+														<div style="padding: 0 15px 15px 15px">
+															<label for="location_field" style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; margin: 20px 0 10px 0; display: block; color: #666; ">Location:</label>
+															<input type="text" id="location_field" placeholder="Enter street address" style="display: block; width: 100%; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 3px; padding: 5px; font-size: 0.7em; ">
+															<label for="location_long_field" style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif;  margin: 10px 0; display: block; color: #666; ">Longitude:</label>
+															<input type="number" id="location_long_field" placeholder="24.7251918" style="display: block; width: 100%;margin-bottom: 10px; border: 1px solid #ddd; border-radius: 3px; padding: 5px; font-size: 0.7em; ">
+															<label for="location_lat_field" style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif;  margin: 10px 0;  display: block; color: #666; ">Latitude:</label>
+															<input type="number" id="location_lat_field" placeholder="46.8225288" style="display: block; width: 100%; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 3px; padding: 5px; font-size: 0.7em; ">
+															<button id="commit_changes" style="text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; display: inline-block; color: #666; border: 1px solid #ddd; background: #fff; padding: 8px 15px; margin: 10px 5px 0px 0px; ">OK </button>
+														</div>
+													</div>
+												</span>
+											</div>
+
+											<div class="app_details" style="margin-top: 25px; position: relative; ">
+												<span  style=" padding: 15px; border: 1px solid #ddd; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Software name:</span> <span id="software_name" ></span></span>
+												<span  style=" padding: 15px; border: 1px solid #ddd; display: block; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Software version:</span> <span id="software_version" ></span></span>
+												<span  style=" padding: 15px; border: 1px solid #ddd; display: block; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Make:</span> <span id="appliance_make" ></span></span>
+												<span  style=" padding: 15px; border: 1px solid #ddd; display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Model:</span> <span id="appliance_model" ></span></span>
+											</div>
+
+											<div class="app_details" style="margin-top: 25px; position: relative; ">
+												<span  style=" border: 1px solid #ddd; border-radius: 3px;  display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px; overflow: none;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin: 15px; display: block; color: #666; ">Groups:</span>
+												<div style="padding: 0 15px 15px 15px;">
+													<span class="group_item">Rack Servers</span><span class="group_item">Jeddah</span><span class="group_item">Visa Offices</span>
+												</div>
+												</span>
+											</div>
+										</div>
+										<div id="tab-2" class="tab-content">
+											<div id="appliances_section" class="edit_in_place" style=" margin-top: 25px; margin-bottom: 80px; border: 1px solid #ddd; border-radius: 3px; position: relative; ">
+												<div class="display_panel">
+													<style>
+													#appliances_section:hover {
+														background-color: #fafafa;
+													}
+
+													#appliances_section:hover i.fa-pencil {
+														color: #333 !important;
+													}
+
+													.chosen-container-multi .chosen-choices {
+														border: 1px solid #ddd;
+														border-radius: 3px;
+														background-image: none;
+													}
+
+													.edit_panel .chosen-container .chosen-choices .search-field input[ type="text"] {
+														min-width: 147px;
+														display: block;
+													}
+													</style>
+													<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 15px; display: block; color: #666; ">Virtual Private Networks:</span>
+														<i class="fa fa-pencil" style="color: #ccc; text-shadow: 0 1px 0 #fff; font-size: 12px; position: absolute; top: 15px; right: 15px;  "></i>
+													<div style="background-color: #fff; ">
+														<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Intranet</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+														<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0; " ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Email</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+														<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Printing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_false"><i class="fa fa-circle"></i></span></div></span>
+														<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">V.O.I.P.</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+														<span  ><div class="grid__item appliance actions-list__option cd-btn" style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">File Sharing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+													</div>
+												</div>
+												<div class="edit_panel" style="display: none; ">
+													<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 15px; display: block; color: #666; ">Virtual Private Networks:</span>
+													<div style="padding: 0 15px 15px 15px; ">
+														<select id="select_vpn_list" data-placeholder="Choose VPNs..." multiple="multiple" name="vpn_list">
+															<option value="Intranet">Intranet</option>
+															<option value="Email">Email</option>
+															<option value="Printing">Printing</option>
+															<option value="V.O.I.P.">V.O.I.P.</option>
+															<option value="File Sharing">File Sharing</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="tab-3" class="tab-content">
+
+										</div>
+										<div id="tab-4" class="tab-content">
+
+										</div>
+										<script type="text/javascript">
+										$(document).ready(function(){
+
+											$('ul.tabs li').click(function(){
+												var tab_id = $(this).attr('data-tab');
+
+												$('ul.tabs li').removeClass('current');
+												$('.tab-content').removeClass('current');
+
+												$(this).addClass('current');
+												$("#"+tab_id).addClass('current');
+											})
+
+										})
+										</script>
+									</section>
 								</div>
 								<aside style=" width: 40%; margin: 0; display: inline-block; float: right; padding:  0px 0 0 15px;  ">
 									<div class="" style=" margin-top: 0px; ">
-										<span style=" padding: 15px; border: 1px solid #eee; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Management Address:</span> <span id="application_address"contenteditable="true" style=" display: block; line-height: 1.5em; "></span></span>
-										<span  style=" padding: 15px; border: 1px solid #eee; display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Management port:</span> <span id="application_port"  contenteditable="true" style=" display: block; line-height: 1.5em; "></span></span>
-										<span  style=" padding: 15px; border: 1px solid #eee; display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Connection:</span><span id="application_status" style=" display: block; width: 100%; float: none; "></span><span style="font-size: 0.7em; color: #666; margin: 0px 0 10px 0; line-height: 1em; ">Last communication attempt: 2:30 AM - October 30, 2015.</span></span>
-									</div>
-
-									<div id="location_section" class="app_details" style="margin-top: 25px; position: relative; ">
-									<style>
-									#location_section:hover {
-										background-color: #fafafa;
-									}
-
-									#location_section:hover i.fa-pencil {
-										color: #333 !important;
-									}
-									</style>
-										<span class="edit_in_place" style=" border: 1px solid #eee; border-radius: 3px;  display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px; overflow: none;  ">
-											<div class="display_panel" style="display: block; ">
-												<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin: 15px; display: block; color: #666; ">Location:</span>
-												<i class="fa fa-pencil" style="color: #ccc; text-shadow: 0 1px 0 #fff; font-size: 12px; position: absolute; top: 15px; right: 15px;  "></i>
-												<span id="application_location_map" style="display: block;  height: 300px; position: relative;  "></span>
+										<span style=" padding: 15px; border: 1px solid #ddd; display: block; border-radius: 3px;  background-color: #fafafa;">
+											<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Management Station:</span>
+											<div class="field">
+												<span class="label" style=" margin-bottom: 15px; display: inline-block; color: #666; ">Management Address:</span>
+												<span id="application_address" contenteditable="true" style=" display: inline-block; line-height: 1.5em; "></span>
 											</div>
-											<div class="edit_panel" style="display: none; ">
-
-												<div style="padding: 0 15px 15px 15px">
-													<label for="location_field" style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; margin: 20px 0 10px 0; display: block; color: #666; ">Location:</label>
-													<input type="text" id="location_field" placeholder="Enter street address" style="display: block; width: 100%; margin-bottom: 10px; border: 1px solid #eee; border-radius: 3px; padding: 5px; font-size: 0.7em; ">
-													<label for="location_long_field" style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif;  margin: 10px 0; display: block; color: #666; ">Longitude:</label>
-													<input type="number" id="location_long_field" placeholder="24.7251918" style="display: block; width: 100%;margin-bottom: 10px; border: 1px solid #eee; border-radius: 3px; padding: 5px; font-size: 0.7em; ">
-													<label for="location_lat_field" style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif;  margin: 10px 0;  display: block; color: #666; ">Latitude:</label>
-													<input type="number" id="location_lat_field" placeholder="46.8225288" style="display: block; width: 100%; margin-bottom: 10px; border: 1px solid #eee; border-radius: 3px; padding: 5px; font-size: 0.7em; ">
-													<button id="commit_changes" style="text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; display: inline-block; color: #666; border: 1px solid #eee; background: #fff; padding: 8px 15px; margin: 10px 5px 0px 0px; ">OK </button>
-												</div>
+											<div class="field">
+												<span class="label" style="margin-bottom: 15px; display: inline-block; color: #666; ">Management port:</span>
+												<span id="application_port"  contenteditable="true" style=" display: inline-block; line-height: 1.5em; "></span>
 											</div>
+											<div class="field">
+												<span class="label" style=" margin-bottom: 15px; display: inline-block; color: #666; ">Connection:</span>
+												<span id="application_status" style=" display: inline-block;"></span>
+											</div>
+											<span style="font-size: 0.7em; color: #666; margin: 0; line-height: 1em; display: block;">Last communication attempt: 2:30 AM - October 30, 2015.</span>
 										</span>
-									</div>
+										<div class="standby_appliance edit_in_place">
+											<div id="add_standby_appliance" class="empty_panel " style="display: none;">
+												<span class="empty_heading">Add a standby appliance</span>
+											</div>
+											<div class="display_panel" >
 
-									<div class="app_details" style="margin-top: 25px; position: relative; ">
-										<span  style=" padding: 15px; border: 1px solid #eee; display: block; border-top-left-radius: 3px;  border-top-right-radius: 3px; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Software name:</span> <span id="application_port" ></span></span>
-										<span  style=" padding: 15px; border: 1px solid #eee; display: block; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Software version:</span> <span id="application_port" ></span></span>
-										<span  style=" padding: 15px; border: 1px solid #eee; display: block; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Make:</span> <span id="application_port" ></span></span>
-										<span  style=" padding: 15px; border: 1px solid #eee; display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Model:</span> <span id="application_port" ></span></span>
-									</div>
+												<span style=" padding: 15px; border: 1px solid #ddd; display: block; border-radius: 3px;  background-color: #fafafa; margin-top: 10px;">
+													<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Standby Appliance:</span>
+													<div class="field">
+														<span class="label" style=" margin-bottom: 15px; display: inline-block; color: #666; ">Management IP Address:</span>
+														<span  contenteditable="true" placeholder="Enter IP" style=" display: inline-block; line-height: 1.5em; "></span>
+													</div>
+													<div class="field">
+														<span class="label" style="margin-bottom: 15px; display: inline-block; color: #666; ">Management port:</span>
+														<span  contenteditable="true" placeholder="Enter port" style=" display: inline-block; line-height: 1.5em; "></span>
+													</div>
+													<div class="field">
+														<span class="label" style=" margin-bottom: 15px; display: inline-block; color: #666; ">Virtual IP Address:</span>
+														<span  contenteditable="true" placeholder="Enter virtual IP" style=" display: inline-block; line-height: 1.5em; "></span>
+													</div>
+													<div class="field">
+														<span class="label" style="margin-bottom: 15px; display: inline-block; color: #666; ">Virtual host ID:</span>
+														<span  contenteditable="true" placeholder="Enter virtual host ID" style=" display: inline-block; line-height: 1.5em; "></span>
+													</div>
 
-									<div class="app_details" style="margin-top: 25px; position: relative; ">
-										<span  style=" border: 1px solid #eee; border-radius: 3px;  display: block; border-bottom-left-radius: 3px;  border-bottom-right-radius: 3px; margin-top: -1px; overflow: none;  "><span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin: 15px; display: block; color: #666; ">Groups:</span>
-										<div style="padding: 0 15px 15px 15px;">
-											<span class="group_item">Rack Servers</span><span class="group_item">Jeddah</span><span class="group_item">Visa Offices</span>
+												</span>
+
+											</div>
+											<div class="edit_panel" style="display: none;">
+
+												<span style=" padding: 15px; border: 1px solid #ddd; display: block; border-radius: 3px;  background-color: #fafafa; margin-top: 10px;">
+													<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Standby Appliance:</span>
+													<div class="field">
+														<span class="label" style=" margin-bottom: 15px; display: inline-block; color: #666; ">Management IP Address:</span>
+														<span  contenteditable="true" placeholder="Enter IP" style=" display: inline-block; line-height: 1.5em; "></span>
+													</div>
+													<div class="field">
+														<span class="label" style="margin-bottom: 15px; display: inline-block; color: #666; ">Management port:</span>
+														<span  contenteditable="true" placeholder="Enter port" style=" display: inline-block; line-height: 1.5em; "></span>
+													</div>
+													<div class="field">
+														<span class="label" style=" margin-bottom: 15px; display: inline-block; color: #666; ">Virtual IP Address:</span>
+														<span  contenteditable="true" placeholder="Enter virtual IP" style=" display: inline-block; line-height: 1.5em; "></span>
+													</div>
+													<div class="field">
+														<span class="label" style="margin-bottom: 15px; display: inline-block; color: #666; ">Virtual host ID:</span>
+														<span  contenteditable="true" placeholder="Enter virtual host ID" style=" display: inline-block; line-height: 1.5em; "></span>
+													</div>
+
+												</span>
+
+											</div>
 										</div>
-										</span>
 									</div>
 
 								</aside>
 							</div> <!-- cd-panel-content -->
 
-							<div id="form_submit_buttons" style="  border-top: 1px solid #eee; background-color: rgba(255, 255, 255, 0.9); height: 70px; position: absolute; bottom: 0; right: 0; left: 0; display: none; z-index: 99999; -webkit-transition: height 400ms ease-in-out,border 0s linear 0s; transition: height 400ms ease-in-out,border 0s linear 0s;">
+							<div id="form_submit_buttons" style="  border-top: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.9); height: 70px; position: absolute; bottom: 0; right: 0; left: 0; display: none; z-index: 99999; -webkit-transition: height 400ms ease-in-out,border 0s linear 0s; transition: height 400ms ease-in-out,border 0s linear 0s;">
 								<input type="submit" name="submit" value="Save Changes" class="submit-button" style=" margin: 15px 5px 10px 25px; border-radius: 3px; height: 40px; padding: 5px 15px; text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600;  background: #1D9D1D;  color: #fff; border: 2px solid #1D9D1D; ; box-shadow: none; text-shadow: 0 1px 0 green;    ">
 								<button type="button" name="button" style=" background: transparent; color: #333; border: 2px solid #333; border-radius: 3px;  box-shadow: none; margin: 15px 5px; height: 40px; padding: 5px 15px; text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600;"> Revert changes </button>
 							</div>
@@ -356,12 +503,12 @@
 						</div> <!-- cd-panel-container -->
 						<div id="assign_to_vpn_panel" class="cd-panel-container" style="width: 100%;  position: relative;  background-color: #fff; display: none; padding: 25px 5%; ">
 							<h3 style="margin-bottom: 25px; ">Assign select appliances to a VPN</h3>
-							<div style="background-color: #fff; border: 1px solid #eee; ">
-								<span  ><div class="appliance " style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;     padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Intranet</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-								<span  ><div class="appliance " style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;     padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Email</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-								<span  ><div class="appliance " style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;    padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Printing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_false"><i class="fa fa-circle"></i></span></div></span>
-								<span  ><div class="appliance " style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;    padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">V.O.I.P.</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
-								<span  ><div class="appliance " style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #eee; border-radius: 0;    padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">File Sharing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+							<div style="background-color: #fff; border: 1px solid #ddd; ">
+								<span  ><div class="appliance " style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0;     padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Intranet</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+								<span  ><div class="appliance " style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0;     padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Email</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+								<span  ><div class="appliance " style="margin: -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0;    padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">Printing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_false"><i class="fa fa-circle"></i></span></div></span>
+								<span  ><div class="appliance " style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0;    padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">V.O.I.P.</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
+								<span  ><div class="appliance " style="margin:  -1px 0 0 0 ; border: none; border-top: 1px solid #ddd; border-radius: 0;    padding: 0.8em;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; "><h3 class="app_name">File Sharing</h3><span class="vpn_status">Full Mesh</span></div><span class="status_true"><i class="fa fa-circle"></i></span></div></span>
 							</div>
 						</div>
 					</div> <!-- cd-panel -->
@@ -375,7 +522,7 @@
 				<h1 style=" font-weight: 200; ">Add appliance to a virtual private network</h1>
 				<br><br>
 				<div class="drop-area__item"> <i class="fa fa-plus"></i> <span style="margin-left: 50px; font-size: 0.7em; text-transform: uppercase; font-family: 'Montserrat'; ">Create vpn</span></div>
-				<div style="border-bottom: 1px solid #eee; margin: 15px; "></div>
+				<div style="border-bottom: 1px solid #ddd; margin: 15px; "></div>
 				<div class="drop-area__item"><i class="fa fa-empire"></i></div>
 				<div class="drop-area__item"><i class="fa fa-empire"></i></div>
 				<div class="drop-area__item"><i class="fa fa-connectdevelop"></i></div>
@@ -461,6 +608,8 @@
 		<script src="js/dropit.js"></script>
 		<script>
 		$(document).ready(function() {
+
+			// Drag and drop
 				var body = document.body,
 					dropArea = document.getElementById( 'drop-area' ),
 					droppableArr = [], dropAreaTimeout;
@@ -542,7 +691,7 @@
 			}
 
 			var detail_map = L.map('application_location_map');
-			L.tileLayer( 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+			L.tileLayer( 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 					attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
 			}).addTo( detail_map );
 
@@ -622,11 +771,11 @@
 
 					$('#application_status').html(
 						( app_status === "online" )?
-							'<span class="status_' + app_status + '" style=" margin: 15px 0; ">' + app_status + ' <i class="fa fa-circle" style="margin-left: 15px; "></i></span>'
+							'<span class="status_' + app_status + '" style=" margin: 15px 0; display: none;">' + app_status + '</span><i class="status_' + app_status + ' fa fa-circle" style="margin-left: 15px; padding-top: 5px;"></i>'
 						: ( app_status ===  "down" )?
-							'<span class="status_' + app_status + '" style=" margin: 15px 0; ">' + app_status + '<i class="fa fa-exclamation-triangle" style="margin-left: 15px; "></i></span>'
+							'<span class="status_' + app_status + '" style=" margin: 15px 0; display: none; ">' + app_status + '</span><i class="status_' + app_status + ' fa fa-exclamation-triangle" style="margin-left: 15px; padding-top: 5px; "></i>'
 						: ( app_status ===  "offline" )?
-							'<span class="status_' + app_status + '" style=" margin: 15px 0; ">' + app_status + '<i class="fa fa-minus" style="margin-left: 15px; "></i></span>'
+							'<span class="status_' + app_status + '" style=" margin: 15px 0; display: none;">' + app_status + '</span><i class="status_' + app_status + ' fa fa-minus" style="margin-left: 15px; padding-top: 5px; "></i>'
 	          : ''
 					);
 
@@ -657,11 +806,11 @@
 
 					$('#application_status').html(
 						( app_status === "online" )?
-							'<span class="status_' + app_status + '" style=" margin: 15px 0; ">' + app_status + ' <i class="fa fa-circle" style="margin-left: 15px; "></i></span>'
+							'<span class="status_' + app_status + '" style=" margin: 15px 0; display: none; ">' + app_status + '</span><i class="status_' + app_status + ' fa fa-circle" style="margin-left: 15px; padding-top: 5px;"></i>'
 						: ( app_status ===  "down" )?
-							'<span class="status_' + app_status + '" style=" margin: 15px 0; ">' + app_status + '<i class="fa fa-exclamation-triangle" style="margin-left: 15px; "></i></span>'
+							'<span class="status_' + app_status + '" style=" margin: 15px 0; display: none; ">' + app_status + '</span><i class="status_' + app_status + ' fa fa-exclamation-triangle" style="margin-left: 15px; padding-top: 5px; "></i>'
 						: ( app_status ===  "offline" )?
-							'<span class="status_' + app_status + '" style=" margin: 15px 0; ">' + app_status + '<i class="fa fa-minus" style="margin-left: 15px; "></i></span>'
+							'<span class="status_' + app_status + '" style=" margin: 15px 0; display: none; ">' + app_status + '</span><i class="status_' + app_status + ' fa fa-minus" style="margin-left: 15px;     padding-top: 5px; "></i>'
 	          : ''
 					);
 
@@ -995,13 +1144,6 @@
 		});
 
 		</script>
-		<!--
-		<script type="text/javascript">
-		(function(){
-			$('#')
-		});
-		</script>
-		-->
 
 		<script type="text/javascript">
 		$(function(){
@@ -1011,6 +1153,16 @@
 					$(this).find( ".display_panel" ).hide();
 				});
 
+				//Close edit in place panels when clicking outside of the panel
+				$(window).click(function(){
+					$('.edit_panel').hide();
+					$('.display_panel').show();
+				});
+
+				$('.edit_in_place').click(function(event){
+					event.stopPropagation();
+				});
+
 				$('#select_vpn_list option').attr('selected', 'selected');
 
 				$('#select_vpn_list').chosen({width: "100%"});
@@ -1018,10 +1170,10 @@
 				//Commit chosen select changes
 				$('.search-field input[type="text"]').blur(function(){
 
-					var component = $(this).closest('div.edit_in_place');
+					var components = $(this).closest('div.edit_in_place');
 
-					$(component).find( ".edit_panel" ).hide();
-					$(component).find( ".display_panel" ).show();
+					$(components).find( ".edit_panel" ).hide();
+					$(components).find( ".display_panel" ).show();
 				});
 
 				//Commit complex selection changes
@@ -1033,16 +1185,6 @@
 					$(this).closest('.edit_in_place').find( ".edit_panel" ).hide();
 					$(this).closest('.edit_in_place').find( ".display_panel" ).show();
 
-
-				});
-
-				$(window).click(function(){
-					$('.edit_panel').hide();
-					$('.display_panel').show();
-				});
-
-				$('.edit_in_place').click(function(event){
-		    	event.stopPropagation();
 				});
 
 		});
