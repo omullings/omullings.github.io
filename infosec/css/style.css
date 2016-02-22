@@ -1203,3 +1203,7 @@ main {
   border-bottom: 1px dashed #666;
   display: block; /* For Firefox */
 }
+
+.shaded_section [contenteditable=true]:hover, .shaded_section .display_value:hover {
+  background-color: #E0E0E0;
+}
