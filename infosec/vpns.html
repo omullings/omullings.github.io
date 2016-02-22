@@ -437,10 +437,18 @@
 											</div>
 										</span>
 										<div class="hub_appliance shaded_section" style="padding: 15px; border: 1px solid #ddd; display: block; border-radius: 3px;  background-color: #fafafa; margin-top: 15px;">
-											<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Hub appliance:</span>
-											<select id="hub_appliance" class="hub_appliance" name="appliances">
+											<div class="edit_in_place" style="margin-bottom: 15px; display: block; position relative; ">
+												<div class=" display_panel" style="display: block; ">
+													<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Hub appliance:</span>
+													<span id="hub_appliance_display" class="display_value" style="display: block; ">Select a hub appliance</span>
+												</div>
+												<div class="edit_panel" style="display: none; ">
+														<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Hub appliance:</span>
+														<select id="hub_appliance" class="hub_appliance" name="appliances">
 
-											</select>
+														</select>
+												</div>
+											</div>
 										</div>
 
 
@@ -461,7 +469,17 @@
 														$(".hub_appliance").hide();
 													}
 												});
+												$( "#hub_appliance" )
+												  .change(function () {
+												    var str = "Select a hub appliance";
 
+														if( $( "#hub_appliance option:selected" ).val() ) {
+															str = $( "#hub_appliance option:selected" ).val() ;
+														}
+
+												    $( "#hub_appliance_display" ).text( str );
+												  })
+												  .change();
 											</script>
 										</div>
 									</div>
@@ -819,7 +837,7 @@
 
 				$('#hub_appliance').prepend(
 
-						'<option value = "'+ appliances[i]['name'] +'" selected = "selected" >' + appliances[i]['name'] + '</option>'
+						'<option value = "'+ appliances[i]['name'] +'" >' + appliances[i]['name'] + '</option>'
 				);
 			}
 
