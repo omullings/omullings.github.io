@@ -7,7 +7,7 @@
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
         <g id="active" sketch:type="MSLayerGroup">
             <path d="M64,0 L32,0 C14.33,0 0,14.33 0,32 C0,49.67 14.33,64 32,64 L64,64 C81.67,64 96,49.67 96,32 C96,14.33 81.67,0 64,0 L64,0 Z" id="track" fill="#86D993" sketch:type="MSShapeGroup"></path>
-            <path d="M31.5,6 C17.417625,6 6,17.417625 6,31.5 C6,45.582375 17.417625,57 31.5,57 C45.582375,57 57,45.582375 57,31.5 C57,17.417625 45.582375,6 31.5,6 L31.5,6 Z" id="switch" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M64.5,6 C50.417625,6 39,17.417625 39,31.5 C39,45.582375 50.417625,57 64.5,57 C78.582375,57 90,45.582375 90,31.5 C90,17.417625 78.582375,6 64.5,6 L64.5,6 Z" id="switch" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
         </g>
     </g>
 </svg>
