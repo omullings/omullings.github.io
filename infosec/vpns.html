@@ -722,6 +722,14 @@
 			if( $('#topology option:selected').val() == 'fullmesh' ) {
 				$(".hub_appliance").hide();
 			}
+
+			//Add appliance detail sections on load
+			var authDetails = $('#appliance_auth_details');
+			$('.auth_appliance_list .appliance_edit_list li:first-child').append(authDetails);
+			$('#appliance_auth_details').show();
+			var keyExchangeDetails = $('#appliance_key_exchange_details');
+			$('.key_exchange_appliance_list .appliance_edit_list li:first-child').append(keyExchangeDetails);
+			$('#appliance_key_exchange_details').show();
 		});
 
 		jQuery(document).ready(function($) {
@@ -961,6 +969,8 @@
 				$('#appliance_key_exchange_details').show();
 				event.stopPropagation();
 			});
+
+
 		});
 
 		</script>
