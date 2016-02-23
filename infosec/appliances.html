@@ -650,6 +650,12 @@
 				$('.cd-panel ').removeClass('is-visible');
 				$('#view_edit_details').show();
 			});
+
+			//Prevent click propogation on clickable elements
+			$('.editable').on('click', function(event){
+				event.preventDefault();
+				event.stopPropagation();
+			});
 		});
 		$(function() {
 

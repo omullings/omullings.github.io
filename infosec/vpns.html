@@ -645,7 +645,7 @@
 			</div><!-- /content -->
 		</div><!-- /container -->
 
-				<span id="appliance_vpn_details" style=" display: none;  ">
+				<span id="appliance_vpn_details" class="editable" style=" display: none;  ">
 					 <span style="background-color: #fafafa; text-shadow: 0 1px 0 #fff; padding: 15px; border-top: 1px solid #ddd; position: relative; display: block; margin-top: -1px; ">
 						 <span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 0 0 5px 0; display: block; color: #666; ">Subnets</span>
 						 <span style=" font-size: 0.8em; " contenteditable="true">
@@ -679,7 +679,7 @@
 				 </span>
 			 </span>
 
-			 <span id="appliance_auth_details" style=" display: none;  ">
+			 <span id="appliance_auth_details" class="editable" style=" display: none;  ">
 					<span style="background-color: #fafafa; text-shadow: 0 1px 0 #fff; padding: 15px; border-top: 1px solid #ddd; position: relative; display: block; margin-top: -1px; ">
 						<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 0 0 5px 0; display: block; color: #666; ">Rivest-Shamir-Adleman (RSA) public key encryption</span>
 						<span style=" font-size: 0.8em; ">
@@ -694,7 +694,7 @@
 				</span>
 			</span>
 
-			<span id="appliance_key_exchange_details" style=" display: none;  ">
+			<span id="appliance_key_exchange_details" class="editable" style=" display: none;  ">
 				 <span style="background-color: #fafafa; text-shadow: 0 1px 0 #fff; padding: 15px; border-top: 1px solid #ddd; position: relative; display: block; margin-top: -1px; ">
 					 <span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 0 0 5px 0; display: block; color: #666; ">Internet Key Exchange (IKE) Configuration</span>
 					 <span style=" font-size: 0.8em; border-bottom: 1px solid #f1f1f1; margin-bottom: 5px; padding: 15px 0; display: block;  ">
@@ -781,6 +781,12 @@
 		</script>
 		<script type="text/javascript">
 		$(function() {
+
+			//Prevent click propogation on clickable elements
+			$('.editable').on('click', function(event){
+				event.preventDefault();
+				event.stopPropagation();
+			});
 
 			$('.cd-btn').on('click', function(event){
 
