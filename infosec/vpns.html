@@ -696,9 +696,9 @@
 
 			<span id="appliance_key_exchange_details" class="editable" style=" display: none;  ">
 				 <span style="background-color: #fafafa; text-shadow: 0 1px 0 #fff; padding: 15px; border-top: 1px solid #ddd; position: relative; display: block; margin-top: -1px; ">
-					 <span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 0 0 5px 0; display: block; color: #666; ">Internet Key Exchange (IKE) Configuration</span>
+					 <span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 0 0 5px 0; display: block; color: #666; ">Appliance Configuration</span>
 					 <span style=" font-size: 0.8em; border-bottom: 1px solid #f1f1f1; margin-bottom: 5px; padding: 15px 0; display: block;  ">
-						 IKE address: <span contenteditable="true"> 000.000.000.000 </span><br>
+						 IKE IP address: <span contenteditable="true"> 000.000.000.000 </span><br>
 						 IKE port: <span contenteditable="true"> 49761 </span><br>
 					 </span>
 					 <span style=" font-size: 0.8em; ">
@@ -927,15 +927,12 @@
           : ''
 				);
 
-				$('.appliance_edit_list').prepend(
-					( application_status === online_status )?
-						'<li style=" padding: 0; border-top: 1px solid #ddd;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; padding: 15px; "><h3 class="app_name" >' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '" style="margin: 15px; "><i class="fa fa-circle"></i></span></li>'
-					: ( application_status ===  down_status )?
-						'<li style=" padding: 0; border-top: 1px solid #ddd;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; padding: 15px; "><h3 class="app_name" >' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '" style="margin: 15px; "><i class="fa fa-exclamation-triangle"></i></span></li>'
-					: ( application_status ===  offline_status )?
-						'<li  style=" padding: 0; border-top: 1px solid #ddd;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; padding: 15px; "><h3 class="app_name" >' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '" style="margin: 15px; "><i class="fa fa-minus"></i></span></li>'
-          : ''
-				);
+				var authApplianceList = '<li style=" padding: 0; border-top: 1px solid #ddd;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; padding: 15px; "><h3 class="app_name" >' + appliances[i]['name'] + '</h3></div><span style="margin: 15px; float: right;"><i style="margin-left: 5px; color: #666; " class="fa fa-circle"></i><i style="margin-left: 5px; color: #ccc; " class="fa fa-circle"></i></span></li>';
+				$('.auth_appliance_list .appliance_edit_list').prepend(authApplianceList);
+
+				var keyExchangeApplianceList = '<li style=" padding: 0; border-top: 1px solid #ddd;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; padding: 15px; "><h3 class="app_name" >' + appliances[i]['name'] + '</h3></div><span style="margin: 15px; float: right;"><i style="margin-left: 5px; color: #666; " class="fa fa-circle"></i><i style="margin-left: 5px; color: #666; " class="fa fa-circle"></i><i style="margin-left: 5px; color: #ccc; " class="fa fa-circle"></i><i style="margin-left: 5px; color: #666; " class="fa fa-circle"></i><i style="margin-left: 5px; color: #ccc; " class="fa fa-circle"></i></span></li>';
+				$('.key_exchange_appliance_list .appliance_edit_list').prepend(keyExchangeApplianceList);
+
 
 				$('#select_appliance_list').prepend(
 
