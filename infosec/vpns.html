@@ -385,21 +385,44 @@
 
 												<span style=" padding: 15px; border: 1px solid #ddd; display: block; border-radius: 3px; margin-top: 10px;">
 													<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Security Association:</span>
-													<div class="field">
-														<span class="label" style=" margin-bottom: 15px; display: inline-block; color: #666; ">Encryption:</span>
-														<span  contenteditable="true" placeholder="Enter IP" style=" display: inline-block; line-height: 1.5em; ">Advanced Encryption Standard (AES) 256 bits</span>
+													<div class="field " style="margin-bottom: 15px; display: block; position relative; ">
+														<span class="label" style=" display: inline-block; color: #666; ">Encryption:</span>
+														<div class="edit_in_place" style="display: inline-block; ">
+															<div class=" display_panel" >
+																<span class="display_value" style="display: block; ">Advanced Encryption Standard (AES) 256 bits</span>
+															</div>
+															<div class="edit_panel" style="display: none; ">
+																	<select class="IKE-encryption" name="ikeEncryption">
+																		<option value="aes-128-cbc">Advanced Encryption Standard (AES) 128 bits</option>
+																		<option value="aes-192-cbc">Advanced Encryption Standard (AES) 192 bits</option>
+																		<option value="aes-256-cbc" selected>Advanced Encryption Standard (AES) 256 bits</option>
+																	</select>
+															</div>
+														</div>
 													</div>
 													<div class="field">
 														<span class="label" style="margin-bottom: 15px; display: inline-block; color: #666; ">Integrity Algorithm:</span>
-														<span  contenteditable="true" placeholder="Enter port" style=" display: inline-block; line-height: 1.5em; ">Secure Hash Algorithm 2 (SHA 2) 256 bits</span>
+														<div class="edit_in_place" style="display: inline-block; ">
+															<div class=" display_panel" >
+																<span class="display_value" style="display: block; ">Secure Hash Algorithm 2 (SHA 2) 256 bits</span>
+															</div>
+															<div class="edit_panel" style="display: none; ">
+																	<select class="IKE-encryption" name="ikeEncryption">
+																		<option value="md5">Message Digest Algorithm (md5) 128 bits</option>
+																		<option value="sha1">Secure Hash Algorithm 1 (SHA-1) 160 bits</option>
+																		<option value="sha-256" selected>Secure Hash Algorithm 2 (SHA 2) 256 bits</option>
+																	</select>
+															</div>
+														</div>
 													</div>
 												</span>
 
 												<span style=" padding: 15px; border: 1px solid #ddd; display: block; border-radius: 3px; margin-top: 10px;">
 													<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 15px; display: block; color: #666; ">Key Negotiation Configuration:</span>
 													<div class="field">
-														<span class="label" style=" margin-bottom: 15px; display: inline-block; color: #666; ">Key retries:</span>
-														<span  contenteditable="true" placeholder="Enter IP" style=" display: inline-block; line-height: 1.5em; ">enabled</span>
+														<span class="label" style=" margin-bottom: 15px; display: inline-block; color: #666; ">Enable Key retries:</span>
+														<input class="tgl tgl-ios" name="keyRetries" type="checkbox" selected>
+														<label class="tgl-btn" for="keyRetries"></label>
 													</div>
 													<div class="field">
 														<span class="label" style="margin-bottom: 15px; display: inline-block; color: #666; ">Re-key time period (sec):</span>
