@@ -378,6 +378,12 @@
 
 											</div>
 
+											<div class="auth_appliance_list" style="border: 1px solid #ddd; border-top: none; border-radius: 3px; margin: 15px 0;">
+												<ul class="appliance_edit_list" style="background-color: #fff; ">
+
+												</ul>
+											</div>
+
 										</div>
 										<div id="tab-3" class="tab-content">
 
@@ -440,6 +446,11 @@
 
 											</div>
 
+											<div class="key_exchange_appliance_list" style="border: 1px solid #ddd; border-top: none; border-radius: 3px; margin: 15px 0;">
+												<ul class="appliance_edit_list" style="background-color: #fff; ">
+
+												</ul>
+											</div>
 										</div>
 
 										<script type="text/javascript">
@@ -662,21 +673,42 @@
 					 </span>
 					 <span style="background-color: #fafafa; text-shadow: 0 1px 0 #fff;  padding: 15px; border-top: 1px solid #ddd;  position: relative; display: block; margin-top: -1px; ">
 						 <span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 0 0 5px 0; display: block; color: #666; ">Certs</span>
-						 <span style=" font-size: 0.8em; " contenteditable="true">
-						 MIIBqDCCARECAQAwajESMBAGA1UEAxMJbG9jYWxob3N0MREwDwYDVQQLEwhHZXJvbmltbz
-						 EPMA0GA1UEChMGQXBhY2hlMRAwDgYDVQQHDAdNeV9DaXR5MREwDwYDVQQIDAhNeV9TdGF0
-						 ZTELMAkGA1UEBhMCQ0MwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMfqprJ/aMbVzm
-						 EjDimnMQuVN/CaO7Yb89KP6ed3VQf+/Ea2i+p0dRskM8oNg+3kZeKuOplwq5KGEUnp+xbf
-						 q7M6tLGrWqQ8qL3EZUFE2nizH5VzV093vKu5jgnR2RfbTc2AplcldCPofUVuMUbDLPsmE1
-						 YQQr+OcHtcNspZL5tdAgMBAAEwDQYJKoZIhvcNAQEEBQADgYEAZFuPz0gzKqMZNA0bYLm0
-						 aPFLbR9a19NA0EbgJL2SYzoKnuKyplG2JzMVQ6myaez0J8t+iWtuthz70kBihRzU2vqOWp
-						 B4oqh+zbPwn4f87l4l8PjJh3SkiDIYdMcL5U1rxwFNAaIEpfjft/uJLY/Bv7DZQG7UPsGz
-						 +SPdn+DbdBo= </span>
+						 <span style="font-size: 0.7em; word-wrap: break-word; " contenteditable="true">
+							 <input type="file" name="certificate" accept=".DER, .PEM, .CRT, .CER, .KEY">
+						 </span>
 				 </span>
 			 </span>
-			 <span>
 
-			 </span>
+			 <span id="appliance_auth_details" style=" display: none;  ">
+					<span style="background-color: #fafafa; text-shadow: 0 1px 0 #fff; padding: 15px; border-top: 1px solid #ddd; position: relative; display: block; margin-top: -1px; ">
+						<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 0 0 5px 0; display: block; color: #666; ">Rivest-Shamir-Adleman (RSA) public key encryption</span>
+						<span style=" font-size: 0.8em; ">
+							RSA Key: <span contenteditable="true">*****************</span> <br>
+						</span>
+					</span>
+					<span style="background-color: #fafafa; text-shadow: 0 1px 0 #fff;  padding: 15px; border-top: 1px solid #ddd;  position: relative; display: block; margin-top: -1px; ">
+						<span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 0 0 5px 0; display: block; color: #666; ">Certs</span>
+						<span style="font-size: 0.7em; word-wrap: break-word; " contenteditable="true">
+							<input type="file" name="certificate" accept=".DER, .PEM, .CRT, .CER, .KEY">
+						</span>
+				</span>
+			</span>
+
+			<span id="appliance_key_exchange_details" style=" display: none;  ">
+				 <span style="background-color: #fafafa; text-shadow: 0 1px 0 #fff; padding: 15px; border-top: 1px solid #ddd; position: relative; display: block; margin-top: -1px; ">
+					 <span style=" text-transform: uppercase;  font-size: 0.6em; font-family: 'Montserrat', sans-serif; font-weight: 600; padding: 0 0 5px 0; display: block; color: #666; ">Internet Key Exchange (IKE) Configuration</span>
+					 <span style=" font-size: 0.8em; border-bottom: 1px solid #f1f1f1; margin-bottom: 5px; padding: 15px 0; display: block;  ">
+						 IKE address: <span contenteditable="true"> 000.000.000.000 </span><br>
+						 IKE port: <span contenteditable="true"> 49761 </span><br>
+					 </span>
+					 <span style=" font-size: 0.8em; ">
+						 id: <span contenteditable="true"> </span><br>
+						 secret: <span contenteditable="true">*****************</span> <br>
+						 ref: <span contenteditable="true"> </span><br>
+					 </span>
+				 </span>
+		 </span>
+
 		<script src="js/main.js"></script> <!-- Resource jQuery -->
 		<script src="js/dropit.js"></script>
 		<script type="text/javascript">
@@ -881,6 +913,16 @@
           : ''
 				);
 
+				$('.appliance_edit_list').prepend(
+					( application_status === online_status )?
+						'<li style=" padding: 0; border-top: 1px solid #ddd;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; padding: 15px; "><h3 class="app_name" >' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '" style="margin: 15px; "><i class="fa fa-circle"></i></span></li>'
+					: ( application_status ===  down_status )?
+						'<li style=" padding: 0; border-top: 1px solid #ddd;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; padding: 15px; "><h3 class="app_name" >' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '" style="margin: 15px; "><i class="fa fa-exclamation-triangle"></i></span></li>'
+					: ( application_status ===  offline_status )?
+						'<li  style=" padding: 0; border-top: 1px solid #ddd;" ><div style=" vertical-align: middle; display: inline-block; width: 80%; padding: 15px; "><h3 class="app_name" >' + appliances[i]['name'] + '</h3></div><span class="status_' + appliances[i]['application_status'] + '" style="margin: 15px; "><i class="fa fa-minus"></i></span></li>'
+          : ''
+				);
+
 				$('#select_appliance_list').prepend(
 
 						'<option value = "'+ appliances[i]['name'] +'" selected = "selected" >' + appliances[i]['name'] + '</option>'
@@ -904,7 +946,23 @@
 				$('#appliance_vpn_details').show();
 				event.stopPropagation();
 			});
+			// Add auth configuration
+			$('.auth_appliance_list .appliance_edit_list li').on('click', function(event){
+				var item_details = $('#appliance_auth_details')
+				$( event.currentTarget ).append(item_details);
+				$('#appliance_auth_details').show();
+				event.stopPropagation();
+			});
+
+			// Add key exchange configuration
+			$('.key_exchange_appliance_list .appliance_edit_list li').on('click', function(event){
+				var item_details = $('#appliance_key_exchange_details')
+				$( event.currentTarget ).append(item_details);
+				$('#appliance_key_exchange_details').show();
+				event.stopPropagation();
+			});
 		});
+
 		</script>
 		<script type="text/javascript">
 		function manageFormSubmitControls(){
