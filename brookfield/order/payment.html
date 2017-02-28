@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Montserrat:400,700|Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+</head>
+<body class='fixed top-0 bottom-0 right-0 left-0 overflow-hidden'>
+  <section class='overflow-hidden bg-white'>
+    <nav class='flex justify-between items-center absolute top-0 left-0 right-0 bg-teal border-bottom border-white py2 z1'>
+      <div class='pr2 relative clearfix col col-6'>
+        <a href='' class='col-11 ml-auto block flex items-center'>
+          <img
+            src='../assets/logo-mono-white.png'
+            class='bg-no-repeat'
+            style='height: 24px;'
+          />
+        </a>
+      </div>
+      <div class="mr3">
+        <button
+          type="button"
+          class="btn btn-primary sm-show md-hide lg-hide mr2"
+          id="summary-btn"
+          onclick=" document.getElementById('summary').className = 'show';
+          document.getElementById('form').className = 'hide';">
+          View Summary</button>
+      </div>
+    </nav>
+    <section class='col col-12 sm-col-12 md-col-8 md-show vh100 py2 overflow-scroll'
+      id="form">
+      <div class='relative clearfix mt2 sm-mt2 md-mt4 mx-auto col-10 pt3'>
+        <p class='serif navy h2 sm-h2 md-h1'>How would you like to pay?</h1>
+        <div class='my3'>
+          <div class='col-12 mb3 clearfix relative'>
+            <div class='py1 h4 bold mb1'>Appraisal Products</div>
+            <div class='h5 relative clearfix border-top border-teal'>
+              <div class='col col-8 px1 py1 bold h5'>Full appraisal</div>
+              <div class='col col-4 px1 py1 right-align h5 bold'>$335</div>
+            </div>
+            <div class='border-gray relative clearfix'>
+              <div class='col col-8 px1 py1 bold h5'>Market Rents</div>
+              <div class='col col-4 px1 py1 right-align h5 bold'>$70</div>
+            </div>
+            <div class=' border-gray relative clearfix'>
+              <div class='col col-8 px1 py1 bold h5'>As is/ As improved</div>
+              <div class='col col-4 px1 py1 right-align h5 bold'>$45</div>
+            </div>
+            <div class='border-top border-gray relative clearfix'>
+              <div class='col col-8 px1 py1 h5'>Subtotal</div>
+              <div class='col col-4 px1 py1 right-align h5 border-gray'>$450</div>
+            </div>
+            <div class='border-gray relative clearfix'>
+              <div class='col col-8 px1 py1 h5'>HST</div>
+              <div class='col col-4 px1 py1 right-align h5 border-gray'>$81</div>
+            </div>
+            <div class='border-top border-gray relative clearfix'
+              style="border-top: solid 5px #E4EBED;">
+              <div class='col col-8 px1 py1 h4 bold teal'>Total</div>
+              <div class='col col-4 px1 py1 right-align bold teal h2'>$581</div>
+            </div>
+          </div>
+          <div class='mt3 mb1'>
+            <label class='bold block mb1'>Who will be making this purchase?</label>
+            <div class='flex flex-wrap'>
+              <span class="inline col-6 sm-col-6 md-col-4">
+                <input
+                  type="radio"
+                  class="radio"
+                  checked
+                  name="payment"
+                  id="cc"
+                  value="cc"/>
+                <label
+                  class="radio-label block mr1 mb1 px2 border rounded h6 bold flex items-center justify-center minh-5 center"
+                  for="cc"
+                  onclick="document.getElementById('creditcard').style.display = 'block';
+                           document.getElementById('email').style.display = 'none'; "
+                >Charge my credit card</label>
+              </span>
+              <span class="inline col-6 sm-col-6 md-col-4">
+                <input
+                  type="radio"
+                  class="radio"
+                  name="payment"
+                  id="borrower"
+                  value="borrower"/>
+                <label
+                  for="borrower"
+                  class="radio-label block mr1 mb1 px2 border rounded h6 bold flex items-center justify-center minh-5 center"
+                  onclick="document.getElementById('email').style.display = 'block';
+                           document.getElementById('creditcard').style.display = 'none'; "
+                >Email borrower for payment</label>
+              </span>
+            </div>
+          </div>
+          <section class='col-12 border rounded border-gray px2 pb2 mb3 clearfix relative bg-silver'
+            id="creditcard">
+            <div class='col-12 mt2'>
+              <label class='bold block mb1 h5 sm-h5 md-h4'>Cardholder Name</label>
+              <input
+                type='text'
+                placeholder="Yvonne von Jena"
+                class='col-12 p1 rounded border'/>
+            </div>
+            <div class='col-12 mt2'>
+              <label class='bold block mb1 h5 sm-h5 md-h4'>Card number</label>
+              <input
+                type='number'
+                placeholder="4012-8888-8888-1881"
+                class='col-12 p1 rounded border'/>
+            </div>
+            <div class='clearfix relative py2'>
+              <div class='col col-6 pr2'>
+                <label class='bold block mb1 h5 sm-h5 md-h4'>Expiry date</label>
+                <input
+                  type='month'
+                  class='col-12 p1 rounded border'/>
+              </div>
+              <div class='col col-6'>
+                <label class='bold block mb1 h5 sm-h5 md-h4'>CVC code</label>
+                <input
+                  type='number'
+                  placeholder="050"
+                  class='col-12 p1 rounded border'/>
+              </div>
+            </div>
+          </section>
+          <section class='col-12 border rounded border-gray px2 mb3 clearfix relative bg-silver'
+            style="display:none;"
+            id="email">
+            <div class='my2'>
+              <label class='bold block mb1 h5 sm-h5 md-h4'>Tell us the borrower's email.</label>
+              <div class="relative clearfix">
+                <input type='email' class="col-12 p1 rounded col-12 border h5" placeholder="borrower@email.com, borrower@email.com"/>
+                <label class='h6  navy muted regular'><b class="red">*</b> Seperate multiple emails with a comma.</label>
+              </div>
+              <h5 class="mt2">Kindly note that we will send an email to the borrower with everything they need to pay for the order.</h5>
+            </div>
+          </section>
+
+          <div class='py2 col col-12 flex justify-start items-center'>
+            <a href="appraisal.html" class='btn btn-primary bg-gray rounded right'>
+              <i class="fa fa-angle-left h3 muted bold black"></i>
+            </a>
+            <a href='12345.html'>
+              <input
+                type='submit'
+                value='Continue'
+                class='btn-primary bg-green py1 px4 border-none ml2'/>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside class='col sm-col-0 md-col-4 vh100 relative md-show'
+      id="summary">
+      <div class='absolute top-0 left-0 right-0 bottom-0 bg-silver z2 border-left border-gray overflow-scroll'>
+        <div class="right-align pt3 px3 sm-px3 md-px4">
+          <img src="../assets/exit.svg"
+            class="sm-show md-hide lg-hide"
+            width="22px;"
+            id="close-btn"
+            onclick=" document.getElementById('form').className = 'show';
+            document.getElementById('summary').className = 'hide';">
+        </div>
+        <h2 class='pt4 pb2 h2 m0 rounded-top px3 sm-px3 md-px4' style='font-weight: 900;'>Order Summary</h2>
+        <section class='py2 clearfix px3 sm-px3 md-px4'>
+          <img
+            src="../assets/check.svg"
+            class="absolute"
+            width="17px;"
+            style="margin-left:-30px; margin-top: 6px;"
+          />
+          <h4 class='caps regular navy pb2'>Property</h4>
+          <div class="flex flex-wrap">
+            <div class='col col-12 sm-col-12 md-col-12 pb2 sm-pb2 md-pb2 lg-pb0 pr2 sm-pr0 md-pr0 lg-pr2'>
+              <h5 class='h5 bold navy'>Borrower</h5>
+              <div class='h5 clickable'>
+                <div>Amy Pickering: <span>amy.pickering@email.com</span></div>
+              </div>
+              <div class="col col-12 flex flex-wrap">
+                <div class="col-12 sm-col-12 md-col-12 lg-col-6 pr2 sm-pr0 md-pr0 lg-pr2">
+                  <h5 class='h5 bold navy mt2'>Address</h5>
+                  <div class='h5 regular navy clickable'>
+                    <div>129 Spadina Ave. Unit 600</div>
+                    <div>Toronto, Ontario</div>
+                    <div>M2W 3W2</div>
+                  </div>
+                </div>
+                <div class="col-12 sm-col-12 md-col-12 lg-col-6">
+                  <h5 class='h5 bold navy mt2'>Est. Value</h5>
+                  <div class='h5 regular navy clickable'>
+                    <div>$ 1,200,000.00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='col sm-col-0 md-col-12 mt2 show sm-hide md-show lg-show' >
+              <div id="street-view" style='height: 150px;' class='overflow-hidden'></div>
+              <script>
+                var panorama;
+                function initialize() {
+                  panorama = new google.maps.StreetViewPanorama(
+                      document.getElementById('street-view'),
+                      {
+                        position: {lat: 43.6473766, lng: -79.3957177},
+                        pov: {heading: 70, pitch: 0},
+                        zoom: 1,
+                        disableDefaultUI: true
+                      });
+                }
+              </script>
+              <script
+                   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvtFv86ijuNMJ4Rm2PT0fGGZgfI4CcLXU&callback=initialize">
+              </script>
+              <h6 class='h6  navy muted mt1'><b>NOTE:</b> This is an approximate view and may not be the exact property</h6>
+            </div>
+          </div>
+        </section>
+        <div class="col-12 bg-gray" style="height:1px;"></div>
+        <section class='py2 px3 sm-px3 md-px4'>
+          <img
+            src="../assets/check.svg"
+            class="absolute"
+            width="17px;"
+            style="margin-left:-30px; margin-top: 6px;"
+          />
+          <h4 class='caps regular navy pb2'>Mortgage</h4>
+          <div class='flex flex-wrap relative clearfix'>
+            <div class='col col-12 sm-col-12 md-col-12 lg-col-6 pb2 sm-pb2 md-pb2 lg-pb0 pr2 sm-pr0 md-pr0 lg-pr2'>
+              <h5 class='h5 bold navy'>Lender</h5>
+              <div class='h5 regular navy clickable pb2'>
+                <div>TD Canada Trust</div>
+                <div>TD234312423</div>
+                <div>yvonne@td.com</div>
+              </div>
+              <h5 class='h5 bold navy'>Mortgage</h5>
+              <div class='h5 regular navy clickable '>
+                <div>Sale/Purchase</div>
+              </div>
+            </div>
+            <div class='col col-12 sm-col-12 md-col-12 lg-col-6 pb2 sm-pb2 md-pb2 lg-pb0 pr2 sm-pr0 md-pr0 lg-pr2'>
+              <h5 class='h5 bold navy'>Condition Date</h5>
+              <div class='h5 regular navy clickable pb2'>
+                <div>January 7, 2017</div>
+              </div>
+              <h5 class='h5 bold navy'>Attachments</h5>
+              <div class='h5 bold teal'>
+                <i class="fa fa-file-pdf-o navy" aria-hidden="true"></i>
+                Sales_Agreement.png
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="col-12 bg-gray" style="height:1px;"></div>
+        <section class='py2 px3 sm-px3 md-px4'>
+          <img
+            src="../assets/check.svg"
+            class="absolute"
+            width="17px;"
+            style="margin-left:-30px; margin-top: 6px;"
+          />
+          <h4 class='caps regular navy pb2'>Appraisal</h4>
+          <div class='relative clearfix'>
+            <div class='col col-12 sm-col-12 md-col-6 lg-col-6 pb2 sm-pb2 md-pb2 lg-pb0 pr2 sm-pr0 md-pr0 lg-pr2'>
+              <h5 class='h5 bold navy'>Type</h5>
+              <div class='h5 clickable mb2'>
+                <span class='navy pr1'>Full Appraisal</span>
+              </div>
+              <h5 class='h5 bold navy'>Appraisal Add-on(s)</h5>
+              <div class='h5 clickable'>
+                <span class='navy pr1'>Market Rents</span>
+              </div>
+              <div class='h5 regular navy clickable'>
+                <span class='navy pr1'>As is/ As improved</span>
+              </div>
+              <h5 class='h5 bold navy mt2'>Will provide access to property</h5>
+              <div class='h5 clickable'>
+                <div class='navy bold muted'>Borrower</div>
+                <div>Amy Pickering: <span>416-123-4567</span></div>
+              </div>
+              <div class='h5 clickable mt2'>
+                <div class='navy bold muted'>
+                  Listing Agent
+                </div>
+                <div>Samuel Gangi: <span>416-765-4321 ext. 23</span></div>
+              </div>
+            </div>
+            <div class='col col-12 sm-col-12 md-col-12 lg-col-6'>
+              <h5 class='h5 bold navy'>Language</h5>
+              <div class='h5 regular navy clickable'>
+                <div class='navy'>English</div>
+              </div>
+              <h5 class='h5 bold navy mt2'>Attachments</h5>
+              <div class='h5 bold teal'>
+                <i class="fa fa-file-pdf-o navy" aria-hidden="true"></i>
+                Plans.png
+              </div>
+            </div>
+            <div class='col col-12 my2'>
+              <h5 class='h5 bold navy'>Additional Information</h5>
+              <div class='h5 regular navy clickable'>
+                <div class='navy'>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </aside>
+  </section>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Montserrat:400,700|Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/base.css">
+</head>
+<body class='top-0 bottom-0 right-0 left-0 bg-white'>
+  <section class='overflow-hidden'>
+    <nav class='fixed top-0 left-0 col-12 flex justify-between items-center  bg-teal py2 z1'>
+      <div class='flex items-between relative clearfix col col-12 ml4'>
+        <div class='flex items-center col-6 ml-auto'>
+          <img
+            src='./assets/logo-mono-white.png'
+            class='bg-no-repeat'
+            style='height: 24px; '
+          />
+        </div>
+        <div class="flex items-center justify-end white regular col-6 mr4">
+          <div class="h4 bold mr3">My Account</div>
+          <div class="">
+            <a href='index.html' class=''>
+              <button type='button' class="btn btn-outline px4 border-white bg-none circle white col-12"
+                style="border-radius:50px; padding: .5rem 2rem;">Logout</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="bg-silver border border-gray py3">
+      <div class="col-12 bg-gray">
+        <div class="col-8 mx-auto flex items-start justify-between py3 mt3"
+          id="message">
+          <h5 class="regular line-height-4"><b>IMPORTANT MESSAGE:</b> If you are a Broker located in the Province of Quebec and would like to place an order for NBC (National Bank of Canada), please use your NBC Broker user ID and password to log on to Brookfield Access so that you may use the NBC version of Brookfield RPS Access. If you do not have a NBC Broker account please set up a new user ID and check the box for NBC Quebec Broker.</h5>
+          <img src="assets/exit.svg" class="p1"
+            width="60px;"
+            onclick="document.getElementById('message').style.display = 'none';"/>
+        </div>
+      </div>
+      <div class="col-8 mx-auto mt4">
+        <section class='relative clearfix flex items-center'>
+          <div class='col col-8'>
+            <h1 class="serif regular navy h1">Welcome back, Yvonne!</h1>
+            <h3 class="navy muted regular">How can we help you?</h3>
+          </div>
+          <div class='col-4 col-right pl4'>
+            <div class="col-12">
+              <button type="button" style="height:50px;" class="border-none btn-primary bg-green p2 h4 col-12 ">
+                Create a new order</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class='col-8 mx-auto mt3 mb2'>
+      <section class='relative clearfix'>
+        <div class="col-9 mx-auto">
+          <h1 class="serif regular navy h2 mb2 center">Find an order</h1>
+          <form class="col-9 mx-auto">
+            <input
+              type='search'
+              class='rounded border h5 px2 py1 col-12'
+              placeholder="Search by Borrower, Address, Order ID or Lender Ref. #"
+              style="height: 50px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;" />
+            <label class='h6 mt1 navy muted regular'><b class="red">*</b> 30 days since last modified</label>
+          </form>
+        </div>
+        <!-- ADVANCED SEARCH -->
+      </section>
+    </section>
+    <section class='col-8 mx-auto'>
+      <section class='relative clearfix'>
+        <div class='col-12 mx-auto'>
+          <div class="flex justify-between items-end mb2 mt3">
+            <div class="col-6">
+              <h2 class="serif regular navy">My order feed</h2>
+              <div class="flex mr2">
+                <div class="flex mr2 col-6">
+                  <select class="py1 px2 col-12">
+                    <option>All Orders</option>
+                    <option>In Progress Orders</option>
+                    <option>Delayed Orders</option>
+                    <option>Payment Required Orders</option>
+                    <option>Completed Orders</option>
+                    <option>Cancelled Orders</option>
+                  </select>
+                  <i class="fa fa-angle-down bold" aria-hidden="true"
+                    style="margin-left: -25px; margin-top: 10px;"></i>
+                </div>
+                <div class="flex col-6">
+                  <select class="py1 px2 col-12">
+                    <option value="" disabled selected>Sort By</option>
+                    <option>Lender</option>
+                    <option>Borrower</option>
+                    <option>Date</option>
+                    <option>Default</option>
+                  </select>
+                  <i class="fa fa-angle-down bold" aria-hidden="true"
+                    style="margin-left: -25px; margin-top: 10px;"></i>
+                </div>
+              </div>
+            </div>
+            <a
+              class='py1 px3 h4 black text-decoration-none btn-primary bg-gray col inline-block'
+              onclick="document.getElementById('search').style.display = 'block';">
+              Advanced Filters
+            </a>
+          </div>
+
+          <div class="z4 col-12 my3 mx-auto bg-silver border border-gray p2" id="search" style="display:none;">
+            <div class="flex col-12">
+              <div class="col-12 mr3">
+                <label class='bold block mb1 h5'>Lender</label>
+                <div class="flex">
+                  <select class="py1 px2 col-12">
+                    <option>TD Canada Trust</option>
+                    <option>B2B Bank</option>
+                    <option>First National Financial</option>
+                    <option>Lendwise</option>
+                    <option>Manulife</option>
+                    <option>MCAN</option>
+                    <option>Merix Financial</option>
+                    <option>National Bank of Canada</option>
+                    <option>Paradigm Quest</option>
+                    <option>Private Lender</option>
+                  </select>
+                  <i class="fa fa-angle-down bold" aria-hidden="true"
+                    style="margin-left: -25px; margin-top: 10px;"></i>
+                </div>
+              </div>
+              <div class="col-12">
+                <label class='bold block mb1 h5'>Creation Date</label>
+                <div class="flex justify-between items-center">
+                  <input type='date' class='col col-5 p1 rounded col-12 border h5'/>
+                  <h5 class="muted px1">to</h5>
+                  <input type='date' class='col col-5 p1 rounded col-12 border h5'/>
+                </div>
+              </div>
+            </div>
+            <div class="flex col-12 mt2">
+              <div class="col-12 mr3">
+                <label class='bold block mb1 h5'>Borrower</label>
+                <input type='search' placeholder="Search by name"class='col-12 p1 rounded col-12 border h5'/>
+              </div>
+              <div class="col-12">
+                <label class='bold block mb1 h5'>Address</label>
+                <input type='search' placeholder="Search by street address"class='col-12 p1 rounded col-12 border h5'/>
+              </div>
+            </div>
+            <div class="flex col-12 mt2">
+              <div class="col-12 mr3">
+                <label class='bold block mb1 h5'>Order ID</label>
+                <input type='search' placeholder="Search by order"class='col-12 p1 rounded col-12 border h5'/>
+              </div>
+              <div class="col-12">
+                <label class='bold block mb1 h5'>Lender Reference #</label>
+                <input type='search' placeholder="Search by reference number"class='col-12 p1 rounded col-12 border h5'/>
+              </div>
+            </div>
+            <a href=''>
+              <input
+                type='submit'
+                id="close"
+                value='Close'
+                class='btn-primary bg-green py1 px4 border-none mt3'
+                onclick="document.getElementById('search').style.display = 'none';"/>
+            </a>
+          </div>
+
+          <div class='border border-gray mb4'>
+            <a
+              href="order/12345.html"
+              class='relative clearfix border-bottom border-gray h5 bg-silver block'>
+              <div class="col col-12">
+                <div class='flex flex-column justify-between col col-4 p2 bold navy'>
+                  <div>
+                    <span class='col-12 block navy h4'>Order# 12345</span>
+                    <span class='col-12 block navy h5 muted'>Amy Pickering</span>
+                    <span class='col-12 block navy h5 muted mb2'>Appraisal Booked 12/05/16</span>
+                  </div>
+                  <div>
+                    <span class='col-12 block navy bold green h4'>In Progress</span>
+                    <span class='col-12 block navy regular h6 muted'>Created 12/05/16</span>
+                  </div>
+                </div>
+                <div class='col col-3 bold navy p2'>
+                  <div class="pr2">
+                    <h5 class='h6 bold navy'>Lender</h5>
+                    <span class='block h6 regular navy mb1'>TD Canada Trust</span>
+                  </div>
+                  <div>
+                    <h5 class='h6 bold navy'>Appraisal Type</h5>
+                    <span class='block h6 regular navy mb1'>Full Appraisal</span>
+                  </div>
+                </div>
+                <div class='col col-3 bold navy p2'>
+                  <h5 class='h6 bold navy'>Address</h5>
+                  <span class='col-12 regular block h6 navy mb1'>129 Spadina Ave. Unit: 600
+                  <br />Toronto, Ontario
+                  <br />M2W 3W2</span>
+                </div>
+                <div class='flex flex-column justify-end p2 col col-2'>
+                  <button type="button" class="bg-teal btn-primary border-none h6 py1 px2" >CAR
+                  </button>
+                </div>
+              </div>
+            </a>
+            <a
+              href="order/12345.html"
+              class='relative clearfix border-bottom border-gray h5 bg-silver block'>
+              <div class="col col-12">
+                <div class='flex flex-column justify-between col col-4 p2 bold navy'>
+                  <div>
+                    <span class='col-12 block navy h4'>Order# 12345</span>
+                    <span class='col-12 block navy h5 muted mb2'>Amy Pickering</span>
+                  </div>
+                  <div>
+                    <span class='col-12 block navy bold red h5'>Payment Required</span>
+                    <span class='col-12 block navy regular h6 muted'>Created 12/05/16</span>
+                  </div>
+                </div>
+                <div class='col col-3 bold navy p2'>
+                  <div class="pr2">
+                    <h5 class='h6 bold navy'>Lender</h5>
+                    <span class='block h6 regular navy mb1'>TD Canada Trust</span>
+                  </div>
+                  <div>
+                    <h5 class='h6 bold navy'>Appraisal Type</h5>
+                    <span class='block h6 regular navy mb1'>Full Appraisal</span>
+                  </div>
+                </div>
+                <div class='col col-3 bold navy p2'>
+                  <h5 class='h6 bold navy'>Address</h5>
+                  <span class='col-12 regular block h6 navy mb1'>129 Spadina Ave. Unit: 600
+                  <br />Toronto, Ontario
+                  <br />M2W 3W2</span>
+                </div>
+              </div>
+            </a>
+            <a
+              href="order/12345.html"
+              class='relative clearfix border-bottom border-gray h5 bg-silver block'>
+              <div class="col col-12">
+                <div class='flex flex-column justify-between col col-4 p2 bold navy'>
+                  <div>
+                    <span class='col-12 block navy h4'>Order# 12345</span>
+                    <span class='col-12 block navy h5 muted'>Amy Pickering</span>
+                    <span class='col-12 block navy h5 muted mb2'>Appraisal Booked 12/05/16</span>
+                  </div>
+                  <div>
+                    <span class='col-12 block navy bold navy h5'>Completed</span>
+                    <span class='col-12 block navy regular h6 muted'>Created 12/05/16</span>
+                  </div>
+                </div>
+                <div class='col col-3 bold navy p2'>
+                  <div class="pr2">
+                    <h5 class='h6 bold navy'>Lender</h5>
+                    <span class='block h6 regular navy mb1'>TD Canada Trust</span>
+                  </div>
+                  <div>
+                    <h5 class='h6 bold navy'>Appraisal Type</h5>
+                    <span class='block h6 regular navy mb1'>Full Appraisal</span>
+                  </div>
+                </div>
+                <div class='col col-3 bold navy p2'>
+                  <h5 class='h6 bold navy'>Address</h5>
+                  <span class='col-12 regular block h6 navy mb1'>129 Spadina Ave. Unit: 600
+                  <br />Toronto, Ontario
+                  <br />M2W 3W2</span>
+                </div>
+                <div class='flex flex-column justify-end p2 col col-2'>
+                  <button type="button" class="bg-teal btn-primary border-none h6 py1 px2" >CAR
+                  </button>
+                  <button type="button" class="bg-teal btn-primary border-none h6 py1 px2 mt2" >Appraisal
+                  </button>
+                </div>
+              </div>
+            </a>
+            <a
+              href="order/12345.html"
+              class='relative clearfix border-bottom border-gray h5 bg-silver block'>
+              <div class="col col-12">
+                <div class='flex flex-column justify-between col col-4 p2 bold navy'>
+                  <div>
+                    <span class='col-12 block navy h4'>Order# 12345</span>
+                    <span class='col-12 block navy h5 muted mb2'>Amy Pickering</span>
+                  </div>
+                  <div>
+                    <span class='col-12 block navy bold orange h5'>Delayed</span>
+                    <span class='col-12 block navy regular h6 muted'>Created 12/05/16</span>
+                  </div>
+                </div>
+                <div class='col col-3 bold navy p2'>
+                  <div class="pr2">
+                    <h5 class='h6 bold navy'>Lender</h5>
+                    <span class='block h6 regular navy mb1'>TD Canada Trust</span>
+                  </div>
+                  <div>
+                    <h5 class='h6 bold navy'>Appraisal Type</h5>
+                    <span class='block h6 regular navy mb1'>Full Appraisal</span>
+                  </div>
+                </div>
+                <div class='col col-3 bold navy p2'>
+                  <h5 class='h6 bold navy'>Address</h5>
+                  <span class='col-12 regular block h6 navy mb1'>129 Spadina Ave. Unit: 600
+                  <br />Toronto, Ontario
+                  <br />M2W 3W2</span>
+                </div>
+              </div>
+            </a>
+            <a
+              href="order/12345.html"
+              class='relative clearfix border-bottom border-gray h5 bg-silver block'>
+              <div class="col col-12">
+                <div class='flex flex-column justify-between col col-4 p2 bold navy'>
+                  <div>
+                    <span class='col-12 block navy h4'>Order# 12345</span>
+                    <span class='col-12 block navy h5 muted mb2'>Amy Pickering</span>
+                  </div>
+                  <div>
+                    <span class='col-12 block bold navy h5'>Cancelled</span>
+                    <span class='col-12 block navy regular h6 muted'>Created 12/05/16</span>
+                  </div>
+                </div>
+                <div class='col col-3 bold navy p2'>
+                  <div class="pr2">
+                    <h5 class='h6 bold navy'>Lender</h5>
+                    <span class='block h6 regular navy mb1'>TD Canada Trust</span>
+                  </div>
+                  <div>
+                    <h5 class='h6 bold navy'>Appraisal Type</h5>
+                    <span class='block h6 regular navy mb1'>Full Appraisal</span>
+                  </div>
+                </div>
+                <div class='col col-3 bold navy p2'>
+                  <h5 class='h6 bold navy'>Address</h5>
+                  <span class='col-12 regular block h6 navy mb1'>129 Spadina Ave. Unit: 600
+                  <br />Toronto, Ontario
+                  <br />M2W 3W2</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>
+</body>

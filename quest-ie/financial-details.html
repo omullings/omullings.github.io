@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Financial details | Medical Card Application</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/quest.ie.min.css">
+</head>
+<body class="bg-l-grey pt3">
+    <nav class="nav z4 bg-green">
+        <div class="col md-col-1 p1"></div>
+        <div class="col md-col-10">
+            <h1 class="white h1 page-title dark-text-shadow col py2">Financial Details</h1>
+            <div class="right inline-block py2">
+                <a class="white inline-block col ml1 " style="border-bottom: 1px dotted #fff; display: none;">Jennifer</a>
+            </div>
+        </div>
+        <div class="col md-col-1 p1"></div>
+    </nav>
+    <header class="bg-green pb4">
+        <div class="relative clearfix md-col-10 px2 pb4 mr-auto ml-auto py2">
+            <h1 class="h1 white">What is the financial situation of the applicant(s)?</h1>
+        </div>
+    </header>
+    <section class="md-col-10 px2 mr-auto ml-auto mtn3">
+        <section >
+            <section>
+                <ul class="m0 list-reset">
+                    <li class="answer">
+                        <h2 class="h2 mt0 p0">
+                            Main applicant: Jennifer Lawrence
+                        </h2>
+                        <section class="profile-info clearfix">
+                            <div class="clearfix">
+                                <div class="relative mb2 js-income-sources" >
+                                    <h2 class="h2 section-heading p1 mb0 border-left border-right border-top mutted-border">
+                                        Income
+                                        <span class="right js-main-income-total" style="display: none; ">€ 2700.00 / Week</span>
+                                    </h2>
+                                    <div class="finance-item js-main-income mb1">
+                                        <div class="financial-item-empty clearfix relative block border p1 mutted-border">
+                                            <p class="inline-help">If Jennifer Lawrence was employed or had include add each income source here, for no income describe how Jennifer is supporting yourself</p>
+                                            <textarea rows="4" class="mutted-border explanation1"  placeholder="provide explanation for how means are being met without an income"  style="min-height: 50px; width: 100%; box-sizing: border-box;"></textarea>
+                                            <div class="supportingDocs1 px1" style="display: none;">
+                                              <h3 class="h4 mb0 mt1">Upload documentation supporting no income claim</h3>
+                                              <p class="inline-help m0">3 month bank statements or P45 or Revenue letter re deregistration</p>
+                                              <input type="file" name="file" class="file" accept="doc, docx, xls, xlsx, pdf, jpg, jpeg, png, txt"/>
+                                            </div>
+                                        </div>
+                                        <div class="financial-item-display clearfix relative block clickable border p1 mutted-border" style="display: none; ">
+                                            <div class="clearfix">
+                                                <div class="financial-item-name bold col col-8">Self Employment Income
+                                                  <div class="inline-block">
+                                                    <img src="img/attachment.svg" width="16" class="attachment-image">
+                                                  </div>
+                                                </div>
+                                                <div class="financial-item-weekly-value col col-4 right-align relative">€ 2700.00 / Week</div>
+                                            </div>
+                                            <div class="relative block pt1 clearfix files">
+                                                <div class="relative h6 bold  bg-l-grey p1 rounded border dashed-border red-border">
+                                                    <div>Upload letter from DSP detailing payment and frequency amount or An Post receipt detailing payment amount or bank statement showing instances of payment being made </div>
+                                                </div>
+                                                <img src="img/edit.svg" width="14" class="absolute bottom-0 right-0 my1 mb2" style="display: none;">
+                                            </div>
+                                        </div>
+                                        <div class="financial-item-edit p2 border mutted-border relative" style="display: none; ">
+                                            <button class="button close-section absolute js-remove-item js-remove-main-income m0 z2">remove</button>
+                                            <div class="field relative js-income-types" >
+                                              <h3 class="h3 m0 inline-block mb3 pr4">Select income type to add</h3>
+                                                <ul class="list-reset m0 clearfix block border rounded mutted-border">
+                                                    <li class="block border-bottom  mutted-border" value="Social Welfare Payments / Pensions">
+                                                      <a href="#" class="py2 px1 block clickable js-self-employment-link">Self Employment</a>
+                                                    </li>
+                                                    <li class="block border-bottom  mutted-border" value="Social Security Payments from an EU state">
+                                                      <a href="#" class="py2 px1 block clickable js-employment-link">Employment</a>
+                                                    </li>
+                                                    <li class="block border-bottom  mutted-border"  value="Wages, Private Pension and Occupational Pension">
+                                                      <a href="#" class="py2 px1 block clickable">Social Welfare Payment</a>
+                                                    </li>
+                                                    <li class="block border-bottom  mutted-border" value="Self Employment">
+                                                      <a href="#" class="py2 px1 block clickable">Occupational or Private Pension</a>
+                                                    </li>
+                                                    <li class="block border-bottom  mutted-border" value="Social Welfare Payments / Pensions">
+                                                      <a href="#" class="py2 px1 block clickable">Payment from other state</a>
+                                                    </li>
+                                                    <li class="block border-bottom  mutted-border" value="Social Security Payments from an EU state">
+                                                      <a href="#" class="py2 px1 block clickable">Maintenance Payment</a>
+                                                    </li>
+                                                    <li class="block border-bottom  mutted-border" value="Wages, Private Pension and Occupational Pension">
+                                                      <a href="#" class="py2 px1 block clickable">Employment or Education Scheme</a>
+                                                    </li>
+                                                    <li class="block border-bottom  mutted-border" value="Self Employment">
+                                                      <a href="#" class="py2 px1 block clickable">Occupational or Private Pension</a>
+                                                    </li>
+                                                    <li class="block mutted-border" value="Other (e.g. maintenance)">
+                                                      <a href="#" class="py2 px1 block clickable">Other (e.g. maintenance)</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="js-income-form relative clearfix" style="display:none;">
+                                              <div class="content"></div>
+                                              <button class="js-main-income-edit-close button">Update</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="new-finance-item pt3 pr3 pl3 pb2 border mutted-border" style="display: none; ">
+                                        <div class="financial-item-edit pt3 pr3 pl3 pb2 border mutted-border relative" style="display: none; ">
+                                            <div class="field relative col col-6 pr2" >
+                                                <label class="field-label r2">Income type</label>
+                                                <select name="income.source" class="input select">
+                                                    <option value="">select income type</option>
+                                                    <option value="Social Welfare Payments / Pensions">Social Welfare Payments / Pensions</option>
+                                                    <option value="Social Security Payments from an EU state">Social Security Payments from an EU state</option>
+                                                    <option value="Wages, Private Pension and Occupational Pension">Wages, Private Pension and Occupational Pension</option>
+                                                    <option value="Self Employment">Self Employment</option>
+                                                    <option value="Other (e.g. maintenance)">Other (e.g. maintenance)</option>
+                                                </select>
+                                                <div class="relative field-border">
+                                                    <hr class="absolute field-border--default"/>
+                                                    <hr class="absolute field-border--focused"/>
+                                                </div>
+                                            </div>
+                                            <div class="field relative col col-6"  >
+                                                <label class="field-label">Financial Source</label>
+                                                <select name="swPayCodesApp[0].sourceCode" class="input select">
+                                                    <option value="">select financial source</option>
+                                                    <option value="NM051">Back to work family dividend</option>
+                                                    <option value="NM032">Blind Pension</option>
+                                                    <option value="NM009">Carers Allowance</option>
+                                                    <option value="NM033">Carers Benefit</option>
+                                                    <option value="NM008">Child Benefit</option>
+                                                    <option value="NM010">Department of Defence Service Pensions 1916 - 1921</option>
+                                                    <option value="NM036">Deserted Wives Benefit</option>
+                                                    <option value="NM028">Disability Allowance</option>
+                                                    <option value="NM044">Disablement benefit</option>
+                                                    <option value="NM020">Early Childcare Supplement.</option>
+                                                    <option value="NM007">Family Income Supplement</option>
+                                                    <option value="NM039">Foster Care Allowance</option>
+                                                    <option value="NM015">Free Fuel Allowance from DSFA</option>
+                                                    <option value="NM037">Guardian Payments e.g Orphans Pensions</option>
+                                                    <option value="NM031">Illness Benefits</option>
+                                                    <option value="NM035">Invalidity Pension</option>
+                                                    <option value="NM017">Island Allowance.</option>
+                                                    <option value="NM029">Jobseekers Allowance/Benefit</option>
+                                                    <option value="NM018">Living Alone Allowance payable by DSFA.</option>
+                                                    <option value="NM040">Maternity Benefit</option>
+                                                    <option value="NM030">One Parent Family Payment</option>
+                                                    <option value="NM019">Over 80 Allowance payable by DSFA.</option>
+                                                    <option value="NM046">Reduction in Social Welfare Payment</option>
+                                                    <option value="NM043">Social Welfare Compensatory Payment</option>
+                                                    <option value="AG001">Social welfare pension.</option>
+                                                    <option value="NM038">Supplementary Welfare Allowance</option>
+                                                    <option value="NM034">Widows Pension</option>
+                                                </select>
+                                                <div class="relative field-border">
+                                                    <hr class="absolute field-border--default"/>
+                                                    <hr class="absolute field-border--focused"/>
+                                                </div>
+                                            </div>
+                                            <div class="field relative col col-12">
+                                                <label class="field-label">Weekly amount</label>
+                                                <input type="number" class="input" placeholder="100.00">
+                                                <div class="relative field-border">
+                                                    <hr class="absolute field-border--default"/>
+                                                    <hr class="absolute field-border--focused"/>
+                                                </div>
+                                            </div>
+                                            <div class="evidence my3">
+                                                <input type="file" name="file" class="file" class="inputfile" accept="doc, docx, xls, xlsx, pdf, jpg, jpeg, png, txt"/>
+                                                <label for="file" style="display: none; ">Upload image of payment receipt</label>
+                                            </div>
+                                            <button class="js-main-expense-edit-close button ">Update</button>
+                                        </div>
+                                    </div>
+                                    <a href="#"class="button block ghost-button p1 js-add-main-income">Add income source</a>
+                                </div>
+                                <div class="field display-only  relative">
+                                    <h2 class="h2 section-heading p1 mb0 border-left border-right border-top mutted-border">
+                                        Expenses
+                                        <span class="right js-main-expense-total" style="display: none; ">€ 250.00 / Week</span>
+                                    </h2>
+                                    <div class="finance-item js-main-expense mb1">
+                                        <div class="financial-item-empty clearfix relative block border p1 mutted-border">
+                                            <p class="inline-help">If Jennifer Lawrence has expenses add them here, for no expenses leave blank</p>
+                                        </div>
+                                        <div class="financial-item-display clearfix relative block clickable border p1 mutted-border" style="display: none;">
+                                            <div class="clearfix">
+                                                <div class="financial-item-name bold col col-8">Renting</div>
+                                                <div class="financial-item-weekly-value col col-4 right-align relative">€ 245.00 / Week</div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="financial-item-name bold col col-8">Home Insurance</div>
+                                                <div class="financial-item-weekly-value col col-4 right-align relative">€ 5.00 / Week</div>
+                                            </div>
+                                            <div class="relative pt1 clearfix files">
+                                                <div class="relative h6 bold  bg-l-grey p1 rounded">
+                                                    <img src="img/attachment.svg" width="16" class="absolute top-0 left-0 mt1 ml1 attachment-image">
+                                                    <div class="attachement-label inline-block">tenancy agreement.pdf</div>
+                                                </div>
+                                                <img src="img/edit.svg" width="14" class="absolute bottom-0 right-0 my1 mb2" style="display: none;">
+                                            </div>
+                                        </div>
+                                        <div class="financial-item-edit pt3 pr3 pl3 pb2  border l-grey-border relative" style="display: none; ">
+                                            <div class="field relative col col-6 pr2" >
+                                                <label class="field-label r2">Expense Type</label>
+                                                <select name="income.source" class="input select">
+                                                    <option value="">select income type</option>
+                                                    <option value="Social Welfare Payments / Pensions">Mortgage / Home Owner</option>
+                                                    <option value="Social Security Payments from an EU state">Renting</option>
+                                                    <option value="Wages, Private Pension and Occupational Pension">Childcare</option>
+                                                    <option value="Self Employment">Travel to work</option>
+                                                    <option value="Other (e.g. maintenance)">Maintenance</option>
+                                                    <option value="Nursing Home Expenses">Nursing Home Expenses</option>
+                                                </select>
+                                                <div class="relative field-border">
+                                                    <hr class="absolute field-border--default"/>
+                                                    <hr class="absolute field-border--focused"/>
+                                                </div>
+                                            </div>
+                                            <div class="field relative col col-6"  >
+                                                <label class="field-label">Payment Frequency</label>
+                                                <select name="swPayCodesApp[0].sourceCode" class="input select">
+                                                    <option value="NM051">Weekly</option>
+                                                    <option value="NM032">Monthly</option>
+                                                    <option value="NM009">Yearly</option>
+                                                </select>
+                                                <div class="relative field-border">
+                                                    <hr class="absolute field-border--default"/>
+                                                    <hr class="absolute field-border--focused"/>
+                                                </div>
+                                            </div>
+                                            <div class="field relative col col-12">
+                                                <label class="field-label">Amount</label>
+                                                <input type="number" class="input" placeholder="100.00">
+                                                <div class="relative field-border">
+                                                    <hr class="absolute field-border--default"/>
+                                                    <hr class="absolute field-border--focused"/>
+                                                </div>
+                                            </div>
+                                            <div class="evidence my3">
+                                                <input type="file" name="file" class="file" class="inputfile" accept="doc, docx, xls, xlsx, pdf, jpg, jpeg, png, txt"/>
+                                                <label for="file" style="display: none; ">Upload image of payment receipt</label>
+                                            </div>
+                                            <button class="js-main-expense-edit-close button">Update</button>
+                                        </div>
+                                    </div>
+                                    <a  href="#"class="button block ghost-button p1 js-add-main-expense">Add expense</a>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="answer mt2">
+                        <h2 class="h2 mt0 p0">
+                            Spouse / Partner: John Doe
+                        </h2>
+                        <section class="profile-info clearfix">
+                            <div class="clearfix">
+                                <div class="relative mb2" id="partnerIncome">
+                                    <h2 class="h2 section-heading p1 mb0 border-left border-right border-top mutted-border">
+                                        Income Sources
+                                        <span class="right js-partner-income-total" style="display: none;">€ 27.89 / Week</span>
+                                    </h2>
+                                    <div class="finance-item js-partner-income mb1">
+                                        <div class="financial-item-empty clearfix relative block border p1 mutted-border">
+                                            <p class="inline-help">If John Doe was employed or had include add each income source here, for no income describe how John is supporting yourself</p>
+                                            <textarea rows="4" class="mutted-border explanation2" placeholder="provide explanation for how means are being met without an income" style="min-height: 50px; width: 100%; box-sizing: border-box;"></textarea>
+                                            <div class="supportingDocs2 px1" style="display: none;">
+                                              <h3 class="h4 mb0 mt1">Upload documentation supporting no income claim</h3>
+                                              <p class="inline-help m0">3 month bank statements or P45 or Revenue letter re deregistration</p>
+                                              <input type="file"/>
+                                            </div>
+                                        </div>
+                                        <div class="financial-item-display clearfix relative block clickable border p1 mutted-border" style="display: none; ">
+                                            <div class="clearfix">
+                                                <div class="financial-item-name bold col col-8">Self employment earnings</div>
+                                                <div class="financial-item-weekly-value col col-4 right-align relative">€ 27.89 / Week</div>
+                                            </div>
+                                            <div class="relative block pt1 clearfix files">
+                                                <div class="relative h6 bold  bg-l-grey p1 rounded">
+                                                    <img src="img/attachment.svg" width="16" class="absolute top-0 left-0 mt1 ml1 attachment-image">
+                                                    <div class="attachement-label inline-block">Notice of Assessment - John Doe.pdf</div>
+                                                </div>
+                                                <img src="img/edit.svg" width="14" class="absolute bottom-0 right-0 my1 mb2" style="display: none;">
+                                            </div>
+                                        </div>
+                                        <div class="financial-item-edit p2  border l-grey-border relative" style="display: none; ">
+                                          <button class="button close-section absolute js-remove-item js-remove-main-income m0 z2">remove</button>
+                                          <div class="field relative js-income-types" >
+                                            <h3 class="h3 m0 inline-block mb3 pr4">Select income type to add</h3>
+                                              <ul class="list-reset m0 clearfix block border rounded mutted-border">
+                                                  <li class="block border-bottom  mutted-border" value="Social Welfare Payments / Pensions">
+                                                    <a href="#partnerIncome" class="py2 px1 block clickable js-self-employment-link">Self Employment</a>
+                                                  </li>
+                                                  <li class="block border-bottom  mutted-border" value="Social Security Payments from an EU state">
+                                                    <a href="#partnerIncome" class="py2 px1 block clickable js-employment-link">Employment</a>
+                                                  </li>
+                                                  <li class="block border-bottom  mutted-border"  value="Wages, Private Pension and Occupational Pension">
+                                                    <a href="#partnerIncome" class="py2 px1 block clickable">Social Welfare Payment</a>
+                                                  </li>
+                                                  <li class="block border-bottom  mutted-border" value="Self Employment">
+                                                    <a href="#partnerIncome" class="py2 px1 block clickable">Occupational or Private Pension</a>
+                                                  </li>
+                                                  <li class="block border-bottom  mutted-border" value="Social Welfare Payments / Pensions">
+                                                    <a href="#partnerIncome" class="py2 px1 block clickable">Payment from other state</a>
+                                                  </li>
+                                                  <li class="block border-bottom  mutted-border" value="Social Security Payments from an EU state">
+                                                    <a href="#partnerIncome" class="py2 px1 block clickable">Maintenance Payment</a>
+                                                  </li>
+                                                  <li class="block border-bottom  mutted-border" value="Wages, Private Pension and Occupational Pension">
+                                                    <a href="#partnerIncome" class="py2 px1 block clickable">Employment or Education Scheme</a>
+                                                  </li>
+                                                  <li class="block border-bottom  mutted-border" value="Self Employment">
+                                                    <a href="#partnerIncome" class="py2 px1 block clickable">Occupational or Private Pension</a>
+                                                  </li>
+                                                  <li class="block mutted-border" value="Other (e.g. maintenance)">
+                                                    <a href="#partnerIncome" class="py2 px1 block clickable">Other (e.g. maintenance)</a>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                          <div class="js-income-form relative clearfix" style="display:none;">
+                                            <div class="content"></div>
+                                            <button class="js-partner-income-edit-close button">Update</button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <a href="#partnerIncome"class="button block ghost-button p1 js-add-partner-income">Add income source</a>
+                                </div>
+                                <div class="field display-only js-partner-expense relative">
+                                    <h2 class="h2 section-heading p1 mb0 border-left border-right border-top mutted-border">
+                                        Expenses
+                                        <span class="right js-partner-expense-total" style="display: none;">€ 250.00 / Week</span>
+                                    </h2>
+                                    <div class="finance-item js-partner-expenses mb1">
+                                        <div class="financial-item-empty clearfix relative block border p1 mutted-border">
+                                            <p class="inline-help">If John doe has expenses add them here, for no expenses leave blank</p>
+                                        </div>
+                                        <div class="financial-item-display clearfix relative block clickable border p1 mutted-border" style="display: none;">
+                                            <div class="clearfix">
+                                                <div class="financial-item-name bold col col-8">Renting</div>
+                                                <div class="financial-item-weekly-value col col-4 right-align relative">€ 245.00 / Week</div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="financial-item-name bold col col-8">Home Insurance</div>
+                                                <div class="financial-item-weekly-value col col-4 right-align relative">€ 5.00 / Week</div>
+                                            </div>
+                                            <div class="relative block pt1 clearfix files">
+                                                <div class="relative h6 bold  bg-l-grey p1 rounded">
+                                                    <img src="img/attachment.svg" width="16" class="absolute top-0 left-0 mt1 ml1 attachment-image">
+                                                    <div class="attachement-label inline-block">tenancy agreement.pdf</div>
+                                                </div>
+                                                <img src="img/edit.svg" width="14" class="absolute bottom-0 right-0 my1 mb2" style="display: none;">
+                                            </div>
+                                        </div>
+                                        <div class="financial-item-edit pt3 pr3 pl3 pb2  border l-grey-border relative" style="display: none; ">
+                                          <div class="field relative col col-6 pr2" >
+                                              <label class="field-label r2">Expense Type</label>
+                                              <select name="income.source" class="input select">
+                                                  <option value="">select income type</option>
+                                                  <option value="Social Welfare Payments / Pensions">Mortgage / Home Owner</option>
+                                                  <option value="Social Security Payments from an EU state">Renting</option>
+                                                  <option value="Wages, Private Pension and Occupational Pension">Childcare</option>
+                                                  <option value="Self Employment">Travel to work</option>
+                                                  <option value="Other (e.g. maintenance)">Maintenance</option>
+                                                  <option value="Nursing Home Expenses">Nursing Home Expenses</option>
+                                              </select>
+                                              <div class="relative field-border">
+                                                  <hr class="absolute field-border--default"/>
+                                                  <hr class="absolute field-border--focused"/>
+                                              </div>
+                                          </div>
+                                          <div class="field relative col col-6"  >
+                                              <label class="field-label">Payment Frequency</label>
+                                              <select name="swPayCodesApp[0].sourceCode" class="input select">
+                                                  <option value="NM051">Weekly</option>
+                                                  <option value="NM032">Monthly</option>
+                                                  <option value="NM009">Yearly</option>
+                                              </select>
+                                              <div class="relative field-border">
+                                                  <hr class="absolute field-border--default"/>
+                                                  <hr class="absolute field-border--focused"/>
+                                              </div>
+                                          </div>
+                                          <div class="field relative col col-12">
+                                              <label class="field-label">Amount</label>
+                                              <input type="number" class="input" placeholder="100.00">
+                                              <div class="relative field-border">
+                                                  <hr class="absolute field-border--default"/>
+                                                  <hr class="absolute field-border--focused"/>
+                                              </div>
+                                          </div>
+                                          <div class="evidence my3">
+                                              <input type="file" name="file" class="file" class="inputfile" accept="doc, docx, xls, xlsx, pdf, jpg, jpeg, png, txt"/>
+                                              <label for="file" style="display: none; ">Upload image of payment receipt</label>
+                                          </div>
+                                          <button class="js-partner-expense-edit-close button">Update</button>
+                                        </div>
+                                    </div>
+                                    <a href="#"class="button block ghost-button p1 js-add-partner-expense">Add expense</a>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="answer mt2">
+                        <h2 class="h2 mt0 p0">
+                            Combined: Jennifer Lawrence & John Doe
+                        </h2>
+                        <section class="profile-info clearfix">
+                            <div class="clearfix">
+                                <div class="relative mb2" id="savings-and-assets">
+                                    <h2 class="h2 section-heading p1 mb0 border-left border-right border-top mutted-border">
+                                        Savings and Assets
+                                        <span class="right js-savings-total" style="display: none;">€ 130,000.00</span>
+                                    </h2>
+                                    <div class="finance-item js-savings mb1">
+                                        <div class="financial-item-empty clearfix relative block border p1 mutted-border">
+                                            <p class="inline-help">If either Jessica or John has any savings or assets add them here, for no savings or assets leave blank</p>
+                                        </div>
+                                        <div class="financial-item-display clearfix relative block clickable border p1 mutted-border" style="display: none;">
+                                            <div class="clearfix">
+                                                <div class="financial-item-name bold col col-8">Additional property or land (Not rented)</div>
+                                                <div class="financial-item-weekly-value col col-4 right-align relative">€ 130,000.00</div>
+                                            </div>
+                                            <div class="relative block pt1 clearfix files">
+                                                <div class="relative h6 bold  bg-l-grey p1 rounded border dashed-border red-border">
+                                                    <div>Upload most recent Notice of Assessment from the Revenue Commissioners or Notice of Self-Assessment with Acknowledgement of Income Tax Return or current tenancy agreement/rent book or letter from the person who pays the rent detailing the payment amount and frequency. This letter must be dated within last 3 months, signed by the rent payer and also include a contact number for them</div>
+                                                </div>
+                                                <img src="img/edit.svg" width="14" class="absolute bottom-0 right-0 my1 mb2" style="display: none;">
+                                            </div>
+                                        </div>
+                                        <div class="financial-item-edit pt3 pr3 pl3 pb2 border l-grey-border relative" style="display: none; ">
+                                          <button class="button close-section absolute js-remove-item js-remove-savings m0 z2">remove</button>
+                                          <div class="field relative js-savings-types" >
+                                            <h3 class="h3 m0 inline-block mb3 pr4">Select a type of savings or assets to add</h3>
+                                              <ul class="list-reset m0 clearfix block border rounded mutted-border">
+                                                  <li class="block border-bottom  mutted-border" value="Social Welfare Payments / Pensions">
+                                                    <a href="#savings-and-assets" class="py2 px1 block clickable js-savings-link">Savings</a>
+                                                  </li>
+                                                  <li class="block border-bottom  mutted-border" value="Social Security Payments from an EU state">
+                                                    <a href="#savings-and-assets" class="py2 px1 block clickable js-stocks-link">Stocks or Shares</a>
+                                                  </li>
+                                                  <li class="block border-bottom  mutted-border"  value="Wages, Private Pension and Occupational Pension">
+                                                    <a href="#savings-and-assets" class="py2 px1 block clickable">Additional property or land - Rented</a>
+                                                  </li>
+                                                  <li class="block " value="Self Employment">
+                                                    <a href="#savings-and-assets" class="py2 px1 block clickable js-add-property-not-rented-link">Additional property or land - Not Rented</a>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                          <div class="js-savings-form relative clearfix" style="display:none;">
+                                            <div class="content"></div>
+                                            <button class="js-savings-edit-close button">Update</button>
+                                          </div>
+                                    </div>
+                                </div>
+                                <a href="#savings-and-assets"class="button block ghost-button p1 js-add-savings">Add savings or asset</a>
+                            </div>
+                        </section>
+                    </li>
+                </ul>
+            </section>
+
+        </section>
+    </section>
+    <div class="pb4 pt2 mb4 mt4" style="display: none;">
+        <div class="md-col-10 ml-auto mr-auto px2" >
+            <h2 class="h2">Financial summary</h2>
+            <div class="py2 relative clearfix">
+                <span class="">Weekly discretionary amount (Income - Expenses)</span>
+                <span class="h3 block align-left">€ 1200 / week</span>
+            </div>
+            <div class="py2 relative clearfix">
+                <span class="">Total Savings & Assets</span>
+                <span class="h3 block align-left">€ 120,000</span>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt4" style="display: block;">
+        <div class="md-col-10 ml-auto mr-auto px2">
+            <a class="button" href="family-details.html">Back</a>
+            <a class="button primary-button" href="gp-selection.html">Next: GP Selection</a>
+        </div>
+    </footer>
+
+    <div style="display:none;" class="js-self-employment">
+      <h3 class="h3 m0 inline-block mb3 pr4">Enter income information</h3>
+      <div class="field-group clearfix relative">
+        <div class="field relative col col-12">
+            <label class="field-label">Total Income</label>
+            <input type="text" class="input" placeholder="Notice of assessment - Panel 1">
+            <div class="relative field-border">
+                <hr class="absolute field-border--default">
+                <hr class="absolute field-border--focused">
+            </div>
+        </div>
+        <div class="field relative col col-12">
+            <label class="field-label">Total capital allowances/losses/PAYE expenses</label>
+            <input type="number" class="input" placeholder="Notice of assessment - Panel 2">
+            <div class="relative field-border">
+                <hr class="absolute field-border--default">
+                <hr class="absolute field-border--focused">
+            </div>
+        </div>
+        <div class="field relative col col-12">
+            <label class="field-label">Total income tax</label>
+            <input type="number" class="input" placeholder="Value of total income tax">
+            <div class="relative field-border">
+                <hr class="absolute field-border--default">
+                <hr class="absolute field-border--focused">
+            </div>
+        </div>
+        <div class="field relative col col-12">
+            <label class="field-label">Total credits/ reliefs set against tax on income</label>
+            <input type="number" class="input" placeholder="Notice of assessment - Panel 5">
+            <div class="relative field-border">
+                <hr class="absolute field-border--default">
+                <hr class="absolute field-border--focused">
+            </div>
+        </div>
+        <div class="field relative col col-12">
+            <label class="field-label">Total PRSI/USC/ITRS</label>
+            <input type="number" class="input" placeholder="Notice of assesment - Panel 6 &amp; 7">
+            <div class="relative field-border">
+                <hr class="absolute field-border--default">
+                <hr class="absolute field-border--focused">
+            </div>
+        </div>
+      </div>
+      <div class="relative clearfix col col-12">
+        <h3 class="h3 mb0 inline-block mt3">Upload notice of assessment</h3>
+        <p class="inline-help">Upload the latest Notice of Assessment or latest Notice of Self Assessment supported by Acknowledgement of Income Tax Return or letter from Revenue to confirm trading ceased or P21 balancing statement issued by Revenue or Revenue letter of non-liability for tax</p>
+        <div class="display-only relative" style="height: 80px;">
+            <input type="file" name="file" class="file" accept="doc, docx, xls, xlsx, pdf, jpg, jpeg, png, txt">
+        </div>
+      </div>
+    </div>
+
+    <div class="relative clearfix block js-add-property-not-rented" style="display: none;">
+          <h3 class="h3 mt0 pr4">Enter additional property or land - not rented</h3>
+          <div class="field-group mt1 block">
+            <div class="field-group mt1 block">
+              <div class="relative block">
+                  <h3 class="field-group-heading my0">Type of asset:</h3>
+                  <div class="relative mt2">
+                    <input id="assetProperty" class="radio" name="radio-1" type="radio" >
+                    <label for="assetProperty" class="radio-label mb2 mr2 pr3 inline-block">Property</label>
+
+                    <input id="assetLand" class="radio optional-section-trigger" name="radio-1" type="radio">
+                    <label for="assetLand" class="radio-label mb2  pr3 inline-block">Land</label>
+                  </div>
+              </div>
+
+              <h3 class="field-group-heading">Address:</h3>
+              <div class="field relative col col-12">
+                  <label class="field-label">Address 1</label>
+                  <input type="text" class="input" placeholder="Enter address line 1 (required)">
+                  <div class="relative field-border">
+                      <hr class="absolute field-border--default"/>
+                      <hr class="absolute field-border--focused"/>
+                  </div>
+              </div>
+              <div class="field relative col col-12">
+                  <label class="field-label">Address 2</label>
+                  <input type="text" class="input" placeholder="Enter address line 2 (required)">
+                  <div class="relative field-border">
+                      <hr class="absolute field-border--default"/>
+                      <hr class="absolute field-border--focused"/>
+                  </div>
+              </div>
+              <div class="field relative col col-12">
+                  <label class="field-label">Address 3</label>
+                  <input type="text" class="input" placeholder="Enter address line 3 (optional)">
+                  <div class="relative field-border">
+                      <hr class="absolute field-border--default"/>
+                      <hr class="absolute field-border--focused"/>
+                  </div>
+              </div>
+              <div class="field relative col col-12">
+                  <label class="field-label">County</label>
+                  <select name="address.county" class="input select">
+                      <option value="">(select County)</option>
+                       <option value="Carlow">Carlow</option>
+                       <option value="Cavan">Cavan</option>
+                       <option value="Clare">Clare</option>
+                       <option value="Cork">Cork</option>
+                       <option value="Donegal">Donegal</option>
+                       <option value="Dublin 1">Dublin 1</option>
+                       <option value="Dublin 2">Dublin 2</option>
+                       <option value="Dublin 3">Dublin 3</option>
+                       <option value="Dublin 4">Dublin 4</option>
+                       <option value="Dublin 5">Dublin 5</option>
+                       <option value="Dublin 6">Dublin 6</option>
+                       <option value="Dublin 6W">Dublin 6W</option>
+                       <option value="Dublin 7">Dublin 7</option>
+                       <option value="Dublin 8">Dublin 8</option>
+                       <option value="Dublin 9">Dublin 9</option>
+                       <option value="Dublin 10">Dublin 10</option>
+                       <option value="Dublin 11">Dublin 11</option>
+                       <option value="Dublin 12">Dublin 12</option>
+                       <option value="Dublin 13">Dublin 13</option>
+                       <option value="Dublin 14">Dublin 14</option>
+                       <option value="Dublin 15">Dublin 15</option>
+                       <option value="Dublin 16">Dublin 16</option>
+                       <option value="Dublin 17">Dublin 17</option>
+                       <option value="Dublin 18">Dublin 18</option>
+                       <option value="Dublin 20">Dublin 20</option>
+                       <option value="Dublin 22">Dublin 22</option>
+                       <option value="Dublin 24">Dublin 24</option>
+                       <option value="Dublin">Dublin</option>
+                       <option value="Galway">Galway</option>
+                       <option value="Kerry">Kerry</option>
+                       <option value="Kildare">Kildare</option>
+                       <option value="Kilkenny">Kilkenny</option>
+                       <option value="Laois">Laois</option>
+                       <option value="Leitrim">Leitrim</option>
+                       <option value="Limerick">Limerick</option>
+                       <option value="Longford">Longford</option>
+                       <option value="Louth">Louth</option>
+                       <option value="Mayo">Mayo</option>
+                       <option value="Meath">Meath</option>
+                       <option value="Monaghan">Monaghan</option>
+                       <option value="Offaly">Offaly</option>
+                       <option value="Roscommon">Roscommon</option>
+                       <option value="Sligo">Sligo</option>
+                       <option value="Tipperary">Tipperary</option>
+                       <option value="Waterford">Waterford</option>
+                       <option value="Westmeath">Westmeath</option>
+                       <option value="Wexford">Wexford</option>
+                       <option value="Wicklow">Wicklow</option>
+                  </select>
+                  <div class="relative field-border">
+                      <hr class="absolute field-border--default"/>
+                      <hr class="absolute field-border--focused"/>
+                  </div>
+              </div>
+              <div class="field relative col col-12">
+                  <label class="field-label">Eircode</label>
+                  <input type="text" class="input" placeholder="Enter eircode (optional)">
+                  <div class="relative field-border">
+                      <hr class="absolute field-border--default"/>
+                      <hr class="absolute field-border--focused"/>
+                  </div>
+              </div>
+              <div class="field relative col col-12 js-property">
+                  <label class="field-label">Type of property</label>
+                  <select name="address.county" class="input select">
+                      <option value="">(select type of property)</option>
+                       <option value="1 bedroom house">1 bedroom house</option>
+                       <option value="2 bedroom house">1 bedroom house</option>
+                       <option value="3 bedroom house">3 bedroom house</option>
+                       <option value="4 bedroom house">4 bedroom house</option>
+                       <option value="5+ bedroom house">5+ bedroom house</option>
+                       <option value="Studio apartment">Studio apartment</option>
+                       <option value="1 bedroom apartment">1 bedroom apartment</option>
+                       <option value="2 bedroom apartment">1 bedroom apartment</option>
+                       <option value="3 bedroom apartment">3 bedroom apartment</option>
+                       <option value="4 bedroom apartment">4 bedroom apartment</option>
+                       <option value="5+ bedroom apartment">5+ bedroom apartment</option>
+                  </select>
+                  <div class="relative field-border">
+                      <hr class="absolute field-border--default"/>
+                      <hr class="absolute field-border--focused"/>
+                  </div>
+              </div>
+              <div class="field relative col col-12 js-land">
+                  <label class="field-label">Size of land (acres)</label>
+                  <input type="number" class="input" placeholder="Enter acreage">
+                  <div class="relative field-border">
+                      <hr class="absolute field-border--default"/>
+                      <hr class="absolute field-border--focused"/>
+                  </div>
+              </div>
+              <div class="relative block col col-12">
+                  <h3 class="field-group-heading my0">How would you like your asset assessed?</h3>
+                  <div class="relative mt2">
+                    <input id="assessValue" class="radio" name="asset-assessed" type="radio" >
+                    <label for="assessValue" class="radio-label mb2 mr2 pr3 inline-block">Value</label>
+
+                    <input id="assessIncome" class="radio optional-section-trigger" name="asset-assessed" type="radio">
+                    <label for="assessIncome" class="radio-label mb2  pr3 inline-block">potential income</label>
+                  </div>
+              </div>
+              <div class="field relative col col-12 js-value">
+                  <label class="field-label">Estimated value</label>
+                  <input type="number" class="input" placeholder="Enter estimated value">
+                  <div class="relative field-border">
+                      <hr class="absolute field-border--default"/>
+                      <hr class="absolute field-border--focused"/>
+                  </div>
+              </div>
+              <div class="field relative col col-12 js-value">
+                  <label class="field-label">Outstanding Mortgage</label>
+                  <input type="number" class="input" placeholder="Enter outstanding mortgage">
+                  <div class="relative field-border">
+                      <hr class="absolute field-border--default"/>
+                      <hr class="absolute field-border--focused"/>
+                  </div>
+              </div>
+              <div class="field relative col col-12 js-potential-income">
+                  <label class="field-label">Potential income</label>
+                  <input type="number" class="input" placeholder="Enter potential income">
+                  <div class="relative field-border">
+                      <hr class="absolute field-border--default"/>
+                      <hr class="absolute field-border--focused"/>
+                  </div>
+              </div>
+              <div class="field relative col col-12 js-potential-income">
+                  <label class="field-label">Frequency</label>
+                  <select name="address.county" class="input select">
+                      <option value="">(select a frequency)</option>
+                       <option value="1 bedroom house">Bi-weekly</option>
+                       <option value="2 bedroom house">Monthly</option>
+                       <option value="3 bedroom house">Quarterly</option>
+                       <option value="4 bedroom house">Yearly</option>
+                  </select>
+                  <div class="relative field-border">
+                      <hr class="absolute field-border--default"/>
+                      <hr class="absolute field-border--focused"/>
+                  </div>
+              </div>
+              <div class="field relative col col-12 js-potential-income">
+                  <label class="field-label">Potential cost</label>
+                  <input type="number" class="input" placeholder="Enter potential cost">
+                  <div class="relative field-border">
+                      <hr class="absolute field-border--default"/>
+                      <hr class="absolute field-border--focused"/>
+                  </div>
+              </div>
+              <div class="field relative col col-12 js-potential-income">
+                  <label class="field-label">Frequency</label>
+                  <select name="address.county" class="input select">
+                      <option value="">(select a frequency)</option>
+                       <option value="1 bedroom house">Bi-weekly</option>
+                       <option value="2 bedroom house">Monthly</option>
+                       <option value="3 bedroom house">Quarterly</option>
+                       <option value="4 bedroom house">Yearly</option>
+                  </select>
+                  <div class="relative field-border">
+                      <hr class="absolute field-border--default"/>
+                      <hr class="absolute field-border--focused"/>
+                  </div>
+              </div>
+
+              <div class="field relative clearfix mb4 col col-12">
+                <h3 class="h3 mb0 inline-block my3">Upload notice of assessment</h3>
+                <p class="inline-help">Upload the latest Notice of Assessment or latest Notice of Self Assessment supported by Acknowledgement of Income Tax Return or letter from Revenue to confirm trading ceased or P21 balancing statement issued by Revenue or Revenue letter of non-liability for tax</p>
+                <div class="display-only relative">
+                    <input type="file" name="file" class="file" accept="doc, docx, xls, xlsx, pdf, jpg, jpeg, png, txt">
+                </div>
+              </div>
+            </div>
+      </div>
+  </div>
+
+    <script src="scripts/jquery.min.js"></script>
+    <script>
+    $(document).ready(function($,window,document){
+      //Income
+      $('.js-add-main-income').click(function(){
+        $('.js-main-income .financial-item-empty').hide();
+        $('.js-main-income .financial-item-display').hide();
+        $('.js-main-income .financial-item-edit').show();
+      });
+
+      $('.js-main-income-edit-close').click(function(){
+        $('.js-main-income .financial-item-empty').hide();
+        $('.js-main-income .financial-item-display').show();
+        $('.js-main-income .financial-item-edit').hide();
+        $('.js-main-income-total').show();
+      });
+
+      $('.js-add-partner-income').click(function(){
+        $('.js-partner-income .financial-item-empty').hide();
+        $('.js-partner-income .financial-item-display').hide();
+        $('.js-partner-income .financial-item-edit').show();
+      });
+
+      $('.js-partner-income-edit-close').click(function(){
+        $('.js-partner-income .financial-item-empty').hide();
+        $('.js-partner-income .financial-item-display').show();
+        $('.js-partner-income .financial-item-edit').hide();
+        $('.js-partner-income-total').show();
+      });
+
+      //Expenses
+      $('.js-add-main-expense').click(function(){
+        $('.js-main-expense .financial-item-empty').hide();
+        $('.js-main-expense .financial-item-display').hide();
+        $('.js-main-expense .financial-item-edit').show();
+      });
+
+      $('.js-main-expense-edit-close').click(function(){
+        $('.js-main-expense .financial-item-empty').hide();
+        $('.js-main-expense .financial-item-display').show();
+        $('.js-main-expense .financial-item-edit').hide();
+        $('.js-main-expense-total').show();
+      });
+
+      $('.js-add-partner-expense').click(function(){
+        $('.js-partner-expense .financial-item-empty').hide();
+        $('.js-partner-expense .financial-item-display').hide();
+        $('.js-partner-expense .financial-item-edit').show();
+      });
+
+      $('.js-partner-expense-edit-close').click(function(){
+        $('.js-partner-expense .financial-item-empty').hide();
+        $('.js-partner-expense .financial-item-display').show();
+        $('.js-partner-expense .financial-item-edit').hide();
+        $('.js-partner-expense-total').show();
+      });
+
+      //Savings
+      $('.js-add-savings').click(function(){
+        $('.js-savings .financial-item-empty').hide();
+        $('.js-savings .financial-item-display').hide();
+        $('.js-savings .financial-item-edit').show();
+      });
+
+      $('.js-savings-edit-close').click(function(){
+        $('.js-savings .financial-item-empty').hide();
+        $('.js-savings .financial-item-display').show();
+        $('.js-savings .financial-item-edit').hide();
+        $('.js-savings-total').show();
+      });
+
+      //Additional property conditional logic
+      //Set defaults
+      $('.js-land').hide();
+      $('.js-property').hide();
+      $('.js-potential-income').hide();
+      $('.js-value').hide();
+
+      $('.radio').change( function(){
+
+        if($('#assetProperty').is(':checked')) {
+          $('.js-land').hide();
+          $('.js-property').show();
+        } else {
+          $('.js-land').show();
+          $('.js-property').hide();
+        }
+
+        if($('#assessValue').is(':checked')) {
+          $('.js-potential-income').hide();
+          $('.js-value').show();
+        } else {
+          $('.js-potential-income').show();
+          $('.js-value').hide();
+        }
+      })
+      //supporting docs
+      $('.explanation1').keyup(function(){
+        if($(this).val()){
+          $('.supportingDocs1').show();
+        } else {
+          $('.supportingDocs1').hide();
+        }
+      });
+      $('.explanation2').keyup(function(){
+        if($(this).val()){
+          $('.supportingDocs2').show();
+        } else {
+          $('.supportingDocs2').hide();
+        }
+      });
+
+      //financial forms
+      $('.js-self-employment-link').click( function(){
+        var selfEmploymentForm = $('.js-self-employment');
+
+        $('.js-income-types').hide();
+        $('.js-income-form').show();
+        $('.js-self-employment').show();
+        $('.js-income-form .content').html(selfEmploymentForm);
+      });
+
+      $('.js-add-property-not-rented-link').click( function(){
+        var addPropertyNotRented = $('.js-add-property-not-rented');
+
+        $('.js-savings-types').hide();
+        $('.js-savings-form').show();
+        $('.js-add-property-not-rented').show();
+        $('.js-savings-form .content').html(addPropertyNotRented);
+      });
+
+      //Remove
+      $('.js-remove-main-income').click( function(){
+        $('.js-main-income .financial-item-empty').show();
+        $('.js-main-income .financial-item-display').hide();
+        $('.js-main-income .financial-item-edit').hide();
+        $('.js-main-income-total').hide();
+      });
+
+      $('.js-remove-main-income').click( function(){
+        $('.js-main-income .financial-item-empty').show();
+        $('.js-main-income .financial-item-display').hide();
+        $('.js-main-income .financial-item-edit').hide();
+        $('.js-main-income-total').hide();
+      });
+
+      $('.js-remove-savings').click( function(){
+        $('.js-savings .financial-item-empty').show();
+        $('.js-savings .financial-item-display').hide();
+        $('.js-savings .financial-item-edit').hide();
+        $('.js-savings-total').hide();
+      });
+
+
+
+    });
+    </script>
+    <script src="scripts/scripts.js"></script>
+    <style>.files {display:none;}</style>
+</body>
+</html>

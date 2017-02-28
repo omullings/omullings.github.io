@@ -1,0 +1,41 @@
+.vh100 { height: 100vh; }
+.100p { height: 100%; }
+
+.minh-1 { min-height: var(--space-1); }
+.minh-2 { min-height: var(--space-2); }
+.minh-3 { min-height: var(--space-3); }
+.minh-4 { min-height: var(--space-4); }
+.minh-5 { min-height: 35px; }
+
+.clickable:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.top-1 { top: var(--space-1); }
+.top-2 { top: var(--space-2); }
+.top-3 { top: var(--space-3); }
+.top-4 { top: var(--space-4); }
+
+.bottom-1 { bottom: var(--space-1); }
+.bottom-2 { bottom: var(--space-2); }
+.bottom-3 { bottom: var(--space-3); }
+.bottom-4 { bottom: var(--space-4); }
+
+.right-1 { right: var(--space-1); }
+.right-2 { top: var(--space-2); }
+.right-3 { right: var(--space-3); }
+.right-4 { right: var(--space-4); }
+
+.left-1 { left: var(--space-1); }
+.left-2 { left: var(--space-2); }
+.left-3 { left: var(--space-3); }
+.left-4 { left: var(--space-4); }
+
+
+:root {
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: 4rem;
+}

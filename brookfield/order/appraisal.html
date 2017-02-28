@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Montserrat:400,700|Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+</head>
+<body class='fixed top-0 bottom-0 right-0 left-0 overflow-hidden'>
+  <section class='overflow-hidden bg-white'>
+    <nav class='flex justify-between items-center absolute top-0 left-0 right-0 bg-teal border-bottom border-white py2 z1'>
+      <div class='pr2 relative clearfix col col-6'>
+        <a href='' class='col-11 ml-auto block flex items-center'>
+          <img
+            src='../assets/logo-mono-white.png'
+            class='bg-no-repeat'
+            style='height: 24px;'
+          />
+        </a>
+      </div>
+      <div class="mr3">
+        <button
+          type="button"
+          class="btn btn-primary sm-show md-hide lg-hide mr2"
+          id="summary-btn"
+          onclick=" document.getElementById('summary').className = 'show';
+          document.getElementById('form').className = 'hide';">
+          View Summary</button>
+      </div>
+    </nav>
+    <section class='col sm-col-12 md-col-8 md-show vh100 py2 overflow-scroll'
+      id="form">
+      <div class='relative clearfix mt2 sm-mt2 md-mt4 mx-auto col-10 pt3'>
+        <p class='serif navy h2 sm-h2 md-h1'>Almost done! Tell us about the appraisal request.</h1>
+        <div class='my3'>
+          <label class='bold block mb1 h5 sm-h5 md-h4'>What type of appraisal does the lender require?</label>
+          <div class=''>
+            <div class="flex">
+              <select class="py1 px2 col-12">
+                <option>Full Appraisal</option>
+                <option>Full Appraisal - By Plans/New Constr.</option>
+                <option>Full Appraisal - Acreage Property</option>
+                <option>Drive by</option>
+                <option>Appraisal Update</option>
+                <option>Progress Inspection</option>
+                <option>Vacant Land</option>
+              </select>
+              <i class="fa fa-angle-down bold" aria-hidden="true"
+                style="margin-left: -25px; margin-top: 10px;"></i>
+            </div>
+          </div>
+          <div class='my3'>
+            <label class='bold block mb1 h5 sm-h5 md-h4'>Does the lender require additional assessments?<span class='h6 navy muted bold ml1'>— Optional</span></label>
+            <div class='flex flex-wrap'>
+              <span class="inline col-6 sm-col-6 md-col-4 lg-col-3 ">
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  name="addons"
+                  id="Market Rents"
+                  value="B2B"/>
+                <label
+                  class="radio-label block mr1 mb1 px2 border rounded h6 bold flex items-center justify-center minh-5"
+                  for="Market Rents"
+                >Market Rents</label>
+              </span>
+              <span class="inline col-6 sm-col-6 md-col-4 lg-col-3 ">
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  name="addons"
+                  id="As Is/As Improved"
+                  value="FIRSTNAT"/>
+                <label
+                  for="As Is/As Improved"
+                  class="radio-label block mr1 mb1 px2 border rounded h6 bold flex items-center justify-center minh-5"
+                >As Is/As Improved</label>
+              </span>
+              <span class="inline col-6 sm-col-6 md-col-4 lg-col-3 ">
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  name="addons"
+                  id="None"
+                  value="NONE"/>
+                <label
+                  for="None"
+                  class="radio-label block mr1 mb1 px2 border rounded h6 bold flex items-center justify-center minh-5"
+                >None</label>
+              </span>
+            </div>
+          </div>
+          <div class='my3'>
+            <label class='bold block mb1 h5 sm-h5 md-h4'>Please upload any construction plans and/or specifications if they are available. </label>
+            <div class="relative clearfix mb2">
+              <input type='file' class='p1 rounded col-12 border h5 mb2'/>
+            </div>
+          </div>
+          <div class='my3'>
+            <label class='bold block mb1 h5 sm-h5 md-h4'>Who should we contact to provide access to the property?</label>
+            <div class='flex flex-wrap mb2'>
+              <span class="inline col-6 sm-col-6 md-col-4 lg-col-3 ">
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  checked
+                  name="mortgageType"
+                  id="Sale"
+                  value="Sale"/>
+                <label
+                  class="radio-label block mr1 mb1 px2 border rounded h6 bold flex items-center justify-center minh-5 center"
+                  for="Sale"
+                >Borrower</label>
+              </span>
+              <span class="inline col-6 sm-col-6 md-col-4 lg-col-3 ">
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  checked
+                  name="mortgageType"
+                  id="Refinance"
+                  value="Refinance"/>
+                <label
+                  for="Refinance"
+                  class="radio-label block mr1 mb1 px2 border rounded h6 bold flex items-center justify-center minh-5 center"
+                >Listing Agent</label>
+              </span>
+              <span class="inline col-6 sm-col-6 md-col-4 lg-col-3 ">
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  name="mortgageType"
+                  id="Transfer"
+                  value="Transfer"/>
+                <label
+                  for="Transfer"
+                  class="radio-label block mr1 mb1 px2 border rounded h6 bold flex items-center justify-center center minh-5 center"
+                >Condo/Strata Manager</label>
+              </span>
+              <span class="inline col-6 sm-col-6 md-col-4 lg-col-3 ">
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  name="mortgageType"
+                  id="Builder"
+                  value="Builder"/>
+                <label
+                  for="Builder"
+                  class="radio-label block mr1 mb1 px2 border rounded h6 bold flex items-center justify-center minh-5 center"
+                >Builder</label>
+              </span>
+              <span class="inline col-6 sm-col-6 md-col-4 lg-col-3 ">
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  name="mortgageType"
+                  id="Other"
+                  value="Other"/>
+                <label
+                  for="Other"
+                  class="radio-label block mr1 mb1 px2 border rounded h6 bold flex items-center justify-center minh-5 center"
+                >Other</label>
+              </span>
+            </div>
+            <div class="relative clearfix mb2">
+              <div class='mb2 h5'>Borrower <span class='h6 navy muted bold ml1'>— Number to provide access</span></div>
+              <input type='tel' class="col-12 p1 rounded col-8 border h5 mb2" placeholder="419-345-4512"/>
+            </div>
+            <div class="relative clearfix mb2">
+              <div class='mb2 h5'>Listing Agent</div>
+              <div class='clearfix relative col-12'>
+                <div class='col col-12 sm-col-12 md-col-6 pr0 sm-pr0 md-pr2 pb2'>
+                  <input type='text' class='p1 rounded border h5 col-12' placeholder="Name"/>
+                </div>
+                <div class='col col-12 sm-col-12 md-col-6 pb2'>
+                  <input type='text' class='p1 rounded border h5 col-12' placeholder="Company"/>
+                </div>
+                <div class='col col-12 pb2'>
+                  <input type='email' class='p1 rounded border h5 col-12' placeholder="jane@email.com"/>
+                </div>
+                <div class='col col-3 pr0 sm-pr0 md-pr2 pb2'>
+                  <select class="p1 rounded h5 col-12">
+                    <option>Mobile</option>
+                    <option>Home</option>
+                    <option>Work</option>
+                  </select>
+                </div>
+                <div class='col col-6 pr0 sm-pr0 md-pr2 pb2'>
+                  <input type='tel' class="p1 rounded border h5 col-12" placeholder="419-345-4512"/>
+                </div>
+                <div class='col col-3 pb2'>
+                  <input type='number' class="p1 rounded border h5 col-12" placeholder="ext"/>
+                </div>
+                <div class='col col-3 pr0 sm-pr0 md-pr2 pb2'>
+                  <select class="p1 rounded h5 col-12">
+                    <option>Mobile</option>
+                    <option>Home</option>
+                    <option selected>Work</option>
+                  </select>
+                </div>
+                <div class='col col-6 pr0 sm-pr0 md-pr2 pb2'>
+                  <input type='tel' class="p1 rounded border h5 col-12" placeholder="419-345-4512"/>
+                </div>
+                <div class='col col-3 pb2'>
+                  <input type='number' class="p1 rounded border h5 col-12" placeholder="ext"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='my3'>
+            <label class='bold block mb1 h5 sm-h5 md-h4'>What language should the report be in?</label>
+            <div class='flex flex-wrap'>
+              <span class="inline col-6 sm-col-6 md-col-4 ">
+                <input
+                  type="radio"
+                  class="radio"
+                  checked
+                  name="language"
+                  id="English"
+                  value="English"/>
+                <label
+                  class="radio-label block mr1 mb1 px2 border rounded h6 bold flex items-center justify-center minh-5"
+                  for="English"
+                >English</label>
+              </span>
+              <span class="inline col-6 sm-col-6 md-col-4 ">
+                <input
+                  type="radio"
+                  class="radio"
+                  name="language"
+                  id="French"
+                  value="French"/>
+                <label
+                  for="French"
+                  class="radio-label block mr1 mb1 px2 border rounded h6 bold flex items-center justify-center minh-5"
+                >French</label>
+              </span>
+            </div>
+          </div>
+          <div class='my3'>
+            <label class='bold block mb1 h5 sm-h5 md-h4'>Any additional information you think is important? </label>
+            <textarea class='p1 rounded col-12 h5' rows="5" placeholder="Add anything that's important to know like, communicating that the property is used for commercial purposes"></textarea>
+          </div>
+          <div class='py2 col col-12 flex justify-start items-center'>
+            <a href="mortgage.html" class='btn btn-primary bg-gray rounded right'>
+              <i class="fa fa-angle-left h3 muted bold black"></i>
+            </a>
+            <a href='payment.html'>
+              <input
+                type='submit'
+                value='Continue'
+                class='btn-primary bg-green py1 px4 border-none ml2'/>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside class='col sm-col-0 md-col-4 vh100 relative md-show'
+      id="summary">
+      <div class='absolute top-0 left-0 right-0 bottom-0 bg-silver z2 border-left border-gray overflow-scroll'>
+        <div class="right-align pt3 px3 sm-px3 md-px4">
+          <img src="../assets/exit.svg"
+            class="sm-show md-hide lg-hide"
+            width="22px;"
+            id="close-btn"
+            onclick=" document.getElementById('form').className = 'show';
+            document.getElementById('summary').className = 'hide';">
+        </div>
+        <h2 class='pt4 pb2 h2 m0 rounded-top px3 sm-px3 md-px4' style='font-weight: 900;'>Order Summary</h2>
+        <section class='py2 clearfix px3 sm-px3 md-px4'>
+          <img
+            src="../assets/check.svg"
+            class="absolute"
+            width="17px;"
+            style="margin-left:-30px; margin-top: 6px;"
+          />
+          <h4 class='caps regular navy pb2'>Property</h4>
+          <div class="flex flex-wrap">
+            <div class='col col-12 sm-col-12 md-col-12 pb2 sm-pb2 md-pb2 lg-pb0 pr2 sm-pr0 md-pr0 lg-pr2'>
+              <h5 class='h5 bold navy'>Borrower</h5>
+              <div class='h5 clickable'>
+                <div>Amy Pickering: <span>amy.pickering@email.com</span></div>
+              </div>
+              <div class="col col-12 flex flex-wrap">
+                <div class="col-12 sm-col-12 md-col-12 lg-col-6 pr2 sm-pr0 md-pr0 lg-pr2">
+                  <h5 class='h5 bold navy mt2'>Address</h5>
+                  <div class='h5 regular navy clickable'>
+                    <div>129 Spadina Ave. Unit 600</div>
+                    <div>Toronto, Ontario</div>
+                    <div>M2W 3W2</div>
+                  </div>
+                </div>
+                <div class="col-12 sm-col-12 md-col-12 lg-col-6">
+                  <h5 class='h5 bold navy mt2'>Est. Value</h5>
+                  <div class='h5 regular navy clickable'>
+                    <div>$ 1,200,000.00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='col sm-col-0 md-col-12 mt2 show sm-hide md-show lg-show' >
+              <div id="street-view" style='height: 150px;' class='overflow-hidden'></div>
+              <script>
+                var panorama;
+                function initialize() {
+                  panorama = new google.maps.StreetViewPanorama(
+                      document.getElementById('street-view'),
+                      {
+                        position: {lat: 43.6473766, lng: -79.3957177},
+                        pov: {heading: 70, pitch: 0},
+                        zoom: 1,
+                        disableDefaultUI: true
+                      });
+                }
+              </script>
+              <script
+                   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvtFv86ijuNMJ4Rm2PT0fGGZgfI4CcLXU&callback=initialize">
+              </script>
+              <h6 class='h6  navy muted mt1'><b>NOTE:</b> This is an approximate view and may not be the exact property</h6>
+            </div>
+          </div>
+        </section>
+        <div class="col-12 bg-gray" style="height:1px;"></div>
+        <section class='py2 px3 sm-px3 md-px4'>
+          <img
+            src="../assets/check.svg"
+            class="absolute"
+            width="17px;"
+            style="margin-left:-30px; margin-top: 6px;"
+          />
+          <h4 class='caps regular navy pb2'>Mortgage</h4>
+          <div class='flex flex-wrap relative clearfix'>
+            <div class='col col-12 sm-col-12 md-col-12 lg-col-6 pb2 sm-pb2 md-pb2 lg-pb0 pr2 sm-pr0 md-pr0 lg-pr2'>
+              <h5 class='h5 bold navy'>Lender</h5>
+              <div class='h5 regular navy clickable pb2'>
+                <div>TD Canada Trust</div>
+                <div>TD234312423</div>
+                <div>yvonne@td.com</div>
+              </div>
+              <h5 class='h5 bold navy'>Mortgage</h5>
+              <div class='h5 regular navy clickable '>
+                <div>Sale/Purchase</div>
+              </div>
+            </div>
+            <div class='col col-12 sm-col-12 md-col-12 lg-col-6 pb2 sm-pb2 md-pb2 lg-pb0 pr2 sm-pr0 md-pr0 lg-pr2'>
+              <h5 class='h5 bold navy'>Condition Date</h5>
+              <div class='h5 regular navy clickable pb2'>
+                <div>January 7, 2017</div>
+              </div>
+              <h5 class='h5 bold navy'>Attachments</h5>
+              <div class='h5 bold teal'>
+                <i class="fa fa-file-pdf-o navy" aria-hidden="true"></i>
+                Sales_Agreement.png
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="col-12 bg-gray" style="height:1px;"></div>
+        <section class='py2 px3 sm-px3 md-px4'>
+          <h5 class="muted regular h5">Step 3</h5>
+          <h4 class='caps regular navy'>Appraisal</h4>
+        </section>
+      </div>
+    </aside>
+  </section>
+</body>
+</html>

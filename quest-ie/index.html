@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Personal Information | Medical Card Application</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/quest.ie.min.css">
+</head>
+<body class="bg-l-grey">
+    <nav class="bg-green" >
+        <div class="md-col-10 ml-auto mr-auto px2">
+            <div class="relative py2">
+                <img class="logo"
+                     src="img/logo.png"
+                     alt="Medical Cards and GP Visit Cards - Ireland's Health Service"/>
+                <div class="right inline-block">
+                    <img src="img/translate.svg"
+                         width="20px"
+                         class="inline-block col"/>
+                    <a class="white inline-block col ml1" style="border-bottom: 1px dotted #fff;">Gaelic</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="bg-green pb4">
+        <div class="relative clearfix md-col-10 px2 pb4 mr-auto ml-auto py2">
+          <div >
+              <a href="family-details.html" class="col col-12 sm-col-8 md-col-6 lg-col-4 border rounded l-grey-border p3 block button primary-button">Create new application</a>
+          </div>
+        </div>
+    </header>
+    <section class="md-col-10 px2 mr-auto ml-auto mtn3 mbfooter">
+        <section class="answer pb2 clearfix">
+            <h2 class="h2 mt0">Account Information</h2>
+            <div class="clearfix">
+                <div class="field display-only relative col col-6 pr2">
+                    <div class="field-label r2">Forename</div>
+                    <div class="input">Jennifer</div>
+                </div>
+                <div class="field display-only relative col col-6 ">
+                    <div class="field-label">Surename</div>
+                    <div class="input">Lawrence</div>
+                </div>
+            </div>
+            <div class="field display-only relative col col-6 pr2">
+                <div class="field-label r2">Date of Birth</div>
+                <div class="input">August 15, 1990</div>
+            </div>
+            <div class="field display-only relative col col-6">
+                <div class="field-label">Personal Public Service Number (PPSN)</div>
+                <div class="input">1234567FA</div>
+            </div>
+        </section>
+
+        <section class="answer p2" style="display: none; ">
+            <div class="field relative col col-12" style="display: none; ">
+                <label class="field-label">Email address </label>
+                <input type="email" class="input required register login js-email" placeholder="e.g. jane.doe@gmail.com">
+                <div class="relative field-border">
+                    <hr class="absolute field-border--default"/>
+                    <hr class="absolute field-border--focused"/>
+                </div>
+                <div class="messages"></div>
+            </div>
+            <section class="registration-section hidden" style="display: none; ">
+                <section class="profile-info">
+                    <h2 class="h2">Register for an account</h2>
+                    <div class="clearfix">
+                        <div class="field relative col col-6 pr2">
+                            <div class="field-label r2">Forename</div>
+                            <input type="text" class="input required register" placeholder="Enter forename (required)">
+                            <div class="relative field-border">
+                                <hr class="absolute field-border--default"/>
+                                <hr class="absolute field-border--focused"/>
+                            </div>
+                            <span class="required-error">this field is reqiured</span>
+                        </div>
+                        <div class="field relative col col-6 ">
+                            <div class="field-label">Surename</div>
+                            <input type="text" class="input required register" placeholder="Enter surname (required)">
+                            <div class="relative field-border">
+                                <hr class="absolute field-border--default"/>
+                                <hr class="absolute field-border--focused"/>
+                            </div>
+                            <span class="required-error">this field is reqiured</span>
+                        </div>
+                    </div>
+                    <div class="field relative col col-6 pr2">
+                        <div class="field-label r2">Date of Birth</div>
+                        <input type="date" class="input required register" >
+                        <div class="relative field-border">
+                            <hr class="absolute field-border--default"/>
+                            <hr class="absolute field-border--focused"/>
+                        </div>
+                        <span class="required-error">this field is reqiured</span>
+                    </div>
+                    <div class="field relative col col-6">
+                        <label class="field-label">Personal Public Service Number (PPSN)</label>
+                        <input type="text" class="input required register js-ppsn" placeholder="Enter your PPSN e.g. 1234567FA (required)">
+                        <div class="relative field-border">
+                            <hr class="absolute field-border--default"/>
+                            <hr class="absolute field-border--focused"/>
+                        </div>
+                        <div class="messages">
+                            <span class="required-error">this field is reqiured</span>
+                        </div>
+                    </div>
+                    <div class="field relative col col-6 pr2">
+                        <div class="field-label r2">Password</div>
+                        <input type="password" class="input required register">
+                        <button class="toggle_show_password absolute r2 z-2 green" title="show password">show</button>
+                        <div class="relative field-border">
+                            <hr class="absolute field-border--default"/>
+                            <hr class="absolute field-border--focused"/>
+                        </div>
+                        <span class="required-error">this field is reqiured</span>
+                    </div>
+                </section>
+            </section>
+            <section class="login-section hidden" style="display: none; ">
+                <div class="field relative col col-12">
+                    <div class="field-label">Password</div>
+                    <input type="password" class="input required login" placeholder="Enter password">
+                    <button class="toggle_show_password absolute z-2 green r2" title="show password">show</button>
+                    <div class="relative field-border">
+                        <hr class="absolute field-border--default"/>
+                        <hr class="absolute field-border--focused"/>
+                    </div>
+                    <span class="required-error">this field is reqiured</span>
+                </div>
+            </section>
+        </section>
+
+        </section>
+        <section class="absolute bottom-0 right-0 left-0 block clearfix bg-white mt4" style="display: none;">
+            <div class="relative block">
+                <a href="family-details.html" class="col col-12 sm-col-8 md-col-6 lg-col-4 border rounded l-grey-border block bg-white">
+                    <div class="h2 py2 px2 block bg-green primary-button">Continue Application</div>
+                    <div class="p2">
+                        <div>
+                            <div>Started:</div>
+                            <div>June 3, 2016 at 12:00pm</div>
+                        </div>
+                        <div>
+                            <div >Last Saved:</div>
+                            <div>June 7, 2016 at 4:00pm</div>
+                        </div>
+                        <div>
+                            <div >Progress:</div>
+                            <div>Step 3 of 5</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+        <!--
+        <footer class="footer">
+            <div class="md-col-10 px2 mr-auto ml-auto">
+                <a href="family-details.html" class="col col-12 sm-col-8 md-col-6 lg-col-4 border rounded l-grey-border p3 block button primary-button">Create new application</a>
+            </div>
+        </footer>
+        -->
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Montserrat:400,700|Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+</head>
+<body class='fixed top-0 bottom-0 right-0 left-0 overflow-hidden bg-white'>
+  <section class='overflow-hidden bg-white'>
+    <nav class='flex justify-between items-center absolute top-0 left-0 right-0 bg-teal border-bottom border-white py2 z1'>
+      <div class='pr2 relative clearfix col col-6'>
+        <a href='' class='col-11 ml-auto block flex items-center'>
+          <img
+            src='../assets/logo-mono-white.png'
+            class='bg-no-repeat'
+            style='height: 24px;'
+          />
+        </a>
+      </div>
+      <div class="mr3">
+        <button
+          type="button"
+          class="btn btn-primary sm-show md-hide lg-hide mr2"
+          id="summary-btn"
+          onclick=" document.getElementById('summary').className = 'show';
+          document.getElementById('form').className = 'hide';">
+          View Summary</button>
+      </div>
+    </nav>
+    <section class='col sm-col-12 md-col-8 md-show vh100 py2 overflow-scroll'
+      id="form">
+      <div class='relative clearfix mt2 sm-mt2 md-mt4 mx-auto col-10 pt3'>
+        <p class='serif navy h2 sm-h2 md-h1'>Hello Yvonne, let's start with some property details.</p>
+        <div class='my3'>
+          <label class='bold block mb1 h5 sm-h5 md-h4'>Tell us your borrower's name and email.</label>
+          <div class="relative clearfix mb2">
+            <input type='text' class='p1 rounded col-12 border h5 mb2' placeholder="Jane Doe"/>
+            <input type='email' class="col-12 p1 rounded col-12 border h5" placeholder="borrower@email.com, borrower@email.com"/>
+            <label class='h6  navy muted regular'><b class="red">*</b> Seperate multiple emails with a comma.</label>
+          </div>
+        </div>
+        <div class='my3'>
+          <label class='bold block mb1 h5 sm-h5 md-h4'>Where is the property located? <span class='h6  navy muted ml1'>— Type street address</span></label>
+          <input type='text' class='p1 rounded col-12 border h5' placeholder="123 Main Street"/>
+        </div>
+        <div class='my3'>
+          <label class='bold block mb1 h5 sm-h5 md-h4'>What's the estimated market value of the property?</label>
+          <input type='number' class='p1 rounded col-12 border h5' placeholder="$ 600,000.00"/>
+        </div>
+        <a href='mortgage.html' class='pb2 col col-12'>
+          <input
+            type='submit'
+            value='Continue'
+            class='btn-primary bg-green py1 px4 border-none'/>
+        </a>
+      </div>
+    </section>
+    <aside class='col sm-col-0 md-col-4 vh100 relative'
+      id="summary">
+      <div class='absolute top-0 left-0 right-0 bottom-0 bg-silver z2 border-left border-gray'>
+        <div class="right-align pt3 px3 sm-px3 md-px4">
+          <img src="../assets/exit.svg"
+            class="sm-show md-hide lg-hide"
+            width="22px;"
+            id="close-btn"
+            onclick=" document.getElementById('form').className = 'show';
+            document.getElementById('summary').className = 'hide';">
+        </div>
+        <h2 class='pt4 pb2 h2 m0 rounded-top px3 sm-px3 md-px4' style='font-weight: 900;'>Order Summary</h2>
+        <section class='py2 clearfix px3 sm-px3 md-px4'>
+          <h5 class="muted regular h5">Step 1</h5>
+          <h4 class='caps regular navy'>Property</h4>
+        </section>
+        <div class="col-12 bg-gray" style="height:1px;"></div>
+        <section class='py2 muted px3 sm-px3 md-px4'>
+          <h5 class="muted regular h5">Step 2</h5>
+          <h4 class='caps regular navy muted'>Mortgage</h4>
+        </section>
+        <div class="col-12 bg-gray" style="height:1px;"></div>
+        <section class='py2 muted px3 sm-px3 md-px4'>
+          <h5 class="muted regular h5">Step 3</h5>
+          <h4 class='caps regular navy muted'>Appraisal</h4>
+        </section>
+        <div class="col-12 bg-gray" style="height:1px;"></div>
+      </div>
+    </aside>
+  </section>
+</body>
+</html>

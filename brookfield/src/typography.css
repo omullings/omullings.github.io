@@ -1,0 +1,10 @@
+.serif {
+  font-family: 'Merriweather', serif;
+}
+
+.caps {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+body { font-family: 'Open Sans', sans-serif; }

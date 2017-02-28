@@ -1,0 +1,52 @@
+gps = [
+        {
+        "contractorNum": "52345",
+        "textBlock": "KEANE SMYTH,DR. PATRICIA. KILTIMAGH MEDICAL CENTRE AIDEN STREET KILTIMAGH, CO MAYO MAYO 52345",
+        "onlineDoc": "Y"
+        },
+        {
+        "contractorNum": "52419",
+        "textBlock": "SMITH,DR. CONNOR. SPRINGFIELD MEDICAL CNT TALLAGHT DUBLIN 24 DUBLIN 24 52419",
+        "onlineDoc": "Y"
+        },
+        {
+        "contractorNum": "69612",
+        "textBlock": "SMITH,DR. MARIAN E. THE GLEN ROAD KANTURK CO CORK CORK 69612",
+        "onlineDoc": "Y"
+        },
+        {
+        "contractorNum": "67034",
+        "textBlock": "SMITH,DR. SUSAN. PRIMARY CARE CENTRE ST MICHAEL'S ESTATE INCHICORE,DUBLIN 8 DUBLIN 8 67034",
+        "onlineDoc": "Y"
+        },
+        {
+        "contractorNum": "54031",
+        "textBlock": "SMYTH,DR. CHARLES. RYEVALE MEDICAL PRACTICE POUND STREET, LEIXLIP CO KILDARE KILDARE (RYEVALE MEDICAL CENTRE) 54031",
+        "onlineDoc": "Y"
+        },
+        {
+        "contractorNum": "79987",
+        "textBlock": "SMYTH,DR. DONAL. KNOXPARK BALLISODARE CO. SLIGO SLIGO 79987",
+        "onlineDoc": "Y"
+        },
+        {
+        "contractorNum": "54164",
+        "textBlock": "SMYTH,DR. JUSTIN. RANELAGH MEDICAL 22-26 SANDFORD RD, RANELAGH. D.6 DUBLIN 6 54164",
+        "onlineDoc": "Y"
+        },
+        {
+        "contractorNum": "75973",
+        "textBlock": "SMYTH,DR. MARIAN. 9 HIGH STREET MONAGHAN CO MONAGHAN MONAGHAN 75973",
+        "onlineDoc": "Y"
+        },
+        {
+        "contractorNum": "52129",
+        "textBlock": "SMYTH,DR. SEAN. ABBEY HOUSE ABBEY STREET, ENNIS, CO CLARE CLARE 52129",
+        "onlineDoc": "Y"
+        },
+        {
+        "contractorNum": "77405",
+        "textBlock": "SMYTH-MORAN,DR. DEIRDRE. THE DIAMOND CLONES CO MONAGHAN MONAGHAN 77405",
+        "onlineDoc": "Y"
+        }
+];
